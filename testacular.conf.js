@@ -12,6 +12,8 @@ files = [
     JASMINE_ADAPTER,
     "node_modules/montage-testing/spec-helper.js",
     "node_modules/montage-testing/testacular.js",
+    {pattern: 'assets/**/*', included: false},
+    {pattern: 'components/**/*', included: false},
     {pattern: 'package.json', included: false},
     {pattern: 'test/all.js', included: false},
 
@@ -19,7 +21,7 @@ files = [
 //    {pattern: 'core/**/*', included: false},
 //    {pattern: 'ui/*', included: false},
 //    {pattern: 'ui/**/*', included: false},
-    {pattern: 'test/**/*-spec.js', included: false},
+    {pattern: 'test/**/*', included: false},
     {pattern: 'node_modules/montage-testing/*', included: false},
     {pattern: 'node_modules/montage/*.js', included: false},
     {pattern: 'node_modules/montage/**/*.js', included: false},
