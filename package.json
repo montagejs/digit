@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "dependencies": {
         "montage": "~0.12.2",
-        "montage-testing": "~0.1.0"
+        "montage-testing": "~0.1.1"
     },
     "devDependencies": {
         "testacular@canary": "~0.5.7"
