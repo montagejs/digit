@@ -2,11 +2,11 @@
     "name": "digit",
     "version": "0.1.0",
     "dependencies": {
-        "montage": "0.12.x",
-        "montage-testing": "0.5.x"
+        "montage": "~0.12.2",
+        "montage-testing": "~0.1.0"
     },
     "devDependencies": {
-        "testacular@canary": "0.5.x"
+        "testacular@canary": "~0.5.7"
     }
 }
 
