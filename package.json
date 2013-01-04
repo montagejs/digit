@@ -6,7 +6,7 @@
         "montage-testing": "~0.1.1"
     },
     "devDependencies": {
-        "testacular@canary": "~0.5.7"
+        "testacular": "~0.5.7"
     }
 }
 
