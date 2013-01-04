@@ -1,0 +1,77 @@
+{
+    "owner": {
+        "properties": {
+            "element": {"#": "main"}
+        }
+    },
+
+    "button1": { "prototype": "button.reel", "properties": { "element": {"#": "button1"} } },
+    "button2": { "prototype": "button.reel", "properties": { "element": {"#": "button2"} } },
+    "button3": { "prototype": "button.reel", "properties": { "element": {"#": "button3"} } },
+
+    "buttonGroup1": { "prototype": "button-group.reel", "properties": { "element": {"#": "buttonGroup1"} } },
+    "buttonGroup1item1": { "prototype": "button.reel", "properties": { "element": {"#": "buttonGroup1item1"} } },
+    "buttonGroup1item2": { "prototype": "button.reel", "properties": { "element": {"#": "buttonGroup1item2"} } },
+    "buttonGroup1item3": { "prototype": "button.reel", "properties": { "element": {"#": "buttonGroup1item3"} } },
+    "buttonGroup2": { "prototype": "button-group.reel", "properties": { "element": {"#": "buttonGroup2"} } },
+    "buttonGroup2item1": { "prototype": "button.reel", "properties": { "element": {"#": "buttonGroup2item1"} } },
+    "buttonGroup2item2": { "prototype": "button.reel", "properties": { "element": {"#": "buttonGroup2item2"} } },
+    "buttonGroup2item3": { "prototype": "button.reel", "properties": { "element": {"#": "buttonGroup2item3"} } },
+    "buttonGroup3": { "prototype": "button-group.reel", "properties": { "element": {"#": "buttonGroup3"} } },
+    "buttonGroup3item1": { "prototype": "button.reel", "properties": { "element": {"#": "buttonGroup3item1"} } },
+    "buttonGroup3item2": { "prototype": "button.reel", "properties": { "element": {"#": "buttonGroup3item2"} } },
+    "buttonGroup3item3": { "prototype": "button.reel", "properties": { "element": {"#": "buttonGroup3item3"} } },
+
+    "toggle1": { "prototype": "toggle.reel", "properties": { "element": {"#": "toggle1"} } },
+    "toggle2": { "prototype": "toggle.reel", "properties": { "element": {"#": "toggle2"} } },
+    "toggle3": { "prototype": "toggle.reel", "properties": { "element": {"#": "toggle3"} } },
+
+    "inputCheckbox1": { "prototype": "input-checkbox.reel", "properties": { "element": {"#": "inputCheckbox1"} } },
+    "inputCheckbox2": { "prototype": "input-checkbox.reel", "properties": { "element": {"#": "inputCheckbox2"} } },
+    "inputCheckbox3": { "prototype": "input-checkbox.reel", "properties": { "element": {"#": "inputCheckbox3"} } },
+
+    "inputRadio1A": { "prototype": "input-radio.reel", "properties": { "element": {"#": "inputRadio1A"} } },
+    "inputRadio1B": { "prototype": "input-radio.reel", "properties": { "element": {"#": "inputRadio1B"} } },
+    "inputRadio2A": { "prototype": "input-radio.reel", "properties": { "element": {"#": "inputRadio2A"} } },
+    "inputRadio2B": { "prototype": "input-radio.reel", "properties": { "element": {"#": "inputRadio2B"} } },
+    "inputRadio3A": { "prototype": "input-radio.reel", "properties": { "element": {"#": "inputRadio3A"} } },
+    "inputRadio3B": { "prototype": "input-radio.reel", "properties": { "element": {"#": "inputRadio3B"} } },
+
+    "select1": { "prototype": "select.reel", "properties": { "element": {"#": "select1"} } },
+    "select2": { "prototype": "select.reel", "properties": { "element": {"#": "select2"} } },
+    "select3": { "prototype": "select.reel", "properties": { "element": {"#": "select3"} } },
+
+    "inputText1": { "prototype": "input-text.reel", "properties": { "element": {"#": "inputText1"} } },
+    "inputText2": { "prototype": "input-text.reel", "properties": { "element": {"#": "inputText2"} } },
+    "inputText3": { "prototype": "input-text.reel", "properties": { "element": {"#": "inputText3"} } },
+
+    "textarea1": { "prototype": "textarea.reel", "properties": { "element": {"#": "textarea1"} } },
+    "textarea2": { "prototype": "textarea.reel", "properties": { "element": {"#": "textarea2"} } },
+    "textarea3": { "prototype": "textarea.reel", "properties": { "element": {"#": "textarea3"} } },
+
+    "inputNumber1": { "prototype": "input-number.reel", "properties": { "element": {"#": "inputNumber1"} } },
+    "inputNumber2": { "prototype": "input-number.reel", "properties": { "element": {"#": "inputNumber2"} } },
+    "inputNumber3": { "prototype": "input-number.reel", "properties": { "element": {"#": "inputNumber3"} } },
+
+    "inputRange1": { "prototype": "input-range.reel", "properties": { "element": {"#": "inputRange1"} } },
+    "inputRange2": { "prototype": "input-range.reel", "properties": { "element": {"#": "inputRange2"} } },
+    "inputRange3": { "prototype": "input-range.reel", "properties": { "element": {"#": "inputRange3"} } },
+
+    "progress1": { "prototype": "progress.reel", "properties": { "element": {"#": "progress1"} } },
+    "progress2": { "prototype": "progress.reel", "properties": { "element": {"#": "progress2"} } },
+    "progress3": { "prototype": "progress.reel", "properties": { "element": {"#": "progress3"} } },
+
+
+
+    "map1": { "prototype": "map.reel", "properties": { "element": {"#": "map1"} } },
+    "map2": { "prototype": "map.reel", "properties": { "element": {"#": "map2"} } },
+    "map3": { "prototype": "map.reel", "properties": { "element": {"#": "map3"} } },
+
+
+
+    "header1": { "prototype": "header.reel", "properties": { "element": {"#": "header1"} } },
+    "header2": { "prototype": "header.reel", "properties": { "element": {"#": "header2"} } },
+    "header3": { "prototype": "header.reel", "properties": { "element": {"#": "header3"} } }
+
+
+}

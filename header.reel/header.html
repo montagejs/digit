@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="header.css">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "header"}
+                }
+            },
+            
+            "button1": {
+                "prototype": "../button.reel",
+                "properties": {
+                    "element": {"#": "button1"}
+                }
+            },
+            
+            "button2": {
+                "prototype": "../button.reel",
+                "properties": {
+                    "element": {"#": "button2"}
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body>
+	<header data-montage-id="header" class="montage-Header">
+		<button data-montage-id="button1" class="montage-Header-button">Button</button>
+		<h1 class="montage-Header-title">Title</h1>
+		<button data-montage-id="button2" class="montage-Header-button">Button</button>
+	</header>
+</body>
+</html>

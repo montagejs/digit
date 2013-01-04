@@ -7,8 +7,10 @@
 </head>
 <body data-montage-id="main">
 
-    <h1>Montage <span class="logo"></span> <span class="hl">Mobile</span></h1>
-
+    <h1>Montage <span class="logo"></span> <span class="hl">Digit</span> UI</h1>
+    
+    <h2>Basic components</h2>
+    
     <table>
         <thead>
             <tr>
@@ -19,12 +21,37 @@
             </tr>
         </thead>
         <tbody>
-                        
+            
             <tr>
                 <td><a href="https://github.com/montagejs/montage-lab/tree/master/skeleton/mobile/components/button.reel">button</a></td>
                 <td><button data-montage-id="button1">Button</button></td>
                 <td data-montage-skin="light"><button data-montage-id="button2">Button</button></td>
                 <td data-montage-skin="dark" ><button data-montage-id="button3">Button</button></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/montage-lab/tree/master/skeleton/mobile/components/button-group.reel">button-group</a></td>
+                <td>
+                    <div data-montage-id="buttonGroup1">
+                        <button data-montage-id="buttonGroup1item1">1</button>
+                        <button data-montage-id="buttonGroup1item2">2</button>
+                        <button data-montage-id="buttonGroup1item3">3</button>
+                    </div>
+                </td>
+                <td data-montage-skin="light">
+                    <div data-montage-id="buttonGroup2">
+                        <button data-montage-id="buttonGroup2item1">1</button>
+                        <button data-montage-id="buttonGroup2item2">2</button>
+                        <button data-montage-id="buttonGroup2item3">3</button>
+                    </div>
+                </td>
+                <td data-montage-skin="dark" >
+                    <div data-montage-id="buttonGroup3">
+                        <button data-montage-id="buttonGroup3item1">1</button>
+                        <button data-montage-id="buttonGroup3item2">2</button>
+                        <button data-montage-id="buttonGroup3item3">3</button>
+                    </div>
+                </td>
             </tr>
             
             <tr>
@@ -101,7 +128,14 @@
                 <td data-montage-skin="light"><textarea data-montage-id="textarea2" placeholder="Textarea"></textarea></td>
                 <td data-montage-skin="dark"><textarea data-montage-id="textarea3" placeholder="Textarea"></textarea></td>
             </tr>
-                        
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/montage-lab/tree/master/skeleton/mobile/components/input-number.reel">input-number</a></td>
+                <td><input data-montage-id="inputNumber1" type="number" value=""></td>
+                <td data-montage-skin="light"><input data-montage-id="inputNumber2" type="number" value="0"></td>
+                <td data-montage-skin="dark"><input data-montage-id="inputNumber3" type="number" value="0"></td>
+            </tr>
+                
             <tr>
                 <td><a href="https://github.com/montagejs/montage-lab/tree/master/skeleton/mobile/components/input-range.reel">input-range</a></td>
                 <td><input data-montage-id="inputRange1" value="50" min="0" max="100" type="range"></td>
@@ -120,7 +154,8 @@
     </table>
     
     
-    <h2>In progress</h2>
+    
+    <h2>Advanced components</h2>
     
     <table>
         <thead>
@@ -132,16 +167,43 @@
             </tr>
         </thead>
         <tbody>
-                        
+            
             <tr>
-                <td><a href="https://github.com/montagejs/montage-lab/tree/master/skeleton/mobile/components/input-number.reel">input-number</a></td>
-                <td><input data-montage-id="inputNumber1" type="number" value="0"></td>
-                <td><input data-montage-id="inputNumber2" type="number" value="0"></td>
-                <td><input data-montage-id="inputNumber3" type="number" value="0"></td>
+                <td><a href="https://github.com/montagejs/montage-lab/tree/master/skeleton/mobile/components/map.reel">map</a></td>
+                <td><div data-montage-id="map1"></div></td>
+                <td data-montage-skin="light"><div data-montage-id="map2"></div></td>
+                <td data-montage-skin="dark"><div data-montage-id="map3"></div></td>
             </tr>
                         
         </tbody>
     </table>
+    
+    
+    
+    <h2>Layout components</h2>
+    
+    <table class="layout">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Skeleton</th>
+                <th>+ <span class="hl">Light</span> Skin</th>
+                <th>+ <span class="hl">Dark</span> Skin</th>
+            </tr>
+        </thead>
+        <tbody>
+                        
+            <tr>
+                <td><a href="https://github.com/montagejs/montage-lab/tree/master/skeleton/mobile/components/header.reel">header</a></td>
+                <td><header data-montage-id="header1"></header></td>
+                <td data-montage-skin="light"><header data-montage-id="header2"></header></td>
+                <td data-montage-skin="dark"><header data-montage-id="header3"></header></td>
+            </tr>
+                        
+        </tbody>
+    </table>
+    
+    
     
     
 </body>
