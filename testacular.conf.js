@@ -12,8 +12,11 @@ files = [
     JASMINE_ADAPTER,
     "node_modules/montage-testing/jasmine-additions.js",
     "node_modules/montage-testing/testacular-adapter.js",
+
     {pattern: 'assets/**/*', included: false},
-    {pattern: 'components/**/*', included: false},
+    {pattern: '*.reel/*', included: false},
+    {pattern: '*.reel/**/*', included: false},
+
     {pattern: 'package.json', included: false},
     {pattern: 'test/*', included: false},
     {pattern: 'test/**/*', included: false},

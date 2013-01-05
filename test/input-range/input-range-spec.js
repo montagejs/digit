@@ -1,16 +1,16 @@
 var Montage = require("montage").Montage;
 var TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
 
-TestPageLoader.queueTest("button-test", function(testPage) {
+TestPageLoader.queueTest("input-range-test", function(testPage) {
 
-    describe("test/button/button-spec", function() {
+    describe("test/input-range/input-range-spec", function() {
         it("should load", function() {
             expect(testPage.loaded).toBe(true);
         });
 
-        describe("Button", function() {
+        describe("InputRange", function() {
             it("can be created", function() {
-                expect(testPage.test.button).toBeDefined();
+                expect(testPage.test.inputRange).toBeDefined();
             });
         });
     });

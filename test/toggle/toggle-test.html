@@ -2,21 +2,21 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Button Test</title>
+    <title>Toggle</title>
     <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
     <script type="text/montage-serialization">
         {
             "test": {
-                "prototype": "test/button/button-test[Test]",
+                "prototype": "test/toggle/toggle-test[Test]",
                 "properties": {
-                    "button": {"@": "button"}
+                    "toggle": {"@": "toggle"}
                 }
             },
 
-            "button": {
-                "prototype": "button.reel",
+            "toggle": {
+                "prototype": "toggle.reel",
                 "properties": {
-                    "element": {"#": "button"}
+                    "element": {"#": "toggle"}
                 }
             }
         }
@@ -24,8 +24,8 @@
 
 </head>
 <body>
-    <h1>Button</h1>
+    <h1>Toggle</h1>
 
-    <div data-montage-id="button"></div>
+    <div data-montage-id="toggle"></div>
 </body>
 </html>

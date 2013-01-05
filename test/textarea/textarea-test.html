@@ -2,21 +2,21 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Button Test</title>
+    <title>Textarea</title>
     <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
     <script type="text/montage-serialization">
         {
             "test": {
-                "prototype": "test/button/button-test[Test]",
+                "prototype": "test/textarea/textarea-test[Test]",
                 "properties": {
-                    "button": {"@": "button"}
+                    "textarea": {"@": "textarea"}
                 }
             },
 
-            "button": {
-                "prototype": "button.reel",
+            "textarea": {
+                "prototype": "textarea.reel",
                 "properties": {
-                    "element": {"#": "button"}
+                    "element": {"#": "textarea"}
                 }
             }
         }
@@ -24,8 +24,8 @@
 
 </head>
 <body>
-    <h1>Button</h1>
+    <h1>Textarea</h1>
 
-    <div data-montage-id="button"></div>
+    <div data-montage-id="textarea"></div>
 </body>
 </html>

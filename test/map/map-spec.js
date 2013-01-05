@@ -1,16 +1,16 @@
 var Montage = require("montage").Montage;
 var TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
 
-TestPageLoader.queueTest("button-test", function(testPage) {
+TestPageLoader.queueTest("map-test", function(testPage) {
 
-    describe("test/button/button-spec", function() {
+    describe("test/map/map-spec", function() {
         it("should load", function() {
             expect(testPage.loaded).toBe(true);
         });
 
-        describe("Button", function() {
+        describe("Map", function() {
             it("can be created", function() {
-                expect(testPage.test.button).toBeDefined();
+                expect(testPage.test.map).toBeDefined();
             });
         });
     });
