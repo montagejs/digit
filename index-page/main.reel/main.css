@@ -86,10 +86,10 @@ td:nth-child(1) { background: hsl(0,0%,86%); }
 td:nth-child(3) { background: hsl(0,0%,96%); }
 td:nth-child(4) { background: hsl(0,0%,24%); }
 
-.layout td { 
-    background: hsl(0,0%,70%);
-    border-top: 1px solid hsla(0,0%,0%,.06);
-}
+.layout td:nth-child(3) { background: hsl(0,0%,70%); }
+.layout td:nth-child(4) { background: hsl(0,0%,40%); }
+
+
 
 /* Montage overrides */ 
 

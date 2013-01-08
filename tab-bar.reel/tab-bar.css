@@ -1,0 +1,120 @@
+.montage-TabBar {
+    display: -webkit-box;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #b3b3b3;
+}
+
+.montage-TabBar-tab {
+    display: block;
+    -webkit-box-flex: 1;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4px;
+    height: 2.5em;
+    border-radius: 0;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    color: hsla(0,0%,0%,.5);
+    border: 1px solid #b3b3b3;
+    border-left: none;
+    background-color: #f2f2f2;
+}
+
+
+/* Icon */
+
+.montage-TabBar-tab[data-icon] {
+    position: relative;
+    height: 50px;
+    padding: 30px 0 0 0;
+    font-size: 10px;
+    color: hsla(0,0%,0%,.4);
+}
+.montage-TabBar-tab[data-icon]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 24px;
+    line-height: 36px;
+    color: hsla(0,0%,0%,.6);
+}
+
+
+/* Icon Only */
+
+.montage-TabBar--iconOnly[data-icon] {
+    font-size: 0;
+    color: transparent;
+}
+.montage-TabBar--iconOnly[data-icon]:before {
+    line-height: 50px;
+}
+
+
+/* States */
+
+.montage-TabBar-tab-active,
+.montage-TabBar-tab:active {
+    background-color: #e5e5e5;
+}
+
+
+
+/* Light ------------------------------------ */
+
+[data-montage-skin="light"] .montage-TabBar {
+    border-color: hsl(0,0%,84%);
+}
+
+[data-montage-skin="light"] .montage-TabBar-tab {
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
+    border-color: inherit;
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,94%), hsl(0,0%,86%) );
+    box-shadow: inset 0 1px 2px hsla(0,0%,100%,.6);
+}
+
+[data-montage-skin="light"] .montage-TabBar-tab-active,
+[data-montage-skin="light"] .montage-TabBar-tab:active {
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,82%), hsl(0,0%,88%) );
+    box-shadow: none;
+}
+
+
+
+
+/* Dark ------------------------------------ */
+
+[data-montage-skin="dark"] .montage-TabBar {
+    border-color: hsl(0,0%,15%);
+}
+
+[data-montage-skin="dark"] .montage-TabBar-tab {
+    color: hsla(0,0%,100%,.5);
+    text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
+    border-color: inherit;
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,24%) );
+    box-shadow: inset 0 1px 2px hsla(0,0%,100%,.1);
+}
+
+[data-montage-skin="dark"] .montage-TabBar-tab-active,
+[data-montage-skin="dark"] .montage-TabBar-tab:active {
+    color: hsla(0,0%,100%,.4);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,26%), hsl(0,0%,20%) );
+    box-shadow: inset 0 1px 3px hsla(0,0%,0%,.2);
+}
+
+
+/* Icon */
+
+[data-montage-skin="dark"] .montage-TabBar-tab[data-icon] {
+    color: hsla(0,0%,100%,.3);
+}
+
+[data-montage-skin="dark"] .montage-TabBar-tab[data-icon]:before {
+    color: hsla(0,0%,100%,.6);
+}
