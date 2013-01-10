@@ -2,7 +2,7 @@
 
 ![List](https://raw.github.com/montagejs/digit/master/list.reel/screenshot.png)
 
-The List component wraps an <ul> element. It supports different kind of list item types.
+The List component wraps an `<ul>` element. It supports different kind of list item types.
 
 ## How to use
 
@@ -48,7 +48,7 @@ A List-item can contain just a label with text. Or it can be mixed and matched w
 * `.montage-List-item-icon` - An icon. Great for giving a visual hint or group the items.
 * `.montage-List-item-image` - And image. Can be used for avatars or thumbnails. Minimum size: 50x50 (100x100 for Retina). Also note that if the images are not a square, they get cropped and centered.
 
-![List-item types](https://raw.github.com/montagejs/digit/master/tab-bar.reel/screenshot-types.png)
+![List-item types](https://raw.github.com/montagejs/digit/master/list.reel/screenshot-types.png)
 
 
 
