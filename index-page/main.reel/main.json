@@ -73,9 +73,14 @@
     "header2": { "prototype": "header.reel", "properties": { "element": {"#": "header2"} } },
     "header3": { "prototype": "header.reel", "properties": { "element": {"#": "header3"} } },
     
+    "list1": { "prototype": "list.reel", "properties": { "element": {"#": "list1"} } },
+    "list2": { "prototype": "list.reel", "properties": { "element": {"#": "list2"} } },
+    "list3": { "prototype": "list.reel", "properties": { "element": {"#": "list3"} } },
+    
     "tabBar1": { "prototype": "tab-bar.reel", "properties": { "element": {"#": "tabBar1"} } },
     "tabBar2": { "prototype": "tab-bar.reel", "properties": { "element": {"#": "tabBar2"} } },
     "tabBar3": { "prototype": "tab-bar.reel", "properties": { "element": {"#": "tabBar3"} } }
+
 
 
 }

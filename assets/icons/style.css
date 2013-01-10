@@ -19,27 +19,26 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-[data-icon="ellipsis"]:before { content: "\e000"; }
-[data-icon="pictures"]:before { content: "\e001"; }
-[data-icon="video"]:before    { content: "\e002"; }
-[data-icon="music"]:before    { content: "\e003"; }
-[data-icon="rocket"]:before   { content: "\e004"; }
-
-
-/* Use the following CSS code if you want to have a class per icon */
-/*
-[class^="icon-"]:before, [class*=" icon-"]:before {
-	font-family: 'entypo';
-	font-style: normal;
-	speak: none;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-
-.icon-ellipsis:before { content: "\e000"; }
-.icon-pictures:before { content: "\e001"; }
-.icon-video:before { content: "\e002"; }
-.icon-music:before { content: "\e003"; }
-.icon-rocket:before { content: "\e004"; }
-*/
+[data-icon="arrow-left"]:before { content: "\e000"; }
+[data-icon="arrow-down"]:before { content: "\e001"; }
+[data-icon="arrow-up"]:before { content: "\e002"; }
+[data-icon="arrow-right"]:before { content: "\e003"; }
+[data-icon="ellipsis"]:before { content: "\e004"; }
+[data-icon="pictures"]:before { content: "\e005"; }
+[data-icon="video"]:before { content: "\e006"; }
+[data-icon="music"]:before { content: "\e007"; }
+[data-icon="rocket"]:before { content: "\e008"; }
+[data-icon="camera"]:before { content: "\e009"; }
+[data-icon="checkmark"]:before { content: "\e00a"; }
+[data-icon="cross"]:before { content: "\e00b"; }
+[data-icon="minus"]:before { content: "\e00c"; }
+[data-icon="plus"]:before { content: "\e00d"; }
+[data-icon="cross-2"]:before { content: "\e00e"; }
+[data-icon="minus-2"]:before { content: "\e00f"; }
+[data-icon="plus-2"]:before { content: "\e010"; }
+[data-icon="cross-3"]:before { content: "\e011"; }
+[data-icon="user-add"]:before { content: "\e012"; }
+[data-icon="user"]:before { content: "\e013"; }
+[data-icon="erase"]:before { content: "\e014"; }
+[data-icon="cog"]:before { content: "\e015"; }
+[data-icon="export"]:before { content: "\e016"; }

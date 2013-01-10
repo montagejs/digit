@@ -1,0 +1,170 @@
+.montage-List {
+    -webkit-box-flex: 1;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    color: hsla(0,0%,0%,.5);
+    list-style: none;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.montage-List-item {
+    display: -webkit-box;
+    height: 50px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 50px;
+    background-color: #f2f2f2;
+    box-shadow: inset 0 -1px 0 hsla(0,0%,0%,.1);
+}
+
+
+/* List-item items ------------------------------------------------------------------------ */
+
+/* Label */
+
+.montage-List-item-label {
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    box-sizing: border-box;
+    padding: 0 15px;
+    
+    /* TODO: ellipsis doesn't seem to work */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.montage-List-item-cell + .montage-List-item-label,
+.montage-List-item-badge + .montage-List-item-label {
+    padding-left: 0;
+}
+
+
+/* Cell */
+
+.montage-List-item-cell {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    height: 50px;
+    padding: 0 15px;
+}
+
+
+/* Badge */
+
+.montage-List-item-badge {
+    display: block;
+    margin: 10px;
+    padding: 0 9px;
+    box-sizing: border-box;
+    line-height: 30px;
+    min-width: 30px;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #b3b3b3;
+    background: #d9d9d9;
+}
+
+/* Icon */
+
+.montage-List-item-icon[data-icon] {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: hsla(0,0%,0%,.04);
+}
+
+.montage-List-item-icon[data-icon]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: inherit;
+    color: hsla(0,0%,0%,.6);
+}
+
+/* Image */
+
+.montage-List-item-image {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+[data-montage-skin] .montage-List-item-image {
+    box-shadow: inset 0 1px 4px hsla(0,0%,0%,.3);
+}
+
+
+
+/* Light ------------------------------------------------------------------------ */
+
+[data-montage-skin="light"] .montage-List-item {
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.5), inset 0 -1px 0 hsla(0,0%,0%,.06);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+}
+
+
+/* Badge */
+
+[data-montage-skin="light"] .montage-List-item-badge {
+    border-color: hsla(0,0%,70%,1);
+    background: hsl(0,0%,86%);
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
+}
+
+/* Icon */
+
+[data-montage-skin="light"] .montage-List-item-icon[data-icon] {
+    background-color: hsla(0,0%,0%,.04);
+    box-shadow: inset 1px 0 0 hsla(0,0%,0%,.02), inset -1px 0 0 hsla(0,0%,0%,.02);
+}
+[data-montage-skin="light"] .montage-List-item-icon[data-icon]:before {
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.8);
+}
+
+
+
+/* Dark ------------------------------------------------------------------------ */
+
+[data-montage-skin="dark"] .montage-List {
+    color: hsla(0,0%,100%,.5);
+    text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
+}
+
+[data-montage-skin="dark"] .montage-List-item {
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.04), inset 0 -1px 0 hsla(0,0%,0%,.12);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+}
+
+/* Badge */
+
+[data-montage-skin="dark"] .montage-List-item-badge {
+    border-color: hsl(0,0%,15%);
+    background: hsl(0,0%,22%);
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.25), 0 1px 0 hsla(0,0%,100%,.1);
+}
+
+/* Icon */
+
+[data-montage-skin="dark"] .montage-List-item-icon[data-icon] {
+    background-color: hsla(0,0%,0%,.1);
+    box-shadow: inset 1px 0 0 hsla(0,0%,0%,.04), inset -1px 0 0 hsla(0,0%,0%,.04);
+}
+
+[data-montage-skin="dark"] .montage-List-item-icon[data-icon]:before {
+    color: hsla(0,0%,100%,.6);
+}
