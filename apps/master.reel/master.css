@@ -1,0 +1,6 @@
+.master {
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-width: 320px;
+}
