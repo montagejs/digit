@@ -79,8 +79,10 @@
     
     "tabBar1": { "prototype": "tab-bar.reel", "properties": { "element": {"#": "tabBar1"} } },
     "tabBar2": { "prototype": "tab-bar.reel", "properties": { "element": {"#": "tabBar2"} } },
-    "tabBar3": { "prototype": "tab-bar.reel", "properties": { "element": {"#": "tabBar3"} } }
+    "tabBar3": { "prototype": "tab-bar.reel", "properties": { "element": {"#": "tabBar3"} } },
 
-
+    "toolBar1": { "prototype": "tool-bar.reel", "properties": { "element": {"#": "toolBar1"} } },
+    "toolBar2": { "prototype": "tool-bar.reel", "properties": { "element": {"#": "toolBar2"} } },
+    "toolBar3": { "prototype": "tool-bar.reel", "properties": { "element": {"#": "toolBar3"} } }
 
 }

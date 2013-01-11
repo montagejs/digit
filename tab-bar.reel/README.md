@@ -4,7 +4,7 @@
 ![Tab Bar + icons](https://raw.github.com/montagejs/digit/master/tab-bar.reel/screenshot-icons.png)
 ![Tab Bar - icons only](https://raw.github.com/montagejs/digit/master/tab-bar.reel/screenshot-iconsonly.png)
 
-The Tab Bar wraps a <nav> element and adds tab buttons. It can be used as text only or with icons.
+The Tab Bar wraps a `<nav>` element and adds tab buttons. It can be used as text only or with icons.
 
 ## How to use
 
