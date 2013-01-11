@@ -2,6 +2,7 @@
     display: -webkit-box;
     -webkit-box-pack: center;
     padding: 10px 5px;
+    margin: 0;
     background-color: hsl(0,0%,85%);
 }
 
