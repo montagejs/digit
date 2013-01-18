@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="icons/style.css">
+    
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "video"}
+                }
+        
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div data-montage-id="video" class="montage-Video">
+        <video class="montage-Video-frame" 
+            src="video.reel/video.mov" 
+            poster="video.reel/poster.png" 
+            >
+        </video>
+        <div class="montage-Video-cover">
+            <button class="montage-Video-cover-button"></button>
+        </div>
+        <menu class="montage-Video-controls">
+            <button class="montage-Video-controls-button-play"></button>
+            <div class="montage-Video-controls-track">
+                <div class="montage-Video-controls-track-timeline">
+                    <div class="montage-Video-controls-track-timeline-progress"></div>
+                </div>
+                <div draggable="true" class="montage-Video-controls-track-thumb">-2:45</div>
+            </div>
+            <button class="montage-Video-controls-button-fullscreen"></button>
+        </menu>
+    </div>
+
+</body>
+</html>

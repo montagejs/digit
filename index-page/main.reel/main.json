@@ -63,11 +63,15 @@
 
 
 
+    "video1": { "prototype": "video.reel", "properties": { "element": {"#": "video1"} } },
+    "video2": { "prototype": "video.reel", "properties": { "element": {"#": "video2"} } },
+    "video3": { "prototype": "video.reel", "properties": { "element": {"#": "video3"} } },
+
     "map1": { "prototype": "map.reel", "properties": { "element": {"#": "map1"} } },
     "map2": { "prototype": "map.reel", "properties": { "element": {"#": "map2"} } },
     "map3": { "prototype": "map.reel", "properties": { "element": {"#": "map3"} } },
-
-
+    
+    
 
     "header1": { "prototype": "header.reel", "properties": { "element": {"#": "header1"} } },
     "header2": { "prototype": "header.reel", "properties": { "element": {"#": "header2"} } },

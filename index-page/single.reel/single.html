@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="../main.reel/main.css" rel="stylesheet">    
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "single"}
+                }
+            },
+            
+            "video1": { "prototype": "video.reel", "properties": { "element": {"#": "video1"} } },
+            "video2": { "prototype": "video.reel", "properties": { "element": {"#": "video2"} } },
+            "video3": { "prototype": "video.reel", "properties": { "element": {"#": "video3"} } }
+        }
+    </script>    
+</head>
+<body data-montage-id="single">
+
+    <h1>Montage <span class="logo"></span> <span class="hl">Digit</span> UI</h1>
+    <h2>Single component (for testing)</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Skeleton</th>
+                <th>+ <span class="hl">Light</span> Skin</th>
+                <th>+ <span class="hl">Dark</span> Skin</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/video.reel">Video</a></td>
+                <td><video data-montage-id="video1"></video></td>
+                <td data-montage-skin="light"><video data-montage-id="video2"></video></td>
+                <td data-montage-skin="dark"><video data-montage-id="video3"></video></td>
+            </tr>
+                        
+        </tbody>
+    </table>
+
+</body>
+</html>
