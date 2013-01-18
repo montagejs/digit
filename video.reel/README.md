@@ -2,7 +2,7 @@
 
 Status: __In progress__
 
-![Video](https://raw.github.com/montagejs/montage-lab/master/skeleton/mobile/components/video.reel/screenshot.png)
+![Video](https://raw.github.com/montagejs/digit/master/video.reel/screenshot.png)
 
 The Video component wraps a video element and provides custom controls.
 
