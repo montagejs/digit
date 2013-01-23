@@ -87,6 +87,10 @@
 
     "toolBar1": { "prototype": "tool-bar.reel", "properties": { "element": {"#": "toolBar1"} } },
     "toolBar2": { "prototype": "tool-bar.reel", "properties": { "element": {"#": "toolBar2"} } },
-    "toolBar3": { "prototype": "tool-bar.reel", "properties": { "element": {"#": "toolBar3"} } }
+    "toolBar3": { "prototype": "tool-bar.reel", "properties": { "element": {"#": "toolBar3"} } },
+    
+    "splitView1": { "prototype": "split-view.reel", "properties": { "element": {"#": "splitView1"} } },
+    "splitView2": { "prototype": "split-view.reel", "properties": { "element": {"#": "splitView2"} } },
+    "splitView3": { "prototype": "split-view.reel", "properties": { "element": {"#": "splitView3"} } }
 
 }
