@@ -1,7 +1,7 @@
 # Skeleton Mobile
 
 ### Setup
-Add a symlink to Montage in node_mudules/
+Add a symlink to Montage in node_modules/
 
 ### Components
 
