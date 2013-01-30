@@ -1,7 +1,9 @@
-# Skeleton Mobile
+![Digit](https://raw.github.com/montagejs/digit/master/assets/logo460x200.png)
 
-### Setup
-Add a symlink to Montage in node_modules/
+## Touch-optimized [Montage](https://github.com/montagejs/montage) components for tablets and phones.
+
+### Install
+Currently Digit is still __work in progress__. To preview the components, add a symlink to Montage inside node_modules/ and then visit index.html on your local server.
 
 ### Components
 
