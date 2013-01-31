@@ -1,4 +1,4 @@
-![Digit](assets/icon.png) Digit
+# ![Digit](assets/images/icon.png) Digit
 
 ## Touch-optimized [Montage](https://github.com/montagejs/montage) components for tablets and phones.
 
