@@ -1,4 +1,4 @@
-![Digit](https://raw.github.com/montagejs/digit/master/assets/logo460x200.png)
+![Digit](assets/icon.png) Digit
 
 ## Touch-optimized [Montage](https://github.com/montagejs/montage) components for tablets and phones.
 

@@ -30,10 +30,10 @@ h1 {
 h1 .logo {
     vertical-align: middle;
     width: 100px;
-    height: 80px;
+    height: 100px;
     margin: 0;
-    background: url(../../assets/images/logo.svg) no-repeat center center;
-    background-size: cover;
+    background: url(../../assets/images/icon.svg) no-repeat center center;
+    background-size: contain;
 }
 
 h1 span {
