@@ -1,6 +1,7 @@
-# ![Digit](assets/images/icon.png) Digit
+![Digit](assets/images/icon.png)
 
-## Touch-optimized [Montage](https://github.com/montagejs/montage) components for tablets and phones.
+# Digit
+Touch-optimized [Montage](https://github.com/montagejs/montage) components for tablets and phones.
 
 ### Install
 Currently Digit is still __work in progress__. To preview the components, add a symlink to Montage inside node_modules/ and then visit index.html on your local server.
