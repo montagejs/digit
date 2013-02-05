@@ -8,7 +8,7 @@
     background-color: #d9d9d9;
 }
 
-.montage-Progress > .montage-Progress-bar {
+.montage-Progress-bar {
     position: absolute;
     height: inherit;
     border-radius: 2px;
