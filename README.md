@@ -19,10 +19,11 @@ Currently Digit is still __work in progress__. To preview the components, add a 
 ![Number](https://raw.github.com/montagejs/digit/master/input-number.reel/screenshot.png)
 ![Range](https://raw.github.com/montagejs/digit/master/input-range.reel/screenshot.png)
 ![Progress](https://raw.github.com/montagejs/digit/master/progress.reel/screenshot.png)
-
+------
+![Audio](https://raw.github.com/montagejs/digit/master/audio.reel/screenshot.png)
 ![Video](https://raw.github.com/montagejs/digit/master/video.reel/screenshot.png)
 ![Map](https://raw.github.com/montagejs/digit/master/map.reel/screenshot.png)
-
+------
 ![Header](https://raw.github.com/montagejs/digit/master/header.reel/screenshot.png)
 ![Tool Bar](https://raw.github.com/montagejs/digit/master/tool-bar.reel/screenshot.png)
 ![List](https://raw.github.com/montagejs/digit/master/list.reel/screenshot.png)

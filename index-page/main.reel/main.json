@@ -62,6 +62,9 @@
     "progress3": { "prototype": "progress.reel", "properties": { "element": {"#": "progress3"} } },
 
 
+    "audio1": { "prototype": "audio.reel", "properties": { "element": {"#": "audio1"} } },
+    "audio2": { "prototype": "audio.reel", "properties": { "element": {"#": "audio2"} } },
+    "audio3": { "prototype": "audio.reel", "properties": { "element": {"#": "audio3"} } },
 
     "video1": { "prototype": "video.reel", "properties": { "element": {"#": "video1"} } },
     "video2": { "prototype": "video.reel", "properties": { "element": {"#": "video2"} } },

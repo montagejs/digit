@@ -91,10 +91,11 @@ td:nth-child(4) { background: hsl(0,0%,24%); }
 
 
 
-/* Montage overrides */ 
+/* Montage overrides */
 
-.montage-Map,
-.montage-Video {
+.montage-Audio,
+.montage-Video,
+.montage-Map {
    display: inline-block;
 }
 
