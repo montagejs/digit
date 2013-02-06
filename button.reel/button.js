@@ -6,10 +6,10 @@ exports.Button = Montage.create(NativeButton, {
 
     hasTemplate: {value: true},
 
-    didSetElement: {
+    willPrepareForDraw: {
         value: function() {
-            NativeButton.didSetElement.call(this);
-            this['class'] = (this['class'] || '') + ' montage-Button';
+            NativeButton.willPrepareForDraw.call(this);
+            this.element.classList.add("montage-Button");
         }
     }
 });

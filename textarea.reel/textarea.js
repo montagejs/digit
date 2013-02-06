@@ -6,10 +6,10 @@ exports.Textarea = Montage.create(NativeTextarea, {
 
     hasTemplate: {value: true},
 
-    didSetElement: {
+    willPrepareForDraw: {
         value: function() {
-            NativeTextarea.didSetElement.call(this);
-            this['class'] = (this['class'] || '') + ' montage-Textarea';
+            NativeTextarea.willPrepareForDraw.call(this);
+            this.element.classList.add("montage-Textarea");
         }
     }
 });

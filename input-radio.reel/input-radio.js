@@ -6,10 +6,10 @@ exports.InputRadio = Montage.create(NativeInputRadio, {
 
     hasTemplate: {value: true},
 
-    didSetElement: {
+    willPrepareForDraw: {
         value: function() {
-            NativeInputRadio.didSetElement.call(this);
-            this['class'] = (this['class'] || '') + ' montage-InputRadio';
+            NativeInputRadio.willPrepareForDraw.call(this);
+            this.element.classList.add("montage-InputRadio");
         }
     }
 
