@@ -6,6 +6,7 @@
 
     <script type="text/montage-serialization">
         {
+        
             "owner": {
                 "properties": {
                     "element": {"#": "inputNumber"}
@@ -16,22 +17,44 @@
                 "prototype": "montage/ui/input-text.reel",
                 "properties": {
                     "element": {"#": "inputText"}
+                },
+                "bindings" : {
+                    "value": {"<->": "@owner.value"}
                 }
             },
             
             "buttonPlus": {
                 "prototype": "montage/ui/button.reel",
                 "properties": {
+                    "identifier": "Plus",
                     "element": {"#": "buttonPlus"}
-                }
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {
+                            "@": "owner"
+                        }
+                    }
+                ]
             },
             
             "buttonMinus": {
                 "prototype": "montage/ui/button.reel",
                 "properties": {
+                    "identifier": "Minus",
                     "element": {"#": "buttonMinus"}
-                }
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {
+                            "@": "owner"
+                        }
+                    }
+                ]
             }
+            
         }
     </script>
 
@@ -39,7 +62,7 @@
 <body>
 
     <span data-montage-id="inputNumber" class="montage-InputNumber">
-        <button data-montage-id="buttonMinus" class="montage-InputNumber-minus">-</button><input data-montage-id="inputText" class="montage-InputNumber-input" type="number" value="123"><button data-montage-id="buttonPlus" class="montage-InputNumber-plus">+</button>
+        <button data-montage-id="buttonMinus" class="montage-InputNumber-minus">-</button><input data-montage-id="inputText" class="montage-InputNumber-input" type="text"><button data-montage-id="buttonPlus" class="montage-InputNumber-plus">+</button>
     </span>
     
 </body>
