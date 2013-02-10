@@ -1,9 +1,8 @@
 .montage-InputCheckbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    outline: none;
     box-sizing: border-box;
     /font-size: 12px;
+    position: relative;
+    display: inline-block;
     width: 1.5em;
     height: 1.5em;
     border-radius: 3px;
@@ -25,11 +24,11 @@
     border-color: #7f7f7f;
 }
 
-.montage-InputCheckbox:checked {
+.montage-InputCheckbox--checked {
     background: #f2f2f2 url(check.svg) no-repeat center;
 }
 
-.montage-InputCheckbox:disabled {
+.montage-InputCheckbox--disabled {
     opacity: .5;
     border-style: dashed;
     pointer-events: none;
@@ -49,7 +48,7 @@
     position: relative;
 }
 
-[data-montage-skin] .montage-InputCheckbox:checked:before {
+[data-montage-skin] .montage-InputCheckbox--checked:before {
     content: "";
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
@@ -57,8 +56,7 @@
 
 
 /* Light ------------------------------------ */
-
-[data-montage-skin="light"] .montage-InputCheckbox:checked:before {
+[data-montage-skin="light"] .montage-InputCheckbox--checked:before {
     background: url(check.svg) no-repeat center;
 }
 
@@ -69,7 +67,7 @@
 }
 
 [data-montage-skin="light"] .montage-InputCheckbox:active,
-[data-montage-skin="light"] .montage-InputCheckbox:checked {
+[data-montage-skin="light"] .montage-InputCheckbox--checked {
     border-color: hsla(0,0%,70%,1);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.2), 0 1px 0 hsla(0,0%,100%,.6);
@@ -78,7 +76,7 @@
 
 /* Dark ------------------------------------ */
 
-[data-montage-skin="dark"] .montage-InputCheckbox:checked:before {
+[data-montage-skin="dark"] .montage-InputCheckbox--checked:before {
     background: url(check-dark.svg) no-repeat center;
 }
 
@@ -89,7 +87,7 @@
 }
 
 [data-montage-skin="dark"] .montage-InputCheckbox:active,
-[data-montage-skin="dark"] .montage-InputCheckbox:checked {
+[data-montage-skin="dark"] .montage-InputCheckbox--checked {
     border-color: hsl(0,0%,15%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,20%), hsl(0,0%,16%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);
