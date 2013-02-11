@@ -3,7 +3,30 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="input-radio.css">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "inputRadio"}
+                }
+            },
+            "pressComposer": {
+                "prototype": "montage/ui/composer/press-composer",
+                "properties": {
+                    "component": {"@": "owner"},
+                    "delegate": {"@": "owner"}
+                },
+                "listeners": [
+                    {
+                        "type": "press",
+                        "listener": {"@": "owner"}
+                    }
+                ]
+            }
+        }
+    </script>
 </head>
 <body>
+    <span data-montage-id="inputRadio" class="montage-InputRadio"></span>
 </body>
 </html>
