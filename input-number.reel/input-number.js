@@ -4,24 +4,23 @@ var Montage = require("montage/core/core").Montage,
 exports.InputNumber = Montage.create(Component, {
 
     _value: {
-        value: null
+        value: 0
     },
-    
+
     _min: {
         value: null
     },
-    
+
     _max: {
         value: null
     },
-    
+
     _step: {
-        value: null
+        value: 1
     },
-    
 
     /**
-    The maximum value allowed in the InputNumber. Can be any number of the string "any".
+    The maximum value allowed in the InputNumber. Can be any number or the string "any".
     @type {number|string}
     @default null
     */
@@ -42,9 +41,8 @@ exports.InputNumber = Montage.create(Component, {
         }
     },
 
-
     /**
-    The maximum value allowed in the InputNumber. Can be any number of the string "any".
+    The maximum value allowed in the InputNumber. Can be any number or the string "any".
     @type {number|string}
     @default null
     */
@@ -84,7 +82,6 @@ exports.InputNumber = Montage.create(Component, {
         }
     },
 
-    
     /**
     The value of the InputNumber
     @type {number}
@@ -110,7 +107,7 @@ exports.InputNumber = Montage.create(Component, {
             }
         }
     },
-    
+
     /**
     Handle increment-button action
     */
@@ -128,7 +125,6 @@ exports.InputNumber = Montage.create(Component, {
         }
     },
 
-   
     /**
     Handle decrement-button action
     */
@@ -145,7 +141,7 @@ exports.InputNumber = Montage.create(Component, {
             }
         }
     },
-    
+
     /**
     Read initial attribute values
     */
@@ -153,8 +149,8 @@ exports.InputNumber = Montage.create(Component, {
         value: function() {
             this.min = this.element.getAttribute('min');
             this.max = this.element.getAttribute('max');
-            this.step = this.element.getAttribute('step') || 1;
-            this.value = this.element.getAttribute('value') || 0;
+            this.step = this.element.getAttribute('step');
+            this.value = this.element.getAttribute('value');
         }
     }
 
