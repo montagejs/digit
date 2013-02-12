@@ -3,7 +3,7 @@ var Montage = require("montage").Montage,
     PressComposer = require("montage/ui/composer/press-composer").PressComposer;
     
 exports.InputRadio = Montage.create(Component, {
-   
+
     _checked: {
         value: false
     },
@@ -33,7 +33,7 @@ exports.InputRadio = Montage.create(Component, {
             }
         }
     },
-    
+
     /**
     The disabled status of the InputRadio
     @type {Boolean}
@@ -51,7 +51,10 @@ exports.InputRadio = Montage.create(Component, {
             }
         }
     },
-   
+
+    /**
+    Handle press event from press composer
+    */
     handlePress: {
         value: function(event) {
             if (this.disabled) {
@@ -61,14 +64,20 @@ exports.InputRadio = Montage.create(Component, {
             this.needsDraw = true;
         }
     },
-   
+
+    /**
+    Read initial values from attributes
+    */
     prepareForDraw: {
         value: function() {
             this.checked = this.element.hasAttribute("checked");
             this.disabled = this.element.hasAttribute("disabled");
         }
     },
-    
+
+    /**
+    Draw the input radio
+    */
     draw: {
         value: function() {
             if (this.checked) {
