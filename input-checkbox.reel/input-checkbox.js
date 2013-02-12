@@ -3,11 +3,11 @@ var Montage = require("montage").Montage,
     PressComposer = require("montage/ui/composer/press-composer").PressComposer;
 
 exports.InputCheckbox = Montage.create(Component, {
-    
+
     _checked: {
         value: false
     },
-    
+
     _disabled: {
         value: false
     },
@@ -29,7 +29,7 @@ exports.InputCheckbox = Montage.create(Component, {
             }
         }
     },
-    
+
     /**
     The disabled status of the InputCheckbox
     @type {Boolean}
@@ -47,7 +47,10 @@ exports.InputCheckbox = Montage.create(Component, {
             }
         }
     },
-   
+
+    /**
+    Handle press event from press composer
+    */
     handlePress: {
         value: function(event) {
             if (this.disabled) {
@@ -57,14 +60,17 @@ exports.InputCheckbox = Montage.create(Component, {
             this.needsDraw = true;
         }
     },
-   
+
+    /**
+    Read initial values from element attributes
+    */
     prepareForDraw: {
         value: function() {
             this.checked = this.element.hasAttribute("checked");
             this.disabled = this.element.hasAttribute("disabled");
         }
     },
-    
+
     draw: {
         value: function() {
             if (this.checked) {
@@ -79,5 +85,5 @@ exports.InputCheckbox = Montage.create(Component, {
             }
         }
     }
-    
+
 });
