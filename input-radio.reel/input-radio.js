@@ -2,7 +2,7 @@ var Montage = require("montage").Montage,
     Component = require("montage/ui/component").Component,
     PressComposer = require("montage/ui/composer/press-composer").PressComposer;
     
-exports.InputRadio = Montage.create(Component, {
+var InputRadio = exports.InputRadio = Montage.create(Component, {
 
     _checked: {
         value: false
@@ -29,7 +29,29 @@ exports.InputRadio = Montage.create(Component, {
             value = !!value;
             if (this._checked !== value) {
                 this._checked = value;
+                if (value) {
+                    if (this.name && this.name !== null) {
+                        // dispatch an event to all other radiobuttons with the same name
+                        var anEvent = document.createEvent("CustomEvent");
+                        anEvent.initCustomEvent("checked", true, true, {
+                            name: this.name
+                        });
+                        InputRadio.dispatchEvent(anEvent);
+                        InputRadio.addEventListener("checked", this);
+                    }
+                }
                 this.needsDraw = true;
+            }
+        }
+    },
+
+    handleChecked:{
+        value: function(evt) {
+            // if we receive this event, it means that some other radiobutton with the same name
+            // has been checked. So, mark this as unchecked.
+            if (this.name === evt.detail.name) {
+                this.checked = false;
+                InputRadio.removeEventListener("checked", this);
             }
         }
     },
@@ -47,6 +69,23 @@ exports.InputRadio = Montage.create(Component, {
             value = !!value;
             if (this._disabled !== value) {
                 this._disabled = value;
+                this.needsDraw = true;
+            }
+        }
+    },
+
+    /**
+    The name of the InputRadio
+    @type {String}
+    @default null
+    */
+    name: {
+        get: function() {
+            return this._name;
+        },
+        set: function(value) {
+            if (this._name !== value) {
+                this._name = value;
                 this.needsDraw = true;
             }
         }
@@ -72,6 +111,9 @@ exports.InputRadio = Montage.create(Component, {
         value: function() {
             this.checked = this.element.hasAttribute("checked");
             this.disabled = this.element.hasAttribute("disabled");
+            if (this.element.hasAttribute("name")) {
+                this.name = this.element.getAttribute("name");
+            }
         }
     },
 
