@@ -9,7 +9,8 @@
             "test": {
                 "prototype": "test/input-number/input-number-test[Test]",
                 "properties": {
-                    "inputNumber": {"@": "inputNumber"}
+                    "inputNumber": {"@": "inputNumber"},
+                    "inputNumberWithAttributes": {"@": "attributes"}
                 }
             },
 
@@ -17,6 +18,13 @@
                 "prototype": "input-number.reel",
                 "properties": {
                     "element": {"#": "inputNumber"}
+                }
+            },
+
+            "attributes": {
+                "prototype": "input-number.reel",
+                "properties": {
+                    "element": {"#": "attributes"}
                 }
             }
         }
@@ -27,5 +35,6 @@
     <h1>InputNumber</h1>
 
     <div data-montage-id="inputNumber"></div>
+    <div data-montage-id="attributes" max="15" min="-4" step="3"></div>
 </body>
 </html>
