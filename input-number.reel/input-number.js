@@ -102,8 +102,7 @@ exports.InputNumber = Montage.create(Component, {
                 value = this.max;
             }
             if (this._value !== value) {
-                this._value = value
-                this.needsDraw = true;
+                this._value = value;
             }
         }
     },
