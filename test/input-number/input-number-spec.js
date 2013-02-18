@@ -159,7 +159,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                                 inputNumber.max = 6;
                                 expect(inputNumber.value).toEqual(2);
                             });
-                            it("TODO value should be changed if value isn't less than max", function() {
+                            it("value should be changed if value isn't less than max", function() {
                                 inputNumber.value = 10;
                                 inputNumber.max = 9;
                                 expect(inputNumber.value).toEqual(9);
