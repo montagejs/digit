@@ -154,9 +154,9 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                             expect(inputNumber.max).toEqual(previousValue);
                         });
                         describe("behavior", function() {
-                            it("value should be unchanged if value already a less than max", function() {
-                                inputNumber.value = 6;
-                                inputNumber.max = 2;
+                            it("value should be unchanged if value is already less than max", function() {
+                                inputNumber.value = 2;
+                                inputNumber.max = 6;
                                 expect(inputNumber.value).toEqual(2);
                             });
                             it("TODO value should be changed if value isn't less than max", function() {
