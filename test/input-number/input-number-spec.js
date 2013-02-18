@@ -78,7 +78,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                             inputNumber.step = 2;
                             expect(inputNumber.step).toEqual(2);
                         });
-                        it("TODO cannot be negative", function() {
+                        it("cannot be negative", function() {
                             // Inspiration from:
                             //  http://dev.w3.org/html5/spec/common-input-element-attributes.html#attr-input-step
                             var previousValue = inputNumber.step;

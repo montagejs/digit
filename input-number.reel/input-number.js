@@ -64,7 +64,7 @@ exports.InputNumber = Montage.create(Component, {
    },
 
     /**
-    The amount the value changes when using the plus/minus buttons.
+    The amount the value changes when using the plus/minus buttons. Can be any positive number.
     @type {number}
     @default 1
     */
@@ -73,7 +73,7 @@ exports.InputNumber = Montage.create(Component, {
             return this._step;
         },
         set: function(value) {
-            if (isNaN(value = parseFloat(value))) {
+            if (isNaN(value = parseFloat(value)) || value <= 0) {
                 return false;
             }
             if (this._step !== value) {
