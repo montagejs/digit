@@ -8,11 +8,11 @@ exports.InputNumber = Montage.create(Component, {
     },
 
     _min: {
-        value: null
+        value: "any"
     },
 
     _max: {
-        value: null
+        value: "any"
     },
 
     _step: {
@@ -22,7 +22,7 @@ exports.InputNumber = Montage.create(Component, {
     /**
     The maximum value allowed in the InputNumber. Can be any number or the string "any".
     @type {number|string}
-    @default null
+    @default "any"
     */
     min: {
         get: function() {
@@ -44,7 +44,7 @@ exports.InputNumber = Montage.create(Component, {
     /**
     The maximum value allowed in the InputNumber. Can be any number or the string "any".
     @type {number|string}
-    @default null
+    @default "any"
     */
     max: {
         get: function() {
