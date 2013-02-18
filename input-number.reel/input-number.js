@@ -112,15 +112,18 @@ exports.InputNumber = Montage.create(Component, {
     */
     handlePlusAction: {
         value: function(event) {
-            if (this.value % this.step) {
-                if (this.value < 0) {
-                    this.value -= this.value % this.step;
+            var stepBase = (typeof this.min == "number") ? this.min : 0;
+            var value = this.value - stepBase;
+            if (value % this.step) {
+                if (value < 0) {
+                    value -= value % this.step;
                 } else {
-                    this.value += this.step - (this.value % this.step);
+                    value += this.step - (value % this.step);
                 }
             } else {
-                this.value += this.step;
+                value += this.step;
             }
+            this.value = value + stepBase;
         }
     },
 
@@ -129,15 +132,18 @@ exports.InputNumber = Montage.create(Component, {
     */
     handleMinusAction: {
         value: function(event) {
-            if (this.value % this.step) {
-                if (this.value > 0) {
-                    this.value -= this.value % this.step;
+            var stepBase = (typeof this.min == "number") ? this.min : 0;
+            var value = this.value - stepBase;
+            if (value % this.step) {
+                if (value > 0) {
+                    value -= value % this.step;
                 } else {
-                    this.value -= this.step + (this.value % this.step);
+                    value -= this.step + (value % this.step);
                 }
             } else {
-                this.value -= this.step;
+                value -= this.step;
             }
+            this.value = value + stepBase;
         }
     },
 

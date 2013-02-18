@@ -177,7 +177,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                             inputNumber.handlePlusAction();
                             expect(inputNumber.value).toEqual(8);
                         });
-                        it("TODO should use min as the step base", function () {
+                        it("should use min as the step base", function () {
                             inputNumber.min = 1;
                             inputNumber.value = 6;
                             inputNumber.step = 2;
@@ -208,7 +208,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                             inputNumber.handleMinusAction();
                             expect(inputNumber.value).toEqual(4);
                         });
-                        it("TODO should use min as the step base", function () {
+                        it("should use min as the step base", function () {
                             inputNumber.min = 1;
                             inputNumber.value = 6;
                             inputNumber.step = 2;
