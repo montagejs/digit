@@ -98,7 +98,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                    });
                     describe("min", function() {
                         it("should have correct default", function() {
-                            expect(defaultMin).toBeNull();
+                            expect(defaultMin).toEqual("any");
                         });
                         it("can be set", function() {
                             inputNumber.min = 2;
@@ -133,7 +133,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                     });
                     describe("max", function() {
                         it("should have correct default", function() {
-                            expect(defaultMax).toBeNull();
+                            expect(defaultMax).toEqual("any");
                         });
                         it("can be set", function() {
                             inputNumber.max = 2;
@@ -171,7 +171,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                     describe("plus", function () {
                         //http://www.w3.org/html/wg/drafts/html/master/forms.html#dom-input-stepup
                         it("should increment by a unit of step", function () {
-                            inputNumber.min = null;
+                            inputNumber.min = "any";
                             inputNumber.value = 6;
                             inputNumber.step = 2;
                             inputNumber.handlePlusAction();
@@ -202,7 +202,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                     describe("minus", function () {
                         //http://www.w3.org/html/wg/drafts/html/master/forms.html#dom-input-stepup
                         it("should decrement by a unit of step", function () {
-                            inputNumber.min = null;
+                            inputNumber.min = "any";
                             inputNumber.value = 6;
                             inputNumber.step = 2;
                             inputNumber.handleMinusAction();
