@@ -193,7 +193,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                         it("should not go above max", function () {
                             inputNumber.min = 1;
                             inputNumber.max = 11;
-                            inputNumber.value = 9.5;
+                            inputNumber.value = 10.5;
                             inputNumber.step = 3;
                             inputNumber.handlePlusAction();
                             expect(inputNumber.value).toEqual(11);
