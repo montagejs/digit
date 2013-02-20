@@ -9,7 +9,8 @@
             "test": {
                 "prototype": "test/input-checkbox/input-checkbox-test[Test]",
                 "properties": {
-                    "inputCheckbox": {"@": "inputCheckbox"}
+                    "inputCheckbox": {"@": "inputCheckbox"},
+                    "inputCheckboxAttributeChecked": {"@": "inputCheckboxChecked"}
                 }
             },
 
@@ -17,6 +18,13 @@
                 "prototype": "input-checkbox.reel",
                 "properties": {
                     "element": {"#": "inputCheckbox"}
+                }
+            },
+            
+            "inputCheckboxChecked": {
+                "prototype": "input-checkbox.reel",
+                "properties": {
+                    "element": {"#": "inputCheckboxChecked"}
                 }
             }
         }
@@ -27,5 +35,6 @@
     <h1>InputCheckbox</h1>
 
     <div data-montage-id="inputCheckbox"></div>
+    <div data-montage-id="inputCheckboxChecked" checked></div>
 </body>
 </html>
