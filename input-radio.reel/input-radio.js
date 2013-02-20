@@ -39,6 +39,8 @@ var InputRadio = exports.InputRadio = Montage.create(Component, {
                         InputRadio.dispatchEvent(anEvent);
                         InputRadio.addEventListener("checked", this);
                     }
+                } else {
+                    InputRadio.removeEventListener("checked", this);
                 }
                 this.needsDraw = true;
             }
@@ -51,7 +53,6 @@ var InputRadio = exports.InputRadio = Montage.create(Component, {
             // has been checked. So, mark this as unchecked.
             if (this.name === evt.detail.name) {
                 this.checked = false;
-                InputRadio.removeEventListener("checked", this);
             }
         }
     },
@@ -96,10 +97,10 @@ var InputRadio = exports.InputRadio = Montage.create(Component, {
     */
     handlePress: {
         value: function(event) {
-            if (this.disabled) {
+            if (this.disabled || this.checked) {
                 return false;
             }
-            this.checked = !this.checked;
+            this.checked = true;
             this.needsDraw = true;
         }
     },
