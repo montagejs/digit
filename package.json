@@ -2,11 +2,10 @@
     "name": "digit",
     "version": "0.1.0",
     "dependencies": {
-        "montage": "~0.12.3",
-        "montage-testing": "~0.1.1"
+        "montage": "~0.12.4"
     },
     "devDependencies": {
-        "testacular": "~0.5.7"
+        "montage-testing": "~0.1.1"
     }
 }
 
