@@ -8,8 +8,29 @@ exports.InputCheckbox = Montage.create(Component, {
         value: false
     },
 
+    _required: {
+        value: false
+    },
+
     _disabled: {
         value: false
+    },
+
+    /**
+    The required status of the InputCheckbox
+    @type {Boolean}
+    @default false
+    */
+    required: {
+        get: function() {
+            return this._required;
+        },
+        set: function(value) {
+            value = !!value;
+            if (this._required !== value) {
+                this._required = value;
+            }
+        }
     },
 
     /**
@@ -68,6 +89,7 @@ exports.InputCheckbox = Montage.create(Component, {
         value: function() {
             this.checked = this.element.hasAttribute("checked");
             this.disabled = this.element.hasAttribute("disabled");
+            this.required = this.element.hasAttribute("required");
         }
     },
 
@@ -82,6 +104,11 @@ exports.InputCheckbox = Montage.create(Component, {
                 this.element.classList.add("montage-InputCheckbox--disabled");
             } else {
                 this.element.classList.remove("montage-InputCheckbox--disabled");
+            }
+            if (this.required) {
+                this.element.classList.add("montage-InputCheckbox--required");
+            } else {
+                this.element.classList.remove("montage-InputCheckbox--required");
             }
         }
     }
