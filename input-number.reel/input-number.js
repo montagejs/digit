@@ -7,6 +7,10 @@ exports.InputNumber = Montage.create(Component, {
         value: 0
     },
 
+    _required: {
+        value: false
+    },
+
     _min: {
         value: "any"
     },
@@ -17,6 +21,23 @@ exports.InputNumber = Montage.create(Component, {
 
     _step: {
         value: 1
+    },
+
+    /**
+    The required status of the InputNumber
+    @type {boolean}
+    @default false
+    */
+    required: {
+        get: function() {
+            return this._required;
+        },
+        set: function(value) {
+            value = !!value;
+            if (this._required !== value) {
+                this._required = value;
+            }
+        }
     },
 
     /**
@@ -156,6 +177,7 @@ exports.InputNumber = Montage.create(Component, {
             this.max = this.element.getAttribute('max');
             this.step = this.element.getAttribute('step');
             this.value = this.element.getAttribute('value');
+            this.required = this.element.hasAttribute('required');
         }
     }
 
