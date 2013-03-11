@@ -13,15 +13,17 @@ TestPageLoader.queueTest("input-checkbox-test", function(testPage) {
                 it("can be created", function() {
                     expect(testPage.test.inputCheckbox).toBeDefined();
                 });
-                var inputCheckbox, defaultChecked;
+                var inputCheckbox, defaultChecked, defaultRequired;
                 beforeEach(function() {
                     if (!inputCheckbox) {
                         inputCheckbox = testPage.test.inputCheckbox;
                         //keep default values
                         defaultChecked = inputCheckbox.checked;
+                        defaultRequired = inputCheckbox.required;
                     }
                     //restore default values
                     inputCheckbox.checked = defaultChecked;
+                    inputCheckbox.required = defaultRequired;
                 });
                 describe("property", function() {
                     describe("checked", function() {
@@ -31,6 +33,17 @@ TestPageLoader.queueTest("input-checkbox-test", function(testPage) {
                         it("can be set", function() {
                             inputCheckbox.checked = true;
                             expect(inputCheckbox.checked).toEqual(true);
+                        });
+                    });
+                });
+                describe("property", function() {
+                    describe("required", function() {
+                        it("should have correct default", function() {
+                            expect(defaultRequired).toEqual(false);
+                        });
+                        it("can be set", function() {
+                            inputCheckbox.required = true;
+                            expect(inputCheckbox.required).toEqual(true);
                         });
                     });
                 });
@@ -50,18 +63,21 @@ TestPageLoader.queueTest("input-checkbox-test", function(testPage) {
                 });
             });
             describe("initialization attributes", function () {
-                var inputCheckbox, defaultChecked;
+                var inputCheckbox, defaultChecked, defaultRequired;
                 beforeEach(function() {
                     if (!inputCheckbox) {
                         inputCheckbox = testPage.test.inputCheckboxAttributeChecked;
                         //keep default values
                         defaultChecked = inputCheckbox.checked;
+                        defaultRequired = inputCheckbox.required;
                     }
                     //restore default values
                     inputCheckbox.checked = defaultChecked;
+                    inputCheckbox.required = defaultRequired;
                 });
                 it("should have expected property values", function () {
                     expect(inputCheckbox.checked).toEqual(true);
+                    expect(inputCheckbox.required).toEqual(true);
                 });
             });
         });
