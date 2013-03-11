@@ -7,11 +7,15 @@ var InputRadio = exports.InputRadio = Montage.create(Component, {
     _checked: {
         value: false
     },
-    
+
     _disabled: {
         value: false
     },
-    
+
+    _required: {
+        value: false
+    },
+
     _name: {
         value: null
     },
@@ -71,6 +75,23 @@ var InputRadio = exports.InputRadio = Montage.create(Component, {
             if (this._disabled !== value) {
                 this._disabled = value;
                 this.needsDraw = true;
+            }
+        }
+    },
+
+    /**
+    The required status of the InputRadio
+    @type {Boolean}
+    @default false
+    */
+    required: {
+        get: function() {
+            return this._required;
+        },
+        set: function(value) {
+            value = !!value;
+            if (this._required !== value) {
+                this._required = value;
             }
         }
     },
