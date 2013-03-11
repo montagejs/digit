@@ -9,7 +9,8 @@
             "test": {
                 "prototype": "test/input-text/input-text-test[Test]",
                 "properties": {
-                    "inputText": {"@": "inputText"}
+                    "inputText": {"@": "inputText"},
+                    "inputTextWithAttributes": {"@": "inputTextWithAttributes"}
                 }
             },
 
@@ -17,6 +18,13 @@
                 "prototype": "ui/input-text.reel",
                 "properties": {
                     "element": {"#": "inputText"}
+                }
+            },
+
+            "inputTextWithAttributes": {
+                "prototype": "input-text.reel",
+                "properties": {
+                    "element": {"#": "inputTextWithAttributes"}
                 }
             }
         }
@@ -27,6 +35,6 @@
     <h1>InputText</h1>
 
     <div data-montage-id="inputText"></div>
-    <input data-montage-id="inputText" value="a string" maxlength=7 required></div>
+    <input data-montage-id="inputTextWithAttributes" value="a string" maxlength=7 required></div>
 </body>
 </html>
