@@ -75,8 +75,10 @@ TestPageLoader.queueTest("input-checkbox-test", function(testPage) {
                     inputCheckbox.checked = defaultChecked;
                     inputCheckbox.required = defaultRequired;
                 });
-                it("should have expected property values", function () {
+                it("should have expected checked property value", function () {
                     expect(inputCheckbox.checked).toEqual(true);
+                });
+                it("should have expected required property value", function () {
                     expect(inputCheckbox.required).toEqual(true);
                 });
             });
