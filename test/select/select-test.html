@@ -9,7 +9,9 @@
             "test": {
                 "prototype": "test/select/select-test[Test]",
                 "properties": {
-                    "select": {"@": "select"}
+                    "select": {"@": "select"},
+                    "selectWithOptions": {"@": "selectWithOptions"},
+                    "selectWithAttributes": {"@": "selectWithAttributes"}
                 }
             },
 
@@ -17,6 +19,20 @@
                 "prototype": "ui/select.reel",
                 "properties": {
                     "element": {"#": "select"}
+                }
+            },
+
+            "selectWithOptions": {
+                "prototype": "select.reel",
+                "properties": {
+                    "element": {"#": "selectWithOptions"}
+                }
+            },
+
+            "selectWithAttributes": {
+                "prototype": "select.reel",
+                "properties": {
+                    "element": {"#": "selectWithAttributes"}
                 }
             }
         }
@@ -27,5 +43,15 @@
     <h1>Select</h1>
 
     <div data-montage-id="select"></div>
+
+    <select data-montage-id="selectWithOptions">
+        <option value="apple">Green</option>
+        <option value="banana">Yellow</option>
+    </select>
+
+    <select data-montage-id="selectWithAttributes" required>
+        <option value="apple">Green</option>
+        <option value="banana" selected>Yellow</option>
+    </select>
 </body>
 </html>
