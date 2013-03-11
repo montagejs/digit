@@ -13,15 +13,17 @@ TestPageLoader.queueTest("input-text-test", function(testPage) {
                 it("can be created", function() {
                     expect(testPage.test.inputText).toBeDefined();
                 });
-                var inputText, defaultValue;
+                var inputText, defaultValue, defaultRequired;
                 beforeEach(function() {
                     if (!inputText) {
                         inputText = testPage.test.inputText;
                         //keep default values
                         defaultValue = inputText.value;
+                        defaultRequired = inputText.required;
                     }
                     //restore default values
                     inputText.value = defaultValue;
+                    inputText.required = defaultRequired;
                 });
                 describe("property", function() {
                     describe("value", function() {
@@ -32,9 +34,36 @@ TestPageLoader.queueTest("input-text-test", function(testPage) {
                             inputText.value = "a string";
                             expect(inputText.value).toEqual("a string");
                         });
-                        describe("behavior", function() {
+                    });
+                    describe("required", function() {
+                        it("TODO should have correct default", function() {
+                            expect(defaultRequired).toEqual(false);
+                        });
+                        it("TODO can be set", function() {
+                            inputText.required = true;
+                            expect(inputText.required).toEqual(true);
                         });
                     });
+                });
+            });
+            describe("initialization attributes", function () {
+                var inputText, defaultValue, defaultRequired;
+                beforeEach(function() {
+                    if (!inputText) {
+                        inputText = testPage.test.inputTextWithAttributes;
+                        //keep default values
+                        defaultValue = inputText.value;
+                        defaultRequired = inputText.required;
+                    }
+                    //restore default values
+                    inputText.value = defaultValue;
+                    inputText.required = defaultRequired;
+                });
+                it("TODO should have expected value property value", function () {
+                    expect(inputText.value).toEqual("a string");
+                });
+                it("TODO should have expected required property value", function () {
+                    expect(inputText.required).toEqual(true);
                 });
             });
         });
