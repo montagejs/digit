@@ -9,7 +9,8 @@
             "test": {
                 "prototype": "test/textarea/textarea-test[Test]",
                 "properties": {
-                    "textarea": {"@": "textarea"}
+                    "textarea": {"@": "textarea"},
+                    "textareaWithAttributes": {"@": "textareaWithAttributes"}
                 }
             },
 
@@ -17,6 +18,13 @@
                 "prototype": "ui/textarea.reel",
                 "properties": {
                     "element": {"#": "textarea"}
+                }
+            },
+
+            "textareaWithAttributes": {
+                "prototype": "textarea.reel",
+                "properties": {
+                    "element": {"#": "textareaWithAttributes"}
                 }
             }
         }
@@ -27,5 +35,6 @@
     <h1>Textarea</h1>
 
     <div data-montage-id="textarea"></div>
+    <textarea data-montage-id="textareaWithAttributes" maxlength=150 required>a string</textarea>
 </body>
 </html>

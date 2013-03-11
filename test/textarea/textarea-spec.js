@@ -57,6 +57,31 @@ TestPageLoader.queueTest("textarea-test", function(testPage) {
                     });
                 });
             });
+            describe("initialization attributes", function () {
+                var textarea, defaultValue, defaultRequired, defaultMaxLength;
+                beforeEach(function() {
+                    if (!textarea) {
+                        textarea = testPage.test.textareaWithAttributes;
+                        //keep default values
+                        defaultValue = textarea.value;
+                        defaultRequired = textarea.required;
+                        defaultMaxLength = textarea.maxLength;
+                    }
+                    //restore default values
+                    textarea.value = defaultValue;
+                    textarea.required = defaultRequired;
+                    textarea.maxLength = defaultMaxLength;
+                });
+                it("TODO should have expected value property value", function () {
+                    expect(textarea.value).toEqual("a string");
+                });
+                it("TODO should have expected required property value", function () {
+                    expect(textarea.required).toEqual(true);
+                });
+                it("TODO should have expected maxLength property value", function () {
+                    expect(textarea.maxLength).toEqual(150);
+                });
+            });
         });
     });
 });
