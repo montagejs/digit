@@ -22,12 +22,14 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                         defaultStep = inputNumber.step;
                         defaultMin = inputNumber.min;
                         defaultMax = inputNumber.max;
+                        defaultRequired = inputNumber.required;
                     }
                     //restore default values
                     inputNumber.min = defaultMin;
                     inputNumber.max = defaultMax;
                     inputNumber.step = defaultStep;
                     inputNumber.value = defaultValue;
+                    inputNumber.required = defaultRequired;
                 });
                 describe("property", function() {
                     describe("value", function() {
@@ -166,6 +168,15 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                             });
                         });
                     });
+                    describe("required", function() {
+                        it("should have correct default", function() {
+                            expect(defaultRequired).toEqual(false);
+                        });
+                        it("can be set", function() {
+                            inputNumber.required = true;
+                            expect(inputNumber.required).toEqual(true);
+                        });
+                    });
                 });
                 describe("interaction", function () {
                     describe("plus", function () {
@@ -238,6 +249,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                     if (!inputNumber) {
                         inputNumber = testPage.test.inputNumberWithAttributes;
                         //keep default values
+                        defaultRequired = inputNumber.required;
                         defaultValue = inputNumber.value;
                         defaultStep = inputNumber.step;
                         defaultMin = inputNumber.min;
@@ -248,8 +260,10 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                     inputNumber.max = defaultMax;
                     inputNumber.step = defaultStep;
                     inputNumber.value = defaultValue;
+                    inputNumber.required = defaultRequired;
                 });
                 it("should have expected property values", function () {
+                    expect(inputNumber.required).toEqual(true);
                     expect(inputNumber.min).toEqual(-4);
                     expect(inputNumber.max).toEqual(15);
                     expect(inputNumber.step).toEqual(3);
