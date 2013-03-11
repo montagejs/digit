@@ -262,10 +262,16 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                     inputNumber.value = defaultValue;
                     inputNumber.required = defaultRequired;
                 });
-                it("should have expected property values", function () {
+                it("should have expected required property value", function () {
                     expect(inputNumber.required).toEqual(true);
+                });
+                it("should have expected min property value", function () {
                     expect(inputNumber.min).toEqual(-4);
+                });
+                it("should have expected max property value", function () {
                     expect(inputNumber.max).toEqual(15);
+                });
+                it("should have expected step property value", function () {
                     expect(inputNumber.step).toEqual(3);
                 });
 
