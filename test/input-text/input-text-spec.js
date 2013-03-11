@@ -13,17 +13,19 @@ TestPageLoader.queueTest("input-text-test", function(testPage) {
                 it("can be created", function() {
                     expect(testPage.test.inputText).toBeDefined();
                 });
-                var inputText, defaultValue, defaultRequired;
+                var inputText, defaultValue, defaultRequired, defaultMaxLength;
                 beforeEach(function() {
                     if (!inputText) {
                         inputText = testPage.test.inputText;
                         //keep default values
                         defaultValue = inputText.value;
                         defaultRequired = inputText.required;
+                        defaultMaxLength = inputText.maxLength;
                     }
                     //restore default values
                     inputText.value = defaultValue;
                     inputText.required = defaultRequired;
+                    inputText.maxLength = defaultMaxLength;
                 });
                 describe("property", function() {
                     describe("value", function() {
@@ -44,26 +46,40 @@ TestPageLoader.queueTest("input-text-test", function(testPage) {
                             expect(inputText.required).toEqual(true);
                         });
                     });
+                    describe("maxLength", function() {
+                        it("TODO should have correct default", function() {
+                            expect(defaultMaxLength).toEqual(-1);
+                        });
+                        it("TODO can be set", function() {
+                            inputText.maxLength = 12;
+                            expect(inputText.maxLength).toEqual(12);
+                        });
+                    });
                 });
             });
             describe("initialization attributes", function () {
-                var inputText, defaultValue, defaultRequired;
+                var inputText, defaultValue, defaultRequired, defaultMaxLength;
                 beforeEach(function() {
                     if (!inputText) {
                         inputText = testPage.test.inputTextWithAttributes;
                         //keep default values
                         defaultValue = inputText.value;
                         defaultRequired = inputText.required;
+                        defaultMaxLength = inputText.maxLength;
                     }
                     //restore default values
                     inputText.value = defaultValue;
                     inputText.required = defaultRequired;
+                    inputText.maxLength = defaultMaxLength;
                 });
                 it("TODO should have expected value property value", function () {
                     expect(inputText.value).toEqual("a string");
                 });
                 it("TODO should have expected required property value", function () {
                     expect(inputText.required).toEqual(true);
+                });
+                it("TODO should have expected maxLength property value", function () {
+                    expect(inputText.maxLength).toEqual(7);
                 });
             });
         });
