@@ -9,14 +9,30 @@
             "test": {
                 "prototype": "test/input-radio/input-radio-test[Test]",
                 "properties": {
-                    "inputRadio": {"@": "inputRadio"}
+                    "inputRadio1": {"@": "inputRadio1"},
+                    "inputRadio2": {"@": "inputRadio2"},
+                    "inputRadioChecked": {"@": "inputRadioChecked"}
                 }
             },
 
-            "inputRadio": {
+            "inputRadio1": {
                 "prototype": "input-radio.reel",
                 "properties": {
-                    "element": {"#": "inputRadio"}
+                    "element": {"#": "inputRadio1"}
+                }
+            },
+
+            "inputRadio2": {
+                "prototype": "input-radio.reel",
+                "properties": {
+                    "element": {"#": "inputRadio2"}
+                }
+            },
+
+            "inputRadioChecked": {
+                "prototype": "input-radio.reel",
+                "properties": {
+                    "element": {"#": "inputRadioChecked"}
                 }
             }
         }
@@ -26,6 +42,9 @@
 <body>
     <h1>InputRadio</h1>
 
-    <div data-montage-id="inputRadio"></div>
+    <div data-montage-id="inputRadio1" name="inputRadioTest"></div>
+    <div data-montage-id="inputRadio2" name="inputRadioTest"></div>
+    
+    <div data-montage-id="inputRadioChecked" checked required></div>
 </body>
 </html>
