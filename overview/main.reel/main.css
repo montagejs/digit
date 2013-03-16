@@ -32,7 +32,7 @@ h1 .logo {
     width: 100px;
     height: 100px;
     margin: 0;
-    background: url(../../assets/images/icon.svg) no-repeat center center;
+    background: url(../assets/images/icon.svg) no-repeat center center;
     background-size: contain;
 }
 
