@@ -1,4 +1,4 @@
-![Digit](../assets/images/icon.png)
+![Digit](assets/images/icon.png)
 
 ### Overview
 
