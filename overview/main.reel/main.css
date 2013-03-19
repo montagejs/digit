@@ -89,6 +89,12 @@ td:nth-child(4) { background: hsl(0,0%,24%); }
 .layout td:nth-child(3) { background: hsl(0,0%,70%); }
 .layout td:nth-child(4) { background: hsl(0,0%,40%); }
 
+.modal td:nth-child(2),
+.modal td:nth-child(3),
+.modal td:nth-child(4) { 
+    background: hsla(0,0%,0%,.8);
+}
+
 
 
 /* Montage overrides */

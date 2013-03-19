@@ -96,6 +96,10 @@
     "ActionSheet2": { "prototype": "action-sheet.reel", "properties": { "element": {"#": "ActionSheet2"} } },
     "ActionSheet3": { "prototype": "action-sheet.reel", "properties": { "element": {"#": "ActionSheet3"} } },
     
+    "Modal1": { "prototype": "modal.reel", "properties": { "element": {"#": "Modal1"} } },
+    "Modal2": { "prototype": "modal.reel", "properties": { "element": {"#": "Modal2"} } },
+    "Modal3": { "prototype": "modal.reel", "properties": { "element": {"#": "Modal3"} } },
+    
     "splitView1": { "prototype": "split-view.reel", "properties": { "element": {"#": "splitView1"} } },
     "splitView2": { "prototype": "split-view.reel", "properties": { "element": {"#": "splitView2"} } },
     "splitView3": { "prototype": "split-view.reel", "properties": { "element": {"#": "splitView3"} } }

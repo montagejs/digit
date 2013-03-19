@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="modal.css" rel="stylesheet">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "Modal"}
+                }
+            },
+            
+            "ButtonCancel": {
+                "prototype": "../button.reel",
+                "properties": {
+                    "element": {"#": "ButtonCancel"}
+                }
+            },
+            
+            "ButtonOK": {
+                "prototype": "../button.reel",
+                "properties": {
+                    "element": {"#": "ButtonOK"}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div data-montage-id="Modal" class="montage-Modal">
+	    <header class="montage-Modal-header">Title</header>
+	    <div class="montage-Modal-content">Modal content</div>
+	    <footer class="montage-Modal-footer">
+	        <button data-montage-id="ButtonCancel" class="montage-Modal-button--cancel">Cancel</button>
+	        <button data-montage-id="ButtonOK" class="Button montage-Modal-button--ok">OK</button>
+	    </footer>
+	</div>
+</body>
+</html>
