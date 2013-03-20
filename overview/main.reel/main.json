@@ -99,6 +99,10 @@
     "Modal1": { "prototype": "modal.reel", "properties": { "element": {"#": "Modal1"} } },
     "Modal2": { "prototype": "modal.reel", "properties": { "element": {"#": "Modal2"} } },
     "Modal3": { "prototype": "modal.reel", "properties": { "element": {"#": "Modal3"} } },
+ 
+    "Notification1": { "prototype": "notification.reel", "properties": { "element": {"#": "Notification1"} } },
+    "Notification2": { "prototype": "notification.reel", "properties": { "element": {"#": "Notification2"} } },
+    "Notification3": { "prototype": "notification.reel", "properties": { "element": {"#": "Notification3"} } },
     
     "splitView1": { "prototype": "split-view.reel", "properties": { "element": {"#": "splitView1"} } },
     "splitView2": { "prototype": "split-view.reel", "properties": { "element": {"#": "splitView2"} } },

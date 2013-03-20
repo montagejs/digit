@@ -24,3 +24,4 @@
 ![Tab Bar](https://raw.github.com/montagejs/digit/master/tab-bar.reel/screenshot.png)
 ![Action Sheet](https://raw.github.com/montagejs/digit/master/action-sheet.reel/screenshot.png)
 ![Modal](https://raw.github.com/montagejs/digit/master/modal.reel/screenshot.png)
+![Notification](https://raw.github.com/montagejs/digit/master/notification.reel/screenshot.png)
