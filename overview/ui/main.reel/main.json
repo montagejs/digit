@@ -1,0 +1,99 @@
+{
+    "owner": {
+        "properties": {
+            "element": {"#": "main"}
+        }
+    },
+
+    "button1": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "button1"} } },
+    "button2": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "button2"} } },
+    "button3": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "button3"} } },
+
+    "buttonGroup1": { "prototype": "digit/ui/button-group.reel", "properties": { "element": {"#": "buttonGroup1"} } },
+    "buttonGroup1item1": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroup1item1"} } },
+    "buttonGroup1item2": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroup1item2"} } },
+    "buttonGroup1item3": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroup1item3"} } },
+    "buttonGroup2": { "prototype": "digit/ui/button-group.reel", "properties": { "element": {"#": "buttonGroup2"} } },
+    "buttonGroup2item1": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroup2item1"} } },
+    "buttonGroup2item2": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroup2item2"} } },
+    "buttonGroup2item3": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroup2item3"} } },
+    "buttonGroup3": { "prototype": "digit/ui/button-group.reel", "properties": { "element": {"#": "buttonGroup3"} } },
+    "buttonGroup3item1": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroup3item1"} } },
+    "buttonGroup3item2": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroup3item2"} } },
+    "buttonGroup3item3": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroup3item3"} } },
+
+    "toggle1": { "prototype": "digit/ui/toggle.reel", "properties": { "element": {"#": "toggle1"} } },
+    "toggle2": { "prototype": "digit/ui/toggle.reel", "properties": { "element": {"#": "toggle2"} } },
+    "toggle3": { "prototype": "digit/ui/toggle.reel", "properties": { "element": {"#": "toggle3"} } },
+
+    "inputCheckbox1": { "prototype": "digit/ui/input-checkbox.reel", "properties": { "element": {"#": "inputCheckbox1"} } },
+    "inputCheckbox2": { "prototype": "digit/ui/input-checkbox.reel", "properties": { "element": {"#": "inputCheckbox2"} } },
+    "inputCheckbox3": { "prototype": "digit/ui/input-checkbox.reel", "properties": { "element": {"#": "inputCheckbox3"} } },
+
+    "inputRadio1A": { "prototype": "digit/ui/input-radio.reel", "properties": { "element": {"#": "inputRadio1A"} } },
+    "inputRadio1B": { "prototype": "digit/ui/input-radio.reel", "properties": { "element": {"#": "inputRadio1B"} } },
+    "inputRadio2A": { "prototype": "digit/ui/input-radio.reel", "properties": { "element": {"#": "inputRadio2A"} } },
+    "inputRadio2B": { "prototype": "digit/ui/input-radio.reel", "properties": { "element": {"#": "inputRadio2B"} } },
+    "inputRadio3A": { "prototype": "digit/ui/input-radio.reel", "properties": { "element": {"#": "inputRadio3A"} } },
+    "inputRadio3B": { "prototype": "digit/ui/input-radio.reel", "properties": { "element": {"#": "inputRadio3B"} } },
+
+    "select1": { "prototype": "digit/ui/select.reel", "properties": { "element": {"#": "select1"} } },
+    "select2": { "prototype": "digit/ui/select.reel", "properties": { "element": {"#": "select2"} } },
+    "select3": { "prototype": "digit/ui/select.reel", "properties": { "element": {"#": "select3"} } },
+
+    "inputText1": { "prototype": "digit/ui/input-text.reel", "properties": { "element": {"#": "inputText1"} } },
+    "inputText2": { "prototype": "digit/ui/input-text.reel", "properties": { "element": {"#": "inputText2"} } },
+    "inputText3": { "prototype": "digit/ui/input-text.reel", "properties": { "element": {"#": "inputText3"} } },
+
+    "textarea1": { "prototype": "digit/ui/textarea.reel", "properties": { "element": {"#": "textarea1"} } },
+    "textarea2": { "prototype": "digit/ui/textarea.reel", "properties": { "element": {"#": "textarea2"} } },
+    "textarea3": { "prototype": "digit/ui/textarea.reel", "properties": { "element": {"#": "textarea3"} } },
+
+    "inputNumber1": { "prototype": "digit/ui/input-number.reel", "properties": { "element": {"#": "inputNumber1"} } },
+    "inputNumber2": { "prototype": "digit/ui/input-number.reel", "properties": { "element": {"#": "inputNumber2"} } },
+    "inputNumber3": { "prototype": "digit/ui/input-number.reel", "properties": { "element": {"#": "inputNumber3"} } },
+
+    "inputRange1": { "prototype": "digit/ui/input-range.reel", "properties": { "element": {"#": "inputRange1"} } },
+    "inputRange2": { "prototype": "digit/ui/input-range.reel", "properties": { "element": {"#": "inputRange2"} } },
+    "inputRange3": { "prototype": "digit/ui/input-range.reel", "properties": { "element": {"#": "inputRange3"} } },
+
+    "progress1": { "prototype": "digit/ui/progress.reel", "properties": { "element": {"#": "progress1"} } },
+    "progress2": { "prototype": "digit/ui/progress.reel", "properties": { "element": {"#": "progress2"} } },
+    "progress3": { "prototype": "digit/ui/progress.reel", "properties": { "element": {"#": "progress3"} } },
+
+
+    "audio1": { "prototype": "digit/ui/audio.reel", "properties": { "element": {"#": "audio1"} } },
+    "audio2": { "prototype": "digit/ui/audio.reel", "properties": { "element": {"#": "audio2"} } },
+    "audio3": { "prototype": "digit/ui/audio.reel", "properties": { "element": {"#": "audio3"} } },
+
+    "video1": { "prototype": "digit/ui/video.reel", "properties": { "element": {"#": "video1"} } },
+    "video2": { "prototype": "digit/ui/video.reel", "properties": { "element": {"#": "video2"} } },
+    "video3": { "prototype": "digit/ui/video.reel", "properties": { "element": {"#": "video3"} } },
+
+    "map1": { "prototype": "digit/ui/map.reel", "properties": { "element": {"#": "map1"} } },
+    "map2": { "prototype": "digit/ui/map.reel", "properties": { "element": {"#": "map2"} } },
+    "map3": { "prototype": "digit/ui/map.reel", "properties": { "element": {"#": "map3"} } },
+
+
+
+    "header1": { "prototype": "digit/ui/header.reel", "properties": { "element": {"#": "header1"} } },
+    "header2": { "prototype": "digit/ui/header.reel", "properties": { "element": {"#": "header2"} } },
+    "header3": { "prototype": "digit/ui/header.reel", "properties": { "element": {"#": "header3"} } },
+
+    "list1": { "prototype": "digit/ui/list.reel", "properties": { "element": {"#": "list1"} } },
+    "list2": { "prototype": "digit/ui/list.reel", "properties": { "element": {"#": "list2"} } },
+    "list3": { "prototype": "digit/ui/list.reel", "properties": { "element": {"#": "list3"} } },
+
+    "tabBar1": { "prototype": "digit/ui/tab-bar.reel", "properties": { "element": {"#": "tabBar1"} } },
+    "tabBar2": { "prototype": "digit/ui/tab-bar.reel", "properties": { "element": {"#": "tabBar2"} } },
+    "tabBar3": { "prototype": "digit/ui/tab-bar.reel", "properties": { "element": {"#": "tabBar3"} } },
+
+    "toolBar1": { "prototype": "digit/ui/tool-bar.reel", "properties": { "element": {"#": "toolBar1"} } },
+    "toolBar2": { "prototype": "digit/ui/tool-bar.reel", "properties": { "element": {"#": "toolBar2"} } },
+    "toolBar3": { "prototype": "digit/ui/tool-bar.reel", "properties": { "element": {"#": "toolBar3"} } },
+
+    "splitView1": { "prototype": "digit/ui/split-view.reel", "properties": { "element": {"#": "splitView1"} } },
+    "splitView2": { "prototype": "digit/ui/split-view.reel", "properties": { "element": {"#": "splitView2"} } },
+    "splitView3": { "prototype": "digit/ui/split-view.reel", "properties": { "element": {"#": "splitView3"} } }
+
+}

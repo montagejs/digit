@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="../main.reel/main.css" rel="stylesheet">    
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "single"}
+                }
+            },
+            
+            "audio1": { "prototype": "audio.reel", "properties": { "element": {"#": "audio1"} } },
+            "audio2": { "prototype": "audio.reel", "properties": { "element": {"#": "audio2"} } },
+            "audio3": { "prototype": "audio.reel", "properties": { "element": {"#": "audio3"} } }
+        }
+    </script>    
+</head>
+<body data-montage-id="single">
+
+    <h1><span class="logo"></span> <span>Digit</span></h1>
+    <h2>Single component (for testing)</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Skeleton</th>
+                <th>+ <span class="hl">Light</span> Skin</th>
+                <th>+ <span class="hl">Dark</span> Skin</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/audio.reel">Audio</a></td>
+                <td><audio data-montage-id="audio1"></audio></td>
+                <td data-montage-skin="light"><audio data-montage-id="audio2"></audio></td>
+                <td data-montage-skin="dark"><audio data-montage-id="audio3"></audio></td>
+            </tr>
+                        
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,11 +1,22 @@
 {
     "name": "digit",
-    "version": "0.1.0",
+    "version": "0.2.0-alpha",
+    "publishConfig": {
+      "tag": "edge"
+    },
     "dependencies": {
-        "montage": "~0.12.4"
+        "montage": "0.13.0-alpha",
+        "matte": "0.2.0-alpha",
+        "native": "0.1.1-alpha"
     },
     "devDependencies": {
-        "montage-testing": "~0.1.1"
-    }
+        "montage-testing": "0.2.0-alpha"
+    },
+    "exclude": [
+        "overview.html",
+        "overview",
+        "run-tests.html",
+        "test"
+    ]
 }
 

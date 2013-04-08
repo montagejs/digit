@@ -1,0 +1,14 @@
+{
+    "name": "overview",
+    "version": "0.1.0",
+    "mappings": {
+        "montage": {
+            "name": "montage",
+            "location": "../node_modules/montage"
+        },
+        "digit": {
+            "name": "digit",
+            "location": "../"
+        }
+    }
+}

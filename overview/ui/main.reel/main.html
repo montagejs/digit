@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet">
+    <link href="../../assets/icons/style.css" rel="stylesheet">
+    <link href="main.json" rel="serialization" type="text/montage-serialization">
+</head>
+<body >
+<div data-montage-id="main">
+    <h1><span class="logo"></span> <span>Digit</span></h1>
+    
+    <h2>Basic components</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Skeleton</th>
+                <th>+ <span class="hl">Light</span> Skin</th>
+                <th>+ <span class="hl">Dark</span> Skin</th>
+            </tr>
+        </thead>
+        <tbody>            
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/button.reel">Button</a></td>
+                <td><button data-montage-id="button1">Button</button></td>
+                <td data-montage-skin="light"><button data-montage-id="button2">Button</button></td>
+                <td data-montage-skin="dark" ><button data-montage-id="button3">Button</button></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/button-group.reel">Button Group</a></td>
+                <td>
+                    <div data-montage-id="buttonGroup1">
+                        <button data-montage-id="buttonGroup1item1">1</button>
+                        <button data-montage-id="buttonGroup1item2">2</button>
+                        <button data-montage-id="buttonGroup1item3">3</button>
+                    </div>
+                </td>
+                <td data-montage-skin="light">
+                    <div data-montage-id="buttonGroup2">
+                        <button data-montage-id="buttonGroup2item1">1</button>
+                        <button data-montage-id="buttonGroup2item2">2</button>
+                        <button data-montage-id="buttonGroup2item3">3</button>
+                    </div>
+                </td>
+                <td data-montage-skin="dark" >
+                    <div data-montage-id="buttonGroup3">
+                        <button data-montage-id="buttonGroup3item1">1</button>
+                        <button data-montage-id="buttonGroup3item2">2</button>
+                        <button data-montage-id="buttonGroup3item3">3</button>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/toggle.reel">Toggle</a></td>
+                <td><input data-montage-id="toggle1" type="checkbox"></td>
+                <td data-montage-skin="light"><input data-montage-id="toggle2" type="checkbox"></td>
+                <td data-montage-skin="dark"><input data-montage-id="toggle3" type="checkbox"></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/input-checkbox.reel">Input Checkbox</a></td>
+                <td><input data-montage-id="inputCheckbox1" type="checkbox" checked></td>
+                <td data-montage-skin="light"><input data-montage-id="inputCheckbox2" type="checkbox" checked></td>
+                <td data-montage-skin="dark" ><input data-montage-id="inputCheckbox3" type="checkbox" checked></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/input-radio.reel">Input Radio</a></td>
+                <td>
+                    <input data-montage-id="inputRadio1A" name="inputRadio1" type="radio" checked>
+                    <input data-montage-id="inputRadio1B" name="inputRadio1" type="radio">
+                </td>
+                <td data-montage-skin="light">
+                    <input data-montage-id="inputRadio2A" name="inputRadio2" type="radio" checked>
+                    <input data-montage-id="inputRadio2B" name="inputRadio2" type="radio">
+                </td>
+                <td data-montage-skin="dark">
+                    <input data-montage-id="inputRadio3A" name="inputRadio3" type="radio" checked>
+                    <input data-montage-id="inputRadio3B" name="inputRadio3" type="radio">
+                </td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/select.reel">Select</a></td>
+                <td>
+                    <select data-montage-id="select1">
+                        <option value="AZ">Arizona</option>
+                        <option value="AL">Alabama</option>
+                        <option value="CA">California</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="NY">New York</option>
+                    </select>
+                </td>
+                <td data-montage-skin="light">
+                    <select data-montage-id="select2">
+                        <option value="AZ">Arizona</option>
+                        <option value="AL">Alabama</option>
+                        <option value="CA">California</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="NY">New York</option>
+                    </select>
+                </td>
+                <td data-montage-skin="dark">
+                    <select data-montage-id="select3">
+                        <option value="AZ">Arizona</option>
+                        <option value="AL">Alabama</option>
+                        <option value="CA">California</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="NY">New York</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/input-text.reel">Input Text</a></td>
+                <td><input data-montage-id="inputText1" type="text" placeholder="Text Input"></td>
+                <td data-montage-skin="light"><input data-montage-id="inputText2" type="text" placeholder="Text Input"></td>
+                <td data-montage-skin="dark"><input data-montage-id="inputText3" type="text" placeholder="Text Input"></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/textarea.reel">Textarea</a></td>
+                <td><textarea data-montage-id="textarea1" placeholder="Textarea"></textarea></td>
+                <td data-montage-skin="light"><textarea data-montage-id="textarea2" placeholder="Textarea"></textarea></td>
+                <td data-montage-skin="dark"><textarea data-montage-id="textarea3" placeholder="Textarea"></textarea></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/input-number.reel">Input Number</a></td>
+                <td><input data-montage-id="inputNumber1" type="number" value=""></td>
+                <td data-montage-skin="light"><input data-montage-id="inputNumber2" type="number" value="0"></td>
+                <td data-montage-skin="dark"><input data-montage-id="inputNumber3" type="number" value="0"></td>
+            </tr>
+                
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/input-range.reel">Input Range</a></td>
+                <td><input data-montage-id="inputRange1" value="50" min="0" max="100" type="range"></td>
+                <td data-montage-skin="light"><input data-montage-id="inputRange2" value="50" min="0" max="100" type="range"></td>
+                <td data-montage-skin="dark"><input data-montage-id="inputRange3" value="50" min="0" max="100" type="range"></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/progress.reel">Progress</a></td>
+                <td><progress data-montage-id="progress1" value="30" max="100"></td>
+                <td data-montage-skin="light"><progress data-montage-id="progress2" value="30" max="100"></td>
+                <td data-montage-skin="dark"><progress data-montage-id="progress3" value="30" max="100"></td>
+            </tr>
+                        
+        </tbody>
+    </table>
+    
+    
+    
+    <h2>Advanced components</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Skeleton</th>
+                <th>+ <span class="hl">Light</span> Skin</th>
+                <th>+ <span class="hl">Dark</span> Skin</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/audio.reel">Audio</a></td>
+                <td><audio data-montage-id="audio1"></audio></td>
+                <td data-montage-skin="light"><audio data-montage-id="audio2"></audio></td>
+                <td data-montage-skin="dark"><audio data-montage-id="audio3"></audio></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/video.reel">Video</a></td>
+                <td><div data-montage-id="video1"></div></td>
+                <td data-montage-skin="light"><div data-montage-id="video2"></div></td>
+                <td data-montage-skin="dark"><div data-montage-id="video3"></div></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/map.reel">Map</a></td>
+                <td><div data-montage-id="map1"></div></td>
+                <td data-montage-skin="light"><div data-montage-id="map2"></div></td>
+                <td data-montage-skin="dark"><div data-montage-id="map3"></div></td>
+            </tr>
+                        
+        </tbody>
+    </table>
+    
+    
+    
+    <h2>Layout components</h2>
+    
+    <table class="layout">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Skeleton</th>
+                <th>+ <span class="hl">Light</span> Skin</th>
+                <th>+ <span class="hl">Dark</span> Skin</th>
+            </tr>
+        </thead>
+        <tbody>
+                        
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/header.reel">Header</a></td>
+                <td><header data-montage-id="header1"></header></td>
+                <td data-montage-skin="light"><header data-montage-id="header2"></header></td>
+                <td data-montage-skin="dark"><header data-montage-id="header3"></header></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/tool-bar.reel">Tool Bar</a></td>
+                <td><menu data-montage-id="toolBar1"></menu></td>
+                <td data-montage-skin="light"><menu data-montage-id="toolBar2"></menu></td>
+                <td data-montage-skin="dark"><menu data-montage-id="toolBar3"></menu></td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/tool-bar.reel">Tool Bar + Groups</a></td>
+                <td>
+                    <menu class="montage-ToolBar">
+                        <div class="montage-ToolBar-group">
+                            <button class="montage-ToolBar-button" data-icon="pictures"></button>
+                            <button class="montage-ToolBar-button" data-icon="video"></button>
+                            <button class="montage-ToolBar-button" data-icon="music"></button>
+                    	</div>
+                    	<div class="montage-ToolBar-group">
+                            <button class="montage-ToolBar-button" data-icon="arrow-left"></button>
+                            <button class="montage-ToolBar-button" data-icon="arrow-right"></button>
+                        </div>
+                    </menu>
+                </td>
+                <td data-montage-skin="light">
+                    <menu class="montage-ToolBar">
+                        <div class="montage-ToolBar-group">
+                            <button class="montage-ToolBar-button" data-icon="pictures"></button>
+                            <button class="montage-ToolBar-button" data-icon="video"></button>
+                            <button class="montage-ToolBar-button" data-icon="music"></button>
+                    	</div>
+                    	<div class="montage-ToolBar-group">
+                            <button class="montage-ToolBar-button" data-icon="arrow-left"></button>
+                            <button class="montage-ToolBar-button" data-icon="arrow-right"></button>
+                        </div>
+                    </menu>
+                </td>
+                <td data-montage-skin="dark">
+                    <menu class="montage-ToolBar">
+                        <div class="montage-ToolBar-group">
+                            <button class="montage-ToolBar-button" data-icon="pictures"></button>
+                            <button class="montage-ToolBar-button" data-icon="video"></button>
+                            <button class="montage-ToolBar-button" data-icon="music"></button>
+                    	</div>
+                    	<div class="montage-ToolBar-group">
+                            <button class="montage-ToolBar-button" data-icon="arrow-left"></button>
+                            <button class="montage-ToolBar-button" data-icon="arrow-right"></button>
+                        </div>
+                    </menu>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/list.reel">List</a></td>
+                <td><ul data-montage-id="list1"></ul>
+                <td data-montage-skin="light"><ul data-montage-id="list2"></ul></td>
+                <td data-montage-skin="dark" ><ul data-montage-id="list3"></ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/tab-bar.reel">Tab Bar</a></td>
+                <td><nav data-montage-id="tabBar1"></nav></td>
+                <td data-montage-skin="light"><nav data-montage-id="tabBar2"></nav></td>
+                <td data-montage-skin="dark"><nav data-montage-id="tabBar3"></nav></td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/tab-bar.reel">Tab Bar<br> + icons only</a></td>
+                <td>
+                    <nav class="montage-TabBar">
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="rocket">Games</button>
+                        <button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="pictures">Pictures</button>
+                        <button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="video">Videos</button>
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly montage-TabBar-tab-active" data-icon="music">Music</button>
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="ellipsis">More</button>
+                    </nav>
+                </td>
+                <td data-montage-skin="light">
+                    <nav class="montage-TabBar">
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="rocket">Games</button>
+                        <button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="pictures">Pictures</button>
+                        <button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="video">Videos</button>
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly montage-TabBar-tab-active" data-icon="music">Music</button>
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="ellipsis">More</button>
+                    </nav>
+                </td>
+                <td data-montage-skin="dark">
+                    <nav class="montage-TabBar">
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="rocket">Games</button>
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="pictures">Pictures</button>
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="video">Videos</button>
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly montage-TabBar-tab-active" data-icon="music">Music</button>
+                    	<button class="montage-TabBar-tab montage-TabBar--iconOnly" data-icon="ellipsis">More</button>
+                    </nav>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/montagejs/digit/tree/master/split-view.reel">Split View</a></td>
+                <td><div data-montage-id="splitView1"></div></td>
+                <td data-montage-skin="light"><div data-montage-id="splitView2"></div></td>
+                <td data-montage-skin="dark"><div data-montage-id="splitView3"></div></td>
+            </tr>
+            
+            
+            
+                                    
+        </tbody>
+    </table>
+    
+</div>
+    
+    
+</body>
+</html>
