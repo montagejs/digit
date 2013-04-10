@@ -171,13 +171,15 @@ exports.InputNumber = Montage.create(Component, {
     /**
     Read initial attribute values
     */
-    prepareForDraw: {
-        value: function() {
-            this.min = this.element.getAttribute('min');
-            this.max = this.element.getAttribute('max');
-            this.step = this.element.getAttribute('step');
-            this.value = this.element.getAttribute('value');
-            this.required = this.element.hasAttribute('required');
+    enterDocument: {
+        value: function(firstTime) {
+            if (firstTime) {
+                this.min = this.element.getAttribute('min');
+                this.max = this.element.getAttribute('max');
+                this.step = this.element.getAttribute('step');
+                this.value = this.element.getAttribute('value');
+                this.required = this.element.hasAttribute('required');
+            }
         }
     }
 

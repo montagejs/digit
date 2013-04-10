@@ -129,12 +129,14 @@ var InputRadio = exports.InputRadio = Montage.create(Component, {
     /**
     Read initial values from attributes
     */
-    prepareForDraw: {
-        value: function() {
-            this.checked = this.element.hasAttribute("checked");
-            this.disabled = this.element.hasAttribute("disabled");
-            if (this.element.hasAttribute("name")) {
-                this.name = this.element.getAttribute("name");
+    enterDocument: {
+        value: function(firstTime) {
+            if (firstTime) {
+                this.checked = this.element.hasAttribute("checked");
+                this.disabled = this.element.hasAttribute("disabled");
+                if (this.element.hasAttribute("name")) {
+                    this.name = this.element.getAttribute("name");
+                }
             }
         }
     },

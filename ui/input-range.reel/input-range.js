@@ -168,13 +168,15 @@ exports.InputRange = Montage.create(Component, {
         }
     },
 
-    prepareForDraw: {
-        value: function() {
-            // read initial values from the input type=range
-            this.min = this.min || this.element.getAttribute('min') || 0;
-            this.max = this.max || this.element.getAttribute('max') || 100;
-            this.step = this.step || this.element.getAttribute('step') || 1;
-            this.value = this.value || this.element.getAttribute('value') || 0;
+    enterDocument: {
+        value: function(firstTime) {
+            if (firstTime) {
+                // read initial values from the input type=range
+                this.min = this.min || this.element.getAttribute('min') || 0;
+                this.max = this.max || this.element.getAttribute('max') || 100;
+                this.step = this.step || this.element.getAttribute('step') || 1;
+                this.value = this.value || this.element.getAttribute('value') || 0;
+            }
         }
     },
 
