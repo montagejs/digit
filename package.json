@@ -6,7 +6,7 @@
     },
     "dependencies": {
         "montage": "0.13.0-alpha",
-        "matte": "0.2.0-alpha",
+        "matte": "0.1.1-alpha",
         "native": "0.1.1-alpha"
     },
     "devDependencies": {
