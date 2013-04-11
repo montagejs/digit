@@ -1,15 +1,14 @@
 var Montage = require("montage/core/core").Montage,
-    Component = require("montage/ui/component").Component,
-    NativeButton = require("native/ui/button.reel").Button;
+    AbstractButton = require("montage/ui/base/abstract-button").AbstractButton;
 
-exports.Button = Montage.create(NativeButton, {
+exports.Button = Montage.create(AbstractButton, {
 
     hasTemplate: {value: true},
 
-    willPrepareForDraw: {
+    didCreate: {
         value: function() {
-            NativeButton.willPrepareForDraw.call(this);
-            this.element.classList.add("montage-Button");
+            AbstractButton.didCreate.call(this);
+            this.classList.add("digit-Button");
         }
     }
 });

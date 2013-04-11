@@ -1,4 +1,4 @@
-.montage-Button {
+.digit-Button {
     outline: none;
     box-sizing: border-box;
     /font-size: 12px;
@@ -15,16 +15,16 @@
 
 /* States */
 
-.montage-Button:active {
+.digit-Button:active {
     background-color: #e5e5e5;
 }
 
-.montage-Button:focus {
+.digit-Button:focus {
     border-color: #7f7f7f;
 }
 
 /* Style for Touch */
-.montage-Button {
+.digit-Button {
     font-size: 16px;
     border-radius: 24px;
 }
@@ -32,7 +32,7 @@
 
 /* Light ------------------------------------ */
 
-[data-montage-skin="light"] .montage-Button {
+[data-montage-skin="light"] .digit-Button {
     color: hsla(0,0%,0%,.7);
     text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
     border-color: hsl(0,0%,80%);
@@ -40,7 +40,7 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), inset 0 -1px 1px hsla(0,0%,0%,.04), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
-[data-montage-skin="light"] .montage-Button:active {
+[data-montage-skin="light"] .digit-Button:active {
     border-color: hsla(0,0%,70%,1);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.2), 0 1px 0 hsla(0,0%,100%,.6);
@@ -49,7 +49,7 @@
 
 /* Dark ------------------------------------ */
 
-[data-montage-skin="dark"] .montage-Button {
+[data-montage-skin="dark"] .digit-Button {
     color: hsla(0,0%,100%,.5);
     text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
     border-color: hsl(0,0%,15%);
@@ -57,7 +57,7 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), inset 0 -1px 1px hsla(0,0%,0%,.06), 0 1px 0 hsla(0,0%,100%,.1);
 }
 
-[data-montage-skin="dark"] .montage-Button:active {
+[data-montage-skin="dark"] .digit-Button:active {
     color: hsla(0,0%,100%,.3);
     border-color: hsl(0,0%,15%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,24%), hsl(0,0%,18%) );
