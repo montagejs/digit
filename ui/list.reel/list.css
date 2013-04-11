@@ -1,4 +1,4 @@
-.montage-List {
+.digit-List {
     -webkit-box-flex: 1;
     margin: 0;
     padding: 0;
@@ -10,7 +10,12 @@
     -webkit-overflow-scrolling: touch;
 }
 
-.montage-List-item {
+.digit-List-repetition {
+    -webkit-padding-start: 0;
+    padding-start: 0;
+}
+
+.digit-List-item {
     display: -webkit-box;
     height: 50px;
     text-align: left;
@@ -25,7 +30,7 @@
 
 /* Label */
 
-.montage-List-item-label {
+.digit-List-item-label {
     -webkit-box-flex: 1;
     display: -webkit-box;
     box-sizing: border-box;
@@ -37,15 +42,27 @@
     white-space: nowrap;
 }
 
-.montage-List-item-cell + .montage-List-item-label,
-.montage-List-item-badge + .montage-List-item-label {
+.digit-ListItem .digit-Text {
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    box-sizing: border-box;
+    padding: 0 15px;
+
+    /* TODO: ellipsis doesn't seem to work */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.digit-List-item-cell + .digit-List-item-label,
+.digit-List-item-badge + .digit-List-item-label {
     padding-left: 0;
 }
 
 
 /* Cell */
 
-.montage-List-item-cell {
+.digit-List-item-cell {
     display: -webkit-box;
     -webkit-box-align: center;
     -webkit-box-pack: center;
@@ -56,7 +73,7 @@
 
 /* Badge */
 
-.montage-List-item-badge {
+.digit-List-item-badge {
     display: block;
     margin: 10px;
     padding: 0 9px;
@@ -71,7 +88,7 @@
 
 /* Icon */
 
-.montage-List-item-icon[data-icon] {
+.digit-List-item-icon[data-icon] {
     display: block;
     position: relative;
     width: 50px;
@@ -80,7 +97,7 @@
     background-color: hsla(0,0%,0%,.04);
 }
 
-.montage-List-item-icon[data-icon]:before {
+.digit-List-item-icon[data-icon]:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -94,7 +111,7 @@
 
 /* Image */
 
-.montage-List-item-image {
+.digit-List-item-image {
     display: block;
     width: 50px;
     height: 50px;
@@ -103,7 +120,7 @@
     background-size: cover;
 }
 
-[data-montage-skin] .montage-List-item-image {
+[data-montage-skin] .digit-List-item-image {
     box-shadow: inset 0 1px 4px hsla(0,0%,0%,.3);
 }
 
@@ -111,7 +128,7 @@
 
 /* Light ------------------------------------------------------------------------ */
 
-[data-montage-skin="light"] .montage-List-item {
+[data-montage-skin="light"] .digit-List-item {
     text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
     box-shadow: inset 0 1px 0 hsla(0,0%,100%,.5), inset 0 -1px 0 hsla(0,0%,0%,.06);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
@@ -120,7 +137,7 @@
 
 /* Badge */
 
-[data-montage-skin="light"] .montage-List-item-badge {
+[data-montage-skin="light"] .digit-List-item-badge {
     border-color: hsla(0,0%,70%,1);
     background: hsl(0,0%,86%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
@@ -128,11 +145,11 @@
 
 /* Icon */
 
-[data-montage-skin="light"] .montage-List-item-icon[data-icon] {
+[data-montage-skin="light"] .digit-List-item-icon[data-icon] {
     background-color: hsla(0,0%,0%,.04);
     box-shadow: inset 1px 0 0 hsla(0,0%,0%,.02), inset -1px 0 0 hsla(0,0%,0%,.02);
 }
-[data-montage-skin="light"] .montage-List-item-icon[data-icon]:before {
+[data-montage-skin="light"] .digit-List-item-icon[data-icon]:before {
     text-shadow: 0 1px 0 hsla(0,0%,100%,.8);
 }
 
@@ -140,19 +157,20 @@
 
 /* Dark ------------------------------------------------------------------------ */
 
-[data-montage-skin="dark"] .montage-List {
+[data-montage-skin="dark"] .digit-List,
+[data-montage-skin="dark"] .digit-List .digit-Text {
     color: hsla(0,0%,100%,.5);
     text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
 }
 
-[data-montage-skin="dark"] .montage-List-item {
+[data-montage-skin="dark"] .digit-List-item {
     box-shadow: inset 0 1px 0 hsla(0,0%,100%,.04), inset 0 -1px 0 hsla(0,0%,0%,.12);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
 }
 
 /* Badge */
 
-[data-montage-skin="dark"] .montage-List-item-badge {
+[data-montage-skin="dark"] .digit-List-item-badge {
     border-color: hsl(0,0%,15%);
     background: hsl(0,0%,22%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.25), 0 1px 0 hsla(0,0%,100%,.1);
@@ -160,11 +178,11 @@
 
 /* Icon */
 
-[data-montage-skin="dark"] .montage-List-item-icon[data-icon] {
+[data-montage-skin="dark"] .digit-List-item-icon[data-icon] {
     background-color: hsla(0,0%,0%,.1);
     box-shadow: inset 1px 0 0 hsla(0,0%,0%,.04), inset -1px 0 0 hsla(0,0%,0%,.04);
 }
 
-[data-montage-skin="dark"] .montage-List-item-icon[data-icon]:before {
+[data-montage-skin="dark"] .digit-List-item-icon[data-icon]:before {
     color: hsla(0,0%,100%,.6);
 }
