@@ -1,0 +1,18 @@
+.digit-Title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: hsl(0,0%,50%);
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+[data-montage-skin="light"] .digit-Title {
+    color: hsl(0,0%,60%);
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.7);
+}
+
+[data-montage-skin="dark"] .digit-Title {
+    color: hsl(0,0%,50%);
+    text-shadow: 0 1px 0 hsla(0,0%,0%,.3);
+}
