@@ -14,11 +14,11 @@ exports.Video = Montage.create(Component, {
                 _el.addEventListener("click", function(event) {
                     if(!isPlaying) {
                         _video.play();
-                        _el.classList.add("montage-Video--isPlaying");
+                        _el.classList.add("digit-Video--isPlaying");
                         isPlaying = true;
                     } else {
-                        _el.classList.toggle("montage-Video--showControls");
-                        //setTimeout( function() { _el.classList.remove("montage-Video--showControls"); } , 5000)
+                        _el.classList.toggle("digit-Video--showControls");
+                        //setTimeout( function() { _el.classList.remove("digit-Video--showControls"); } , 5000)
                     }
                 }, true);
             }

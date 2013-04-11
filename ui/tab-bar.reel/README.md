@@ -30,11 +30,11 @@ The Tab Bar wraps a `<nav>` element and adds tab buttons. It can be used as text
 
 ## Customizing with CSS
 
-* `.montage-TabBar` - The Tab Bar component
-* `.montage-TabBar-tab` - The tab button
+* `.digit-TabBar` - The Tab Bar component
+* `.digit-TabBar-tab` - The tab button
 
 ```css
-.montage-TabBar-tab {
+.digit-TabBar-tab {
     background-color: pink;
 }
 ```
@@ -50,7 +50,7 @@ The Tab Bar is best used with icons. A good place to find lots of icon sets is t
 If you prefer to not show a label, you can do that by adding a `montage-TabBar--iconOnly` class.
 
 ```html
-<button class="montage-TabBar--iconOnly" data-icon="pictures">Pictures</button>
+<button class="digit-TabBar--iconOnly" data-icon="pictures">Pictures</button>
 ```
 ![Tab Bar - icons only](https://raw.github.com/montagejs/digit/master/tab-bar.reel/screenshot-iconsonly.png)
 

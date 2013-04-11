@@ -29,10 +29,10 @@ The InputText component wraps an HTML `<input type="text">` element.
 
 ## Customizing with CSS
 
-* `.montage-InputText` - The InputText element
+* `.digit-InputText` - The InputText element
 
 ```css
-.montage-InputText {
+.digit-InputText {
     border-color: blue;
 }
 ```

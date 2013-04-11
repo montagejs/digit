@@ -27,9 +27,9 @@ you can use the generic selector below, but it's slower:
 */
 .icon-play:before, .icon-pause:before, .icon-cw:before, .icon-ccw:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-resize-enlarge:before, .icon-resize-shrink:before, .icon-volume:before, .icon-sound:before, .icon-mute:before, .icon-ellipsis:before,
 
-.montage-Video-cover-button:before,
-.montage-Video-controls-button-play:before,
-.montage-Video-controls-button-fullscreen:before
+.digit-Video-cover-button:before,
+.digit-Video-controls-button-play:before,
+.digit-Video-controls-button-fullscreen:before
 
 {
 	font-family: 'entypo';
@@ -40,8 +40,8 @@ you can use the generic selector below, but it's slower:
 	-webkit-font-smoothing: antialiased;
 }
 
-.montage-Video-cover-button:before,
-.montage-Video-controls-button-play:before,
+.digit-Video-cover-button:before,
+.digit-Video-controls-button-play:before,
 .icon-play:before {
 	content: "\e101";
 }
@@ -61,7 +61,7 @@ you can use the generic selector below, but it's slower:
 	content: "\e106";
 }
 
-.montage-Video-controls-button-fullscreen:before,
+.digit-Video-controls-button-fullscreen:before,
 .icon-resize-enlarge:before {
 	content: "\e107";
 }

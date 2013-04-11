@@ -9,7 +9,7 @@ exports.Select = Montage.create(NativeSelect, {
     willPrepareForDraw: {
         value: function() {
             NativeSelect.willPrepareForDraw.call(this);
-            this.element.classList.add("montage-Select");
+            this.element.classList.add("digit-Select");
         }
     }
 

@@ -31,15 +31,15 @@ The Modal component will "pop up" in the center as an overlay. It can be used as
 
 ## Customizing with CSS
 
-* `.montage-Modal` - The container
-* `.montage-Modal-header` - The title
-* `.montage-Modal-content` - The content frame
-* `.montage-Modal-footer` - The footer with the cancel and/or ok button.
-* `.montage-Modal-button--cancel` - The cancel button closes the Modal.
-* `.montage-Modal-button--ok` - The ok button closes the Modal or confirms the action.
+* `.digit-Modal` - The container
+* `.digit-Modal-header` - The title
+* `.digit-Modal-content` - The content frame
+* `.digit-Modal-footer` - The footer with the cancel and/or ok button.
+* `.digit-Modal-button--cancel` - The cancel button closes the Modal.
+* `.digit-Modal-button--ok` - The ok button closes the Modal or confirms the action.
 
 ```css
-.montage-Modal-content {
+.digit-Modal-content {
     background-color: pink;
 }
 ```

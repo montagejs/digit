@@ -98,16 +98,16 @@ td:nth-child(4) { background: hsl(0,0%,24%); }
 
 /* Montage overrides */
 
-.montage-Audio,
-.montage-Video,
-.montage-Map {
+.digit-Audio,
+.digit-Video,
+.digit-Map {
    display: inline-block;
 }
 
-td .montage-List {
+td .digit-List {
     height: 200px;
 }
 
-.montage-SplitView {
+.digit-SplitView {
     height: 200px;
 }

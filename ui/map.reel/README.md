@@ -30,12 +30,12 @@ The Map component adds a static maps image form Google Maps.
 
 ## Customizing with CSS
 
-* `.montage-Map` - The Map element
-* `.montage-Map-img` - The actually map image
-* `.montage-Map-link` - The external link button
+* `.digit-Map` - The Map element
+* `.digit-Map-img` - The actually map image
+* `.digit-Map-link` - The external link button
 
 ```css
-.montage-Map {
+.digit-Map {
     border-radius: 0;
 }
 ```

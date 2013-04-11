@@ -32,12 +32,12 @@ The Tool Bar wraps a `<menu>` element and adds groups of buttons with icons.
 
 ## Customizing with CSS
 
-* `.montage-ToolBar` - The Tool Bar component
-* `.montage-ToolBar-group` - Visually groups button together
-* `.montage-ToolBar-button` - The Tool Bar button
+* `.digit-ToolBar` - The Tool Bar component
+* `.digit-ToolBar-group` - Visually groups button together
+* `.digit-ToolBar-button` - The Tool Bar button
 
 ```css
-.montage-ToolBar-button {
+.digit-ToolBar-button {
     font-size: 20px;
 }
 ```

@@ -29,14 +29,14 @@ The Range Input component wraps an HTML `<input type="range">` element.
 
 ## Customizing with CSS
 
-* `.montage-InputRange` - The track of the InputRange element
-* `.montage-InputRange-thumb` - The thumb of the InputRange element
+* `.digit-InputRange` - The track of the InputRange element
+* `.digit-InputRange-thumb` - The thumb of the InputRange element
 
 ```css
-.montage-InputRange {
+.digit-InputRange {
     border-color: blue;
 }
-.montage-InputRange-thumb {
+.digit-InputRange-thumb {
     background-color: pink;
 }
 ```

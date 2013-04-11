@@ -32,19 +32,19 @@ The Audio component wraps an audio element and provides custom controls.
 
 ## Customizing with CSS
 
-* `.montage-Audio` - The Audio component
-* `.montage-Audio-file` - The actual audio element, hidden by default
-* `.montage-Audio-controls` - Controls
-* `.montage-Audio-controls-poster` - Cover art
-* `.montage-Audio-controls-button-play` - Play button
-* `.montage-Audio-controls-track` - Audio track
-* `.montage-Audio-controls-track-timeline` - Timeline bar
-* `.montage-Audio-controls-track-timeline-progress` - Progress of the timeline bar
-* `.montage-Audio-controls-track-thumb` - Handle with remaining time
+* `.digit-Audio` - The Audio component
+* `.digit-Audio-file` - The actual audio element, hidden by default
+* `.digit-Audio-controls` - Controls
+* `.digit-Audio-controls-poster` - Cover art
+* `.digit-Audio-controls-button-play` - Play button
+* `.digit-Audio-controls-track` - Audio track
+* `.digit-Audio-controls-track-timeline` - Timeline bar
+* `.digit-Audio-controls-track-timeline-progress` - Progress of the timeline bar
+* `.digit-Audio-controls-track-thumb` - Handle with remaining time
 
 
 ```css
-.montage-Audio-controls {
+.digit-Audio-controls {
     background: pink;
 }
 ```

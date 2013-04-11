@@ -8,7 +8,7 @@ exports.Toggle = Montage.create(Component, {
             if (firstTime) {
                 // Just temporary to test, should probably work on whole element.
                 this._element.addEventListener("click", function(event) {
-                    this.classList.toggle("montage-Toggle--checked");
+                    this.classList.toggle("digit-Toggle--checked");
                 }, true);
             }
         }

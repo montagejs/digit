@@ -1,4 +1,4 @@
-.montage-InputNumber {
+.digit-InputNumber {
     /font-size: 12px;
     position: relative;
     display: inline-block;
@@ -6,19 +6,19 @@
     /margin-right: 2.5em;
 }
 
-.montage-InputNumber > .montage-InputNumber-input {
+.digit-InputNumber > .digit-InputNumber-input {
     font-size: inherit;
     width: 3.6em;
     vertical-align: middle;
     /border-radius: 3px 0 0 3px;
 }
 
-.montage-InputNumber > .montage-InputNumber-input:focus {
+.digit-InputNumber > .digit-InputNumber-input:focus {
     border-color: #7f7f7f;
 }
 
-.montage-InputNumber > .montage-InputNumber-plus,
-.montage-InputNumber > .montage-InputNumber-minus {
+.digit-InputNumber > .digit-InputNumber-plus,
+.digit-InputNumber > .digit-InputNumber-minus {
     position: absolute;
     margin: 0;
     padding: 0;
@@ -28,13 +28,13 @@
     line-height: 0;
 }
 
-.montage-InputNumber > .montage-InputNumber-plus {
+.digit-InputNumber > .digit-InputNumber-plus {
     border-width: 1px 1px 0 0;
     border-radius: 0 3px 0 0;
     top: 0px;
 }
 
-.montage-InputNumber > .montage-InputNumber-minus {
+.digit-InputNumber > .digit-InputNumber-minus {
     border-width: 1px 1px 1px 0;
     border-radius: 0 0 3px 0;
     bottom: 0px;
@@ -43,34 +43,34 @@
 
 
 /* Style for Touch */
-.montage-InputNumber {
+.digit-InputNumber {
     font-size: 16px;
     width: auto;
     margin: 0;
 }
 
-.montage-InputNumber > .montage-InputNumber-input {
+.digit-InputNumber > .digit-InputNumber-input {
     font-size: inherit;
     border-radius: 0;
     text-align: center;
 }
 
-.montage-InputNumber-input::-webkit-inner-spin-button {
+.digit-InputNumber-input::-webkit-inner-spin-button {
     display: none;
 }
 
-.montage-InputNumber > .montage-InputNumber-plus,
-.montage-InputNumber > .montage-InputNumber-minus {
+.digit-InputNumber > .digit-InputNumber-plus,
+.digit-InputNumber > .digit-InputNumber-minus {
     position: static;
     height: 2.5em;
     top: auto;
     right: auto;
 }
-.montage-InputNumber > .montage-InputNumber-plus {
+.digit-InputNumber > .digit-InputNumber-plus {
     border-width: 1px 1px 1px 0;
     border-radius: 0 2.5em 2.5em 0;
 }
-.montage-InputNumber > .montage-InputNumber-minus {
+.digit-InputNumber > .digit-InputNumber-minus {
     border-width: 1px 0 1px 1px;
     border-radius: 2.5em 0 0 2.5em;
 }

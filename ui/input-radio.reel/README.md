@@ -29,10 +29,10 @@ The Radio component wraps an HTML `<input type="radio">` with custom styles and 
 
 ## Customizing with CSS
 
-* `.montage-InputRadio` - The checkbox element
+* `.digit-InputRadio` - The checkbox element
 
 ```css
-.montage-InputRadio {
+.digit-InputRadio {
     border-color: blue;
 }
 ```

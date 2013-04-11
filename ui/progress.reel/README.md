@@ -29,14 +29,14 @@ The Progress component wraps an HTML `<progress>` element.
 
 ## Customizing with CSS
 
-* `.montage-Progress` - The track of the Progress element
-* `.montage-Progress-bar` - The bar of the Progress element
+* `.digit-Progress` - The track of the Progress element
+* `.digit-Progress-bar` - The bar of the Progress element
 
 ```css
-.montage-Progress {
+.digit-Progress {
     border-color: blue;
 }
-.montage-Progress-bar {
+.digit-Progress-bar {
     background-color: pink;
 }
 ```

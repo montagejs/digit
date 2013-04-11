@@ -1,10 +1,10 @@
-.montage-Header {
+.digit-Header {
     display: -webkit-box;
     padding: 10px;
     background-color: hsl(0,0%,85%);
 }
 
-.montage-Header-title {
+.digit-Header-title {
     -webkit-box-flex: 1;
     margin: 0;
     padding: 0;
@@ -22,11 +22,11 @@
 
 /* Light ------------------------------------ */
 
-[data-montage-skin="light"] .montage-Header {
+[data-montage-skin="light"] .digit-Header {
     background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,92%) );
 }
 
-[data-montage-skin="light"] .montage-Header-title {
+[data-montage-skin="light"] .digit-Header-title {
     color: hsl(0,0%,60%);
     text-shadow: 0 1px 0 hsla(0,0%,100%,.7);
 }
@@ -35,11 +35,11 @@
 
 /* Dark ------------------------------------ */
 
-[data-montage-skin="dark"] .montage-Header {
+[data-montage-skin="dark"] .digit-Header {
     background-image: -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,20%) );
 }
 
-[data-montage-skin="dark"] .montage-Header-title {
+[data-montage-skin="dark"] .digit-Header-title {
     color: hsl(0,0%,50%);
     text-shadow: 0 1px 0 hsla(0,0%,0%,.3);
 }

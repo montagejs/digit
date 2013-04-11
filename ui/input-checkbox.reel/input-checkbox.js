@@ -96,19 +96,19 @@ exports.InputCheckbox = Montage.create(Component, {
     draw: {
         value: function() {
             if (this.checked) {
-                this.element.classList.add("montage-InputCheckbox--checked");
+                this.element.classList.add("digit-InputCheckbox--checked");
             } else {
-                this.element.classList.remove("montage-InputCheckbox--checked");
+                this.element.classList.remove("digit-InputCheckbox--checked");
             }
             if (this.disabled) {
-                this.element.classList.add("montage-InputCheckbox--disabled");
+                this.element.classList.add("digit-InputCheckbox--disabled");
             } else {
-                this.element.classList.remove("montage-InputCheckbox--disabled");
+                this.element.classList.remove("digit-InputCheckbox--disabled");
             }
             if (this.required) {
-                this.element.classList.add("montage-InputCheckbox--required");
+                this.element.classList.add("digit-InputCheckbox--required");
             } else {
-                this.element.classList.remove("montage-InputCheckbox--required");
+                this.element.classList.remove("digit-InputCheckbox--required");
             }
         }
     }

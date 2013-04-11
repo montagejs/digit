@@ -1,4 +1,4 @@
-.montage-Toggle {
+.digit-Toggle {
     box-sizing: border-box;
     /font-size: 12px;
     position: relative;
@@ -13,7 +13,7 @@
     -webkit-transition: background-color .2s cubic-bezier(.5,.15,.2,1);
 }
 
-.montage-Toggle-thumb {
+.digit-Toggle-thumb {
     box-sizing: border-box;
     position: absolute;
     left: 0;
@@ -29,26 +29,26 @@
 
 
 /* States */
-.montage-Toggle-thumb:active {
+.digit-Toggle-thumb:active {
     background-color: #e5e5e5;
 }
 
-.montage-Toggle:focus {
+.digit-Toggle:focus {
     border-color: #7f7f7f;
 }
 
-.montage-Toggle--checked {
+.digit-Toggle--checked {
     background-color: hsl(0,0%,70%);
 }
 
-.montage-Toggle--checked > .montage-Toggle-thumb {
+.digit-Toggle--checked > .digit-Toggle-thumb {
     -webkit-transform: translate3d(100%,0,0);
 }
 
 
 
 /* Style for Touch */
-.montage-Toggle {
+.digit-Toggle {
     font-size: 16px;
     border-radius: 24px;
 }
@@ -58,24 +58,24 @@
 
 /* Light ------------------------------------ */
 
-[data-montage-skin="light"] .montage-Toggle {
+[data-montage-skin="light"] .digit-Toggle {
     border-color: hsla(0,0%,70%,1);
     background: hsl(0,0%,86%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
-[data-montage-skin="light"] .montage-Toggle--checked {
+[data-montage-skin="light"] .digit-Toggle--checked {
     border-color: hsla(0,0%,60%,1);
     background-color: hsl(0,0%,76%);
 }
 
-[data-montage-skin="light"] .montage-Toggle-thumb {
+[data-montage-skin="light"] .digit-Toggle-thumb {
     border-color: hsla(0,0%,70%,1);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,98%), hsl(0,0%,84%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.1), 0 7px 6px -3px hsla(0,0%,0%,.15);
 }
 
-[data-montage-skin="light"] .montage-Toggle-thumb:active {
+[data-montage-skin="light"] .digit-Toggle-thumb:active {
     border-color: hsla(0,0%,65%,1);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,83%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 6px 6px -3px hsla(0,0%,0%,.1);
@@ -86,24 +86,24 @@
 
 /* Dark ------------------------------------ */
 
-[data-montage-skin="dark"] .montage-Toggle {
+[data-montage-skin="dark"] .digit-Toggle {
     border-color: hsl(0,0%,15%);
     background: hsl(0,0%,22%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.25), 0 1px 0 hsla(0,0%,100%,.1);
 }
 
-[data-montage-skin="dark"] .montage-Toggle--checked {
+[data-montage-skin="dark"] .digit-Toggle--checked {
     border-color: hsl(0,0%,12%);
     background: hsl(0,0%,18%);
 }
 
-[data-montage-skin="dark"] .montage-Toggle-thumb {
+[data-montage-skin="dark"] .digit-Toggle-thumb {
     border-color: hsl(0,0%,16%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,36%), hsl(0,0%,24%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.15), 0 7px 6px -3px hsla(0,0%,0%,.25);
 }
 
-[data-montage-skin="dark"] .montage-Toggle-thumb:active {
+[data-montage-skin="dark"] .digit-Toggle-thumb:active {
     border-color: hsl(0,0%,12%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,34%), hsl(0,0%,23%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 7px 6px -3px hsla(0,0%,0%,.15);

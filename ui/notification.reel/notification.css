@@ -1,7 +1,7 @@
 
 /*  TODO: More notification types, Show/Hide */
 
-.montage-Notification {
+.digit-Notification {
     margin: 0 auto;
     max-width: 300px;
     font-size: 16px;
@@ -13,12 +13,12 @@
     //-webkit-transition: -webkit-transform .24s cubic-bezier(0.38,0.04,0.81,0.29);
 }
 
-.montage-Notification--show {
+.digit-Notification--show {
     -webkit-transform: translate3d(0,0,0);
     -webkit-transition-timing-function: cubic-bezier(0.23,0.21,0.00,1.00);
 }
 
-.montage-Notification-icon {
+.digit-Notification-icon {
     position: absolute;
     width: 36px;
     height: 36px;
@@ -28,7 +28,7 @@
     vertical-align: middle;
 }
 
-.montage-Notification-message {
+.digit-Notification-message {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -44,7 +44,7 @@
 /* Light ------------------------------------ */
 
 
-[data-montage-skin="light"] .montage-Notification {
+[data-montage-skin="light"] .digit-Notification {
     color: hsl(0,0%,40%);
     text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,92%) );
@@ -54,7 +54,7 @@
 
 /* Dark ------------------------------------ */
 
-[data-montage-skin="dark"] .montage-Notification {
+[data-montage-skin="dark"] .digit-Notification {
     color: hsl(0,0%,70%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,26%), hsl(0,0%,20%) );
     box-shadow: 0 1px 2px hsla(0,0%,0%,.4);

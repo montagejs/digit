@@ -30,13 +30,13 @@ The Number Input component wraps an HTML `<input type="number">` element and add
 
 ## Customizing with CSS
 
-* `.montage-InputNumber` - The InputNumber wrapper
-* `.montage-InputNumber-input` - The actual input for the numbers
-* `.montage-InputNumber-minus` - The minus button
-* `.montage-InputNumber-plus` - The plus button
+* `.digit-InputNumber` - The InputNumber wrapper
+* `.digit-InputNumber-input` - The actual input for the numbers
+* `.digit-InputNumber-minus` - The minus button
+* `.digit-InputNumber-plus` - The plus button
 
 ```css
-.montage-InputNumber-input {
+.digit-InputNumber-input {
     width: 100px;
 }
 ```

@@ -9,7 +9,7 @@ exports.ButtonGroup = Montage.create(NativeButton, {
     willPrepareForDraw: {
         value: function() {
             NativeButton.willPrepareForDraw.call(this);
-            this.element.classList.add("montage-ButtonGroup");
+            this.element.classList.add("digit-ButtonGroup");
         }
     }
 });

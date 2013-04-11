@@ -29,13 +29,13 @@ The Action Sheet component slides up from the bottom over the content and contai
 
 ## Customizing with CSS
 
-* `.montage-ActionSheet` - The container
-* `.montage-ActionSheet-title` - The title, 1-2 lines long
-* `.montage-ActionSheet-button` - The action buttons
-* `.montage-ActionSheet-button--cancel` - The cancel button closes the Action Sheet.
+* `.digit-ActionSheet` - The container
+* `.digit-ActionSheet-title` - The title, 1-2 lines long
+* `.digit-ActionSheet-button` - The action buttons
+* `.digit-ActionSheet-button--cancel` - The cancel button closes the Action Sheet.
 
 ```css
-.montage-ActionSheet {
+.digit-ActionSheet {
     background-color: pink;
 }
 ```

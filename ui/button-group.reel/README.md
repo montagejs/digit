@@ -50,10 +50,10 @@ The Button Group component wraps multiple <button> elements and groups them toge
 
 ## Customizing with CSS
 
-* `.montage-ButtonGroup` - The Button element
+* `.digit-ButtonGroup` - The Button element
 
 ```css
-.montage-ButtonGroup {
+.digit-ButtonGroup {
     background-color: pink;
 }
 ```

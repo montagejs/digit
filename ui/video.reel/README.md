@@ -33,21 +33,21 @@ The Video component wraps a video element and provides custom controls.
 
 ## Customizing with CSS
 
-* `.montage-Video` - The Video component
-* `.montage-Video-frame` - The actual video element
-* `.montage-Video-cover` - Initial cover with a the play button
-* `.montage-Video-cover-button` - Initial play button
-* `.montage-Video-controls` - Controls
-* `.montage-Video-controls-button-play` - Play button
-* `.montage-Video-controls-button-fullscreen` - Fullscreen button
-* `.montage-Video-controls-track` - Video track
-* `.montage-Video-controls-track-timeline` - Timeline bar
-* `.montage-Video-controls-track-timeline-progress` - Progress of the timeline bar
-* `.montage-Video-controls-track-thumb` - Handle with remaining time
+* `.digit-Video` - The Video component
+* `.digit-Video-frame` - The actual video element
+* `.digit-Video-cover` - Initial cover with a the play button
+* `.digit-Video-cover-button` - Initial play button
+* `.digit-Video-controls` - Controls
+* `.digit-Video-controls-button-play` - Play button
+* `.digit-Video-controls-button-fullscreen` - Fullscreen button
+* `.digit-Video-controls-track` - Video track
+* `.digit-Video-controls-track-timeline` - Timeline bar
+* `.digit-Video-controls-track-timeline-progress` - Progress of the timeline bar
+* `.digit-Video-controls-track-thumb` - Handle with remaining time
 
 
 ```css
-.montage-Video-controls {
+.digit-Video-controls {
     background: pink;
 }
 ```

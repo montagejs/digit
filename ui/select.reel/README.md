@@ -32,10 +32,10 @@ The Select Input component wraps an HTML `<select>` element.
 
 ## Customizing with CSS
 
-* `.montage-Select` - The Button element
+* `.digit-Select` - The Button element
 
 ```css
-.montage-Select {
+.digit-Select {
     background-color: pink;
 }
 ```

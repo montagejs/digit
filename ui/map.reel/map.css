@@ -1,4 +1,4 @@
-.montage-Map {
+.digit-Map {
    position: relative;
    width: 200px;
    height: 120px;
@@ -6,7 +6,7 @@
    border-radius: 3px;
 }
 
-.montage-Map:before {
+.digit-Map:before {
     content: "";
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
@@ -14,7 +14,7 @@
     box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.15);
 }
 
-.montage-Map-img {
+.digit-Map-img {
     display: block;
     margin: 0;
     width: 100%;
@@ -22,7 +22,7 @@
     border-radius: inherit;
 }
 
-.montage-Map-link {
+.digit-Map-link {
     display: none;
     position: absolute;
     top: 10px;
@@ -33,11 +33,11 @@
     background: hsla(0,0%,20%,.8) url(fullscreen.svg) no-repeat center;
 }
 
-.montage-Map-link:active {
+.digit-Map-link:active {
     background-color: hsla(0,0%,20%,.6);
 }
 
-.montage-Map-link--show .montage-Map-link {
+.digit-Map-link--show .digit-Map-link {
     display: block;
 }
 
@@ -46,13 +46,13 @@
 
 /* Light ------------------------------------ */
 
-[data-montage-skin="light"] .montage-Map:before {
+[data-montage-skin="light"] .digit-Map:before {
     box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.2), inset 0 1px 3px 2px hsla(0,0%,0%,.15), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
 
 /* Dark ------------------------------------ */
 
-[data-montage-skin="dark"] .montage-Map:before {
+[data-montage-skin="dark"] .digit-Map:before {
     box-shadow: inset 0 1px 3px 1px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.2);
 }

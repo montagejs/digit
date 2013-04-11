@@ -1,7 +1,7 @@
 
 /*  TODO: Add a dark background cover + Show/Hide */
 
-.montage-Modal {
+.digit-Modal {
     margin: 20px auto;
     max-width: 300px;
     font-size: 16px;
@@ -12,25 +12,25 @@
     //-webkit-transform: scale(.9);
 }
 
-.montage-Modal--show {
+.digit-Modal--show {
     opacity: 1;
     -webkit-transform: scale(1);
     -webkit-transition-timing-function: cubic-bezier(0.23,0.21,0.00,1.00);
 }
 
-.montage-Modal-content {
+.digit-Modal-content {
     padding: 10px;
     text-align: center;
 }
 
 
-.montage-Modal-header,
-.montage-Modal-footer {
+.digit-Modal-header,
+.digit-Modal-footer {
     padding: 10px;
     background-color: hsl(0,0%,90%);
 }
 
-.montage-Modal-header {
+.digit-Modal-header {
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
@@ -39,14 +39,14 @@
     border-top-right-radius: inherit;
 }
 
-.montage-Modal-footer {
+.digit-Modal-footer {
     text-align: right;
     border-top: 1px solid hsla(0,0%,0%,.06);
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
 }
 
-.montage-Button.montage-Modal-button--cancel {
+.digit-Button.digit-Modal-button--cancel {
     color: hsl(0,0%,60%);
     border-color: hsl(0,0%,80%);
     background-color: transparent;
@@ -56,22 +56,22 @@
 /* Light ------------------------------------ */
 
 
-[data-montage-skin="light"] .montage-Modal {
+[data-montage-skin="light"] .digit-Modal {
     color: hsl(0,0%,40%);
     text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
     background: hsl(0,0%,90%);
 }
 
-[data-montage-skin="light"] .montage-Modal-header,
-[data-montage-skin="light"] .montage-Modal-footer {
+[data-montage-skin="light"] .digit-Modal-header,
+[data-montage-skin="light"] .digit-Modal-footer {
     background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,92%) );
 }
 
-[data-montage-skin="light"] .montage-Modal-header {
+[data-montage-skin="light"] .digit-Modal-header {
     border-bottom: 1px solid hsla(0,0%,0%,.12);
 }
 
-[data-montage-skin="light"] .montage-Button.montage-Modal-button--cancel {
+[data-montage-skin="light"] .digit-Button.digit-Modal-button--cancel {
     color: hsl(0,0%,60%);
     border-color: hsl(0,0%,86%);
     background: transparent;
@@ -81,28 +81,28 @@
 
 /* Dark ------------------------------------ */
 
-[data-montage-skin="dark"] .montage-Modal {
+[data-montage-skin="dark"] .digit-Modal {
     background: hsl(0,0%,20%);
 }
 
-[data-montage-skin="dark"] .montage-Modal-content {
+[data-montage-skin="dark"] .digit-Modal-content {
     color: hsl(0,0%,40%);
     text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
     background: hsl(0,0%,90%);
 }
 
-[data-montage-skin="dark"] .montage-Modal-header,
-[data-montage-skin="dark"] .montage-Modal-footer {
+[data-montage-skin="dark"] .digit-Modal-header,
+[data-montage-skin="dark"] .digit-Modal-footer {
     background-image: -webkit-linear-gradient(top, hsl(0,0%,26%), hsl(0,0%,20%) );
 }
 
-[data-montage-skin="dark"] .montage-Modal-header {
+[data-montage-skin="dark"] .digit-Modal-header {
     color: hsl(0,0%,70%);
     text-shadow: none;
     border-bottom: 1px solid hsla(0,0%,100%,.9);
 }
 
-[data-montage-skin="dark"] .montage-Button.montage-Modal-button--cancel {
+[data-montage-skin="dark"] .digit-Button.digit-Modal-button--cancel {
     color: hsl(0,0%,50%);
     border-color: hsl(0,0%,16%);
     background: transparent;

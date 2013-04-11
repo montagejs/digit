@@ -1,14 +1,14 @@
-.montage-SplitView {
+.digit-SplitView {
     display: -webkit-box;
     background-color: hsl(0,0%,75%);
 }
 
-.montage-SplitView-master {
+.digit-SplitView-master {
     width: 30%;
     background-color: hsl(0,0%,85%);
 }
 
-.montage-SplitView-detail {
+.digit-SplitView-detail {
     -webkit-box-flex: 1;
     background-color: hsl(0,0%,95%);
 }

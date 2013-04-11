@@ -8,7 +8,7 @@ exports.Map = Montage.create(Component, {
             if (firstTime) {
                 // Just temporary to test, should probably work on whole element.
                 this._element.addEventListener("click", function(event) {
-                    this.classList.toggle("montage-Map-link--show");
+                    this.classList.toggle("digit-Map-link--show");
                 }, true);
             }
         }

@@ -147,14 +147,14 @@ var InputRadio = exports.InputRadio = Montage.create(Component, {
     draw: {
         value: function() {
             if (this.checked) {
-                this.element.classList.add("montage-InputRadio--checked");
+                this.element.classList.add("digit-InputRadio--checked");
             } else {
-                this.element.classList.remove("montage-InputRadio--checked");
+                this.element.classList.remove("digit-InputRadio--checked");
             }
             if (this.disabled) {
-                this.element.classList.add("montage-InputRadio--disabled");
+                this.element.classList.add("digit-InputRadio--disabled");
             } else {
-                this.element.classList.remove("montage-InputRadio--disabled");
+                this.element.classList.remove("digit-InputRadio--disabled");
             }
         }
     }

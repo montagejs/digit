@@ -28,10 +28,10 @@ The Checkbox component wraps an HTML `<input type="checkbox">` with custom style
 
 ## Customizing with CSS
 
-* `.montage-InputCheckbox` - The checkbox element
+* `.digit-InputCheckbox` - The checkbox element
 
 ```css
-.montage-InputCheckbox {
+.digit-InputCheckbox {
     border-color: blue;
 }
 ```

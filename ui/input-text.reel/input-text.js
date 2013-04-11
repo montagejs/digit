@@ -9,7 +9,7 @@ exports.InputText = Montage.create(NativeInputText, {
     willPrepareForDraw: {
         value: function() {
             NativeInputText.willPrepareForDraw.call(this);
-            this.element.classList.add("montage-InputText");
+            this.element.classList.add("digit-InputText");
         }
     }
 });

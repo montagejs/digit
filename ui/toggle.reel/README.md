@@ -27,14 +27,14 @@ The Toggle component turns an `<input type="checkbox">` element into a toggle sw
 
 ## Customizing with CSS
 
-* `.montage-Toggle` - The track of the Toggle component
-* `.montage-Toggle-thumb` - The thumb of the Toggle component
+* `.digit-Toggle` - The track of the Toggle component
+* `.digit-Toggle-thumb` - The thumb of the Toggle component
 
 ```css
-.montage-Toggle {
+.digit-Toggle {
     border-color: blue;
 }
-.montage-Toggle-thumb {
+.digit-Toggle-thumb {
     background-color: pink;
 }
 ```

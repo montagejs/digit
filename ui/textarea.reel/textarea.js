@@ -9,7 +9,7 @@ exports.Textarea = Montage.create(NativeTextarea, {
     willPrepareForDraw: {
         value: function() {
             NativeTextarea.willPrepareForDraw.call(this);
-            this.element.classList.add("montage-Textarea");
+            this.element.classList.add("digit-Textarea");
         }
     }
 });

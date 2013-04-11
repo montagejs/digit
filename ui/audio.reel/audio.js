@@ -14,12 +14,12 @@ exports.Audio = Montage.create(Component, {
                 _el.addEventListener("click", function(event) {
                     if(!isPlaying) {
                         _audio.play();
-                        _el.classList.add("montage-Audio--isPlaying");
+                        _el.classList.add("digit-Audio--isPlaying");
                         isPlaying = true;
                     } else {
                         _audio.pause();
-                        _el.classList.remove("montage-Audio--isPlaying");
-                        //setTimeout( function() { _el.classList.remove("montage-Video--showControls"); } , 5000)
+                        _el.classList.remove("digit-Audio--isPlaying");
+                        //setTimeout( function() { _el.classList.remove("digit-Video--showControls"); } , 5000)
                         isPlaying = false;
                     }
                 }, true);

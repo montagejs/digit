@@ -31,12 +31,12 @@ The Notification component will slide down from the top as an overlay. It will a
 
 ## Customizing with CSS
 
-* `.montage-Notification` - The container
-* `.montage-Notification-icon` - The icon
-* `.montage-Notification-message` - The message
+* `.digit-Notification` - The container
+* `.digit-Notification-icon` - The icon
+* `.digit-Notification-message` - The message
 
 ```css
-.montage-Notification {
+.digit-Notification {
     background-color: pink;
 }
 ```

@@ -29,10 +29,10 @@ The InputText component wraps an HTML `<textarea>` element.
 
 ## Customizing with CSS
 
-* `.montage-Textarea` - The Textarea element
+* `.digit-Textarea` - The Textarea element
 
 ```css
-.montage-Textarea {
+.digit-Textarea {
     border-color: blue;
 }
 ```

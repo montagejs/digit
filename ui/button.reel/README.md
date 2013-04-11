@@ -28,10 +28,10 @@ The Button component wraps a <button> or <input type="button"> element, and expo
 
 ## Customizing with CSS
 
-* `.montage-Button` - The Button element
+* `.digit-Button` - The Button element
 
 ```css
-.montage-Button {
+.digit-Button {
     background-color: pink;
 }
 ```

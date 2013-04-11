@@ -27,7 +27,7 @@ you can use the generic selector below, but it's slower:
 */
 .icon-play:before, .icon-pause:before, .icon-cw:before, .icon-ccw:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-resize-enlarge:before, .icon-resize-shrink:before, .icon-volume:before, .icon-sound:before, .icon-mute:before, .icon-ellipsis:before,
 
-.montage-Audio-controls-button-play:before
+.digit-Audio-controls-button-play:before
 {
 	font-family: 'entypo';
 	speak: none;
@@ -37,12 +37,12 @@ you can use the generic selector below, but it's slower:
 	-webkit-font-smoothing: antialiased;
 }
 
-.montage-Audio-controls-button-play:before,
+.digit-Audio-controls-button-play:before,
 .icon-play:before {
 	content: "\e101";
 }
 
-.montage-Audio--isPlaying .montage-Audio-controls-button-play:before,
+.digit-Audio--isPlaying .digit-Audio-controls-button-play:before,
 .icon-pause:before {
 	content: "\e102";
 }

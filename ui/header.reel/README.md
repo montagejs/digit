@@ -28,12 +28,12 @@ The Header components wraps a `<header>` element and adds two buttons with a tit
 
 ## Customizing with CSS
 
-* `.montage-Header` - The Header component
-* `.montage-Header-title` - The Title
-* `.montage-Header .montage-Button` - The Buttons
+* `.digit-Header` - The Header component
+* `.digit-Header-title` - The Title
+* `.digit-Header .digit-Button` - The Buttons
 
 ```css
-.montage-Header {
+.digit-Header {
     background-color: pink;
 }
 ```
