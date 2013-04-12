@@ -9,6 +9,15 @@
     background-color: #d9d9d9;
 }
 
+.digit-InputRange-thumbSlider {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*width of thumb - input-range border*/
+    right: 26px;
+    bottom: 0px;
+}
+
 .digit-InputRange-thumb {
     position: absolute;
     font-size: inherit;
@@ -23,6 +32,7 @@
     background-color: #f2f2f2;
     cursor: pointer;
 }
+
 
 /* States */
 .digit-InputRange-thumb:active {

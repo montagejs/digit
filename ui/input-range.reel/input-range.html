@@ -8,18 +8,10 @@
             "owner": {
                 "properties": {
                     "element": {"#": "inputRange"},
-                    "_handleEl": {"#": "inputRangeThumb"},
-                    "_translateComposer": {"@": "translateComposer1"}
+                    "_thumbSliderElement": {"#": "thumbSlider"},
+                    "_inputRangeThumbElement": {"#": "inputRangeThumb"}
                 }
         
-            },
-            "translateComposer1": {
-                "prototype": "montage/composer/translate-composer",
-                "properties": {
-                    "component": {"@": "owner"},
-                    "axis": "horizontal",
-                    "hasMomentum": false
-                }
             }
         }
     </script>
@@ -27,7 +19,9 @@
 <body>
     <!-- inputRange needs to be a div to work in Firefox -->
     <div data-montage-id="inputRange" class="digit-InputRange">
-        <div data-montage-id="inputRangeThumb" draggable="true" class="digit-InputRange-thumb"></div>
+        <div data-montage-id="thumbSlider" class="digit-InputRange-thumbSlider">
+            <div data-montage-id="inputRangeThumb" class="digit-InputRange-thumb"></div>
+        </div>
     </div>
 </body>
 </html>
