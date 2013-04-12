@@ -1,3 +1,4 @@
+/*global describe, it, expect, beforeEach, afterEach */
 var Montage = require("montage").Montage;
 var TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
 
@@ -97,7 +98,7 @@ TestPageLoader.queueTest("input-number-test", function(testPage) {
                             expect(inputNumber.step).not.toEqual("hello");
                             expect(inputNumber.step).toEqual(previousValue);
                         });
-                   });
+                    });
                     describe("min", function() {
                         it("should have correct default", function() {
                             expect(defaultMin).toEqual("any");
