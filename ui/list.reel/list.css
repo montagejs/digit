@@ -11,8 +11,8 @@
 }
 
 .digit-List-repetition {
-    -webkit-padding-start: 0;
-    padding-start: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .digit-List-item {
