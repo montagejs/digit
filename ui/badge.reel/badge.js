@@ -31,6 +31,10 @@ exports.Badge = Montage.create(Text, /** @lends module:"ui/badge.reel".Badge# */
         set: function(value) {
             value = parseInt(value, 10);
             Object.getOwnPropertyDescriptor(Text, "value").set.call(this, value);
+        },
+
+        get: function() {
+            return Object.getOwnPropertyDescriptor(Text, "value").get.call(this);
         }
     }
 
