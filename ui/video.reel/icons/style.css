@@ -1,22 +1,22 @@
 @font-face {
-	font-family: 'entypo';
-	src:url('fonts/entypo.eot');
-	src:url('fonts/entypo.eot?#iefix') format('embedded-opentype'),
-		url('fonts/entypo.svg#entypo') format('svg'),
-		url('fonts/entypo.woff') format('woff'),
-		url('fonts/entypo.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'entypo';
+    src:url('fonts/entypo.eot');
+    src:url('fonts/entypo.eot?#iefix') format('embedded-opentype'),
+        url('fonts/entypo.svg#entypo') format('svg'),
+        url('fonts/entypo.woff') format('woff'),
+        url('fonts/entypo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 /*[data-icon]:before {
-	font-family: 'entypo';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+    font-family: 'entypo';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
 }*/
 
 /* Use the following CSS code if you want to have a class per icon */
@@ -32,51 +32,51 @@ you can use the generic selector below, but it's slower:
 .digit-Video-controls-button-fullscreen:before
 
 {
-	font-family: 'entypo';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+    font-family: 'entypo';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
 }
 
 .digit-Video-cover-button:before,
-.digit-Video-controls-button-play:before,
+.digit-VideoControl-button-play:before,
 .icon-play:before {
-	content: "\e101";
+    content: "\e101";
 }
 .icon-pause:before {
-	content: "\e102";
+    content: "\e102";
 }
 .icon-cw:before {
-	content: "\e103";
+    content: "\e103";
 }
 .icon-ccw:before {
-	content: "\e104";
+    content: "\e104";
 }
 .icon-arrow-left:before {
-	content: "\e105";
+    content: "\e105";
 }
 .icon-arrow-right:before {
-	content: "\e106";
+    content: "\e106";
 }
 
-.digit-Video-controls-button-fullscreen:before,
+.digit-VideoControl-button-fullscreen:before,
 .icon-resize-enlarge:before {
-	content: "\e107";
+    content: "\e107";
 }
 .icon-resize-shrink:before {
-	content: "\e108";
+    content: "\e108";
 }
 .icon-volume:before {
-	content: "\e109";
+    content: "\e109";
 }
 .icon-sound:before {
-	content: "\e10a";
+    content: "\e10a";
 }
 .icon-mute:before {
-	content: "\e10b";
+    content: "\e10b";
 }
 .icon-ellipsis:before {
-	content: "\e10c";
+    content: "\e10c";
 }

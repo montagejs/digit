@@ -1,11 +1,17 @@
-var Montage = require("montage/core/core").Montage,
-    Component = require("montage/ui/component").Component;
+var Montage = require("montage/core/core").Montage;
+var Component = require("montage/ui/component").Component;
+var MediaController = require("montage/core/media-controller").MediaController;
 
 exports.Video = Montage.create(Component, {
 
     enterDocument: {
         value: function(firstTime) {
             if (firstTime) {
+
+                if (this.controller.status === this.controller.EMPTY) {
+                    this.controller.loadMedia();
+                }
+
                 // Just temporary to test.
                 var isPlaying = false;
                 var _el = this._element;
@@ -23,6 +29,19 @@ exports.Video = Montage.create(Component, {
                 }, true);
             }
         }
-    }
+    },
 
+    // Properties
+
+    src: {
+        value: "ui/video.reel/video.mov"
+    },
+
+    poster: {
+        value: "ui/video.reel/poster.png"
+    },
+
+    controller: {
+        value: null
+    }
 });

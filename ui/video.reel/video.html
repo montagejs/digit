@@ -9,33 +9,40 @@
         {
             "owner": {
                 "properties": {
-                    "element": {"#": "video"}
+                    "element": {"#": "video"},
+                    "controller": {"@": "mediacontroller"}
                 }
-        
+            },
+            "mediacontroller": {
+                "prototype": "montage/core/media-controller",
+                "properties": {
+                    "mediaElement": {"#": "mediaElement"}
+                },
+                "bindings": {
+                    "mediaSrc": {"<-": "@owner.src"},
+                    "posterSrc": {"<-": "@owner.poster"}
+                }
+            },
+            "control": {
+                "prototype": "ui/video-control.reel",
+                "properties": {
+                    "element": {"#": "control"},
+                    "controller": {"@": "mediacontroller"}
+                }
             }
+
         }
     </script>
 </head>
 <body>
 
-    <div data-montage-id="video" class="digit-Video">
-        <video class="digit-Video-frame"
-                src="../ui/video.reel/video.mov"
-                poster="../ui/video.reel/poster.png"
-                >
+    <div data-montage-id="video" class="digit-Video digit-Video--showControls">
+        <video data-montage-id="mediaElement" class="digit-Video-frame">
         </video>
         <div class="digit-Video-cover">
             <button class="digit-Video-cover-button"></button>
         </div>
-        <menu class="digit-Video-controls">
-            <button class="digit-Video-controls-button-play"></button>
-            <div class="digit-Video-controls-track">
-                <div class="digit-Video-controls-track-timeline">
-                    <div class="digit-Video-controls-track-timeline-progress"></div>
-                </div>
-                <div draggable="true" class="digit-Video-controls-track-thumb">-2:45</div>
-            </div>
-            <button class="digit-Video-controls-button-fullscreen"></button>
+        <menu data-montage-id="control">
         </menu>
     </div>
 
