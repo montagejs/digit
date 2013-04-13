@@ -42,6 +42,35 @@
     white-space: nowrap;
 }
 
+/** ListItem specific style */
+
+.digit-ListItem {
+    display: -webkit-box;
+    height: 50px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 50px;
+    background-color: #f2f2f2;
+    box-shadow: inset 0 -1px 0 hsla(0,0%,0%,.1);
+}
+
+[data-montage-skin="light"] .digit-ListItem {
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.5), inset 0 -1px 0 hsla(0,0%,0%,.06);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+}
+
+[data-montage-skin="dark"] .digit-ListItem {
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.04), inset 0 -1px 0 hsla(0,0%,0%,.12);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+}
+
+/* Selected --------------------- */
+.digit-ListItem.selected {
+    background: hsl(0,0%,40%);
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.04), inset 0 -1px 0 hsla(0,0%,0%,0.35);
+}
+
 .digit-ListItem .digit-Text {
     -webkit-box-flex: 1;
     display: -webkit-box;
@@ -52,6 +81,14 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.digit-ListItem.selected .digit-Text {
+    color: hsla(0,0%,100%,0.8);
+}
+
+[data-montage-skin="dark"] .digit-ListItem--highlight {
+    box-shadow: inset 2px 0 0 hsl(210,100%,50%);
 }
 
 .digit-List-item-cell + .digit-List-item-label,
