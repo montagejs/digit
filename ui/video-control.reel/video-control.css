@@ -1,13 +1,5 @@
 /* Controls ------------------------------------ */
 
-.digit-Video--showControls .digit-VideoControl {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -webkit-transition-duration: .2s;
-    -webkit-transition-delay: 0;
-    -webkit-transition-timing-function: cubic-bezier(.02, .40, .20, .96);
-}
-
 .digit-VideoControl {
     display: -webkit-box;
     position: absolute;
@@ -30,7 +22,7 @@
 /* Buttons ------------------------------------ */
 
 .digit-VideoControl-button-play,
-.digit-VideoControl-button-fullscreen {
+.digit-VideoControl-button-fullScreen {
     display: block;
     position: relative;
     margin: 0;
@@ -46,7 +38,7 @@
 }
 
 .digit-VideoControl-button-play:before,
-.digit-VideoControl-button-fullscreen:before {
+.digit-VideoControl-button-fullScreen:before {
     display: block;
     position: absolute;
     top: 0;
@@ -58,7 +50,7 @@
 }
 
 .digit-VideoControl-button-play:active,
-.digit-VideoControl-button-fullscreen:active {
+.digit-VideoControl-button-fullScreen:active {
     background-color: hsla(0,0%,100%,.1);
 }
 
@@ -70,14 +62,14 @@
 }
 
 [data-montage-skin="light"] .digit-VideoControl-button-play,
-[data-montage-skin="light"] .digit-VideoControl-button-fullscreen {
+[data-montage-skin="light"] .digit-VideoControl-button-fullScreen {
     color: hsla(0,0%,0%,.6);
     text-shadow: 0 1px hsla(0,0%,100%,1);
 }
 [data-montage-skin="light"] .digit-VideoControl-button-play:active {
     background: -webkit-linear-gradient(left, hsla(0,0%,0%,.1), hsla(0,0%,0%,.1), hsla(0,0%,0%,0) );
 }
-[data-montage-skin="light"] .digit-VideoControl-button-fullscreen:active {
+[data-montage-skin="light"] .digit-VideoControl-button-fullScreen:active {
     background: -webkit-linear-gradient(right, hsla(0,0%,0%,.1), hsla(0,0%,0%,.1), hsla(0,0%,0%,0) );
 }
 
@@ -91,13 +83,13 @@
 }
 
 [data-montage-skin="dark"] .digit-VideoControl-button-play,
-[data-montage-skin="dark"] .digit-VideoControl-button-fullscreen {
+[data-montage-skin="dark"] .digit-VideoControl-button-fullScreen {
     color: hsla(0,0%,100%,.7);
     text-shadow: 0 1px hsla(0,0%,0%,.2);
 }
 [data-montage-skin="dark"] .digit-VideoControl-button-play:active {
     background: -webkit-linear-gradient(left, hsla(0,0%,100%,.1), hsla(0,0%,100%,.1), hsla(0,0%,100%,0) );
 }
-[data-montage-skin="dark"] .digit-VideoControl-button-fullscreen:active {
+[data-montage-skin="dark"] .digit-VideoControl-button-fullScreen:active {
     background: -webkit-linear-gradient(right, hsla(0,0%,100%,.1), hsla(0,0%,100%,.1), hsla(0,0%,100%,0) );
 }

@@ -29,18 +29,29 @@
                     "element": {"#": "control"},
                     "controller": {"@": "mediacontroller"}
                 }
+            },
+            "play": {
+                "prototype": "native/ui/button.reel",
+                "properties": {
+                    "element": {"#": "play"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
             }
-
         }
     </script>
 </head>
 <body>
 
-    <div data-montage-id="video" class="digit-Video digit-Video--showControls">
+    <div data-montage-id="video" class="digit-Video digit-Video--firstPlay">
         <video data-montage-id="mediaElement" class="digit-Video-frame">
         </video>
         <div class="digit-Video-cover">
-            <button class="digit-Video-cover-button"></button>
+            <button data-montage-id="play" class="digit-Video-cover-button"></button>
         </div>
         <menu data-montage-id="control">
         </menu>

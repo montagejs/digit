@@ -5,6 +5,7 @@
    margin: 0;
    background: hsl(0,0%,10%);
    overflow: hidden;
+    -webkit-user-select: none;
 }
 
 
@@ -28,7 +29,11 @@
 .digit-Video-cover {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0;
     box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1);
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.02, .40, .20, .96);
     pointer-events: none;
 }
 
@@ -45,6 +50,39 @@
     color: hsla(0,0%,100%,.9);
     border: none;
     background-color: hsla(0,0%,10%,.8);
+    -webkit-transform: translate3d(2em,0,0);
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.02, .40, .20, .96);
+}
+
+.digit-Video-cover-button:before {
+    position: absolute;
+    left: 30%;
+    top: 0
+}
+
+
+
+/* firstPlay */
+
+.digit-Video--firstPlay .digit-Video-cover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.digit-Video--firstPlay .digit-Video-cover-button {
+    -webkit-transform: translate3d(0,0,0);
+}
+
+/* showControls */
+
+.digit-Video--showControls .digit-VideoControl {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition-duration: .2s;
+    -webkit-transition-delay: 0;
+    -webkit-transition-timing-function: cubic-bezier(.02, .40, .20, .96);
 }
 
 

@@ -8,6 +8,17 @@
     height: 2em;
 }
 
+.digit-VideoControlTrack-thumbSlider {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*width of thumb - input-range border*/
+    right: 1.6em;
+    bottom: 0px;
+    -webkit-transition: -webkit-transform .025s;
+    -webkit-transition-timing-function: linear;
+}
+
 
 /* Timeline ------------------------------------ */
 
@@ -17,6 +28,8 @@
     overflow: hidden;
     box-sizing: border-box;
     height: 6px;
+    /* em value needs to be sorted out when the font size is more stable*/
+    margin: 0px .8em;
     border-radius: 10px;
     background-color: hsla(0,0%,100%,.2);
     -webkit-transition: -webkit-transform .1s;
@@ -37,7 +50,8 @@
     height: 2em;
     line-height: 2em;
     top: 50%;
-    left: 22%;
+    left: 0%;
+    width: 4em;
     font-size: 12px;
     border-radius: 1em;
     -webkit-font-smoothing: antialiased;

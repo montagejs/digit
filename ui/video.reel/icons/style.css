@@ -28,15 +28,14 @@ you can use the generic selector below, but it's slower:
 .icon-play:before, .icon-pause:before, .icon-cw:before, .icon-ccw:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-resize-enlarge:before, .icon-resize-shrink:before, .icon-volume:before, .icon-sound:before, .icon-mute:before, .icon-ellipsis:before,
 
 .digit-Video-cover-button:before,
-.digit-Video-controls-button-play:before,
-.digit-Video-controls-button-fullscreen:before
+.digit-VideoControl-button-play:before,
+.digit-VideoControl-button-fullScreen:before
 
 {
     font-family: 'entypo';
     speak: none;
     font-style: normal;
     font-weight: normal;
-    line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -61,7 +60,7 @@ you can use the generic selector below, but it's slower:
     content: "\e106";
 }
 
-.digit-VideoControl-button-fullscreen:before,
+.digit-VideoControl-button-fullScreen:before,
 .icon-resize-enlarge:before {
     content: "\e107";
 }

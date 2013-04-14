@@ -7,14 +7,43 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "video-control"}
+                "element": {"#": "video-control"},
+                "_controlTrack": {"@": "track"}
             }
         },
+
+        "play": {
+            "prototype": "native/ui/button.reel",
+            "properties": {
+                "element": {"#": "play"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+
         "track": {
             "prototype": "ui/video-control.reel/video-control-track.reel",
             "properties": {
-                "element": {"#": "track"}
+                "element": {"#": "track"},
+                "value": 0
             }
+        },
+
+        "fullScreen": {
+            "prototype": "native/ui/button.reel",
+            "properties": {
+                "element": {"#": "fullScreen"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
         }
 
     }
@@ -22,9 +51,9 @@
 </head>
 <body>
     <menu data-montage-id="video-control" class="digit-VideoControl">
-         <button class="digit-VideoControl-button-play"></button>
+         <button data-montage-id="play" class="digit-VideoControl-button-play"></button>
          <div data-montage-id="track"></div>
-         <button class="digit-VideoControl-button-fullscreen"></button>
+         <button data-montage-id="fullScreen" class="digit-VideoControl-button-fullScreen"></button>
      </menu>
 </body>
 </html>
