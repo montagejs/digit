@@ -36,7 +36,6 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
 
     handleFullScreenAction: {
         value: function (e) {
-            alert("fullScreen")
             this.controller.fullscreen();
         }
     },
