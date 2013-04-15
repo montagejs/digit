@@ -13,7 +13,7 @@
         },
 
         "play": {
-            "prototype": "native/ui/button.reel",
+            "prototype": "ui/video-control.reel[Button]",
             "properties": {
                 "element": {"#": "play"}
             },
@@ -30,11 +30,14 @@
             "properties": {
                 "element": {"#": "track"},
                 "value": 0
+            },
+            "bindings": {
+                "controller": {"<-": "@owner.controller"}
             }
         },
 
         "fullScreen": {
-            "prototype": "native/ui/button.reel",
+            "prototype": "ui/video-control.reel[Button]",
             "properties": {
                 "element": {"#": "fullScreen"}
             },

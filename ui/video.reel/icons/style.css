@@ -44,6 +44,7 @@ you can use the generic selector below, but it's slower:
 .icon-play:before {
     content: "\e101";
 }
+.digit-VideoControl--playing .digit-VideoControl-button-play:before,
 .icon-pause:before {
     content: "\e102";
 }

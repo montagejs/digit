@@ -9,8 +9,7 @@ exports.Video = Montage.create(Component, {
 
     didCreate: {
         value: function() {
-            this._pressComposer = PressComposer.create();
-            this.addComposer(this._pressComposer);
+            this.addPathChangeListener("controller.status", this, "handleControllerStatusChange");
         }
     },
 
@@ -18,6 +17,9 @@ exports.Video = Montage.create(Component, {
     enterDocument: {
         value: function(firstTime) {
             if (firstTime) {
+                this._pressComposer = PressComposer.create();
+                this._pressComposer.identifier = "video";
+                this.addComposerForElement(this._pressComposer, this.controller.mediaElement);
                 this.controller.showPoster();
             }
         }
@@ -41,40 +43,72 @@ exports.Video = Montage.create(Component, {
             this.classList.remove("digit-Video--firstPlay");
         }
     },
-    // Handlers
 
-    handlePressStart: {
-        value: function() {
-            if(! this._showControlsTimeout) {
-                clearTimeout(this._showControlsTimeout);
-            }
-            this.classList.add("digit-Video--showControls");
-        }
-    },
+    // Event Handlers
 
-    handlePress: {
+//    handleVideoPressStart: {
+//        value: function() {
+//            console.log("pressStart" + this.identifier, "target", event.target.identifier)
+//            if(! this._showControlsTimeout) {
+//                clearTimeout(this._showControlsTimeout);
+//            }
+//            this.classList.add("digit-Video--showControls");
+//        }
+//    },
+
+    handleVideoPress: {
         value: function(event) {
             if (this.controller.status === this.controller.EMPTY) {
                 this.controller.loadMedia();
                 this.classList.remove("digit-Video--firstPlay");
-            } else {
-                var self = this;
+                this._pressComposer.unload();
+                this._pressComposer.removeEventListener("pressStart", this, false);
+                this._pressComposer.removeEventListener("press", this, false);
+                this._pressComposer.removeEventListener("pressCancel", this, false);
 
-                this._showControlsTimeout = setTimeout(function() {
-                    self.classList.remove("digit-Video--showControls");
-                }, 5000);
+                this._pressComposer = null;
             }
-
-
         }
     },
 
-    handlePressCancel: {
-        value: function(event) {
+    handleTouchstart: {
+        value: function() {
+            this.clearHideControlsTimeout();
+            this.classList.add("digit-Video--showControls");
+            document.addEventListener("touchend",this , false);
+        }
+    },
+    handleTouchend: {
+        value: function() {
             var self = this;
-            this._showControlsTimeout = setTimeout(function() {
-                self.classList.remove("digit-Video--showControls");
-            }, 5000);
+            this.setHideControlsTimeout();
+        }
+    },
+
+    handleMousedown: {
+        value: function() {
+            this.clearHideControlsTimeout();
+            this.classList.add("digit-Video--showControls");
+            document.addEventListener("mouseup",this , false);
+        }
+    },
+    handleMouseup: {
+        value: function() {
+            var self = this;
+            this.setHideControlsTimeout();
+        }
+    },
+
+    handleControllerStatusChange: {
+        value: function (newValue, path, myObject) {
+            if (this.controller) {
+                if (!this._firstPlay && newValue !== this.controller.PLAYING) {
+                    this.clearHideControlsTimeout();
+                    this.classList.add("digit-Video--showControls");
+                } else if (this._firstPlay && newValue === this.controller.PLAYING) {
+                    this.doFirstPlay();
+                }
+            }
         }
     },
 
@@ -94,7 +128,37 @@ exports.Video = Montage.create(Component, {
 
     // Machinery
 
-    _showControlsTimeout: {
+    doFirstPlay: {
+        value: function(newValue) {
+            this.element.addEventListener("touchstart",this , false);
+            this.element.addEventListener("mousedown",this , false);
+            this._firstPlay = false;
+        }
+    },
+
+    setHideControlsTimeout: {
+        value: function(newValue) {
+            var self = this;
+            this.clearHideControlsTimeout();
+            this._hideControlsTimeout = setTimeout(function() {
+                self.classList.remove("digit-Video--showControls");
+            }, 2500);
+        }
+    },
+
+    clearHideControlsTimeout: {
+        value: function(newValue) {
+            if(this._hideControlsTimeout) {
+                clearTimeout(this._hideControlsTimeout);
+            }
+        }
+    },
+
+    _firstPlay: {
+        value: true
+    },
+
+    _hideControlsTimeout: {
         value: null
     }
 });

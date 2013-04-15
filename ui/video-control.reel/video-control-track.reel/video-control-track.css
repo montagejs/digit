@@ -61,7 +61,7 @@
     -webkit-transition: -webkit-transform .3s cubic-bezier(.44, .14, .08, .97);
 }
 
-.digit-VideoControlTrack:active .digit-VideoControlTrack-thumb {
+.montage-InputRange--active .digit-VideoControlTrack-thumb {
     -webkit-transform: translateY(-4.2em);
     -webkit-transition-duration: .15s;
     -webkit-transition-timing-function: cubic-bezier(.04, .18, .14, .98);
@@ -78,7 +78,7 @@
     -webkit-transform: translate(-5px, 1.5em) rotate(-45deg);
 }
 
-.digit-VideoControlTrack:active .digit-VideoControlTrack-thumb:before {
+.montage-InputRange--active .digit-VideoControlTrack-thumb:before {
     opacity: 1;
 }
 

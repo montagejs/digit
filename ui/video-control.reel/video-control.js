@@ -5,6 +5,7 @@
 */
 var Montage = require("montage").Montage,
     Component = require("montage/ui/component").Component;
+var AbstractButton = require("montage/ui/base/abstract-button").AbstractButton;
 
 /**
     Description TODO
@@ -20,6 +21,8 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
      */
     didCreate: {
         value: function () {
+            this.addPathChangeListener("controller.status", this, "handleControllerStatusChange");
+
             this.defineBinding("_controlTrack.value", {"<->": "controller.position", source: this});
             this.defineBinding("_controlTrack.max", {"<-": "controller.duration", source: this});
             this.defineBinding("_controlTrack.time", {"<-": "controller.position", source: this});
@@ -48,8 +51,25 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
 
     // Machinery
 
+    handleControllerStatusChange: {
+        value: function (newValue, path, myObject) {
+            if (this.controller) {
+                if (newValue === this.controller.PLAYING) {
+                    this.classList.add("digit-VideoControl--playing");
+                } else {
+                    this.classList.remove("digit-VideoControl--playing");
+                }
+            }
+        }
+    },
+
     _controlTrack: {
         value: null
     }
 
+});
+
+exports.Button = Montage.create(AbstractButton, {
+
+    hasTemplate: {value: false},
 });
