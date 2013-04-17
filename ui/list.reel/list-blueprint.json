@@ -47,8 +47,7 @@
             "blueprint": {
                 "@": "root"
             },
-            "valueType": "boolean",
-            "readOnly": "true"
+            "valueType": "boolean"
         }
     },
     "root": {
