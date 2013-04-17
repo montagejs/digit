@@ -113,6 +113,18 @@ exports.Video = Montage.create(Component, {
 
     handleSrcChange: {
         value: function() {
+            // We need to create a new video element because there's really
+            // no good way to unload the current video in order to show the
+            // cover for the next video (without loading the new video in the
+            // first place but we want to avoid doing it, only when the user
+            // presses play).
+            var currentVideoElement = this.controller.mediaElement,
+                newVideoElement = document.createElement("video");
+
+            newVideoElement.className = currentVideoElement.className;
+            this.element.replaceChild(newVideoElement, currentVideoElement);
+            this.controller.mediaElement = newVideoElement;
+
             this.setupFirstPlay();
         }
     },
