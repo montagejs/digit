@@ -17,10 +17,10 @@ exports.Video = Montage.create(Component, {
     enterDocument: {
         value: function(firstTime) {
             if (firstTime) {
-                this._pressComposer = PressComposer.create();
-                this._pressComposer.identifier = "video";
-                this.addComposerForElement(this._pressComposer, this.controller.mediaElement);
-                this.controller.showPoster();
+                this.setupFirstPlay();
+
+                this.addOwnPropertyChangeListener("src", this);
+                this.addOwnPropertyChangeListener("poster", this);
             }
         }
     },
@@ -37,9 +37,8 @@ exports.Video = Montage.create(Component, {
 
     handlePlayAction: {
         value: function (e) {
-            if (this.controller.status === this.controller.EMPTY) {
-                this.controller.loadMedia();
-            }
+            this.controller.loadMedia();
+            this.controller.play();
             this.classList.remove("digit-Video--firstPlay");
         }
     },
@@ -112,6 +111,18 @@ exports.Video = Montage.create(Component, {
         }
     },
 
+    handleSrcChange: {
+        value: function() {
+            this.setupFirstPlay();
+        }
+    },
+
+    handlePosterChange: {
+        value: function() {
+            this.controller.showPoster();
+        }
+    },
+
     // Properties
 
     src: {
@@ -127,6 +138,23 @@ exports.Video = Montage.create(Component, {
     },
 
     // Machinery
+
+    setupFirstPlay: {
+        value: function() {
+            this.element.removeEventListener("touchstart", this, false);
+            this.element.removeEventListener("mousedown", this, false);
+            this._firstPlay = true;
+            this.controller.stop();
+
+            this.classList.add("digit-Video--firstPlay");
+            this.classList.remove("digit-Video--showControls");
+
+            this._pressComposer = PressComposer.create();
+            this._pressComposer.identifier = "video";
+            this.addComposerForElement(this._pressComposer, this.controller.mediaElement);
+            this.controller.showPoster();
+        }
+    },
 
     doFirstPlay: {
         value: function(newValue) {
