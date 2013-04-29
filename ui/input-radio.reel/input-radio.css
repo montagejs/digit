@@ -11,7 +11,7 @@
     cursor: pointer;
 }
 
-.digit-InputRadio:active {
+.digit-InputRadio.montage--active {
     background-color: #e5e5e5;
 }
 
@@ -19,11 +19,11 @@
     border-color: #7f7f7f;
 }
 
-.digit-InputRadio--checked {
+.digit-InputRadio.montage-InputRadio--checked {
     background: #f2f2f2 url(radio.svg) no-repeat center;
 }
 
-.digit-InputRadio--disabled {
+.digit-InputRadio.montage--disabled {
     opacity: .5;
     border-style: dashed;
     pointer-events: none;
@@ -43,7 +43,7 @@
     position: relative;
 }
 
-[data-montage-skin] .digit-InputRadio--checked:before {
+[data-montage-skin] .digit-InputRadio.montage-InputRadio--checked:before {
     content: "";
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
@@ -52,7 +52,7 @@
 
 /* Light ------------------------------------ */
 
-[data-montage-skin="light"] .digit-InputRadio--checked:before {
+[data-montage-skin="light"] .digit-InputRadio.montage-InputRadio--checked:before {
     background: url(radio.svg) no-repeat center;
 }
 
@@ -62,8 +62,8 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), inset 0 -1px 1px hsla(0,0%,0%,.04), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
-[data-montage-skin="light"] .digit-InputRadio:active,
-[data-montage-skin="light"] .digit-InputRadio--checked {
+[data-montage-skin="light"] .digit-InputRadio.montage--active,
+[data-montage-skin="light"] .digit-InputRadio.montage-InputRadio--checked {
     border-color: hsla(0,0%,70%,1);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.2), 0 1px 0 hsla(0,0%,100%,.6);
@@ -72,7 +72,7 @@
 
 /* Dark ------------------------------------ */
 
-[data-montage-skin="dark"] .digit-InputRadio--checked:before {
+[data-montage-skin="dark"] .digit-InputRadio.montage-InputRadio--checked:before {
     background: url(radio-dark.svg) no-repeat center;
 }
 
@@ -82,8 +82,8 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), inset 0 -1px 1px hsla(0,0%,0%,.06), 0 1px 0 hsla(0,0%,100%,.1);
 }
 
-[data-montage-skin="dark"] .digit-InputRadio:active,
-[data-montage-skin="dark"] .digit-InputRadio--checked {
+[data-montage-skin="dark"] .digit-InputRadio.montage--active,
+[data-montage-skin="dark"] .digit-InputRadio.montage-InputRadio--checked {
     border-color: hsl(0,0%,15%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,20%), hsl(0,0%,16%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);

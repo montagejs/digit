@@ -7,32 +7,13 @@
     <script type="text/montage-serialization">
         {
             "test": {
-                "prototype": "test/input-radio/input-radio-test[Test]",
-                "properties": {
-                    "inputRadio1": {"@": "inputRadio1"},
-                    "inputRadio2": {"@": "inputRadio2"},
-                    "inputRadioChecked": {"@": "inputRadioChecked"}
-                }
+                "prototype": "test/input-radio/input-radio-test[Test]"
             },
 
             "inputRadio1": {
                 "prototype": "ui/input-radio.reel",
                 "properties": {
                     "element": {"#": "inputRadio1"}
-                }
-            },
-
-            "inputRadio2": {
-                "prototype": "ui/input-radio.reel",
-                "properties": {
-                    "element": {"#": "inputRadio2"}
-                }
-            },
-
-            "inputRadioChecked": {
-                "prototype": "ui/input-radio.reel",
-                "properties": {
-                    "element": {"#": "inputRadioChecked"}
                 }
             }
         }
@@ -42,9 +23,6 @@
 <body>
     <h1>InputRadio</h1>
 
-    <div data-montage-id="inputRadio1" name="inputRadioTest"></div>
-    <div data-montage-id="inputRadio2" name="inputRadioTest"></div>
-    
-    <div data-montage-id="inputRadioChecked" checked required></div>
+    <div data-montage-id="inputRadio1"></div>
 </body>
 </html>
