@@ -4,7 +4,7 @@
     @requires montage/ui/component
 */
 var Montage = require("montage").Montage;
-var AbstractInputRange = require("montage/ui/base/abstract-input-range").AbstractInputRange;
+var AbstractSlider = require("montage/ui/base/abstract-slider").AbstractSlider;
 var Promise = require("montage/core/promise").Promise;
 
 /**
@@ -12,7 +12,7 @@ var Promise = require("montage/core/promise").Promise;
     @class VideoControlTrack
     @extends Component
 */
-exports.VideoControlTrack = Montage.create(AbstractInputRange, /** @lends VideoControlTrack# */ {
+exports.VideoControlTrack = Montage.create(AbstractSlider, /** @lends VideoControlTrack# */ {
 
     // Lifecycle
 
@@ -21,7 +21,7 @@ exports.VideoControlTrack = Montage.create(AbstractInputRange, /** @lends VideoC
      */
     didCreate: {
         value: function () {
-            AbstractInputRange.didCreate.call(this);
+            AbstractSlider.didCreate.call(this);
             this.addOwnPropertyChangeListener("time", this);
 
 //            this.defineBinding("value", {"<->": "controller.position", source: this});
@@ -35,7 +35,7 @@ exports.VideoControlTrack = Montage.create(AbstractInputRange, /** @lends VideoC
 
     handleThumbTranslateStart: {
         value: function (e) {
-            AbstractInputRange.handleThumbTranslateStart.apply(this, arguments);
+            AbstractSlider.handleThumbTranslateStart.apply(this, arguments);
             if(this.controller.status === this.controller.PLAYING ) {
                 this._wasPlaying = true;
                 this.controller.pause();
@@ -47,14 +47,14 @@ exports.VideoControlTrack = Montage.create(AbstractInputRange, /** @lends VideoC
 
     handleThumbTranslate: {
         value: function (event) {
-            AbstractInputRange.handleThumbTranslate.apply(this, arguments);
+            AbstractSlider.handleThumbTranslate.apply(this, arguments);
 
         }
     },
 
     handleThumbTranslateEnd: {
         value: function (e) {
-            AbstractInputRange.handleThumbTranslateEnd.apply(this, arguments);
+            AbstractSlider.handleThumbTranslateEnd.apply(this, arguments);
             if ( this._wasPlaying ) {
                 this.controller.play();
             }
@@ -62,13 +62,13 @@ exports.VideoControlTrack = Montage.create(AbstractInputRange, /** @lends VideoC
     },
 
 
-    // Elements for AbstractInputRange
+    // Elements for AbstractSlider
 
-    _thumbSliderElement: {
+    _sliderThumbTrackElement: {
         value: null
     },
 
-    _inputRangeThumbElement: {
+    _sliderThumbElement: {
         value: null
     },
 

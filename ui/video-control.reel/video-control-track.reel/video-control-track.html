@@ -8,14 +8,14 @@
         "owner": {
             "properties": {
                 "element": {"#": "video-control-track"},
-                "_thumbSliderElement": {"#": "thumbSlider"},
-                "_inputRangeThumbElement": {"#": "inputRangeThumb"}
+                "_sliderThumbTrackElement": {"#": "sliderThumbTrack"},
+                "_sliderThumbElement": {"#": "sliderThumb"}
             }
         },
         "time": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "inputRangeThumb"}
+                "element": {"#": "sliderThumb"}
             },
             "bindings": {
                 "value": {"<-": "@owner.formattedTime"}
@@ -29,8 +29,8 @@
         <div class="digit-VideoControlTrack-timeline">
             <!--<div class="digit-VideoControlTrack-timeline-progress"></div>-->
         </div>
-        <div data-montage-id="thumbSlider" class="digit-VideoControlTrack-thumbSlider">
-            <div data-montage-id="inputRangeThumb" class="digit-VideoControlTrack-thumb">-2:45</div>
+        <div data-montage-id="sliderThumbTrack" class="digit-VideoControlTrack-thumbTrack">
+            <div data-montage-id="sliderThumb" class="digit-VideoControlTrack-thumb">-2:45</div>
         </div>
     </div>
 </body>

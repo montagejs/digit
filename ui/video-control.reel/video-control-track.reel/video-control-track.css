@@ -8,7 +8,7 @@
     height: 2em;
 }
 
-.digit-VideoControlTrack-thumbSlider {
+.digit-VideoControlTrack-thumbTrack {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -62,7 +62,7 @@
     -webkit-transition: -webkit-transform .3s cubic-bezier(.44, .14, .08, .97);
 }
 
-.montage-InputRange--active .digit-VideoControlTrack-thumb {
+.montage-Slider--active .digit-VideoControlTrack-thumb {
     -webkit-transform: translateY(-4.2em);
     -webkit-transition-duration: .15s;
     -webkit-transition-timing-function: cubic-bezier(.04, .18, .14, .98);
@@ -79,7 +79,7 @@
     -webkit-transform: translate(-5px, 1.5em) rotate(-45deg);
 }
 
-.montage-InputRange--active .digit-VideoControlTrack-thumb:before {
+.montage-Slider--active .digit-VideoControlTrack-thumb:before {
     opacity: 1;
 }
 

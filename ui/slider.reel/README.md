@@ -29,14 +29,15 @@ The Range Input component wraps an HTML `<input type="range">` element.
 
 ## Customizing with CSS
 
-* `.digit-InputRange` - The track of the InputRange element
-* `.digit-InputRange-thumb` - The thumb of the InputRange element
+* `.digit-Slider` - The track of the Slider element
+* `.digit-Slider-thumb` - The thumb of the Slider element
+* `.digit-Slider-thumbTrack` - The element which bounds the motion of the thumb, If the width of the thumb is changed the right property should be adjusted.
 
 ```css
-.digit-InputRange {
+.digit-Slider {
     border-color: blue;
 }
-.digit-InputRange-thumb {
+.digit-Slider-thumb {
     background-color: pink;
 }
 ```

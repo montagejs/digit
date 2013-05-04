@@ -70,6 +70,5 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
 });
 
 exports.Button = Montage.create(AbstractButton, {
-
-    hasTemplate: {value: false},
+    hasTemplate: {value: false}
 });

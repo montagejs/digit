@@ -53,9 +53,9 @@
     "inputNumber2": { "prototype": "digit/ui/input-number.reel", "properties": { "element": {"#": "inputNumber2"} } },
     "inputNumber3": { "prototype": "digit/ui/input-number.reel", "properties": { "element": {"#": "inputNumber3"} } },
 
-    "inputRange1": { "prototype": "digit/ui/input-range.reel", "properties": { "element": {"#": "inputRange1"} } },
-    "inputRange2": { "prototype": "digit/ui/input-range.reel", "properties": { "element": {"#": "inputRange2"} } },
-    "inputRange3": { "prototype": "digit/ui/input-range.reel", "properties": { "element": {"#": "inputRange3"} } },
+    "slider1": { "prototype": "digit/ui/slider.reel", "properties": { "element": {"#": "slider1"} } },
+    "slider2": { "prototype": "digit/ui/slider.reel", "properties": { "element": {"#": "slider2"} } },
+    "slider3": { "prototype": "digit/ui/slider.reel", "properties": { "element": {"#": "slider3"} } },
 
     "progress1": { "prototype": "digit/ui/progress.reel", "properties": { "element": {"#": "progress1"} } },
     "progress2": { "prototype": "digit/ui/progress.reel", "properties": { "element": {"#": "progress2"} } },
