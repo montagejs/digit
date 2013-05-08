@@ -6,9 +6,9 @@ exports.InputText = Montage.create(NativeInputText, {
 
     hasTemplate: {value: true},
 
-    willPrepareForDraw: {
+    enterDocument: {
         value: function() {
-            NativeInputText.willPrepareForDraw.call(this);
+            NativeInputText.enterDocument.apply(this, arguments);
             this.element.classList.add("digit-InputText");
         }
     }

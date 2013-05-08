@@ -6,9 +6,9 @@ exports.Select = Montage.create(NativeSelect, {
 
     hasTemplate: {value: true},
 
-    willPrepareForDraw: {
+    enterDocument: {
         value: function() {
-            NativeSelect.willPrepareForDraw.call(this);
+            NativeSelect.enterDocument.apply(this, arguments);
             this.element.classList.add("digit-Select");
         }
     }

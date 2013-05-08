@@ -6,9 +6,9 @@ exports.ButtonGroup = Montage.create(NativeButton, {
 
     hasTemplate: {value: true},
 
-    willPrepareForDraw: {
+    enterDocument: {
         value: function() {
-            NativeButton.willPrepareForDraw.call(this);
+            NativeButton.enterDocument.apply(this, arguments);
             this.element.classList.add("digit-ButtonGroup");
         }
     }

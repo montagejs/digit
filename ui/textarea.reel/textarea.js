@@ -6,9 +6,9 @@ exports.Textarea = Montage.create(NativeTextarea, {
 
     hasTemplate: {value: true},
 
-    willPrepareForDraw: {
+    enterDocument: {
         value: function() {
-            NativeTextarea.willPrepareForDraw.call(this);
+            NativeTextarea.enterDocument.apply(this, arguments);
             this.element.classList.add("digit-Textarea");
         }
     }
