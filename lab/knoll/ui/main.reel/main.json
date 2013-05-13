@@ -1,0 +1,58 @@
+{
+    "owner": {
+        "properties": {
+            "element": {"#": "main"}
+        }
+    },
+
+    "button": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "button"} } },
+
+    "buttonGroup": { "prototype": "digit/ui/button-group.reel", "properties": { "element": {"#": "buttonGroup"} } },
+    "buttonGroupItem1": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroupItem1"} } },
+    "buttonGroupItem2": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroupItem2"} } },
+    "buttonGroupItem3": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "buttonGroupItem3"} } },
+
+    "toggle": { "prototype": "digit/ui/toggle.reel", "properties": { "element": {"#": "toggle"} } },
+
+    "inputCheckbox": { "prototype": "digit/ui/input-checkbox.reel", "properties": { "element": {"#": "inputCheckbox"} } },
+
+    "inputRadio1": { "prototype": "digit/ui/input-radio.reel", "properties": { "element": {"#": "inputRadio1"} } },
+    "inputRadio2": { "prototype": "digit/ui/input-radio.reel", "properties": { "element": {"#": "inputRadio2"} } },
+
+    "select": { "prototype": "digit/ui/select.reel", "properties": { "element": {"#": "select"} } },
+
+    "inputText": { "prototype": "digit/ui/input-text.reel", "properties": { "element": {"#": "inputText"} } },
+
+    "textarea": { "prototype": "digit/ui/textarea.reel", "properties": { "element": {"#": "textarea"} } },
+
+    "inputNumber": { "prototype": "digit/ui/input-number.reel", "properties": { "element": {"#": "inputNumber"} } },
+
+    "slider": { "prototype": "digit/ui/slider.reel", "properties": { "element": {"#": "slider"} } },
+
+    "progress": { "prototype": "digit/ui/progress.reel", "properties": { "element": {"#": "progress"} } },
+
+
+
+    "audio": { "prototype": "digit/ui/audio.reel", "properties": { "element": {"#": "audio"} } },
+
+    "video": { "prototype": "digit/ui/video.reel", "properties": { "element": {"#": "video"} } },
+
+    "map": { "prototype": "digit/ui/map.reel", "properties": { "element": {"#": "map"} } },
+
+
+
+    "header": { "prototype": "digit/ui/header.reel", "properties": { "element": {"#": "header"} } },
+
+    "list": { "prototype": "digit/ui/list.reel", "properties": { "element": {"#": "list"} } },
+
+    "tabBar": { "prototype": "digit/ui/tab-bar.reel", "properties": { "element": {"#": "tabBar"} } },
+
+    "toolBar": { "prototype": "digit/ui/tool-bar.reel", "properties": { "element": {"#": "toolBar"} } },
+
+    "actionSheet": { "prototype": "digit/ui/action-sheet.reel", "properties": { "element": {"#": "actionSheet"} } },
+    
+    "modal": { "prototype": "digit/ui/modal.reel", "properties": { "element": {"#": "modal"} } },
+    
+    "notification": { "prototype": "digit/ui/notification.reel", "properties": { "element": {"#": "notification"} } }
+
+}
