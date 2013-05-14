@@ -2,21 +2,21 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>InputRange</title>
+    <title>Slider</title>
     <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
     <script type="text/montage-serialization">
         {
             "test": {
-                "prototype": "test/input-range/input-range-test[Test]",
+                "prototype": "test/slider/slider-test[Test]",
                 "properties": {
-                    "inputRange": {"@": "inputRange"}
+                    "inputRange": {"@": "slider"}
                 }
             },
 
-            "inputRange": {
-                "prototype": "ui/input-range.reel",
+            "slider": {
+                "prototype": "ui/slider.reel",
                 "properties": {
-                    "element": {"#": "inputRange"}
+                    "element": {"#": "slider"}
                 }
             }
         }
@@ -24,8 +24,8 @@
 
 </head>
 <body>
-    <h1>InputRange</h1>
+    <h1>Slider</h1>
 
-    <div data-montage-id="inputRange"></div>
+    <div data-montage-id="slider"></div>
 </body>
 </html>
