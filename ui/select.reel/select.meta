@@ -126,7 +126,7 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "NativeControl",
-                "blueprintModuleId": "native/ui/native-control-blueprint.json",
+                "blueprintModuleId": "native/ui/native-control.meta",
                 "prototypeName": "NativeControl"
             }
         }
@@ -135,7 +135,7 @@
         "prototype": "montage/core/meta/blueprint",
         "properties": {
             "name": "select",
-            "blueprintModuleId": "ui/select.reel/select-blueprint.json",
+            "blueprintModuleId": "ui/select.reel/select.meta",
             "prototypeName": "select",
             "customPrototype": false,
             "parent": {

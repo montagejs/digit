@@ -4,7 +4,7 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "Component",
-                "blueprintModuleId": "montage/ui/component-blueprint.json",
+                "blueprintModuleId": "montage/ui/component.meta",
                 "prototypeName": "Component"
             }
         }
@@ -54,7 +54,7 @@
         "prototype": "montage/core/meta/blueprint",
         "properties": {
             "name": "List",
-            "blueprintModuleId": "ui/list.reel/list-blueprint.json",
+            "blueprintModuleId": "ui/list.reel/list.meta",
             "parent": {
                 "@": "blueprint_component_reference"
             },
