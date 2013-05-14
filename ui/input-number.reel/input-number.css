@@ -1,58 +1,22 @@
 .digit-InputNumber {
-    /font-size: 12px;
+    box-sizing: border-box;
     position: relative;
     display: inline-block;
-    /width: 5em;
-    /margin-right: 2.5em;
-}
-
-.digit-InputNumber > .digit-InputNumber-input {
-    font-size: inherit;
-    width: 3.6em;
-    vertical-align: middle;
-    /border-radius: 3px 0 0 3px;
-}
-
-.digit-InputNumber > .digit-InputNumber-input:focus {
-    border-color: #7f7f7f;
-}
-
-.digit-InputNumber > .digit-InputNumber-plus,
-.digit-InputNumber > .digit-InputNumber-minus {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 2.5em;
-    height: 1.25em;
-    right: -2.5em;
-    line-height: 0;
-}
-
-.digit-InputNumber > .digit-InputNumber-plus {
-    border-width: 1px 1px 0 0;
-    border-radius: 0 3px 0 0;
-    top: 0px;
-}
-
-.digit-InputNumber > .digit-InputNumber-minus {
-    border-width: 1px 1px 1px 0;
-    border-radius: 0 0 3px 0;
-    bottom: 0px;
-}
-
-
-
-/* Style for Touch */
-.digit-InputNumber {
     font-size: 16px;
     width: auto;
     margin: 0;
 }
 
 .digit-InputNumber > .digit-InputNumber-input {
+    display: inline-block;
     font-size: inherit;
+    height: 2.5em;
+    width: 3.6em;
     border-radius: 0;
     text-align: center;
+    padding-bottom: 3px;
+    border: 1px solid #b3b3b3;
+    /*vertical-align: middle;*/
 }
 
 .digit-InputNumber-input::-webkit-inner-spin-button {
@@ -61,10 +25,18 @@
 
 .digit-InputNumber > .digit-InputNumber-plus,
 .digit-InputNumber > .digit-InputNumber-minus {
-    position: static;
+    display: inline-block;
+    font-size: inherit;
+    width: 2.5em;
     height: 2.5em;
     top: auto;
     right: auto;
+    margin: 0;
+    line-height: 2.5em;
+    padding: 2px;
+    border: 1px solid #b3b3b3;
+    cursor: pointer;
+    -webkit-user-select: none;
 }
 .digit-InputNumber > .digit-InputNumber-plus {
     border-width: 1px 1px 1px 0;
@@ -73,4 +45,42 @@
 .digit-InputNumber > .digit-InputNumber-minus {
     border-width: 1px 0 1px 1px;
     border-radius: 2.5em 0 0 2.5em;
+}
+/* Light ------------------------------------ */
+
+[data-montage-skin="light"] .digit-InputNumber > .digit-InputNumber-plus,
+[data-montage-skin="light"] .digit-InputNumber > .digit-InputNumber-minus {
+
+    color: hsla(0,0%,0%,.7);
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
+    border-color: hsl(0,0%,80%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,92%) );
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), inset 0 -1px 1px hsla(0,0%,0%,.04), 0 1px 0 hsla(0,0%,100%,.6);
+}
+
+[data-montage-skin="light"] .digit-InputNumber > .digit-InputNumber-plus.montage--active,
+[data-montage-skin="light"] .digit-InputNumber > .digit-InputNumber-minus.montage--active {
+    border-color: hsla(0,0%,70%,1);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
+    box-shadow: inset 0 1px 3px hsla(0,0%,0%,.2), 0 1px 0 hsla(0,0%,100%,.6);
+}
+
+
+/* Dark ------------------------------------ */
+
+[data-montage-skin="dark"] .digit-InputNumber > .digit-InputNumber-plus,
+[data-montage-skin="dark"] .digit-InputNumber > .digit-InputNumber-minus {
+    color: hsla(0,0%,100%,.5);
+    text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
+    border-color: hsl(0,0%,15%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,24%) );
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), inset 0 -1px 1px hsla(0,0%,0%,.06), 0 1px 0 hsla(0,0%,100%,.1);
+}
+
+[data-montage-skin="dark"] .digit-InputNumber > .digit-InputNumber-plus.montage--active,
+[data-montage-skin="dark"] .digit-InputNumber > .digit-InputNumber-minus.montage--active {
+    color: hsla(0,0%,100%,.3);
+    border-color: hsl(0,0%,15%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,24%), hsl(0,0%,18%) );
+    box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);
 }

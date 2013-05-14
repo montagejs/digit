@@ -8,12 +8,16 @@
         {
             "owner": {
                 "properties": {
-                    "element": {"#": "inputNumber"}
+                    "element": {"#": "inputNumber"},
+                    "_numberFieldTextFieldComponent": {"@": "inputText"},
+                    "_numberFieldMinusComponent": {"@": "minus"},
+                    "_numberFieldPlusComponent": {"@": "plus"}
+
                 }
             },
 
             "inputText": {
-                "prototype": "matte/ui/input-text.reel",
+                "prototype": "ui/input-number.reel[TextField]",
                 "properties": {
                     "element": {"#": "inputText"}
                 },
@@ -23,7 +27,7 @@
             },
 
             "plus": {
-                "prototype": "matte/ui/button.reel",
+                "prototype": "ui/input-number.reel[Button]",
                 "properties": {
                     "element": {"#": "buttonPlus"}
                 },
@@ -38,7 +42,7 @@
             },
 
             "minus": {
-                "prototype": "matte/ui/button.reel",
+                "prototype": "ui/input-number.reel[Button]",
                 "properties": {
                     "element": {"#": "buttonMinus"}
                 },
@@ -59,7 +63,7 @@
 <body>
 
     <span data-montage-id="inputNumber" class="digit-InputNumber">
-        <button data-montage-id="buttonMinus" class="digit-InputNumber-minus">-</button><input data-montage-id="inputText" class="digit-InputNumber-input" type="text"><button data-montage-id="buttonPlus" class="digit-InputNumber-plus">+</button>
+        <span data-montage-id="buttonMinus" class="digit-InputNumber-minus">-</span><input data-montage-id="inputText" class="digit-InputNumber-input" type="text"><span data-montage-id="buttonPlus" class="digit-InputNumber-plus">+</span>
     </span>
     
 </body>
