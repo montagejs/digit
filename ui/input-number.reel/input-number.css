@@ -35,6 +35,7 @@
     line-height: 2.5em;
     padding: 2px;
     border: 1px solid #b3b3b3;
+    text-align: center;
     cursor: pointer;
     -webkit-user-select: none;
 }
