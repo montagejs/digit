@@ -3,7 +3,7 @@ var Montage = require("montage/core/core").Montage,
     AbstractButton = require("montage/ui/base/abstract-button").AbstractButton,
     AbstractTextField = require("montage/ui/base/abstract-text-field").AbstractTextField;
 
-exports.InputNumber = Montage.create(AbstractNumberField, {
+exports.NumberField = Montage.create(AbstractNumberField, {
 
 });
 

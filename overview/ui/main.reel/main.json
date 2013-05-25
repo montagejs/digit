@@ -52,9 +52,9 @@
     "textarea2": { "prototype": "ui/textarea.reel", "properties": { "element": {"#": "textarea2"} } },
     "textarea3": { "prototype": "ui/textarea.reel", "properties": { "element": {"#": "textarea3"} } },
 
-    "inputNumber1": { "prototype": "ui/input-number.reel", "properties": { "element": {"#": "inputNumber1"} } },
-    "inputNumber2": { "prototype": "ui/input-number.reel", "properties": { "element": {"#": "inputNumber2"} } },
-    "inputNumber3": { "prototype": "ui/input-number.reel", "properties": { "element": {"#": "inputNumber3"} } },
+    "numberField1": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField1"} } },
+    "numberField2": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField2"} } },
+    "numberField3": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField3"} } },
 
     "slider1": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider1"} } },
     "slider2": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider2"} } },

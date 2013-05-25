@@ -10,7 +10,7 @@ Currently Digit is still __work in progress__. To preview the components, add a 
 
 ![Button](https://raw.github.com/montagejs/digit/master/button.reel/screenshot.png)
 ![Toggle](https://raw.github.com/montagejs/digit/master/toggle.reel/screenshot.png)
-![Number](https://raw.github.com/montagejs/digit/master/input-number.reel/screenshot.png)
+![NumberField](https://raw.github.com/montagejs/digit/edge/number-field.reel/screenshot.png)
 ![Range](https://raw.github.com/montagejs/digit/master/input-range.reel/screenshot.png)
 ![Header](https://raw.github.com/montagejs/digit/master/header.reel/screenshot.png)
 ![Tool Bar](https://raw.github.com/montagejs/digit/master/tool-bar.reel/screenshot.png)

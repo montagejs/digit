@@ -2,27 +2,27 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>InputNumber</title>
+    <title>NumberField</title>
     <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
     <script type="text/montage-serialization">
         {
             "test": {
-                "prototype": "test/input-number/input-number-test[Test]",
+                "prototype": "test/number-field/number-field-test[Test]",
                 "properties": {
-                    "inputNumber": {"@": "inputNumber"},
-                    "inputNumberWithAttributes": {"@": "attributes"}
+                    "numberField": {"@": "numberField"},
+                    "numberFieldWithAttributes": {"@": "attributes"}
                 }
             },
 
-            "inputNumber": {
-                "prototype": "ui/input-number.reel",
+            "numberField": {
+                "prototype": "ui/number-field.reel",
                 "properties": {
-                    "element": {"#": "inputNumber"}
+                    "element": {"#": "numberField"}
                 }
             },
 
             "attributes": {
-                "prototype": "ui/input-number.reel",
+                "prototype": "ui/number-field.reel",
                 "properties": {
                     "element": {"#": "attributes"}
                 }
@@ -32,9 +32,9 @@
 
 </head>
 <body>
-    <h1>InputNumber</h1>
+    <h1>NumberField</h1>
 
-    <div data-montage-id="inputNumber"></div>
+    <div data-montage-id="numberField"></div>
     <div data-montage-id="attributes" max="15" min="-4" step="3" required></div>
 </body>
 </html>

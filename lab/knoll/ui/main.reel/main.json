@@ -26,7 +26,7 @@
 
     "textarea": { "prototype": "digit/ui/textarea.reel", "properties": { "element": {"#": "textarea"} } },
 
-    "inputNumber": { "prototype": "digit/ui/input-number.reel", "properties": { "element": {"#": "inputNumber"} } },
+    "numberField": { "prototype": "digit/ui/number-field.reel", "properties": { "element": {"#": "numberField"} } },
 
     "slider": { "prototype": "digit/ui/slider.reel", "properties": { "element": {"#": "slider"} } },
 
