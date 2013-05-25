@@ -5,7 +5,8 @@
 ![Button](https://raw.github.com/montagejs/digit/master/button.reel/screenshot.png)
 ![Button Group](https://raw.github.com/montagejs/digit/master/button-group.reel/screenshot.png)
 ![Toggle](https://raw.github.com/montagejs/digit/master/toggle.reel/screenshot.png)
-![Checkbox](https://raw.github.com/montagejs/digit/master/input-checkbox.reel/screenshot.png)
+![Checkbox](https://raw.github.com/montagejs/digit/edge/checkbox
+.reel/screenshot.png)
 ![RadioButton](https://raw.github.com/montagejs/digit/master/radio-button
 .reel/screenshot.png)
 ![Select](https://raw.github.com/montagejs/digit/master/select.reel/screenshot.png)

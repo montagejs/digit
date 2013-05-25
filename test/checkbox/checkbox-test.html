@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Checkbox</title>
+    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "test/checkbox/checkbox-test[Test]",
+                "properties": {
+                    "checkbox": {"@": "checkbox"},
+                    "checkboxAttributeChecked": {"@": "checkboxChecked"}
+                }
+            },
+
+            "checkbox": {
+                "prototype": "ui/checkbox.reel",
+                "properties": {
+                    "element": {"#": "checkbox"}
+                }
+            },
+            
+            "checkboxChecked": {
+                "prototype": "ui/checkbox.reel",
+                "properties": {
+                    "element": {"#": "checkboxChecked"}
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Checkbox</h1>
+
+    <div data-montage-id="checkbox"></div>
+    <div data-montage-id="checkboxChecked" checked required></div>
+</body>
+</html>

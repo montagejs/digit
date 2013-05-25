@@ -14,7 +14,7 @@
 
     "toggle": { "prototype": "digit/ui/toggle.reel", "properties": { "element": {"#": "toggle"} } },
 
-    "inputCheckbox": { "prototype": "digit/ui/input-checkbox.reel", "properties": { "element": {"#": "inputCheckbox"} } },
+    "checkbox": { "prototype": "digit/ui/checkbox.reel", "properties": { "element": {"#": "checkbox"} } },
 
     "radioButtonController": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
     "radioButton1": { "prototype": "digit/ui/radio-button.reel", "properties": { "element": {"#": "radioButton1"}, "radioButtonController": {"@": "radioButtonController"}, "value": 1 } },
