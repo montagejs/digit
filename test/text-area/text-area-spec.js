@@ -1,9 +1,9 @@
 var Montage = require("montage").Montage;
 var TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
 
-TestPageLoader.queueTest("textarea-test", function(testPage) {
+TestPageLoader.queueTest("text-area-test", function(testPage) {
 
-    describe("test/textarea/textarea-spec", function() {
+    describe("test/text-area/text-area-spec", function() {
         it("should load", function() {
             expect(testPage.loaded).toBe(true);
         });
@@ -11,30 +11,30 @@ TestPageLoader.queueTest("textarea-test", function(testPage) {
         describe("Textarea", function() {
             describe("default", function () {
                 it("can be created", function() {
-                    expect(testPage.test.textarea).toBeDefined();
+                    expect(testPage.test.templateObjects.textArea).toBeDefined();
                 });
-                var textarea, defaultValue, defaultRequired, defaultMaxLength;
+                var textArea, defaultValue, defaultRequired, defaultMaxLength;
                 beforeEach(function() {
-                    if (!textarea) {
-                        textarea = testPage.test.textarea;
+                    if (!textArea) {
+                        textArea = testPage.test.templateObjects.textArea;
                         //keep default values
-                        defaultValue = textarea.value;
-                        defaultRequired = textarea.required;
-                        defaultMaxLength = textarea.maxLength;
+                        defaultValue = textArea.value;
+                        defaultRequired = textArea.required;
+                        defaultMaxLength = textArea.maxLength;
                     }
                     //restore default values
-                    textarea.value = defaultValue;
-                    textarea.required = defaultRequired;
-                    textarea.maxLength = defaultMaxLength;
+                    textArea.value = defaultValue;
+                    textArea.required = defaultRequired;
+                    textArea.maxLength = defaultMaxLength;
                 });
                 describe("property", function() {
                     describe("value", function() {
-                        it("should have correct default", function() {
+                        it("TODO should have correct default", function() {
                             expect(defaultValue).toEqual("");
                         });
                         it("can be set", function() {
-                            textarea.value = "a string";
-                            expect(textarea.value).toEqual("a string");
+                            textArea.value = "a string";
+                            expect(textArea.value).toEqual("a string");
                         });
                     });
                     describe("required", function() {
@@ -42,8 +42,8 @@ TestPageLoader.queueTest("textarea-test", function(testPage) {
                             expect(defaultRequired).toEqual(false);
                         });
                         it("TODO can be set", function() {
-                            textarea.required = true;
-                            expect(textarea.required).toEqual(true);
+                            textArea.required = true;
+                            expect(textArea.required).toEqual(true);
                         });
                     });
                     describe("maxLength", function() {
@@ -51,35 +51,35 @@ TestPageLoader.queueTest("textarea-test", function(testPage) {
                             expect(defaultMaxLength).toEqual(-1);
                         });
                         it("TODO can be set", function() {
-                            textarea.maxLength = 400;
-                            expect(textarea.maxLength).toEqual(400);
+                            textArea.maxLength = 400;
+                            expect(textArea.maxLength).toEqual(400);
                         });
                     });
                 });
             });
             describe("initialization attributes", function () {
-                var textarea, defaultValue, defaultRequired, defaultMaxLength;
+                var textArea, defaultValue, defaultRequired, defaultMaxLength;
                 beforeEach(function() {
-                    if (!textarea) {
-                        textarea = testPage.test.textareaWithAttributes;
+                    if (!textArea) {
+                        textArea = testPage.test.textAreaWithAttributes;
                         //keep default values
-                        defaultValue = textarea.value;
-                        defaultRequired = textarea.required;
-                        defaultMaxLength = textarea.maxLength;
+                        defaultValue = textArea.value;
+                        defaultRequired = textArea.required;
+                        defaultMaxLength = textArea.maxLength;
                     }
                     //restore default values
-                    textarea.value = defaultValue;
-                    textarea.required = defaultRequired;
-                    textarea.maxLength = defaultMaxLength;
+                    textArea.value = defaultValue;
+                    textArea.required = defaultRequired;
+                    textArea.maxLength = defaultMaxLength;
                 });
                 it("TODO should have expected value property value", function () {
-                    expect(textarea.value).toEqual("a string");
+                    expect(textArea.value).toEqual("a string");
                 });
                 it("TODO should have expected required property value", function () {
-                    expect(textarea.required).toEqual(true);
+                    expect(textArea.required).toEqual(true);
                 });
                 it("TODO should have expected maxLength property value", function () {
-                    expect(textarea.maxLength).toEqual(150);
+                    expect(textArea.maxLength).toEqual(150);
                 });
             });
         });

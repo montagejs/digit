@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Textarea</title>
+    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "test/text-area/text-area-test[Test]"
+            },
+
+            "textArea": {
+                "prototype": "ui/text-area.reel",
+                "properties": {
+                    "element": {"#": "textArea"}
+                }
+            },
+
+            "textAreaWithAttributes": {
+                "prototype": "ui/text-area.reel",
+                "properties": {
+                    "element": {"#": "textAreaWithAttributes"}
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Textarea</h1>
+
+    <div data-montage-id="textArea"></div>
+    <textarea data-montage-id="textAreaWithAttributes">a string</textarea>
+</body>
+</html>

@@ -10,6 +10,6 @@ require("montage-testing").run(require,[
     "test/radio-button/radio-button-spec",
     "test/select/select-spec",
     "test/text-field/text-field-spec",
-    "test/textarea/textarea-spec",
     "test/toggle/toggle-spec"
+    "test/text-area/text-area-spec"
 ]);

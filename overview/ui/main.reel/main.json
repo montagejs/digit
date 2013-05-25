@@ -48,9 +48,9 @@
     "textField2": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField2"}, "placeholderValue": "Text Field" } },
     "textField3": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField3"}, "placeholderValue": "Text Field" } },
 
-    "textarea1": { "prototype": "ui/textarea.reel", "properties": { "element": {"#": "textarea1"} } },
-    "textarea2": { "prototype": "ui/textarea.reel", "properties": { "element": {"#": "textarea2"} } },
-    "textarea3": { "prototype": "ui/textarea.reel", "properties": { "element": {"#": "textarea3"} } },
+    "textArea1": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea1"}, "placeholderValue": "Text Area" } },
+    "textArea2": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea2"}, "placeholderValue": "Text Area" } },
+    "textArea3": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea3"}, "placeholderValue": "Text Area" } },
 
     "numberField1": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField1"} } },
     "numberField2": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField2"} } },

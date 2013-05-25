@@ -13,7 +13,8 @@
 ![TextField](https://raw.github.com/montagejs/digit/edge/text-field
 .reel/screenshot
 .png)
-![Textarea](https://raw.github.com/montagejs/digit/master/textarea.reel/screenshot.png)
+![TextArea](https://raw.github.com/montagejs/digit/edge/ui/text-area
+.reel/screenshot.png)
 ![NumberField](https://raw.github.com/montagejs/digit/edge/number-field.reel/screenshot.png)
 ![Range](https://raw.github.com/montagejs/digit/master/input-range.reel/screenshot.png)
 ![Progress](https://raw.github.com/montagejs/digit/master/progress.reel/screenshot.png)
