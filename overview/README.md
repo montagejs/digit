@@ -10,7 +10,9 @@
 ![RadioButton](https://raw.github.com/montagejs/digit/master/radio-button
 .reel/screenshot.png)
 ![Select](https://raw.github.com/montagejs/digit/master/select.reel/screenshot.png)
-![Text](https://raw.github.com/montagejs/digit/master/input-text.reel/screenshot.png)
+![TextField](https://raw.github.com/montagejs/digit/edge/text-field
+.reel/screenshot
+.png)
 ![Textarea](https://raw.github.com/montagejs/digit/master/textarea.reel/screenshot.png)
 ![Number](https://raw.github.com/montagejs/digit/master/input-number.reel/screenshot.png)
 ![Range](https://raw.github.com/montagejs/digit/master/input-range.reel/screenshot.png)

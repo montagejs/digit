@@ -44,9 +44,9 @@
     "select2": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select2"} } },
     "select3": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select3"} } },
 
-    "inputText1": { "prototype": "ui/input-text.reel", "properties": { "element": {"#": "inputText1"} } },
-    "inputText2": { "prototype": "ui/input-text.reel", "properties": { "element": {"#": "inputText2"} } },
-    "inputText3": { "prototype": "ui/input-text.reel", "properties": { "element": {"#": "inputText3"} } },
+    "textField1": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField1"}, "placeholderValue": "Text Field" } },
+    "textField2": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField2"}, "placeholderValue": "Text Field" } },
+    "textField3": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField3"}, "placeholderValue": "Text Field" } },
 
     "textarea1": { "prototype": "ui/textarea.reel", "properties": { "element": {"#": "textarea1"} } },
     "textarea2": { "prototype": "ui/textarea.reel", "properties": { "element": {"#": "textarea2"} } },

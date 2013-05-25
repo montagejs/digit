@@ -1,31 +1,31 @@
 var Montage = require("montage").Montage;
 var TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
 
-TestPageLoader.queueTest("input-text-test", function(testPage) {
+TestPageLoader.queueTest("text-field-test", function(testPage) {
 
-    describe("test/input-text/input-text-spec", function() {
+    describe("test/text-field/text-field-spec", function() {
         it("should load", function() {
             expect(testPage.loaded).toBe(true);
         });
 
-        describe("InputText", function() {
+        describe("TextField", function() {
             describe("default", function () {
                 it("can be created", function() {
-                    expect(testPage.test.inputText).toBeDefined();
+                    expect(testPage.test.textField).toBeDefined();
                 });
-                var inputText, defaultValue, defaultRequired, defaultMaxLength;
+                var textField, defaultValue, defaultRequired, defaultMaxLength;
                 beforeEach(function() {
-                    if (!inputText) {
-                        inputText = testPage.test.inputText;
+                    if (!textField) {
+                        textField = testPage.test.textField;
                         //keep default values
-                        defaultValue = inputText.value;
-                        defaultRequired = inputText.required;
-                        defaultMaxLength = inputText.maxLength;
+                        defaultValue = textField.value;
+                        defaultRequired = textField.required;
+                        defaultMaxLength = textField.maxLength;
                     }
                     //restore default values
-                    inputText.value = defaultValue;
-                    inputText.required = defaultRequired;
-                    inputText.maxLength = defaultMaxLength;
+                    textField.value = defaultValue;
+                    textField.required = defaultRequired;
+                    textField.maxLength = defaultMaxLength;
                 });
                 describe("property", function() {
                     describe("value", function() {
@@ -33,8 +33,8 @@ TestPageLoader.queueTest("input-text-test", function(testPage) {
                             expect(defaultValue).toEqual("");
                         });
                         it("can be set", function() {
-                            inputText.value = "a string";
-                            expect(inputText.value).toEqual("a string");
+                            textField.value = "a string";
+                            expect(textField.value).toEqual("a string");
                         });
                     });
                     describe("required", function() {
@@ -42,8 +42,8 @@ TestPageLoader.queueTest("input-text-test", function(testPage) {
                             expect(defaultRequired).toEqual(false);
                         });
                         it("TODO can be set", function() {
-                            inputText.required = true;
-                            expect(inputText.required).toEqual(true);
+                            textField.required = true;
+                            expect(textField.required).toEqual(true);
                         });
                     });
                     describe("maxLength", function() {
@@ -51,35 +51,35 @@ TestPageLoader.queueTest("input-text-test", function(testPage) {
                             expect(defaultMaxLength).toEqual(-1);
                         });
                         it("TODO can be set", function() {
-                            inputText.maxLength = 12;
-                            expect(inputText.maxLength).toEqual(12);
+                            textField.maxLength = 12;
+                            expect(textField.maxLength).toEqual(12);
                         });
                     });
                 });
             });
             describe("initialization attributes", function () {
-                var inputText, defaultValue, defaultRequired, defaultMaxLength;
+                var textField, defaultValue, defaultRequired, defaultMaxLength;
                 beforeEach(function() {
-                    if (!inputText) {
-                        inputText = testPage.test.inputTextWithAttributes;
+                    if (!textField) {
+                        textField = testPage.test.textFieldWithAttributes;
                         //keep default values
-                        defaultValue = inputText.value;
-                        defaultRequired = inputText.required;
-                        defaultMaxLength = inputText.maxLength;
+                        defaultValue = textField.value;
+                        defaultRequired = textField.required;
+                        defaultMaxLength = textField.maxLength;
                     }
                     //restore default values
-                    inputText.value = defaultValue;
-                    inputText.required = defaultRequired;
-                    inputText.maxLength = defaultMaxLength;
+                    textField.value = defaultValue;
+                    textField.required = defaultRequired;
+                    textField.maxLength = defaultMaxLength;
                 });
                 it("TODO should have expected value property value", function () {
-                    expect(inputText.value).toEqual("a string");
+                    expect(textField.value).toEqual("a string");
                 });
                 it("TODO should have expected required property value", function () {
-                    expect(inputText.required).toEqual(true);
+                    expect(textField.required).toEqual(true);
                 });
                 it("TODO should have expected maxLength property value", function () {
-                    expect(inputText.maxLength).toEqual(7);
+                    expect(textField.maxLength).toEqual(7);
                 });
             });
         });

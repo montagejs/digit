@@ -22,7 +22,7 @@
 
     "select": { "prototype": "digit/ui/select.reel", "properties": { "element": {"#": "select"} } },
 
-    "inputText": { "prototype": "digit/ui/input-text.reel", "properties": { "element": {"#": "inputText"} } },
+    "textField": { "prototype": "digit/ui/text-field.reel", "properties": { "element": {"#": "textField"}, "placeholderValue": "Text Field" } },
 
     "textarea": { "prototype": "digit/ui/textarea.reel", "properties": { "element": {"#": "textarea"} } },
 
