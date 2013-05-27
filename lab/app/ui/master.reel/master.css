@@ -1,9 +1,0 @@
-.Master {
-    -webkit-box-flex: 1;
-    display: -webkit-box;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    font-size: 30px;
-    color: hsl(0,0%,60%);
-    background: white;
-}
