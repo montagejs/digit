@@ -3,9 +3,9 @@
         "prototype": "core/meta/blueprint-reference",
         "properties": {
             "valueReference": {
-                "blueprintName": "AbstractSelect",
-                "blueprintModuleId": "montage/ui/base/abstract-select.meta",
-                "prototypeName": "AbstractSelect"
+                "blueprintName": "Text",
+                "blueprintModuleId": "montage/ui/text.reel/text.meta",
+                "prototypeName": "Text"
             }
         }
     },
@@ -13,9 +13,9 @@
     "root": {
         "prototype": "core/meta/blueprint",
         "properties": {
-            "name": "Select",
-            "blueprintModuleId": "ui/select.reel/select.meta",
-            "prototypeName": "Select",
+            "name": "Text",
+            "blueprintModuleId": "ui/text.reel/text.meta",
+            "prototypeName": "Text",
             "parent": {"@": "blueprint_parent"}
         }
     }

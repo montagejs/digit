@@ -3,9 +3,9 @@
         "prototype": "core/meta/blueprint-reference",
         "properties": {
             "valueReference": {
-                "blueprintName": "AbstractSelect",
-                "blueprintModuleId": "montage/ui/base/abstract-select.meta",
-                "prototypeName": "AbstractSelect"
+                "blueprintName": "AbstractSlider",
+                "blueprintModuleId": "montage/ui/base/abstract-slider.meta",
+                "prototypeName": "AbstractSlider"
             }
         }
     },
@@ -13,9 +13,9 @@
     "root": {
         "prototype": "core/meta/blueprint",
         "properties": {
-            "name": "Select",
-            "blueprintModuleId": "ui/select.reel/select.meta",
-            "prototypeName": "Select",
+            "name": "Slider",
+            "blueprintModuleId": "ui/slider.reel/slider.meta",
+            "prototypeName": "Slider",
             "parent": {"@": "blueprint_parent"}
         }
     }
