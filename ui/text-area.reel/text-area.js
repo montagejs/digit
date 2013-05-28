@@ -1,5 +1,4 @@
-var Montage = require("montage").Montage,
-    AbstractTextArea = require("montage/ui/base/abstract-text-area").AbstractTextArea;
+var AbstractTextArea = require("montage/ui/base/abstract-text-area").AbstractTextArea;
 
 exports.TextArea = AbstractTextArea.specialize({
 
@@ -8,7 +7,7 @@ exports.TextArea = AbstractTextArea.specialize({
     },
 
     constructor: {
-        value: function() {
+        value: function TextArea() {
             this.super();
 
             this.classList.add("digit-TextArea");

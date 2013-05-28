@@ -1,5 +1,4 @@
-var Montage = require("montage").Montage,
-    AbstractTextField = require("montage/ui/base/abstract-text-field").AbstractTextField;
+var AbstractTextField = require("montage/ui/base/abstract-text-field").AbstractTextField;
 
 exports.TextField = AbstractTextField.specialize({
 
