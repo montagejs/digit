@@ -1,29 +1,22 @@
 /**
     @module "ui/badge.reel"
-    @requires montage
-    @requires montage/ui/component
 */
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
-    Text = require("montage/ui/text.reel").Text;
+var Text = require("montage/ui/text.reel").Text;
 
 /**
     Description TODO
     @class module:"ui/badge.reel".Badge
     @extends module:montage/ui/component.Component
 */
-exports.Badge = Montage.create(Text, /** @lends module:"ui/badge.reel".Badge# */ {
+exports.Badge = Text.specialize(/** @lends module:"ui/badge.reel".Badge# */ {
     hasTemplate: {
         value: true
     },
 
-    enterDocument: {
-        value: function(firstTime) {
-            Text.enterDocument.apply(this, arguments);
-
-            if (firstTime) {
-                this.classList.add("digit-Badge");
-            }
+    constructor: {
+        value: function Badge() {
+            this.super();
+            this.classList.add("digit-Badge");
         }
     },
 
@@ -37,10 +30,4 @@ exports.Badge = Montage.create(Text, /** @lends module:"ui/badge.reel".Badge# */
             return Object.getOwnPropertyDescriptor(Text, "value").get.call(this);
         }
     }
-
-//    didCreate: {
-//        value: function() {
-//            this.classList.add("digit-Badge");
-//        }
-//    }
 });
