@@ -1,10 +1,19 @@
 # Select
 
-![Button](https://raw.github.com/montagejs/montage-lab/master/skeleton/mobile/components/select.reel/screenshot.png)
+![Button](screenshot.png)
 
 The Select Input component wraps an HTML `<select>` element.
 
 ## How to use
+
+```json
+"select": {
+    "prototype": "digit/ui/select.reel",
+    "properties": {
+        "element": {"#": "select"}
+    }
+}
+```
 
 ```html
 <select data-montage-id="select">
@@ -12,15 +21,6 @@ The Select Input component wraps an HTML `<select>` element.
     <option value="HI">Hawaii</option>
     <option value="NY">New York</option>
 </select>
-```
-
-```json
-"select": {
-    "prototype": "matte/ui/select.reel",
-    "properties": {
-        "element": {"#": "select"}
-    }
-}
 ```
 
 
@@ -32,19 +32,10 @@ The Select Input component wraps an HTML `<select>` element.
 
 ## Customizing with CSS
 
-* `.digit-Select` - The Button element
+* `.digit-Select` - The select element
 
 ```css
 .digit-Select {
     background-color: pink;
 }
 ```
-
-
-
-## Browser support
-
-* Chrome (latest)
-* Safari 5+
-* Firefox 4+
-* Opera (latest)
