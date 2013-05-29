@@ -3,13 +3,14 @@
     -moz-appearance: none;
     outline: none;
     box-sizing: border-box;
-    /font-size: 12px;
+    font-size: 16px;
     height: 2.5em;
     padding: 0 2em 0 1em;
-    /border-radius: 3px;
+    border-radius: 1.5em .5em .5em 1.5em;
     border: 1px solid #b3b3b3;
     background: #f2f2f2 url(select.svg) no-repeat right center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .digit-Select:active {
@@ -41,17 +42,7 @@
 }
 
 
-/* Style for Touch */
-.digit-Select {
-    font-size: 16px;
-    border-radius: 1.5em .5em .5em 1.5em;
-    -webkit-tap-highlight-color: transparent;
-}
-
-
-
 /* Light ------------------------------------ */
-
 
 [data-montage-skin="light"] .digit-Select {
     color: hsla(0,0%,0%,.7);
@@ -69,7 +60,6 @@
 
 
 /* Dark ------------------------------------ */
-
 
 [data-montage-skin="dark"] .digit-Select {
     color: hsla(0,0%,100%,.5);

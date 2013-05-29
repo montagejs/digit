@@ -1,7 +1,7 @@
 .digit-TextArea {
     outline: none;
     box-sizing: border-box;
-    /font-size: 12px;
+    font-size: 14px;
     width: 150px;
     min-width: 10em;
     padding: 0.5em;
@@ -20,13 +20,6 @@
     border-style: dashed;
     pointer-events: none;
 }
-
-
-/* Style for Touch */
-.digit-TextArea {
-    font-size: 14px;
-}
-
 
 
 /* Light ------------------------------------ */
