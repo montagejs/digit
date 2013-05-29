@@ -1,15 +1,10 @@
 # Number Field
 
-![NumberField](https://raw.github.com/montagejs/digit/edge/number-field
-.reel/screenshot.png)
+![NumberField](screenshot.png)
 
 The Number Field component wraps an HTML `<input type="number">` element and adds a plus and minus stepper button.
 
 ## How to use
-
-```html
-<input data-montage-id="number" type="number">
-```
 
 ```json
 "number": {
@@ -19,6 +14,10 @@ The Number Field component wraps an HTML `<input type="number">` element and add
         "value": 0
     }
 }
+```
+
+```html
+<input data-montage-id="number" type="number">
 ```
 
 

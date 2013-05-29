@@ -1,12 +1,8 @@
 # Checkbox
 
-![Checkbox](https://raw.github.com/montagejs/montage/edge/checkbox.reel/screenshot.png)
+![Checkbox](screenshot.png)
 
 ## How to use
-
-```html
-<span data-montage-id="checkbox"></span>
-```
 
 ```json
 "checkbox": {
@@ -16,6 +12,11 @@
     }
 }
 ```
+
+```html
+<span data-montage-id="checkbox"></span>
+```
+
 
 
 ## Available properties

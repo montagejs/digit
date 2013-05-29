@@ -1,23 +1,25 @@
-# Text Field
+# TextField
 
-![Text Field](https://raw.github.com/montagejs/digit/edge/ui/text-field.reel/screenshot.png)
+![TextField](screenshot.png)
 
 The TextField component wraps an HTML `<input type="text">` element.
 
 ## How to use
 
-```html
-<input data-montage-id="text" type="text">
-```
-
 ```json
-"text": {
+"textField": {
     "prototype": "digit/ui/text-field.reel",
     "properties": {
-        "element": {"#": "text"}
+        "element": {"#": "textField"}
     }
 }
 ```
+
+```html
+<input data-montage-id="textField" type="text">
+```
+
+
 
 
 ## Available properties
@@ -36,12 +38,3 @@ The TextField component wraps an HTML `<input type="text">` element.
     border-color: blue;
 }
 ```
-
-
-
-## Browser support
-
-* Chrome (latest)
-* Safari 5+
-* Firefox 4+
-* Opera (latest)

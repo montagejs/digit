@@ -1,29 +1,29 @@
-# Range Input
+# Slider
 
-![Range Input](https://raw.github.com/montagejs/montage-lab/master/skeleton/mobile/components/input-range.reel/screenshot.png)
+![Slider](screenshot.png)
 
-The Range Input component wraps an HTML `<input type="range">` element.
+The Slider component wraps an HTML `<input type="range">` element.
 
 ## How to use
 
-```html
-<input data-montage-id="range" type="range">
-```
-
 ```json
-"range": {
-    "prototype": "matte/ui/input-range.reel",
+"slider": {
+    "prototype": "digit/ui/slider.reel",
     "properties": {
-        "element": {"#": "range"}
+        "element": {"#": "slider"}
     }
 }
+```
+
+```html
+<input data-montage-id="slider" type="range">
 ```
 
 
 ## Available properties
 
 * `max` - Maximal value.
-* `value` - Current value of the Range Input.
+* `value` - Current value of the Slider.
 
 
 
@@ -41,12 +41,3 @@ The Range Input component wraps an HTML `<input type="range">` element.
     background-color: pink;
 }
 ```
-
-
-
-## Browser support
-
-* Chrome (latest)
-* Safari 5+
-* Firefox 4+
-* Opera (latest)
