@@ -2,86 +2,34 @@
     box-sizing: border-box;
     position: relative;
     display: inline-block;
-    font-size: 16px;
+    font-size: 0;
     width: auto;
     margin: 0;
+    outline: none;
+    -webkit-user-select: none;
 }
 
 .digit-NumberField > .digit-NumberField-input {
     display: inline-block;
-    font-size: inherit;
-    height: 2.5em;
+    font-size: 16px;
     width: 3.6em;
     border-radius: 0;
     text-align: center;
-    padding-bottom: 3px;
-    border: 1px solid #b3b3b3;
-    /*vertical-align: middle;*/
-}
-
-.digit-NumberField-input::-webkit-inner-spin-button {
-    display: none;
 }
 
 .digit-NumberField > .digit-NumberField-plus,
 .digit-NumberField > .digit-NumberField-minus {
-    display: inline-block;
-    font-size: inherit;
-    width: 2.5em;
-    height: 2.5em;
-    top: auto;
-    right: auto;
+    font-size: 16px;
     margin: 0;
-    line-height: 2.5em;
     padding: 2px;
-    border: 1px solid #b3b3b3;
-    text-align: center;
-    cursor: pointer;
-    -webkit-user-select: none;
 }
+
 .digit-NumberField > .digit-NumberField-plus {
     border-width: 1px 1px 1px 0;
     border-radius: 0 2.5em 2.5em 0;
 }
+
 .digit-NumberField > .digit-NumberField-minus {
     border-width: 1px 0 1px 1px;
     border-radius: 2.5em 0 0 2.5em;
-}
-/* Light ------------------------------------ */
-
-[data-montage-skin="light"] .digit-NumberField > .digit-NumberField-plus,
-[data-montage-skin="light"] .digit-NumberField > .digit-NumberField-minus {
-
-    color: hsla(0,0%,0%,.7);
-    text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
-    border-color: hsl(0,0%,80%);
-    background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,92%) );
-    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), inset 0 -1px 1px hsla(0,0%,0%,.04), 0 1px 0 hsla(0,0%,100%,.6);
-}
-
-[data-montage-skin="light"] .digit-NumberField > .digit-NumberField-plus.montage--active,
-[data-montage-skin="light"] .digit-NumberField > .digit-NumberField-minus.montage--active {
-    border-color: hsla(0,0%,70%,1);
-    background-image: -webkit-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
-    box-shadow: inset 0 1px 3px hsla(0,0%,0%,.2), 0 1px 0 hsla(0,0%,100%,.6);
-}
-
-
-/* Dark ------------------------------------ */
-
-[data-montage-skin="dark"] .digit-NumberField > .digit-NumberField-plus,
-[data-montage-skin="dark"] .digit-NumberField > .digit-NumberField-minus {
-    color: hsla(0,0%,100%,.5);
-    text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
-    border-color: hsl(0,0%,15%);
-    background-image: -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,24%) );
-    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), inset 0 -1px 1px hsla(0,0%,0%,.06), 0 1px 0 hsla(0,0%,100%,.1);
-}
-
-[data-montage-skin="dark"] .digit-NumberField > .digit-NumberField-plus.montage--active,
-[data-montage-skin="dark"] .digit-NumberField > .digit-NumberField-minus.montage--active {
-    color: hsla(0,0%,100%,.3);
-    border-color: hsl(0,0%,15%);
-    background-image: -webkit-linear-gradient(top, hsl(0,0%,24%), hsl(0,0%,18%) );
-    box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);
 }

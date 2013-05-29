@@ -17,7 +17,7 @@
         },
 
         "textField": {
-            "prototype": "ui/number-field.reel[TextField]",
+            "prototype": "ui/text-field.reel",
             "properties": {
                 "element": {"#": "textField"}
             },
@@ -27,7 +27,7 @@
         },
 
         "plus": {
-            "prototype": "ui/number-field.reel[Button]",
+            "prototype": "ui/button.reel",
             "properties": {
                 "element": {"#": "buttonPlus"}
             },
@@ -42,7 +42,7 @@
         },
 
         "minus": {
-            "prototype": "ui/number-field.reel[Button]",
+            "prototype": "ui/button.reel",
             "properties": {
                 "element": {"#": "buttonMinus"}
             },
@@ -63,7 +63,9 @@
 <body>
 
     <span data-montage-id="numberField" class="digit-NumberField">
-        <span data-montage-id="buttonMinus" class="digit-NumberField-minus">-</span><input data-montage-id="textField" class="digit-NumberField-input" type="text"><span data-montage-id="buttonPlus" class="digit-NumberField-plus">+</span>
+        <button data-montage-id="buttonMinus" class="digit-NumberField-minus" tabindex="-1">-</button>
+        <input data-montage-id="textField" class="digit-NumberField-input" type="text">
+        <button data-montage-id="buttonPlus" class="digit-NumberField-plus" tabindex="-1">+</button>
     </span>
     
 </body>
