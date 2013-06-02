@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Video</title>
+    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "test/video/video-test[Test]",
+                "properties": {
+                    "video": {"@": "video"}
+                }
+            },
+
+            "video": {
+                "prototype": "ui/video.reel",
+                "properties": {
+                    "element": {"#": "video"}
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Video</h1>
+
+    <div data-montage-id="video"></div>
+</body>
+</html>
