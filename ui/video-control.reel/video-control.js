@@ -33,13 +33,19 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
 
     handlePlayAction: {
         value: function (e) {
-            this.controller.playPause();
+            if (this.controller.status === this.controller.PLAYING) {
+                this.controller.pause();
+            } else if (this.controller.status === this.controller.PAUSED) {
+                this.controller.unpause();
+            } else {
+                this.controller.play();
+            }
         }
     },
 
     handleFullScreenAction: {
         value: function (e) {
-            this.controller.fullscreen();
+            this.video.toggleFullScreen()
         }
     },
 
