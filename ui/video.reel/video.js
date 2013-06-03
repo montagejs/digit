@@ -2,23 +2,32 @@ var Montage = require("montage/core/core").Montage;
 var Component = require("montage/ui/component").Component;
 var PressComposer = require("montage/composer/press-composer").PressComposer;
 var MediaController = require("montage/core/media-controller").MediaController;
+var AbstractVideo = require("montage/ui/base/abstract-video").AbstractVideo;
 
-exports.Video = Montage.create(Component, {
+exports.Video = Montage.create(AbstractVideo, {
 
     // Lifecycle
 
-    didCreate: {
-        value: function() {
+    /**
+     * @private
+     */
+    constructor: {
+        value: function Video() {
+            AbstractVideo.constructor.call(this); // super
             this.addPathChangeListener("controller.status", this, "handleControllerStatusChange");
         }
     },
 
-
     enterDocument: {
         value: function(firstTime) {
+            // Call super method
+            if (AbstractVideo.enterDocument) {
+                AbstractVideo.enterDocument.call(this, firstTime);
+            }
+            
             if (firstTime) {
                 this.setupFirstPlay();
-
+                
                 this.addOwnPropertyChangeListener("src", this);
                 this.addOwnPropertyChangeListener("poster", this);
             }
@@ -37,28 +46,16 @@ exports.Video = Montage.create(Component, {
 
     handlePlayAction: {
         value: function (e) {
-            this.controller.loadMedia();
+            this.loadMedia();
             this.controller.play();
             this.classList.remove("digit-Video--firstPlay");
         }
     },
 
-    // Event Handlers
-
-//    handleVideoPressStart: {
-//        value: function() {
-//            console.log("pressStart" + this.identifier, "target", event.target.identifier)
-//            if(! this._showControlsTimeout) {
-//                clearTimeout(this._showControlsTimeout);
-//            }
-//            this.classList.add("digit-Video--showControls");
-//        }
-//    },
-
     handleVideoPress: {
         value: function(event) {
             if (this.controller.status === this.controller.EMPTY) {
-                this.controller.loadMedia();
+                this.loadMedia();
                 this.classList.remove("digit-Video--firstPlay");
                 this._pressComposer.unload();
                 this._pressComposer.removeEventListener("pressStart", this, false);
@@ -118,12 +115,12 @@ exports.Video = Montage.create(Component, {
             // cover for the next video (without loading the new video in the
             // first place but we want to avoid doing it, only when the user
             // presses play).
-            var currentVideoElement = this.controller.mediaElement,
+            var currentVideoElement = this.mediaElement,
                 newVideoElement = document.createElement("video");
 
             newVideoElement.className = currentVideoElement.className;
             this.element.replaceChild(newVideoElement, currentVideoElement);
-            this.controller.mediaElement = newVideoElement;
+            this.mediaElement = newVideoElement;
 
             this.setupFirstPlay();
         }
@@ -131,7 +128,7 @@ exports.Video = Montage.create(Component, {
 
     handlePosterChange: {
         value: function() {
-            this.controller.showPoster();
+            this.showPoster();
         }
     },
 
@@ -141,13 +138,10 @@ exports.Video = Montage.create(Component, {
         value: "../../ui/video.reel/video.mov"
     },
 
-    poster: {
+    posterSrc: {
         value: "../../ui/video.reel/poster.png"
     },
 
-    controller: {
-        value: null
-    },
 
     // Machinery
 
@@ -164,10 +158,29 @@ exports.Video = Montage.create(Component, {
             this._pressComposer = PressComposer.create();
             this._pressComposer.identifier = "video";
             this.addComposerForElement(this._pressComposer, this.controller.mediaElement);
-            this.controller.showPoster();
+            this.showPoster();
         }
     },
 
+    draw: {
+        value: function() {
+            // Call super method
+            if (AbstractVideo.draw) {
+                AbstractVideo.draw.call(this);
+            }
+
+            if (this.supportsFullScreen) {
+                if (!this.isFullScreen) {
+                    this.element.classList.remove("fullscreen");
+                } else {
+                    this.element.classList.add("fullscreen");
+                }
+            } else {
+                this.element.classList.remove("fullscreen");
+            }
+        }
+    },
+    
     doFirstPlay: {
         value: function(newValue) {
             this.element.addEventListener("touchstart",this , false);
