@@ -1,4 +1,5 @@
 .digit-NumberField {
+    outline: none;
     box-sizing: border-box;
     position: relative;
     display: inline-block;
