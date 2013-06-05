@@ -33,7 +33,7 @@ exports.Progress = Montage.create(NativeProgress, {
         },
         set: function(val) {
             if(val !== this._value) {
-                this._value = String.isString(val) ? parseInt(val, 10) : val;
+                this._value = typeof val === "string" ? parseInt(val, 10) : val;
 
                 if(this._max && (this._value > this._max)) {
                     this._value = this._max;
@@ -64,7 +64,7 @@ exports.Progress = Montage.create(NativeProgress, {
         },
         set: function(val) {
             if(val !== this._max) {
-                this._max = String.isString(val) ? parseInt(val, 10) : val;
+                this._max = typeof val === "string" ? parseInt(val, 10) : val;
                 if(this._max <= 0) {
                     this._max = 1; // Prevent divide by zero errors
                 }
