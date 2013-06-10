@@ -4,6 +4,10 @@
     "publishConfig": {
       "tag": "edge"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/montagejs/digit.git"
+    },
     "dependencies": {
         "montage": "0.13.0-alpha",
         "matte": "0.1.1-alpha",
