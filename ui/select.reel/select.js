@@ -14,6 +14,11 @@ exports.Select = AbstractSelect.specialize({
             this.super(firstTime);
 
             this.element.addEventListener("change", this, false);
+            // Default to the first value in the content controller if no value
+            // has been set yet. We don't support not having a selected value.
+            if (this.value == null) {
+                this.value = this.contentController.organizedContent[0];
+            }
         }
     },
 
