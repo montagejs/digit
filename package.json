@@ -7,8 +7,7 @@
     },
     "dependencies": {
         "montage": "~0.13.0",
-        "matte": "~0.1.1",
-        "native": "~0.1.1"
+        "matte": "~0.1.1"
     },
     "devDependencies": {
         "montage-testing": "~0.2.0"
