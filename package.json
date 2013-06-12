@@ -5,10 +5,6 @@
         "type": "git",
         "url": "https://github.com/montagejs/digit.git"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/montagejs/digit.git"
-    },
     "dependencies": {
         "montage": "~0.13.0",
         "matte": "~0.1.1",
