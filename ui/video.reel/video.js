@@ -14,7 +14,7 @@ exports.Video = Montage.create(AbstractVideo, {
     constructor: {
         value: function Video() {
             AbstractVideo.constructor.call(this); // super
-            this.addPathChangeListener("controller.status", this, "handleControllerStatusChange");
+            this.addPathChangeListener("videoController.status", this, "handleControllerStatusChange");
         }
     },
 
@@ -47,14 +47,14 @@ exports.Video = Montage.create(AbstractVideo, {
     handlePlayAction: {
         value: function (e) {
             this.loadMedia();
-            this.controller.play();
+            this.videoController.play();
             this.classList.remove("digit-Video--firstPlay");
         }
     },
 
     handleVideoPress: {
         value: function(event) {
-            if (this.controller.status === this.controller.EMPTY) {
+            if (this.videoController.status === this.videoController.EMPTY) {
                 this.loadMedia();
                 this.classList.remove("digit-Video--firstPlay");
                 this._pressComposer.unload();
@@ -97,11 +97,11 @@ exports.Video = Montage.create(AbstractVideo, {
 
     handleControllerStatusChange: {
         value: function (newValue, path, myObject) {
-            if (this.controller) {
-                if (!this._firstPlay && newValue !== this.controller.PLAYING) {
+            if (this.videoController) {
+                if (!this._firstPlay && newValue !== this.videoController.PLAYING) {
                     this.clearHideControlsTimeout();
                     this.classList.add("digit-Video--showControls");
-                } else if (this._firstPlay && newValue === this.controller.PLAYING) {
+                } else if (this._firstPlay && newValue === this.videoController.PLAYING) {
                     this.doFirstPlay();
                 }
             }
@@ -150,14 +150,14 @@ exports.Video = Montage.create(AbstractVideo, {
             this.element.removeEventListener("touchstart", this, false);
             this.element.removeEventListener("mousedown", this, false);
             this._firstPlay = true;
-            this.controller.stop();
+            this.videoController.stop();
 
             this.classList.add("digit-Video--firstPlay");
             this.classList.remove("digit-Video--showControls");
 
             this._pressComposer = PressComposer.create();
             this._pressComposer.identifier = "video";
-            this.addComposerForElement(this._pressComposer, this.controller.mediaElement);
+            this.addComposerForElement(this._pressComposer, this.mediaElement);
             this.showPoster();
         }
     },
