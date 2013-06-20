@@ -25,8 +25,8 @@ exports.VideoControlTrack = Montage.create(AbstractSlider, /** @lends VideoContr
             this.addOwnPropertyChangeListener("time", this);
 
 //            this.defineBinding("value", {"<->": "controller.position", source: this});
-            this.defineBinding("max", {"<-": "controller.duration", source: this});
-            this.defineBinding("time", {"<-": "controller.position", source: this});
+            this.defineBinding("max", {"<-": "videoController.duration", source: this});
+            this.defineBinding("time", {"<-": "videoController.position", source: this});
 
         }
     },
@@ -36,9 +36,9 @@ exports.VideoControlTrack = Montage.create(AbstractSlider, /** @lends VideoContr
     handleThumbTranslateStart: {
         value: function (e) {
             AbstractSlider.handleThumbTranslateStart.apply(this, arguments);
-            if(this.controller.status === this.controller.PLAYING ) {
+            if(this.videoController.status === this.videoController.PLAYING ) {
                 this._wasPlaying = true;
-                this.controller.pause();
+                this.videoController.pause();
             } else {
                 this._wasPlaying = false;
             }
@@ -56,7 +56,7 @@ exports.VideoControlTrack = Montage.create(AbstractSlider, /** @lends VideoContr
         value: function (e) {
             AbstractSlider.handleThumbTranslateEnd.apply(this, arguments);
             if ( this._wasPlaying ) {
-                this.controller.play();
+                this.videoController.play();
             }
         }
     },

@@ -21,11 +21,11 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
      */
     didCreate: {
         value: function () {
-            this.addPathChangeListener("controller.status", this, "handleControllerStatusChange");
+            this.addPathChangeListener("videoController.status", this, "handleControllerStatusChange");
 
-            this.defineBinding("_controlTrack.value", {"<->": "controller.position", source: this});
-            this.defineBinding("_controlTrack.max", {"<-": "controller.duration", source: this});
-            this.defineBinding("_controlTrack.time", {"<-": "controller.position", source: this});
+            this.defineBinding("_controlTrack.value", {"<->": "videoController.position", source: this});
+            this.defineBinding("_controlTrack.max", {"<-": "videoController.duration", source: this});
+            this.defineBinding("_controlTrack.time", {"<-": "videoController.position", source: this});
         }
     },
 
@@ -33,12 +33,12 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
 
     handlePlayAction: {
         value: function (e) {
-            if (this.controller.status === this.controller.PLAYING) {
-                this.controller.pause();
-            } else if (this.controller.status === this.controller.PAUSED) {
-                this.controller.unpause();
+            if (this.videoController.status === this.videoController.PLAYING) {
+                this.videoController.pause();
+            } else if (this.videoController.status === this.videoController.PAUSED) {
+                this.videoController.unpause();
             } else {
-                this.controller.play();
+                this.videoController.play();
             }
         }
     },
@@ -51,7 +51,7 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
 
     // Properties
 
-    controller: {
+    videoController: {
         value: null
     },
 
@@ -59,8 +59,8 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
 
     handleControllerStatusChange: {
         value: function (newValue, path, myObject) {
-            if (this.controller) {
-                if (newValue === this.controller.PLAYING) {
+            if (this.videoController) {
+                if (newValue === this.videoController.PLAYING) {
                     this.classList.add("digit-VideoControl--playing");
                 } else {
                     this.classList.remove("digit-VideoControl--playing");
