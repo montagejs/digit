@@ -19,15 +19,17 @@ exports.VideoControlTrack = Montage.create(AbstractSlider, /** @lends VideoContr
     /**
      * @private
      */
-    didCreate: {
-        value: function () {
-            AbstractSlider.didCreate.call(this);
+    /**
+     * @private
+     */
+    constructor: {
+        value: function VideoControlTrack() {
+            AbstractSlider.constructor.call(this); // super
             this.addOwnPropertyChangeListener("time", this);
 
 //            this.defineBinding("value", {"<->": "controller.position", source: this});
             this.defineBinding("max", {"<-": "videoController.duration", source: this});
             this.defineBinding("time", {"<-": "videoController.position", source: this});
-
         }
     },
 

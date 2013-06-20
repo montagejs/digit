@@ -19,8 +19,9 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
     /**
      * @private
      */
-    didCreate: {
-        value: function () {
+    constructor: {
+        value: function VideoControl() {
+            Component.constructor.call(this); // super
             this.addPathChangeListener("videoController.status", this, "handleControllerStatusChange");
 
             this.defineBinding("_controlTrack.value", {"<->": "videoController.position", source: this});
@@ -50,7 +51,6 @@ exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-con
     },
 
     // Properties
-
     videoController: {
         value: null
     },
