@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractCheckbox",
+                "blueprintModuleId": "montage/ui/base/abstract-checkbox.meta",
+                "prototypeName": "AbstractCheckbox"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "Checkbox",
+            "blueprintModuleId": "ui/checkbox.reel/checkbox.meta",
+            "prototypeName": "Checkbox",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}

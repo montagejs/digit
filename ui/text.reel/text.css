@@ -1,5 +1,20 @@
 .digit-Text {
     box-sizing: border-box;
     font-size: 16px;
-    color: hsla(0,0%,0%,.5);
+    color: hsl(0,0%,30%);
+}
+
+
+/* Light ------------------------------------ */
+
+[data-montage-skin="light"] .digit-Text {
+    color: hsl(0,0%,40%);
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.8);
+}
+
+
+/* Dark ------------------------------------ */
+
+[data-montage-skin="dark"] .digit-Text {
+    color: hsl(0,0%,70%);
 }

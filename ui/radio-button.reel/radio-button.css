@@ -2,13 +2,14 @@
     box-sizing: border-box;
     display: inline-block;
     vertical-align: middle;
-    /font-size: 12px;
+    font-size: 16px;
     width: 1.5em;
     height: 1.5em;
     border-radius: 1em;
     border: 1px solid #b3b3b3;
     background: #f2f2f2;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .digit-RadioButton.montage--active {
@@ -30,14 +31,7 @@
 }
 
 
-/* Style for Touch */
-.digit-RadioButton {
-    font-size: 16px;
-    -webkit-tap-highlight-color: transparent;
-}
-
-
-/* Style for Skins */
+/* Style for Skins ------------------------------------ */
 
 [data-montage-skin] .digit-RadioButton {
     position: relative;

@@ -1,221 +1,22 @@
 {
-    "blueprint_select_content": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "content",
-            "blueprint": {
-                "@": "root"
-            },
-            "cardinality": -1,
-            "valueType": "object",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_valuePropertyPath": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "valuePropertyPath",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "string",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_textPropertyPath": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "textPropertyPath",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "string",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_contentController": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "contentController",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "object",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_autofocus": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "autofocus",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "string",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_disabled": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "disabled",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "boolean",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_form": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "form",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "string",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_multiple": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "multiple",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "boolean",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_name": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "name",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "string",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_required": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "required",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "boolean",
-            "helpKey": ""
-        }
-    },
-    "blueprint_select_size": {
-        "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
-            "name": "size",
-            "blueprint": {
-                "@": "root"
-            },
-            "valueType": "number",
-            "helpKey": ""
-        }
-    },
-    "blueprint_nativecontrol_reference": {
+    "blueprint_parent": {
         "prototype": "montage/core/meta/blueprint-reference",
         "properties": {
             "valueReference": {
-                "blueprintName": "NativeControl",
-                "blueprintModuleId": "native/ui/native-control.meta",
-                "prototypeName": "NativeControl"
+                "blueprintName": "AbstractSelect",
+                "blueprintModuleId": "montage/ui/base/abstract-select.meta",
+                "prototypeName": "AbstractSelect"
             }
         }
     },
+
     "root": {
         "prototype": "montage/core/meta/blueprint",
         "properties": {
-            "name": "select",
+            "name": "Select",
             "blueprintModuleId": "ui/select.reel/select.meta",
-            "prototypeName": "select",
-            "customPrototype": false,
-            "parent": {
-                "@": "blueprint_nativecontrol_reference"
-            },
-            "propertyBlueprints": [
-                {
-                    "@": "blueprint_select_content"
-                },
-                {
-                    "@": "blueprint_select_valuePropertyPath"
-                },
-                {
-                    "@": "blueprint_select_textPropertyPath"
-                },
-                {
-                    "@": "blueprint_select_contentController"
-                },
-                {
-                    "@": "blueprint_select_autofocus"
-                },
-                {
-                    "@": "blueprint_select_disabled"
-                },
-                {
-                    "@": "blueprint_select_form"
-                },
-                {
-                    "@": "blueprint_select_multiple"
-                },
-                {
-                    "@": "blueprint_select_name"
-                },
-                {
-                    "@": "blueprint_select_required"
-                },
-                {
-                    "@": "blueprint_select_size"
-                }
-            ],
-            "propertyBlueprintGroups": {
-                "select": [
-                    {
-                        "@": "blueprint_select_content"
-                    },
-                    {
-                        "@": "blueprint_select_valuePropertyPath"
-                    },
-                    {
-                        "@": "blueprint_select_textPropertyPath"
-                    },
-                    {
-                        "@": "blueprint_select_contentController"
-                    }
-                ],
-                "select-base": [
-                    {
-                        "@": "blueprint_select_autofocus"
-                    },
-                    {
-                        "@": "blueprint_select_disabled"
-                    },
-                    {
-                        "@": "blueprint_select_form"
-                    },
-                    {
-                        "@": "blueprint_select_multiple"
-                    },
-                    {
-                        "@": "blueprint_select_name"
-                    },
-                    {
-                        "@": "blueprint_select_required"
-                    },
-                    {
-                        "@": "blueprint_select_size"
-                    }
-                ]
-            },
-            "propertyValidationRules": {}
+            "prototypeName": "Select",
+            "parent": {"@": "blueprint_parent"}
         }
     }
 }

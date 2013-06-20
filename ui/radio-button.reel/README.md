@@ -1,12 +1,8 @@
 # RadioButton
 
-![RadioButton](https://raw.github.com/montagejs/digit/edge/radio-button.reel/screenshot.png)
+![RadioButton](screenshot.png)
 
 ## How to use
-
-```html
-<span data-montage-id="radio"></span>
-```
 
 ```json
 "radio": {
@@ -18,15 +14,20 @@
 }
 ```
 
+```html
+<span data-montage-id="radio"></span>
+```
+
+
 ## Available properties
 
 * `value` - Value of the radio group.
-* `checked` - The checked state of the checkbox.
-* `radioButtonController` - The controller of the checkbox.
+* `checked` - The checked state of the radio button.
+* `radioButtonController` - The controller of the radio button.
 
 ## Customizing with CSS
 
-* `.digit-RadioButton` - The checkbox element
+* `.digit-RadioButton` - The radio button element
 
 ```css
 .digit-RadioButton {

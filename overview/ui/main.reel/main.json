@@ -5,110 +5,60 @@
         }
     },
 
-    "button1": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button1"} } },
-    "button2": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button2"} } },
-    "button3": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button3"} } },
+    "button-1": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button-1"} } },
+    "button-2": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button-2"} } },
+    "button-3": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button-3"} } },
 
-    "buttonGroup1": { "prototype": "ui/button-group.reel", "properties": { "element": {"#": "buttonGroup1"} } },
-    "buttonGroup1item1": { "prototype": "ui/button.reel", "properties": { "element": {"#": "buttonGroup1item1"} } },
-    "buttonGroup1item2": { "prototype": "ui/button.reel", "properties": { "element": {"#": "buttonGroup1item2"} } },
-    "buttonGroup1item3": { "prototype": "ui/button.reel", "properties": { "element": {"#": "buttonGroup1item3"} } },
-    "buttonGroup2": { "prototype": "ui/button-group.reel", "properties": { "element": {"#": "buttonGroup2"} } },
-    "buttonGroup2item1": { "prototype": "ui/button.reel", "properties": { "element": {"#": "buttonGroup2item1"} } },
-    "buttonGroup2item2": { "prototype": "ui/button.reel", "properties": { "element": {"#": "buttonGroup2item2"} } },
-    "buttonGroup2item3": { "prototype": "ui/button.reel", "properties": { "element": {"#": "buttonGroup2item3"} } },
-    "buttonGroup3": { "prototype": "ui/button-group.reel", "properties": { "element": {"#": "buttonGroup3"} } },
-    "buttonGroup3item1": { "prototype": "ui/button.reel", "properties": { "element": {"#": "buttonGroup3item1"} } },
-    "buttonGroup3item2": { "prototype": "ui/button.reel", "properties": { "element": {"#": "buttonGroup3item2"} } },
-    "buttonGroup3item3": { "prototype": "ui/button.reel", "properties": { "element": {"#": "buttonGroup3item3"} } },
+    "radioButtonController-1": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
+    "radioButton-1A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-1A"}, "radioButtonController": {"@": "radioButtonController-1"}, "value": 1 } },
+    "radioButton-1B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-1B"}, "radioButtonController": {"@": "radioButtonController-1"}, "value": 2 } },
+    "radioButtonController-2": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
+    "radioButton-2A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-2A"}, "radioButtonController": {"@": "radioButtonController-2"}, "value": 1 } },
+    "radioButton-2B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-2B"}, "radioButtonController": {"@": "radioButtonController-2"}, "value": 2 } },
+    "radioButtonController-3": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
+    "radioButton-3A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-3A"}, "radioButtonController": {"@": "radioButtonController-3"}, "value": 1 } },
+    "radioButton-3B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-3B"}, "radioButtonController": {"@": "radioButtonController-3"}, "value": 2 } },
 
-    "toggle1": { "prototype": "ui/toggle.reel", "properties": { "element": {"#": "toggle1"} } },
-    "toggle2": { "prototype": "ui/toggle.reel", "properties": { "element": {"#": "toggle2"} } },
-    "toggle3": { "prototype": "ui/toggle.reel", "properties": { "element": {"#": "toggle3"} } },
+    "checkbox-1": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-1"} } },
+    "checkbox-2": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-2"} } },
+    "checkbox-3": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-3"} } },
 
-    "checkbox1": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox1"} } },
-    "checkbox2": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox2"} } },
-    "checkbox3": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox3"} } },
+    "badge-1": { "prototype": "ui/badge.reel", "properties": { "element": {"#": "badge-1"}, "value": 1 } },
+    "badge-2": { "prototype": "ui/badge.reel", "properties": { "element": {"#": "badge-2"}, "value": 2 } },
+    "badge-3": { "prototype": "ui/badge.reel", "properties": { "element": {"#": "badge-3"}, "value": 3 } },
 
-    "radioButtonController1": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
-    "radioButton1A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton1A"}, "radioButtonController": {"@": "radioButtonController1"}, "value": 1 } },
-    "radioButton1B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton1B"}, "radioButtonController": {"@": "radioButtonController1"}, "value": 2 } },
-    "radioButtonController2": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
-    "radioButton2A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton2A"}, "radioButtonController": {"@": "radioButtonController2"}, "value": 1 } },
-    "radioButton2B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton2B"}, "radioButtonController": {"@": "radioButtonController2"}, "value": 2 } },
-    "radioButtonController3": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
-    "radioButton3A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton3A"}, "radioButtonController": {"@": "radioButtonController3"}, "value": 1 } },
-    "radioButton3B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton3B"}, "radioButtonController": {"@": "radioButtonController3"}, "value": 2 } },
+    "select-1": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select-1"}, "content": [{"label": "Arizona"}, {"label": "Alabama"}, {"label": "California"}, {"label": "Hawaii"}, {"label": "New York"}] } },
+    "select-2": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select-2"}, "content": [{"label": "Arizona"}, {"label": "Alabama"}, {"label": "California"}, {"label": "Hawaii"}, {"label": "New York"}] } },
+    "select-3": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select-3"}, "content": [{"label": "Arizona"}, {"label": "Alabama"}, {"label": "California"}, {"label": "Hawaii"}, {"label": "New York"}] } },
 
-    "select1": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select1"} } },
-    "select2": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select2"} } },
-    "select3": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select3"} } },
+    "numberField-1": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField-1"} } },
+    "numberField-2": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField-2"} } },
+    "numberField-3": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField-3"} } },
 
-    "textField1": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField1"}, "placeholderValue": "Text Field" } },
-    "textField2": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField2"}, "placeholderValue": "Text Field" } },
-    "textField3": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField3"}, "placeholderValue": "Text Field" } },
+    "slider-1": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider-1"} } },
+    "slider-2": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider-2"} } },
+    "slider-3": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider-3"} } },
 
-    "textArea1": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea1"}, "placeholderValue": "Text Area" } },
-    "textArea2": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea2"}, "placeholderValue": "Text Area" } },
-    "textArea3": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea3"}, "placeholderValue": "Text Area" } },
+    "text-1": { "prototype": "ui/text.reel", "properties": { "element": {"#": "text-1"}, "value": "Text" } },
+    "text-2": { "prototype": "ui/text.reel", "properties": { "element": {"#": "text-2"}, "value": "Text" } },
+    "text-3": { "prototype": "ui/text.reel", "properties": { "element": {"#": "text-3"}, "value": "Text" } },
 
-    "numberField1": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField1"} } },
-    "numberField2": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField2"} } },
-    "numberField3": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField3"} } },
+    "title-1": { "prototype": "ui/title.reel", "properties": { "element": {"#": "title-1"}, "value": "Title" } },
+    "title-2": { "prototype": "ui/title.reel", "properties": { "element": {"#": "title-2"}, "value": "Title" } },
+    "title-3": { "prototype": "ui/title.reel", "properties": { "element": {"#": "title-3"}, "value": "Title" } },
 
-    "slider1": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider1"} } },
-    "slider2": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider2"} } },
-    "slider3": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider3"} } },
+    "textField-1": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-1"}, "placeholderValue": "Text Field" } },
+    "textField-2": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-2"}, "placeholderValue": "Text Field" } },
+    "textField-3": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-3"}, "placeholderValue": "Text Field" } },
 
-    "progress1": { "prototype": "ui/progress.reel", "properties": { "element": {"#": "progress1"} } },
-    "progress2": { "prototype": "ui/progress.reel", "properties": { "element": {"#": "progress2"} } },
-    "progress3": { "prototype": "ui/progress.reel", "properties": { "element": {"#": "progress3"} } },
+    "textArea-1": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-1"}, "placeholderValue": "Text Area" } },
+    "textArea-2": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-2"}, "placeholderValue": "Text Area" } },
+    "textArea-3": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-3"}, "placeholderValue": "Text Area" } },
 
-
-    "audio1": { "prototype": "ui/audio.reel", "properties": { "element": {"#": "audio1"} } },
-    "audio2": { "prototype": "ui/audio.reel", "properties": { "element": {"#": "audio2"} } },
-    "audio3": { "prototype": "ui/audio.reel", "properties": { "element": {"#": "audio3"} } },
-
-    "video1": { "prototype": "ui/video.reel", "properties": { "element": {"#": "video1"} } },
-    "video2": { "prototype": "ui/video.reel", "properties": { "element": {"#": "video2"} } },
-    "video3": { "prototype": "ui/video.reel", "properties": { "element": {"#": "video3"} } },
-
-    "map1": { "prototype": "ui/map.reel", "properties": { "element": {"#": "map1"} } },
-    "map2": { "prototype": "ui/map.reel", "properties": { "element": {"#": "map2"} } },
-    "map3": { "prototype": "ui/map.reel", "properties": { "element": {"#": "map3"} } },
-    
-    
-
-    "header1": { "prototype": "ui/header.reel", "properties": { "element": {"#": "header1"} } },
-    "header2": { "prototype": "ui/header.reel", "properties": { "element": {"#": "header2"} } },
-    "header3": { "prototype": "ui/header.reel", "properties": { "element": {"#": "header3"} } },
-    
-    "list1": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list1"} } },
-    "list2": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list2"} } },
-    "list3": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list3"} } },
-    
-    "tabBar1": { "prototype": "ui/tab-bar.reel", "properties": { "element": {"#": "tabBar1"} } },
-    "tabBar2": { "prototype": "ui/tab-bar.reel", "properties": { "element": {"#": "tabBar2"} } },
-    "tabBar3": { "prototype": "ui/tab-bar.reel", "properties": { "element": {"#": "tabBar3"} } },
-
-    "toolBar1": { "prototype": "ui/tool-bar.reel", "properties": { "element": {"#": "toolBar1"} } },
-    "toolBar2": { "prototype": "ui/tool-bar.reel", "properties": { "element": {"#": "toolBar2"} } },
-    "toolBar3": { "prototype": "ui/tool-bar.reel", "properties": { "element": {"#": "toolBar3"} } },
-
-    "ActionSheet1": { "prototype": "ui/action-sheet.reel", "properties": { "element": {"#": "ActionSheet1"} } },
-    "ActionSheet2": { "prototype": "ui/action-sheet.reel", "properties": { "element": {"#": "ActionSheet2"} } },
-    "ActionSheet3": { "prototype": "ui/action-sheet.reel", "properties": { "element": {"#": "ActionSheet3"} } },
-
-    "Modal1": { "prototype": "ui/modal.reel", "properties": { "element": {"#": "Modal1"} } },
-    "Modal2": { "prototype": "ui/modal.reel", "properties": { "element": {"#": "Modal2"} } },
-    "Modal3": { "prototype": "ui/modal.reel", "properties": { "element": {"#": "Modal3"} } },
-
-    "Notification1": { "prototype": "ui/notification.reel", "properties": { "element": {"#": "Notification1"} } },
-    "Notification2": { "prototype": "ui/notification.reel", "properties": { "element": {"#": "Notification2"} } },
-    "Notification3": { "prototype": "ui/notification.reel", "properties": { "element": {"#": "Notification3"} } },
-
-    "splitView1": { "prototype": "ui/split-view.reel", "properties": { "element": {"#": "splitView1"} } },
-    "splitView2": { "prototype": "ui/split-view.reel", "properties": { "element": {"#": "splitView2"} } },
-    "splitView3": { "prototype": "ui/split-view.reel", "properties": { "element": {"#": "splitView3"} } }
-
+    "list-1": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-1"}, "content": [1, 2, 3] } },
+    "listItem-1": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-1"} } },
+    "list-2": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-2"}, "content": [1, 2, 3] } },
+    "listItem-2": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-2"} } },
+    "list-3": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-3"}, "content": [1, 2, 3] } },
+    "listItem-3": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-3"} } }
 }

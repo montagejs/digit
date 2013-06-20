@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractNumberField",
+                "blueprintModuleId": "montage/ui/base/abstract-number-field.meta",
+                "prototypeName": "AbstractNumberField"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "NumberField",
+            "blueprintModuleId": "ui/number-field.reel/number-field.meta",
+            "prototypeName": "Checkbox",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}

@@ -1,32 +1,23 @@
 ![Digit](assets/images/icon.png)
 
-### Overview
+# Digit Overview
 
-![Button](https://raw.github.com/montagejs/digit/master/button.reel/screenshot.png)
-![Button Group](https://raw.github.com/montagejs/digit/master/button-group.reel/screenshot.png)
-![Toggle](https://raw.github.com/montagejs/digit/master/toggle.reel/screenshot.png)
-![Checkbox](https://raw.github.com/montagejs/digit/edge/checkbox
-.reel/screenshot.png)
-![RadioButton](https://raw.github.com/montagejs/digit/master/radio-button
-.reel/screenshot.png)
-![Select](https://raw.github.com/montagejs/digit/master/select.reel/screenshot.png)
-![TextField](https://raw.github.com/montagejs/digit/edge/text-field
-.reel/screenshot
-.png)
-![TextArea](https://raw.github.com/montagejs/digit/edge/ui/text-area
-.reel/screenshot.png)
-![NumberField](https://raw.github.com/montagejs/digit/edge/number-field.reel/screenshot.png)
-![Range](https://raw.github.com/montagejs/digit/master/input-range.reel/screenshot.png)
-![Progress](https://raw.github.com/montagejs/digit/master/progress.reel/screenshot.png)
+## Basic components
+
+![Button](../ui/button.reel/screenshot.png)
+![RadioButton](../ui/radio-button.reel/screenshot.png)
+![Checkbox](../ui/checkbox.reel/screenshot.png)
+![Badge](../ui/badge.reel/screenshot.png)
+![Select](../ui/select.reel/screenshot.png)
+![NumberField](../ui/number-field.reel/screenshot.png)
+![Slider](../ui/slider.reel/screenshot.png)
+![Text](../ui/text.reel/screenshot.png)
+![Title](../ui/title.reel/screenshot.png)
+![TextField](../ui/text-field.reel/screenshot.png)
+![TextArea](../ui/text-area.reel/screenshot.png)
+
 ------
-![Audio](https://raw.github.com/montagejs/digit/master/audio.reel/screenshot.png)
-![Video](https://raw.github.com/montagejs/digit/master/video.reel/screenshot.png)
-![Map](https://raw.github.com/montagejs/digit/master/map.reel/screenshot.png)
-------
-![Header](https://raw.github.com/montagejs/digit/master/header.reel/screenshot.png)
-![Tool Bar](https://raw.github.com/montagejs/digit/master/tool-bar.reel/screenshot.png)
-![List](https://raw.github.com/montagejs/digit/master/list.reel/screenshot.png)
-![Tab Bar](https://raw.github.com/montagejs/digit/master/tab-bar.reel/screenshot.png)
-![Action Sheet](https://raw.github.com/montagejs/digit/master/action-sheet.reel/screenshot.png)
-![Modal](https://raw.github.com/montagejs/digit/master/modal.reel/screenshot.png)
-![Notification](https://raw.github.com/montagejs/digit/master/notification.reel/screenshot.png)
+
+## Layout components
+
+![List](../ui/list.reel/screenshot.png)

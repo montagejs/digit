@@ -1,22 +1,22 @@
 # List
 
-![List](https://raw.github.com/montagejs/digit/master/list.reel/screenshot.png)
+![List](screenshot.png)
 
 The List component wraps an `<ul>` element. It supports different kind of list item types.
 
 ## How to use
 
-```html
-<ul data-montage-id="list"></ul>
-```
-
 ```json
 "list": {
-    "prototype": "matte/ui/list.reel",
+    "prototype": "digit/ui/list.reel",
     "properties": {
         "element": {"#": "list"}
     }
 }
+```
+
+```html
+<ul data-montage-id="list"></ul>
 ```
 
 
@@ -48,12 +48,4 @@ A List-item can contain just a label with text. Or it can be mixed and matched w
 * `.digit-List-item-icon` - An icon. Great for giving a visual hint or group the items.
 * `.digit-List-item-image` - And image. Can be used for avatars or thumbnails. Minimum size: 50x50 (100x100 for Retina). Also note that if the images are not a square, they get cropped and centered.
 
-![List-item types](https://raw.github.com/montagejs/digit/master/list.reel/screenshot-types.png)
-
-
-
-
-## Browser support
-
-* Chrome (latest)
-* Safari 5+
+![List-item types](screenshot-types.png)

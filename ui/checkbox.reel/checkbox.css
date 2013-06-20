@@ -1,6 +1,6 @@
 .digit-Checkbox {
     box-sizing: border-box;
-    /font-size: 12px;
+    font-size: 16px;
     position: relative;
     display: inline-block;
     width: 1.5em;
@@ -10,10 +10,7 @@
     border: 1px solid #b3b3b3;
     background: #f2f2f2;
     cursor: pointer;
-}
-
-.digit-Checkbox:hover {
-    background-color: #fff;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .digit-Checkbox.montage--active {
@@ -35,14 +32,7 @@
 }
 
 
-/* Style for Touch */
-.digit-Checkbox {
-    font-size: 16px;
-    -webkit-tap-highlight-color: transparent;
-}
-
-
-/* Style for Skins */
+/* Style for Skins ------------------------------------ */
 
 [data-montage-skin] .digit-Checkbox {
     position: relative;
@@ -56,6 +46,7 @@
 
 
 /* Light ------------------------------------ */
+
 [data-montage-skin="light"] .digit-Checkbox.montage-Checkbox--checked:before {
     background: url(check.svg) no-repeat center;
 }

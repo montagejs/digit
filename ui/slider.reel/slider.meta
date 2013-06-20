@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractSlider",
+                "blueprintModuleId": "montage/ui/base/abstract-slider.meta",
+                "prototypeName": "AbstractSlider"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "Slider",
+            "blueprintModuleId": "ui/slider.reel/slider.meta",
+            "prototypeName": "Slider",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}

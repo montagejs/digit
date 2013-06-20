@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "Component",
+                "blueprintModuleId": "ui/component.meta",
+                "prototypeName": "Component"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "ListItem",
+            "blueprintModuleId": "ui/list-item.reel/list-item.meta",
+            "prototypeName": "ListItem",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractButton",
+                "blueprintModuleId": "montage/ui/base/abstract-button.meta",
+                "prototypeName": "AbstractButton"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "Button",
+            "blueprintModuleId": "ui/button.reel/button.meta",
+            "prototypeName": "Button",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}

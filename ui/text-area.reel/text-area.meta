@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractTextArea",
+                "blueprintModuleId": "montage/ui/base/abstract-text-area.meta",
+                "prototypeName": "AbstractTextArea"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "TextArea",
+            "blueprintModuleId": "ui/text-area.reel/text-area.meta",
+            "prototypeName": "TextArea",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}

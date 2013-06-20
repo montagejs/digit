@@ -1,6 +1,9 @@
-var Montage = require("montage").Montage,
-    AbstractSlider = require("montage/ui/base/abstract-slider").AbstractSlider,
-    dom = require("montage/core/dom");
+var AbstractSlider = require("montage/ui/base/abstract-slider").AbstractSlider;
 
-exports.Slider = Montage.create(AbstractSlider, {
+exports.Slider = AbstractSlider.specialize({
+    constructor: {
+        value: function Slider() {
+            this.super();
+        }
+    }
 });

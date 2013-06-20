@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "Text",
+                "blueprintModuleId": "montage/ui/text.reel/text.meta",
+                "prototypeName": "Text"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "Title",
+            "blueprintModuleId": "ui/title.reel/title.meta",
+            "prototypeName": "Title",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}

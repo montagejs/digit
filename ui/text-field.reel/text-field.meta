@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractTextField",
+                "blueprintModuleId": "montage/ui/base/abstract-text-field.meta",
+                "prototypeName": "AbstractTextField"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "TextField",
+            "blueprintModuleId": "ui/text-field.reel/text-field.meta",
+            "prototypeName": "TextField",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}
