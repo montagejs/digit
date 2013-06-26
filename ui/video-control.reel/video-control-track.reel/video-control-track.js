@@ -58,7 +58,7 @@ exports.VideoControlTrack = Montage.create(AbstractSlider, /** @lends VideoContr
         value: function (e) {
             AbstractSlider.handleThumbTranslateEnd.apply(this, arguments);
             if ( this._wasPlaying ) {
-                this.videoController.play();
+                this.videoController.unpause();
             }
         }
     },
