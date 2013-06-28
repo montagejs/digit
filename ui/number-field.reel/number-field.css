@@ -3,16 +3,17 @@
     box-sizing: border-box;
     position: relative;
     display: inline-block;
-    font-size: 0;
+    font-size: 16px;
     width: auto;
-    margin: 0;
+    margin: 0 4px;
+    vertical-align: middle;
     outline: none;
     -webkit-user-select: none;
 }
 
 .digit-NumberField > .digit-NumberField-input {
-    display: inline-block;
-    font-size: 16px;
+    float: left;
+    font-size: inherit;
     width: 3.6em;
     border-radius: 0;
     text-align: center;
@@ -20,7 +21,8 @@
 
 .digit-NumberField > .digit-NumberField-plus,
 .digit-NumberField > .digit-NumberField-minus {
-    font-size: 16px;
+    float: left;
+    font-size: inherit;
     margin: 0;
     padding: 2px;
 }
