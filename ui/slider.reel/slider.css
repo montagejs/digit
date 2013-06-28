@@ -3,9 +3,10 @@
     position: relative;
     display: inline-block;
     box-sizing: border-box;
-    width: 150px;
-    height: 10px;
-    border-radius: 3px;
+    font-size: 16px;
+    width: 10em;
+    height: .625em;
+    border-radius: .25em;
     border: 1px solid #b3b3b3;
     background-color: #d9d9d9;
     outline: none;
@@ -15,25 +16,23 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    right: 26px; /*width of thumb - slider border*/
+    right: calc( 1.75em - 2px ); /* width of thumb - border */
     bottom: 0px;
 }
 
 .digit-Slider-thumb {
     position: absolute;
-    font-size: inherit;
     box-sizing: border-box;
-    margin: -14px 0 0 -1px;
-    border-radius: 14px;
-    width: 28px;
-    height: 28px;
+    margin: -.875em 0 0 -1px;
+    border-radius: .875em;
+    width: 1.75em;
+    height: 1.75em;
     left: 0;
     top: 50%;
     border: 1px solid #b3b3b3;
     background-color: #f2f2f2;
     cursor: pointer;
 }
-
 
 .digit-Slider-thumb:before {
     content: "";
