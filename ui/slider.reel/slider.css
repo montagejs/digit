@@ -16,8 +16,11 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    right: calc( 1.75em - 2px ); /* width of thumb - border */
     bottom: 0px;
+    
+    /* width of thumb - border */
+    right: -webkit-calc( 1.75em - 2px ); /* still needed for Safari 6 */
+    right: calc( 1.75em - 2px ); /* rest */
 }
 
 .digit-Slider-thumb {
