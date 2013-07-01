@@ -2,21 +2,23 @@
 
 Status: __In progress__
 
-![Video](https://raw.github.com/montagejs/digit/master/video.reel/screenshot.png)
+![Video](https://raw.github.com/montagejs/digit/master/ui/video.reel/screenshot.png)
 
 The Video component wraps a video element and provides custom controls.
 
 ## How to use
 
 ```html
-<video data-montage-id="video"></video>
+<div data-montage-id="video"></div>
 ```
 
 ```json
 "video": {
-    "prototype": "matte/ui/video.reel",
+    "prototype": "ui/video.reel",
     "properties": {
-        "element": {"#": "video"}
+        "element": {"#": "video"},
+        "src": "movie.ogg",
+        "posterSrc": "poster.png"
     }
 }
 ```
@@ -25,17 +27,32 @@ The Video component wraps a video element and provides custom controls.
 ## Available properties
 
 * `src` - Source file of the video.
-* `poster` - An image that gets shown before the video plays.
-* `size` - Size of the video in pixels (e.g. "500x400").
-* `...`
+* `posterSrc` - An image that gets shown before the video plays.
+* `videoController` - The MediaController object used to control playback.
 
 
+## Using multiple sources
+
+Multiple source files can be specified with the `sources` property. The Video component will use the first source with a supported media type.
+
+```json
+"video": {
+    "prototype": "ui/video.reel",
+    "properties": {
+        "element": {"#": "video"},
+        "sources": [
+            {"src": "movie.ogg", "type": "video/ogg"},
+            {"src": "movie.mp4", "type": "video/mpeg"}
+        ]
+    }
+}
+```
 
 ## Customizing with CSS
 
 * `.digit-Video` - The Video component
 * `.digit-Video-frame` - The actual video element
-* `.digit-Video-cover` - Initial cover with a the play button
+* `.digit-Video-cover` - Initial cover with a play button
 * `.digit-Video-cover-button` - Initial play button
 * `.digit-Video-controls` - Controls
 * `.digit-Video-controls-button-play` - Play button
