@@ -29,7 +29,7 @@ exports.Video = Montage.create(AbstractVideo, {
                 this.setupFirstPlay();
                 
                 this.addOwnPropertyChangeListener("src", this);
-                this.addOwnPropertyChangeListener("poster", this);
+                this.addOwnPropertyChangeListener("posterSrc", this);
             }
         }
     },
@@ -126,22 +126,13 @@ exports.Video = Montage.create(AbstractVideo, {
         }
     },
 
-    handlePosterChange: {
+    handlePostersrcChange: {
         value: function() {
             this.showPoster();
         }
     },
 
     // Properties
-
-    src: {
-        value: "../../ui/video.reel/video.mov"
-    },
-
-    posterSrc: {
-        value: "../../ui/video.reel/poster.png"
-    },
-
 
     // Machinery
 
