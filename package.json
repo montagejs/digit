@@ -1,20 +1,16 @@
 {
     "name": "digit",
-    "version": "0.2.0-alpha",
-    "publishConfig": {
-      "tag": "edge"
-    },
+    "version": "0.2.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/montagejs/digit.git"
     },
     "dependencies": {
-        "montage": "0.13.0-alpha",
-        "matte": "0.1.1-alpha",
-        "native": "0.1.1-alpha"
+        "montage": "~0.13.0",
+        "matte": "~0.1.1"
     },
     "devDependencies": {
-        "montage-testing": "0.2.0-alpha"
+        "montage-testing": "~0.2.0"
     },
     "exclude": [
         "overview.html",

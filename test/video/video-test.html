@@ -2,21 +2,23 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Toggle</title>
+    <title>Video</title>
     <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
     <script type="text/montage-serialization">
         {
             "test": {
-                "prototype": "test/toggle/toggle-test[Test]",
+                "prototype": "test/video/video-test[Test]",
                 "properties": {
-                    "toggle": {"@": "toggle"}
+                    "video": {"@": "video"}
                 }
             },
 
-            "toggle": {
-                "prototype": "ui/toggle.reel",
+            "video": {
+                "prototype": "ui/video.reel",
                 "properties": {
-                    "element": {"#": "toggle"}
+                    "element": {"#": "video"},
+                    "src": "../../ui/video.reel/video.mov",
+                    "posterSrc": "../../ui/video.reel/poster.png"
                 }
             }
         }
@@ -24,8 +26,8 @@
 
 </head>
 <body>
-    <h1>Toggle</h1>
+    <h1>Video</h1>
 
-    <div data-montage-id="toggle"></div>
+    <div data-montage-id="video"></div>
 </body>
 </html>

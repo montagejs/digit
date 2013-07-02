@@ -10,29 +10,21 @@
             "owner": {
                 "properties": {
                     "element": {"#": "video"},
-                    "controller": {"@": "mediacontroller"}
-                }
-            },
-            "mediacontroller": {
-                "prototype": "montage/core/media-controller",
-                "properties": {
                     "mediaElement": {"#": "mediaElement"}
-                },
-                "bindings": {
-                    "autoplay": {"<-": "@owner.autoplay"},
-                    "mediaSrc": {"<-": "@owner.src"},
-                    "posterSrc": {"<-": "@owner.poster"}
                 }
             },
             "control": {
                 "prototype": "ui/video-control.reel",
                 "properties": {
                     "element": {"#": "control"},
-                    "controller": {"@": "mediacontroller"}
+                    "video": {"@": "owner"}
+                },
+                "bindings": {
+                    "videoController": {"<-": "@owner.videoController"}
                 }
             },
             "play": {
-                "prototype": "native/ui/button.reel",
+                "prototype": "ui/button.reel",
                 "properties": {
                     "element": {"#": "play"}
                 },
