@@ -28,6 +28,7 @@ The Video component wraps a video element and provides custom controls.
 
 * `src` - Source file of the video.
 * `posterSrc` - An image that gets shown before the video plays.
+* `sources` - Array of video source files.
 * `videoController` - The MediaController object used to control playback.
 
 
@@ -44,6 +45,41 @@ Multiple source files can be specified with the `sources` property. The Video co
             {"src": "movie.ogg", "type": "video/ogg"},
             {"src": "movie.mp4", "type": "video/mpeg"}
         ]
+    }
+}
+```
+
+
+## Synchronized playback
+
+Playback of multiple videos can be synchronized by using the same MediaController.
+
+```html
+<div data-montage-id="video1"></div>
+<div data-montage-id="video2"></div>
+```
+
+```json
+"video1": {
+    "prototype": "ui/video.reel",
+    "properties": {
+        "element": {"#": "video1"},
+        "videoController" : {"@": "mediaController"},
+        "src": "movie1.mp4"
+    }
+},
+"video2": {
+    "prototype": "ui/video.reel",
+    "properties": {
+        "element": {"#": "video2"},
+        "videoController" : {"@": "mediaController"},
+        "src": "movie2.mp4"
+    }
+},
+"mediaController": {
+    "prototype": "montage/core/media-controller",
+    "properties": {
+        "autoplay": false
     }
 }
 ```
