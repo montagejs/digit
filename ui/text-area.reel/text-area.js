@@ -9,8 +9,6 @@ exports.TextArea = AbstractTextArea.specialize({
     constructor: {
         value: function TextArea() {
             this.super();
-
-            this.classList.add("digit-TextArea");
         }
     }
 });

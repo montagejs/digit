@@ -9,8 +9,6 @@ exports.TextField = AbstractTextField.specialize({
     constructor: {
         value: function TextField() {
             this.super();
-
-            this.classList.add("digit-TextField");
         }
     }
 });
