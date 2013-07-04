@@ -3,8 +3,16 @@
 # digit
 Touch-optimized [Montage](https://github.com/montagejs/montage) components for tablets and phones.
 
+Note: Digit is currently still __work in progress__.
+
+
 ## Install
-Currently Digit is still __work in progress__. To preview the components, add a symlink that points to Montage at `/node_modules/montage` and then you should see them if you visit `/overview` on your local server.
+
+The Digit components depend on the MontageJS framework which isn't included in the repository. If you have npm installed already, `cd` into the Digit's directory and simply type:
+
+    npm install
+
+It will add MontageJS and all the other dependencies. Then you can preview the components on your local server by going to `[path-to-digit]/overview`.
 
 ## Components
 
