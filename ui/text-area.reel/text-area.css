@@ -1,7 +1,7 @@
 .digit-TextArea {
     outline: none;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 100%; /* Override UA style. */
     width: 10em;
     height: 3.75em;
     padding: .5em;

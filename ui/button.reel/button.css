@@ -1,7 +1,7 @@
 .digit-Button {
     outline: none;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 100%; /* Override UA style. */
     height: 2.5em;
     min-width: 2.5em; /* Don't shrink below the height. Makes a perfect circle. */
     margin: 0 2px;
