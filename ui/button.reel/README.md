@@ -2,7 +2,7 @@
 
 ![Button](screenshot.png)
 
-The Button component wraps a <button> or <input type="button"> element, and exposes the standard attributes of those elements as properties, which you can use with data binding, for example.
+The Button component wraps a `<button>`, `<input type="button">` or `<a>` element, and exposes the standard attributes of those elements as properties, which you can use with data binding, for example.
 
 ## How to use
 
