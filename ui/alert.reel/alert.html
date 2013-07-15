@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="alert.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "alert"}
+            }
+        },
+        "message": {
+            "prototype": "ui/text.reel",
+            "properties": {
+                "element": {"#": "message"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.message"}
+            }
+        },
+        "modalOverlay": {
+            "prototype": "montage/ui/modal-overlay.reel",
+            "properties": {
+                "element": {"#": "modalOverlay"}
+            }
+        },
+        "okButton": {
+            "prototype": "ui/button.reel",
+            "properties": {
+                "element": {"#": "okButton"}
+            },
+            "bindings": {
+                "label": {"<-": "@owner.okLabel"}
+            }
+        },
+        "title": {
+            "prototype": "ui/text.reel",
+            "properties": {
+                "element": {"#": "title"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.title"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="alert" class="digit-Alert">
+        <div data-montage-id="modalOverlay" class="digit-Alert-Overlay">
+            <header data-montage-id="title" class="digit-Alert-header"></header>
+            <div data-montage-id="message" class="digit-Alert-content"></div>
+            <footer class="digit-Alert-footer">
+                <button data-montage-id="okButton" class="Button montage-Alert-button--ok"></button>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
