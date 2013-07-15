@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Confirm Test</title>
+    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "test/confirm/confirm-test[Test]"
+            },
+
+            "confirm": {
+                "prototype": "ui/confirm.reel",
+                "properties": {
+                    "element": {"#": "confirm"},
+                    "title": "A Title",
+                    "message": "A message",
+                    "okLabel": "Okay",
+                    "cancelLabel": "Nay"
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<h1>Confirm</h1>
+
+<div data-montage-id="confirm"></div>
+
+</body>
+</html>

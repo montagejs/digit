@@ -3,6 +3,7 @@ require("montage-testing").run(require,[
     "test/alert/alert-spec",
     "test/button/button-spec",
     "test/checkbox/checkbox-spec",
+    "test/confirm/confirm-spec",
     "test/slider/slider-spec",
     "test/number-field/number-field-spec",
     "test/radio-button/radio-button-spec",
