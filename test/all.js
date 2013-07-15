@@ -1,5 +1,6 @@
 require("montage-testing").run(require,[
     // Please keep in alphabetical order
+    "test/alert/alert-spec",
     "test/button/button-spec",
     "test/checkbox/checkbox-spec",
     "test/slider/slider-spec",

@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractAlert",
+                "blueprintModuleId": "montage/ui/base/abstract-alert.meta",
+                "prototypeName": "AbstractAlert"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "Alert",
+            "blueprintModuleId": "ui/alert.reel/alert.meta",
+            "prototypeName": "Alert",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}
