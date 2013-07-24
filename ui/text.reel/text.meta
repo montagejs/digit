@@ -4,19 +4,27 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "Text",
-                "blueprintModuleId": "montage/ui/text.reel/text.meta",
-                "prototypeName": "Text"
+                "prototypeName": "Text",
+                "blueprintModule": {
+                    "%": "montage/ui/text.reel/text.meta"
+                }
             }
         }
     },
-
     "root": {
-        "prototype": "montage/core/meta/blueprint",
+        "prototype": "montage/core/meta/module-blueprint",
         "properties": {
             "name": "Text",
-            "blueprintModuleId": "ui/text.reel/text.meta",
-            "prototypeName": "Text",
-            "parent": {"@": "blueprint_parent"}
+            "parent": {
+                "@": "blueprint_parent"
+            },
+            "blueprintModule": {
+                "%": "ui/text.reel/text.meta"
+            },
+            "exportName": "Text",
+            "module": {
+                "%": "ui/text.reel"
+            }
         }
     }
 }

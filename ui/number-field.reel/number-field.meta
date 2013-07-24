@@ -4,19 +4,27 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "AbstractNumberField",
-                "blueprintModuleId": "montage/ui/base/abstract-number-field.meta",
-                "prototypeName": "AbstractNumberField"
+                "prototypeName": "AbstractNumberField",
+                "blueprintModule": {
+                    "%": "montage/ui/base/abstract-number-field.meta"
+                }
             }
         }
     },
-
     "root": {
-        "prototype": "montage/core/meta/blueprint",
+        "prototype": "montage/core/meta/module-blueprint",
         "properties": {
             "name": "NumberField",
-            "blueprintModuleId": "ui/number-field.reel/number-field.meta",
-            "prototypeName": "Checkbox",
-            "parent": {"@": "blueprint_parent"}
+            "parent": {
+                "@": "blueprint_parent"
+            },
+            "blueprintModule": {
+                "%": "ui/number-field.reel/number-field.meta"
+            },
+            "exportName": "NumberField",
+            "module": {
+                "%": "ui/number-field.reel"
+            }
         }
     }
 }

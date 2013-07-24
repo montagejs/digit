@@ -4,19 +4,27 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "Component",
-                "blueprintModuleId": "ui/component.meta",
-                "prototypeName": "Component"
+                "prototypeName": "Component",
+                "blueprintModule": {
+                    "%": "ui/component.meta"
+                }
             }
         }
     },
-
     "root": {
-        "prototype": "montage/core/meta/blueprint",
+        "prototype": "montage/core/meta/module-blueprint",
         "properties": {
             "name": "ListItem",
-            "blueprintModuleId": "ui/list-item.reel/list-item.meta",
-            "prototypeName": "ListItem",
-            "parent": {"@": "blueprint_parent"}
+            "parent": {
+                "@": "blueprint_parent"
+            },
+            "blueprintModule": {
+                "%": "ui/list-item.reel/list-item.meta"
+            },
+            "exportName": "ListItem",
+            "module": {
+                "%": "ui/list-item.reel"
+            }
         }
     }
 }
