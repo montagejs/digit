@@ -4,19 +4,27 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "AbstractSlider",
-                "blueprintModuleId": "montage/ui/base/abstract-slider.meta",
-                "prototypeName": "AbstractSlider"
+                "prototypeName": "AbstractSlider",
+                "blueprintModule": {
+                    "%": "montage/ui/base/abstract-slider.meta"
+                }
             }
         }
     },
-
     "root": {
-        "prototype": "montage/core/meta/blueprint",
+        "prototype": "montage/core/meta/module-blueprint",
         "properties": {
             "name": "Slider",
-            "blueprintModuleId": "ui/slider.reel/slider.meta",
-            "prototypeName": "Slider",
-            "parent": {"@": "blueprint_parent"}
+            "parent": {
+                "@": "blueprint_parent"
+            },
+            "blueprintModule": {
+                "%": "ui/slider.reel/slider.meta"
+            },
+            "exportName": "Slider",
+            "module": {
+                "%": "ui/slider.reel"
+            }
         }
     }
 }

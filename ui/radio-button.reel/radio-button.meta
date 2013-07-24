@@ -4,19 +4,27 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "AbstractRadioButton",
-                "blueprintModuleId": "montage/ui/base/abstract-radio-button.meta",
-                "prototypeName": "AbstractRadioButton"
+                "prototypeName": "AbstractRadioButton",
+                "blueprintModule": {
+                    "%": "montage/ui/base/abstract-radio-button.meta"
+                }
             }
         }
     },
-
     "root": {
-        "prototype": "montage/core/meta/blueprint",
+        "prototype": "montage/core/meta/module-blueprint",
         "properties": {
             "name": "RadioButton",
-            "blueprintModuleId": "ui/radio-button.reel/radio-button.meta",
-            "prototypeName": "RadioButton",
-            "parent": {"@": "blueprint_parent"}
+            "parent": {
+                "@": "blueprint_parent"
+            },
+            "blueprintModule": {
+                "%": "ui/radio-button.reel/radio-button.meta"
+            },
+            "exportName": "RadioButton",
+            "module": {
+                "%": "ui/radio-button.reel"
+            }
         }
     }
 }
