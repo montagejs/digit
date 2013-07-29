@@ -84,6 +84,9 @@ exports.List = Montage.create(Component, /** @lends module:"ui/flow-list.reel".F
                 this._scrollBars.displayHorizontal = false;
                 this._scrollBars.displayVertical = true;
                 this._scrollBars.verticalLength = (this._height / this._rowHeight) / this.flow._numberOfIterations;
+                if (this._scrollBars.verticalLength > 1) {
+                    this._scrollBars.verticalLength = 1;
+                }
             }
         }
     },
@@ -96,7 +99,10 @@ exports.List = Montage.create(Component, /** @lends module:"ui/flow-list.reel".F
 
     didTranslateStart: {
         value: function () {
+            // equivalent to CSS' overflow: auto
+            if (this._scrollBars.verticalLength < 1) {
                 this._scrollBars.opacity = 0.5;
+            }
         }
     },
 
@@ -116,7 +122,11 @@ exports.List = Montage.create(Component, /** @lends module:"ui/flow-list.reel".F
         },
         set: function (value) {
             this.__scroll = value;
-            this._scrollBars.verticalScroll = (value * (1 - this._scrollBars.verticalLength)) / (this.flow._numberOfIterations - (this._height / this._rowHeight));
+            if (this._scrollBars.verticalLength < 1) {
+                this._scrollBars.verticalScroll = (value * (1 - this._scrollBars.verticalLength)) / (this.flow._numberOfIterations - (this._height / this._rowHeight));
+            } else {
+                this._scrollBars.verticalScroll = 0;
+            }
         }
     },
 
