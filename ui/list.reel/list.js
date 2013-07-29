@@ -19,8 +19,6 @@ exports.List = Montage.create(Component, /** @lends module:"ui/flow-list.reel".F
             var self = this;
 
             if (firstTime) {
-                this.flow._flowTranslateComposer.addEventListener("translateStart", this, false);
-                this.flow._flowTranslateComposer.addEventListener("translateEnd", this, false);
                 window.addEventListener("resize", function () {
                     self.needsDraw = true;
                 }, false);
@@ -96,16 +94,14 @@ exports.List = Montage.create(Component, /** @lends module:"ui/flow-list.reel".F
         }
     },
 
-    handleTranslateStart: {
-        value: function(event) {
-            console.log("Start");
-            this._scrollBars.opacity = 0.5;
+    didTranslateStart: {
+        value: function () {
+                this._scrollBars.opacity = 0.5;
         }
     },
 
-    handleTranslateEnd: {
-        value: function(event) {
-            console.log("End");
+    didTranslateEnd: {
+        value: function () {
             this._scrollBars.opacity = 0;
         }
     },
