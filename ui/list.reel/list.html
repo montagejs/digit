@@ -12,7 +12,12 @@
                 "_scrollBars": {"@": "scrollbars"}
             },
             "bindings": {
-                "_scroll": {"<->": "@flow.scroll"}
+                "_scroll": {"<->": "@flow.scroll"},
+                "_numberOfIterations": {"<->": "@flow._numberOfIterations"},
+                "_scrollBarsOpacity": {"<->": "@scrollbars.opacity"},
+                "_scrollBarsVerticalLength": {"<->": "@scrollbars.verticalLength"},
+                "_scrollBarsVerticalScroll": {"<->": "@scrollbars.verticalScroll"},
+                "_firstIteration": {"<-": "@flow._repetition._drawnIterations.0"}
             }
         },
         "scrollbars": {

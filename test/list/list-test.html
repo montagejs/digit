@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>NumberField</title>
+    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "test/list/list-test[Test]",
+                "properties": {
+                    "list": {"@": "list"}
+                }
+            },
+
+            "list": {
+                "prototype": "ui/list.reel",
+                "properties": {
+                    "element": {"#": "list"}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>List</h1>
+
+    <div data-montage-id="list"></div>
+</body>
+</html>

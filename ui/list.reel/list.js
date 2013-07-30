@@ -26,89 +26,57 @@ exports.List = Montage.create(Component, /** @lends module:"ui/flow-list.reel".F
         }
     },
 
-    willDraw: {
-        value: function () {
-            if (this.flow._repetition._drawnIterations[0]) {
-                this._width = this.element.clientWidth;
-                this._height = this.element.clientHeight;
-                this._rowHeight = this.flow._repetition._drawnIterations[0].firstElement.scrollHeight;
-                this.flow.linearScrollingVector = [0, (-500 * this._rowHeight) / this._height, 0];
-                this.flow.paths = [
-                    {
-                        "knots": [
-                            {
-                                "knotPosition": [
-                                    0,
-                                    0,
-                                    0
-                                ],
-                                "nextHandlerPosition": [
-                                    0,
-                                    this._rowHeight * 1000,
-                                    0
-                                ],
-                                "nextDensity": 3000,
-                                "previousDensity": 3000
-                            },
-                            {
-                                "knotPosition": [
-                                    0,
-                                    this._rowHeight * 3000,
-                                    0
-                                ],
-                                "previousHandlerPosition": [
-                                    0,
-                                    this._rowHeight * 2000,
-                                    0
-                                ],
-                                "nextDensity": 3000,
-                                "previousDensity": 3000
-                            }
-                        ],
-                        "units": {},
-                        "headOffset": 1,
-                        "tailOffset": this._height / this._rowHeight
-                    }
-                ];
-                this.flow.cameraTargetPoint = [
-                    this._width / 2,
-                    this._height / 2 + this._rowHeight,
-                    0
-                ];
-                this.flow.cameraPosition = [
-                    this._width / 2,
-                    this._height / 2 + this._rowHeight,
-                    this._height / 2
-                ];
-                this.flow.cameraFov = 90;
-                this._scrollBars.displayHorizontal = false;
-                this._scrollBars.displayVertical = true;
-                this._scrollBars.verticalLength = (this._height / this._rowHeight) / this.flow._numberOfIterations;
-                if (this._scrollBars.verticalLength > 1) {
-                    this._scrollBars.verticalLength = 1;
-                }
-            }
+    _scrollBarsVerticalLength: {
+        value: 1
+    },
+
+    _scrollBarsVerticalScroll: {
+        value: 0
+    },
+
+    _scrollBarsOpacity: {
+        value: 0
+    },
+
+    __height: {
+        value: null
+    },
+
+    _height: {
+        get: function () {
+            return this.__height;
+        },
+        set: function (value) {
+            this.__height = value;
+            this._updateScrollBars();
         }
     },
 
-    draw: {
-        value: function () {
+    __numberOfIterations: {
+        value: null
+    },
 
+    _numberOfIterations: {
+        get: function () {
+            return this.__numberOfIterations;
+        },
+        set: function (value) {
+            this.__numberOfIterations = value;
+            this._updateScrollBars();
         }
     },
 
-    didTranslateStart: {
-        value: function () {
-            // equivalent to CSS' overflow: auto
-            if (this._scrollBars.verticalLength < 1) {
-                this._scrollBars.opacity = 0.5;
-            }
-        }
+    __rowHeight: {
+        value: null
     },
 
-    didTranslateEnd: {
-        value: function () {
-            this._scrollBars.opacity = 0;
+    _rowHeight: {
+        get: function () {
+            return this.__rowHeight;
+        },
+        set: function (value) {
+            this.__rowHeight = value;
+            this._updateScrollBars();
         }
     },
 
@@ -122,11 +90,109 @@ exports.List = Montage.create(Component, /** @lends module:"ui/flow-list.reel".F
         },
         set: function (value) {
             this.__scroll = value;
-            if (this._scrollBars.verticalLength < 1) {
-                this._scrollBars.verticalScroll = (value * (1 - this._scrollBars.verticalLength)) / (this.flow._numberOfIterations - (this._height / this._rowHeight));
+            this._updateScrollBars();
+        }
+    },
+
+    _updateScrollBars: {
+        value: function () {
+            this._scrollBarsVerticalLength = (this.__height / this.__rowHeight) / this.__numberOfIterations;
+            if (this._scrollBarsVerticalLength < 1) {
+                this._scrollBarsVerticalScroll = (this.__scroll * (1 - this._scrollBarsVerticalLength)) / (this.__numberOfIterations - (this.__height / this.__rowHeight));
             } else {
-                this._scrollBars.verticalScroll = 0;
+                this._scrollBarsVerticalLength = 1;
+                this._scrollBarsVerticalScroll = 0;
             }
+        }
+    },
+
+    __firstIteration: {
+        value: null
+    },
+
+    _firstIteration: {
+        get: function () {
+            return this.__firstIteration;
+        },
+        set: function (value) {
+            this.__firstIteration = value;
+            this.needsDraw = true;
+        }
+    },
+
+    willDraw: {
+        value: function () {
+            if ((typeof this.__firstIteration !== "undefined") && (this.__firstIteration !== null)) {
+                this._width = this.element.clientWidth;
+                this._height = this.element.clientHeight;
+                this._rowHeight = this.__firstIteration.firstElement.scrollHeight;
+                this.flow.linearScrollingVector = [0, (-500 * this.__rowHeight) / this.__height];
+                this.flow.paths = [
+                    {
+                        "knots": [
+                            {
+                                "knotPosition": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "nextHandlerPosition": [
+                                    0,
+                                    this.__rowHeight * 1000,
+                                    0
+                                ],
+                                "nextDensity": 3000,
+                                "previousDensity": 3000
+                            },
+                            {
+                                "knotPosition": [
+                                    0,
+                                    this.__rowHeight * 3000,
+                                    0
+                                ],
+                                "previousHandlerPosition": [
+                                    0,
+                                    this.__rowHeight * 2000,
+                                    0
+                                ],
+                                "nextDensity": 3000,
+                                "previousDensity": 3000
+                            }
+                        ],
+                        "units": {},
+                        "headOffset": 1,
+                        "tailOffset": this.__height / this.__rowHeight
+                    }
+                ];
+                this.flow.cameraTargetPoint = [
+                    this._width / 2,
+                    this.__height / 2 + this.__rowHeight,
+                    0
+                ];
+                this.flow.cameraPosition = [
+                    this._width / 2,
+                    this.__height / 2 + this.__rowHeight,
+                    this.__height / 2
+                ];
+                this.flow.cameraFov = 90;
+                this._scrollBars.displayHorizontal = false;
+                this._scrollBars.displayVertical = true;
+            }
+        }
+    },
+
+    didTranslateStart: {
+        value: function () {
+            // equivalent to CSS' overflow: auto
+            if (this._scrollBarsVerticalLength < 1) {
+                this._scrollBarsOpacity = 0.5;
+            }
+        }
+    },
+
+    didTranslateEnd: {
+        value: function () {
+            this._scrollBarsOpacity = 0;
         }
     },
 
@@ -176,20 +242,6 @@ exports.List = Montage.create(Component, /** @lends module:"ui/flow-list.reel".F
                 return observeProperty(this, key, emit, source, parameters, beforeChange);
             }
         }
-    },
-
-    templateDidLoad: {
-        value: function() {
-            var self = this,
-                oldDidDraw = this.flow.didDraw;
-
-            this.flow.didDraw = function () {
-                if (self.flow._repetition._drawnIterations[0]) {
-                    self.needsDraw = true;
-                    self.flow.didDraw = oldDidDraw;
-                }
-            }
-        }
-    },
+    }
 
 });
