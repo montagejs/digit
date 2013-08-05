@@ -11,15 +11,27 @@
     outline: none;
 }
 
+.digit-Slider.montage-Slider--vertical {
+    width: 10px;
+    height: 150px;
+}
+
 .digit-Slider-thumbTrack {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 26px; /*width of thumb - slider border*/
-    bottom: 0px;
-
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     /* avoid the thumb track to be draggable when outside the slider component */
     visibility: hidden;
+}
+
+.montage-Slider--horizontal .digit-Slider-thumbTrack {
+    right: 26px; /* width of thumb - slider border */
+}
+
+.montage-Slider--vertical .digit-Slider-thumbTrack {
+    bottom: 26px; /* height of thumb - slider border */
 }
 
 .digit-Slider-thumb {
@@ -40,6 +52,11 @@
     visibility: visible;
 }
 
+.montage-Slider--vertical .digit-Slider-thumb {
+    margin: -1px 0 0 -14px;
+    left: 50%;
+    top: 0;
+}
 
 .digit-Slider-thumb:before {
     content: "";
