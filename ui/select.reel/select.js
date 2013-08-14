@@ -15,7 +15,12 @@ exports.Select = AbstractSelect.specialize({
         value: function(firstTime) {
             this.super(firstTime);
 
-            this.element.addEventListener("change", this, false);
+            if (this.element.addEventListener !== HTMLSelectElement.prototype.addEventListener) {
+                // Firefox 22 bug fixed in 23 https://github.com/montagejs/montage/issues/1254
+                HTMLSelectElement.prototype.addEventListener.call(this.element,"change", this, false);
+            } else {
+                this.element.addEventListener("change", this, false);
+            }
         }
     },
 
