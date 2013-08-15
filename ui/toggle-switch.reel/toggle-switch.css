@@ -37,11 +37,11 @@
     border-color: #7f7f7f;
 }
 
-.digit-ToggleSwitch--checked {
+.montage-ToggleSwitch--checked {
     background-color: hsl(0,0%,70%);
 }
 
-.digit-ToggleSwitch--checked > .digit-ToggleSwitch-thumb {
+.montage-ToggleSwitch--checked > .digit-ToggleSwitch-thumb {
     -webkit-transform: translate3d(100%,0,0);
 }
 

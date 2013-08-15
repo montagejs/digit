@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Toggle Switch Test</title>
+    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "test/toggle-switch/toggle-switch-test[Test]",
+                "properties": {
+                    "toggleSwitch": {"@": "toggleSwitch"}
+                }
+            },
+
+            "toggleSwitch": {
+                "prototype": "ui/toggle-switch.reel",
+                "properties": {
+                    "element": {"#": "toggleSwitch"}
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Toggle Switch</h1>
+
+    <input type="checkbox" data-montage-id="toggleSwitch">
+</body>
+</html>
+
