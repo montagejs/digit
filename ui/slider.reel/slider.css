@@ -40,6 +40,15 @@
     visibility: visible;
 }
 
+.digit-Slider-thumb:after {
+    position: absolute;
+    content: "";
+    top: -16px;
+    left: -16px;
+    bottom: -16px;
+    right: -16px;
+    border-radius: 100px;
+}
 
 .digit-Slider-thumb:before {
     content: "";
