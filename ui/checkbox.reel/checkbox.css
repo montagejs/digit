@@ -13,6 +13,15 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+.digit-Checkbox:after {
+    position: absolute;
+    content: "";
+    top: -16px;
+    left: -16px;
+    bottom: -16px;
+    right: -16px;
+}
+
 .digit-Checkbox.montage--active {
     background-color: #e5e5e5;
 }
