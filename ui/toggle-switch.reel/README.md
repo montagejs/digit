@@ -1,6 +1,6 @@
 # Toggle Switch
 
-![Toggle Switch](https://raw.github.com/montagejs/montage-lab/master/skeleton/mobile/components/toggle-switch.reel/screenshot.png)
+![Toggle Switch](screenshot.png)
 
 The Toggle Switch component turns an `<input type="checkbox">` element into a toggle switch.
 
