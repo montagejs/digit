@@ -41,6 +41,7 @@
 }
 
 .digit-Slider-thumb:after {
+    /* Extra space to increase touch area */
     position: absolute;
     content: "";
     top: -16px;
@@ -48,17 +49,6 @@
     bottom: -16px;
     right: -16px;
     border-radius: 100px;
-}
-
-.digit-Slider-thumb:before {
-    content: "";
-    position: absolute;
-    /* Makes the touch target a bit bigger.*/
-    top: -7px;
-    left: -7px;
-    right: -7px;
-    bottom: -7px;
-    border-radius: 50%;
 }
 
 /* States */
