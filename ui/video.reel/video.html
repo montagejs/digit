@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="icons/style.css">
+    
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "video"},
+                    "mediaElement": {"#": "mediaElement"}
+                }
+            },
+            "control": {
+                "prototype": "ui/video-control.reel",
+                "properties": {
+                    "element": {"#": "control"},
+                    "video": {"@": "owner"}
+                },
+                "bindings": {
+                    "videoController": {"<-": "@owner.videoController"}
+                }
+            },
+            "play": {
+                "prototype": "ui/button.reel",
+                "properties": {
+                    "element": {"#": "play"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div data-montage-id="video" class="digit-Video digit-Video--firstPlay">
+        <video data-montage-id="mediaElement" class="digit-Video-frame">
+        </video>
+        <div class="digit-Video-cover">
+            <button data-montage-id="play" class="digit-Video-cover-button"></button>
+        </div>
+        <menu data-montage-id="control">
+        </menu>
+    </div>
+
+</body>
+</html>
