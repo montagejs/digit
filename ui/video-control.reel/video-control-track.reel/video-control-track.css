@@ -1,0 +1,133 @@
+/* Track ------------------------------------ */
+
+.digit-VideoControlTrack {
+    -webkit-box-flex: 1;
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    height: 2em;
+}
+
+.digit-VideoControlTrack-thumbTrack {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*width of thumb - input-range border*/
+    right: 1.6em;
+    bottom: 0px;
+    -webkit-transition: -webkit-transform .025s;
+    -webkit-transition-timing-function: linear;
+}
+
+
+/* Timeline ------------------------------------ */
+
+.digit-VideoControlTrack-timeline {
+    -webkit-box-flex: 1;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 6px;
+    /* em value needs to be sorted out when the font size is more stable*/
+    margin: 0px .8em;
+    border-radius: 10px;
+    background-color: hsla(0,0%,100%,.2);
+    -webkit-transition: -webkit-transform .1s;
+}
+
+.digit-VideoControlTrack-timeline-progress {
+    background-color: hsla(0,0%,85%,.8);
+    height: inherit;
+    border-radius: inherit;
+    -webkit-transform: translateX(-67%);
+}
+
+.digit-VideoControlTrack-thumb {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+    padding: 0 .6em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    top: 50%;
+    left: 0%;
+    width: 4em;
+    font-size: 12px;
+    border-radius: 1em;
+    -webkit-font-smoothing: antialiased;
+    color: hsla(0,0%,0%,.7);
+    background-color: hsl(0,0%,90%);
+    -webkit-transform: translateY(-1em);
+    -webkit-transition: -webkit-transform .3s cubic-bezier(.44, .14, .08, .97);
+}
+
+.montage-Slider--active .digit-VideoControlTrack-thumb {
+    -webkit-transform: translateY(-4.2em);
+    -webkit-transition-duration: .15s;
+    -webkit-transition-timing-function: cubic-bezier(.04, .18, .14, .98);
+}
+
+.digit-VideoControlTrack-thumb:before {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: -webkit-linear-gradient(45deg, hsla(0,0%,90%,1) 50%, hsla(0,0%,0%,0) 50% );
+    -webkit-transform: translate(-5px, 1.5em) rotate(-45deg);
+}
+
+.montage-Slider--active .digit-VideoControlTrack-thumb:before {
+    opacity: 1;
+}
+
+
+
+/* Light ------------------------------------ */
+
+[data-montage-skin="light"] .digit-VideoControlTrack-timeline {
+    background-color: hsla(0,0%,0%,.1);
+    box-shadow: inset 0 1px 1px hsla(0,0%,0%,.15), 0 1px 0 hsla(0,0%,100%,.5);
+}
+
+[data-montage-skin="light"] .digit-VideoControlTrack-timeline-progress {
+    background-color: hsla(0,0%,0%,.5);
+}
+
+[data-montage-skin="light"] .digit-VideoControlTrack-thumb {
+    color: hsl(0,0%,75%);
+    text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,36%), hsl(0,0%,24%) );
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.15), 0 7px 6px -3px hsla(0,0%,0%,.25);
+}
+
+[data-montage-skin="light"] .digit-VideoControlTrack-thumb:before {
+    background: -webkit-linear-gradient(45deg, hsla(0,0%,24%,1) 50%, hsla(0,0%,240%,0) 50% );
+    box-shadow: -1px 1px 2px hsla(0,0%,0%,.2);
+}
+
+
+
+/* Dark ------------------------------------ */
+
+[data-montage-skin="dark"] .digit-VideoControlTrack-timeline {
+    background-color: hsla(0,0%,0%,.1);
+    box-shadow: inset 0 1px 1px hsla(0,0%,0%,.15), 0 1px 0 hsla(0,0%,100%,.15);
+}
+
+[data-montage-skin="dark"] .digit-VideoControlTrack-timeline-progress {
+    background-color: hsla(0,0%,100%,.7);
+}
+
+[data-montage-skin="dark"] .digit-VideoControlTrack-thumb {
+    color: hsl(0,0%,40%);
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.3);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,98%), hsl(0,0%,84%) );
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.1), 0 7px 6px -3px hsla(0,0%,0%,.15);
+}
+[data-montage-skin="dark"] .digit-VideoControlTrack-thumb:before {
+    background: -webkit-linear-gradient(45deg, hsla(0,0%,84%,1) 50%, hsla(0,0%,240%,0) 50% );
+    box-shadow: -2px 2px 2px hsla(0,0%,0%,.3);
+}

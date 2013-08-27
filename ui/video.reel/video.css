@@ -1,0 +1,126 @@
+.digit-Video {
+   position: relative;
+   width: 320px;
+   height: 180px;
+   margin: 0;
+   background: hsl(0,0%,10%);
+   overflow: hidden;
+    -webkit-user-select: none;
+}
+
+.digit-Video.fullscreen {
+    position: absolute;
+    display: -webkit-box;
+    -webkit-box-sizing: border-box;
+    z-index: 1000;                        /* TODO: Define global z-index regions */
+    top: 0;
+    left: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Frame (the actual video) ------------------------------------ */
+
+.digit-Video-frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: top;
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.36, .12, .20, .92);
+}
+
+
+/* Cover (with the initial play button) ------------------------------------ */
+
+.digit-Video--isPlaying .digit-Video-cover {
+    display: none;
+} 
+
+.digit-Video-cover {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1);
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.02, .40, .20, .96);
+    pointer-events: none;
+}
+
+.digit-Video-cover-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -.75em;
+    border-radius: 2em 0 0 2em;    
+    width: 2em;
+    height: 1.6em;
+    line-height: 1.6em;
+    font-size: 40px;
+    color: hsla(0,0%,100%,.9);
+    border: none;
+    background-color: hsla(0,0%,10%,.8);
+    -webkit-transform: translate3d(2em,0,0);
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.02, .40, .20, .96);
+}
+
+.digit-Video-cover-button:before {
+    position: absolute;
+    left: 30%;
+    top: 0
+}
+
+
+
+/* firstPlay */
+
+.digit-Video--firstPlay .digit-Video-cover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.digit-Video--firstPlay .digit-Video-cover-button {
+    -webkit-transform: translate3d(0,0,0);
+}
+
+/* showControls */
+
+.digit-Video--showControls .digit-VideoControl {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition-duration: .2s;
+    -webkit-transition-delay: 0;
+    -webkit-transition-timing-function: cubic-bezier(.02, .40, .20, .96);
+}
+
+
+/* Light ------------------------------------ */
+
+[data-montage-skin="light"] .digit-Video-cover {
+    background: -webkit-linear-gradient(-45deg, hsla(0,0%,100%,.05), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
+}
+
+[data-montage-skin="light"] .digit-Video-cover-button {
+    color: hsla(0,0%,0%,.6);
+    text-shadow: 0 1px hsla(0,0%,100%,1);
+    background: -webkit-linear-gradient(top, hsla(0,0%,100%,.96), hsla(0,0%,90%,.90) );
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,1), 0 2px 3px hsla(0,0%,0%,.2);
+}
+
+
+
+/* Dark ------------------------------------ */
+
+[data-montage-skin="dark"] .digit-Video-cover {
+    background: -webkit-linear-gradient(-45deg, hsla(0,0%,100%,.05), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
+}
+
+[data-montage-skin="dark"] .digit-Video-cover-button {
+    color: hsla(0,0%,100%,.7);
+    text-shadow: 0 1px hsla(0,0%,0%,.2);
+    background: -webkit-linear-gradient(top, hsla(0,0%,24%,.92), hsla(0,0%,15%,1) );
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.15), 0 2px 3px hsla(0,0%,0%,.3);
+}
