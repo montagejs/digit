@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "test/list/list-test",
+                "properties": {
+                    "list1": {"@": "list1"}
+                }
+            },
+
+            "list1": {
+                "prototype": "ui/list.reel",
+                "properties": {
+                    "element": {"#": "list1"},
+                    "content": [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]
+                }
+            },
+
+            "listItem1": {
+                "prototype": "ui/list-item.reel",
+                "properties": {
+                    "element": {"#": "listItem1"}
+                }
+            }
+        }
+    </script>
+    <style>
+        .list1 {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div data-montage-id="list1" class="list1">
+    <p data-montage-id="listItem1">Item</p>
+</div>
+
+</body>
+</html>
