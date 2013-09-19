@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractConfirm",
+                "blueprintModuleId": "montage/ui/base/abstract-confirm.meta",
+                "prototypeName": "AbstractConfirm"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "Confirm",
+            "blueprintModuleId": "ui/confirm.reel/confirm.meta",
+            "prototypeName": "Confirm",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}
