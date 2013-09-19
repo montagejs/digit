@@ -4,7 +4,10 @@
             "element": {"#": "main"},
             "alert": {"@": "alert"},
             "alert-light": {"@": "alert-light"},
-            "alert-dark": {"@": "alert-dark"}
+            "alert-dark": {"@": "alert-dark"},
+            "confirm": {"@": "confirm"},
+            "confirm-light": {"@": "confirm-light"},
+            "confirm-dark": {"@": "confirm-dark"}
         }
     },
 
@@ -67,5 +70,9 @@
 
     "alert": { "prototype": "ui/alert.reel", "properties": { "element": {"#": "alert"}, "title": "Title", "message": "This is an alert"}},
     "alert-light": { "prototype": "ui/alert.reel", "properties": { "element": {"#": "alert-light"}, "title": "Title", "message": "This is an alert"}},
-    "alert-dark": { "prototype": "ui/alert.reel", "properties": { "element": {"#": "alert-dark"}, "title": "Title", "message": "This is an alert"}}
+    "alert-dark": { "prototype": "ui/alert.reel", "properties": { "element": {"#": "alert-dark"}, "title": "Title", "message": "This is an alert"}},
+
+    "confirm": { "prototype": "ui/confirm.reel", "properties": { "element": {"#": "confirm"}, "title": "Title", "message": "This is a confirm"}},
+    "confirm-light": { "prototype": "ui/confirm.reel", "properties": { "element": {"#": "confirm-light"}, "title": "Title", "message": "This is a confirm"}},
+    "confirm-dark": { "prototype": "ui/confirm.reel", "properties": { "element": {"#": "confirm-dark"}, "title": "Title", "message": "This is a confirm"}}
 }

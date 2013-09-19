@@ -4,11 +4,11 @@ exports.Main = Component.specialize({
 
     draw: {
         value: function() {
-            // There can normallt only be one alert, absolutely-positioned,
+            // There can normally only be one overlay, absolutely-positioned,
             // so we need to manually mangle the dom and style them to appear inline.
-            var alerts = ["alert", "alert-light", "alert-dark"];
-            alerts.forEach(function(alertName){
-                this[alertName].element.appendChild(this[alertName]._overlay.element);
+            var overlays = ["alert", "alert-light", "alert-dark", "confirm", "confirm-light", "confirm-dark"];
+            overlays.forEach(function(overlayName){
+                this[overlayName].element.appendChild(this[overlayName]._overlay.element);
             }.bind(this));
         }
     }
