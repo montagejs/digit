@@ -26,6 +26,7 @@
     position: absolute;
     font-size: inherit;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
     margin: -14px 0 0 -1px;
     border-radius: 14px;
     width: 28px;
