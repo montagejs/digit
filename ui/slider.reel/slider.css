@@ -32,6 +32,7 @@
 .digit-Slider.montage-Slider--vertical {
     width: 10px;
     height: 150px;
+    margin: 0 10px;
 }
 
 .digit-Slider-thumbTrack {
