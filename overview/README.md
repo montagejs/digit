@@ -21,3 +21,5 @@
 ## Layout components
 
 [![List](../ui/list.reel/screenshot.png)](../ui/list.reel)
+[![Alert](../ui/alert.reel/screenshot.png)](../ui/alert.reel)
+[![Confirm](../ui/confirm.reel/screenshot.png)](../ui/confirm.reel)

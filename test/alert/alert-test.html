@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Alert Test</title>
+    <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
+    <link rel="stylesheet" href="../../ui/text.reel/text.css">
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "test/alert/alert-test[Test]"
+            },
+
+            "alert": {
+                "prototype": "ui/alert.reel",
+                "properties": {
+                    "element": {"#": "alert"},
+                    "title": "A Title",
+                    "message": "A message"
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<h1>Alert</h1>
+
+<div data-montage-id="alert"></div>
+
+</body>
+</html>

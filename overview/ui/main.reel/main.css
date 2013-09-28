@@ -87,9 +87,6 @@ td:nth-child(2) { background: hsl(0,0%,90%); }
 td:nth-child(3) { background: hsl(0,0%,96%); }
 td:nth-child(4) { background: hsl(0,0%,24%); }
 
-.layout td:nth-child(3) { background: hsl(0,0%,70%); }
-.layout td:nth-child(4) { background: hsl(0,0%,40%); }
-
 .modal td:nth-child(2) {
     background: hsla(0,0%,0%,.1);
 }
@@ -99,4 +96,14 @@ td:nth-child(4) { background: hsl(0,0%,24%); }
 }
 .layout td:nth-child(4) {
     background: hsl(0,0%,40%);
+}
+
+.test-alert {
+    display: inline-block !important;
+}
+
+.test-alert .montage-Overlay {
+    position: relative !important;
+    display: inline-block !important;
+    margin: 0px;
 }

@@ -1,7 +1,13 @@
 {
     "owner": {
         "properties": {
-            "element": {"#": "main"}
+            "element": {"#": "main"},
+            "alert": {"@": "alert"},
+            "alert-light": {"@": "alert-light"},
+            "alert-dark": {"@": "alert-dark"},
+            "confirm": {"@": "confirm"},
+            "confirm-light": {"@": "confirm-light"},
+            "confirm-dark": {"@": "confirm-dark"}
         }
     },
 
@@ -60,5 +66,13 @@
     "list-2": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-2"}, "content": [1, 2, 3] } },
     "listItem-2": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-2"} } },
     "list-3": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-3"}, "content": [1, 2, 3] } },
-    "listItem-3": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-3"} } }
+    "listItem-3": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-3"} } },
+
+    "alert": { "prototype": "ui/alert.reel", "properties": { "element": {"#": "alert"}, "title": "Title", "message": "This is an alert"}},
+    "alert-light": { "prototype": "ui/alert.reel", "properties": { "element": {"#": "alert-light"}, "title": "Title", "message": "This is an alert"}},
+    "alert-dark": { "prototype": "ui/alert.reel", "properties": { "element": {"#": "alert-dark"}, "title": "Title", "message": "This is an alert"}},
+
+    "confirm": { "prototype": "ui/confirm.reel", "properties": { "element": {"#": "confirm"}, "title": "Title", "message": "This is a confirm"}},
+    "confirm-light": { "prototype": "ui/confirm.reel", "properties": { "element": {"#": "confirm-light"}, "title": "Title", "message": "This is a confirm"}},
+    "confirm-dark": { "prototype": "ui/confirm.reel", "properties": { "element": {"#": "confirm-dark"}, "title": "Title", "message": "This is a confirm"}}
 }
