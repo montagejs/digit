@@ -25,16 +25,16 @@
 }
 
 .montage-Slider--horizontal .digit-Slider-clip {
-    top: -10px;
+    top: -16px;
     left: -1px;
-    bottom: -10px;
+    bottom: -16px;
     right: -1px;
 }
 
 .montage-Slider--vertical .digit-Slider-clip {
     top: -1px;
     left: -10px;
-    bottom: -1px;
+    bottom: -10px;
     right: -10px;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .montage-Slider--vertical .digit-Slider-thumbTrack {
-    bottom: 28px; /* height of thumb */
+    bottom: 37px; /* height of thumb + space for shadow */
 }
 
 
@@ -80,6 +80,12 @@
     visibility: visible;
 }
 
+.montage-Slider--vertical .digit-Slider-thumb {
+    margin: 0 0 0 -14px;
+    left: 50%;
+    top: 0;
+}
+
 .digit-Slider-thumb:after {
     /* Extra space to increase touch area */
     position: absolute;
@@ -88,7 +94,6 @@
     left: -16px;
     bottom: -16px;
     right: -16px;
-    border-radius: 100px;
 }
 
 
@@ -100,12 +105,6 @@
 
 .digit-Slider-thumb:focus {
     border-color: #7f7f7f;
-}
-
-.montage-Slider--vertical .digit-Slider-thumb {
-    margin: 0 0 0 -14px;
-    left: 50%;
-    top: 0;
 }
 
 
