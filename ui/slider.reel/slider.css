@@ -1,5 +1,4 @@
 .digit-Slider {
-    outline: none;
     position: relative;
     display: inline-block;
     box-sizing: border-box;
@@ -11,29 +10,36 @@
     outline: none;
 }
 
-.montage-Slider--horizontal .digit-Slider-clip {
-    position: absolute;
-    top: -10px;
-    left: -1px;
-    bottom: -10px;
-    right: -1px;
-    overflow: hidden;
-}
-
-.montage-Slider--vertical .digit-Slider-clip {
-    position: absolute;
-    top: -1px;
-    left: -10px;
-    bottom: -1px;
-    right: -10px;
-    overflow: hidden;
-}
-
 .digit-Slider.montage-Slider--vertical {
     width: 10px;
     height: 150px;
     margin: 0 10px;
 }
+
+
+/* Clip ------------------------------------ */
+
+.digit-Slider-clip {
+    position: absolute;
+    overflow: hidden;
+}
+
+.montage-Slider--horizontal .digit-Slider-clip {
+    top: -10px;
+    left: -1px;
+    bottom: -10px;
+    right: -1px;
+}
+
+.montage-Slider--vertical .digit-Slider-clip {
+    top: -1px;
+    left: -10px;
+    bottom: -1px;
+    right: -10px;
+}
+
+
+/* Track ------------------------------------ */
 
 .digit-Slider-thumbTrack {
     position: absolute;
@@ -52,6 +58,9 @@
 .montage-Slider--vertical .digit-Slider-thumbTrack {
     bottom: 28px; /* height of thumb */
 }
+
+
+/* Thumb ------------------------------------ */
 
 .digit-Slider-thumb {
     position: absolute;
@@ -82,7 +91,9 @@
     border-radius: 100px;
 }
 
-/* States */
+
+/* States ------------------------------------ */
+
 .digit-Slider-thumb:active {
     background-color: #e5e5e5;
 }
@@ -96,6 +107,7 @@
     left: 50%;
     top: 0;
 }
+
 
 /* Light ------------------------------------ */
 
