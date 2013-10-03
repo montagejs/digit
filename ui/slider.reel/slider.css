@@ -25,9 +25,9 @@
 }
 
 .montage-Slider--horizontal .digit-Slider-clip {
-    top: -16px;
+    top: -10px;
     left: -1px;
-    bottom: -16px;
+    bottom: -18px;
     right: -1px;
 }
 
@@ -66,7 +66,7 @@
     position: absolute;
     font-size: inherit;
     box-sizing: border-box;
-    margin: -14px 0 0 0;
+    margin: -18px 0 0 0;
     border-radius: 14px;
     width: 28px;
     height: 28px;
