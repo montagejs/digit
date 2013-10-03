@@ -18,14 +18,33 @@
                 "properties": {
                     "element": {"#": "slider"}
                 }
+            },
+
+            "verticalSlider": {
+                "prototype": "ui/slider.reel",
+                "properties": {
+                    "element": {"#": "verticalSlider"},
+                    "axis": "vertical"
+                }
+            },
+
+            "verticalSlider2": {
+                "prototype": "ui/slider.reel",
+                "properties": {
+                    "element": {"#": "verticalSlider2"},
+                    "axis": "vertical"
+                }
             }
+
         }
     </script>
 
 </head>
-<body>
+<body data-montage-skin="light">
     <h1>Slider</h1>
-
     <div data-montage-id="slider"></div>
+    <h2>Axis: vertical</h2>
+    <div data-montage-id="verticalSlider"></div><div data-montage-id="verticalSlider2"></div>Some text right after
+    <p>Some text below</p>
 </body>
 </html>

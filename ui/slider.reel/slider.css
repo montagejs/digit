@@ -1,5 +1,4 @@
 .digit-Slider {
-    outline: none;
     position: relative;
     display: inline-block;
     box-sizing: border-box;
@@ -14,7 +13,33 @@
 .digit-Slider.montage-Slider--vertical {
     width: 10px;
     height: 150px;
+    margin: 0 10px;
 }
+
+
+/* Clip ------------------------------------ */
+
+.digit-Slider-clip {
+    position: absolute;
+    overflow: hidden;
+}
+
+.montage-Slider--horizontal .digit-Slider-clip {
+    top: -10px;
+    left: -1px;
+    bottom: -18px;
+    right: -1px;
+}
+
+.montage-Slider--vertical .digit-Slider-clip {
+    top: -1px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+}
+
+
+/* Track ------------------------------------ */
 
 .digit-Slider-thumbTrack {
     position: absolute;
@@ -27,18 +52,21 @@
 }
 
 .montage-Slider--horizontal .digit-Slider-thumbTrack {
-    right: 26px; /* width of thumb - slider border */
+    right: 28px; /* width of thumb */
 }
 
 .montage-Slider--vertical .digit-Slider-thumbTrack {
-    bottom: 26px; /* height of thumb - slider border */
+    bottom: 37px; /* height of thumb + space for shadow */
 }
+
+
+/* Thumb ------------------------------------ */
 
 .digit-Slider-thumb {
     position: absolute;
     font-size: inherit;
     box-sizing: border-box;
-    margin: -14px 0 0 -1px;
+    margin: -18px 0 0 0;
     border-radius: 14px;
     width: 28px;
     height: 28px;
@@ -52,19 +80,25 @@
     visibility: visible;
 }
 
-
-.digit-Slider-thumb:before {
-    content: "";
-    position: absolute;
-    /* Makes the touch target a bit bigger.*/
-    top: -7px;
-    left: -7px;
-    right: -7px;
-    bottom: -7px;
-    border-radius: 50%;
+.montage-Slider--vertical .digit-Slider-thumb {
+    margin: 0 0 0 -14px;
+    left: 50%;
+    top: 0;
 }
 
-/* States */
+.digit-Slider-thumb:after {
+    /* Extra space to increase touch area */
+    position: absolute;
+    content: "";
+    top: -16px;
+    left: -16px;
+    bottom: -16px;
+    right: -16px;
+}
+
+
+/* States ------------------------------------ */
+
 .digit-Slider-thumb:active {
     background-color: #e5e5e5;
 }
@@ -73,11 +107,6 @@
     border-color: #7f7f7f;
 }
 
-.montage-Slider--vertical .digit-Slider-thumb {
-    margin: -1px 0 0 -14px;
-    left: 50%;
-    top: 0;
-}
 
 /* Light ------------------------------------ */
 
