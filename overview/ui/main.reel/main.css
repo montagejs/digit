@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    color: #444;
+    color: #777;
     font: 13px/1.231 sans-serif;
 	background-color: hsl(0,0%,98%);
 }
@@ -78,12 +78,16 @@ td {
     border-top: 1px solid hsla(0,0%,0%,.06);
 }
 
+td:nth-child(2) {
+    position: relative;
+    border-top: 1px solid hsla(0,0%,0%,.1);
+}
+
 td:nth-child(4) {
     border-top: 1px solid hsla(0,0%,100%,.06);
 }
 
 td:nth-child(1) { background: hsl(0,0%,96%); }
-td:nth-child(2) { background: hsl(0,0%,90%); }
 td:nth-child(3) { background: hsl(0,0%,96%); }
 td:nth-child(4) { background: hsl(0,0%,24%); }
 
@@ -100,3 +104,21 @@ td:nth-child(4) { background: hsl(0,0%,24%); }
 .layout td:nth-child(4) {
     background: hsl(0,0%,40%);
 }
+
+
+
+/* Color debug --------------------- */
+
+/*td:nth-child(2) { color: hsl(206, 70%, 50%); }
+
+td:nth-child(2):before { 
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: currentColor;
+    opacity: .1;
+}*/

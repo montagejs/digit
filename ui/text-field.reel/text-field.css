@@ -6,14 +6,15 @@
     height: 2.5em;
     padding: 0.5em;
     vertical-align: middle;
-    border: 1px solid #b3b3b3;
-    border-radius: 3px;
-    background-color: #fff;
+    color: inherit;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: transparent;
     -webkit-appearance: none; /* Removes inner shadow on iOS. */
 }
 
 .digit-TextField:focus {
-    border-color: #7f7f7f;
+    box-shadow: inset 0 0 0 1px;
 }
 
 .digit-TextField:invalid {
@@ -26,9 +27,9 @@
     pointer-events: none;
 }
 
-.digit-TextField[readonly] {
-    background-color: #e5e5e5;
-}
+.digit-TextField::-webkit-input-placeholder { color: inherit; opacity: .5; }
+.digit-TextField::-moz-placeholder { color: inherit; opacity: .5; }
+.digit-TextField:-ms-input-placeholder { color: inherit; opacity: .5; }
 
 
 /* Light ------------------------------------ */
@@ -57,7 +58,6 @@
 
 [data-montage-skin="dark"] .digit-TextField {
     color: hsla(0,0%,100%,.5);
-    text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
     border-color: hsl(0,0%,15%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,30%) );
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.1);
@@ -74,3 +74,7 @@
     background-image: -webkit-linear-gradient(top, hsl(0,0%,26%), hsl(0,0%,28%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);
 }
+
+[data-montage-skin="dark"] .digit-TextField::-webkit-input-placeholder { color: hsla(0,0%,100%,.3); -webkit-font-smoothing: antialiased; }
+[data-montage-skin="dark"] .digit-TextField::-moz-placeholder { color: hsla(0,0%,100%,.3); }
+[data-montage-skin="dark"] .digit-TextField:-ms-input-placeholder { color: hsla(0,0%,100%,.3); }
