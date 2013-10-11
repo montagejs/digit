@@ -2,18 +2,16 @@
 
 body {
     margin: 0;
-    color: #777;
-    font: 13px/1.231 sans-serif;
-	background-color: hsl(0,0%,98%);
+    color: #444;
+    font-family: sans-serif;
 }
 
 a {
-    font-size: 14px;
     text-decoration: none;
     color: hsl(0,0%,40%);
 }
-a:hover { color: hsl(0,0%,60%); }
-a:active { color: hsl(0,0%,20%); }
+a:hover { color: hsl(0,0%,20%); }
+a:active { color: hsl(0,0%,60%); }
 
 
 h1 {
@@ -47,9 +45,10 @@ h1 span {
 h2 {
     margin: 50px 0 20px 0;
     text-align: center;
-    color: #aaa;
-    font-size: 30px;
+    color: hsl(0,0%,70%);
+    font-size: 2em;
     line-height: 1.5;
+    font-weight: normal;
     font-family: 'Inder', sans-serif;
     border-bottom: 1px dashed hsla(0,0%,0%,.1);
 }
@@ -65,31 +64,30 @@ table {
 }
 
 th {
-    color: #aaa;
+    color: hsl(0,0%,70%);
     font-family: 'Inder', sans-serif ;
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: normal;
     padding: 10px;
+}
+
+tbody tr:hover {
+    background-color: hsl(200,100%,96%);
 }
 
 td {
     text-align: center;
     padding: 20px;
     border-top: 1px solid hsla(0,0%,0%,.06);
-}
-
-td:nth-child(2) {
-    position: relative;
-    border-top: 1px solid hsla(0,0%,0%,.1);
+    border-left: 1px solid hsla(0,0%,0%,.06);
 }
 
 td:nth-child(4) {
     border-top: 1px solid hsla(0,0%,100%,.06);
 }
-
-td:nth-child(1) { background: hsl(0,0%,96%); }
-td:nth-child(3) { background: hsl(0,0%,96%); }
-td:nth-child(4) { background: hsl(0,0%,24%); }
+td:nth-child(1) { background-color: hsla(0,0%,0%,.02); }
+td:nth-child(3) { background-color: hsla(0,0%,0%,.02); }
+td:nth-child(4) { background-color: hsla(0,0%,0%,.75); }
 
 .layout td:nth-child(3) { background: hsl(0,0%,70%); }
 .layout td:nth-child(4) { background: hsl(0,0%,40%); }
@@ -109,7 +107,13 @@ td:nth-child(4) { background: hsl(0,0%,24%); }
 
 /* Color debug --------------------- */
 
-/*td:nth-child(2) { color: hsl(206, 70%, 50%); }
+td:nth-child(2) { color: hsl(200, 100%, 50%); }
+
+/*
+td:nth-child(2) {
+    position: relative;
+    border-top: 1px solid hsla(0,0%,0%,.1);
+}
 
 td:nth-child(2):before { 
     content: "";
@@ -120,5 +124,6 @@ td:nth-child(2):before {
     right: 0;
     bottom: 0;
     background: currentColor;
-    opacity: .1;
-}*/
+    opacity: .2;
+}
+*/
