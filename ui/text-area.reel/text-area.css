@@ -1,14 +1,15 @@
 .digit-TextArea {
     outline: none;
     box-sizing: border-box;
-    font-size: 14px;
     width: 150px;
     min-width: 10em;
     padding: 0.5em;
-    resize: vertical;
+    font-family: sans-serif;
+    font-size: 14px;
     border: 1px solid #b3b3b3;
     border-radius: 3px;
     background-color: #fff;
+    resize: vertical;
     -webkit-appearance: none; /* Removes inner shadow on iOS. */
 }
 

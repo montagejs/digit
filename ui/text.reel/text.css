@@ -1,5 +1,5 @@
 .digit-Text {
-    box-sizing: border-box;
+    font-family: sans-serif;
     font-size: 16px;
     color: hsl(0,0%,30%);
 }

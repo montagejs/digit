@@ -1,12 +1,13 @@
 .digit-Button {
     outline: none;
     box-sizing: border-box;
-    font-size: 16px;
+    vertical-align: middle;
     height: 2.5em;
     min-width: 2.5em;
     margin: 0 2px;
     padding: 0 1em;
-    vertical-align: middle;
+    font-family: sans-serif;
+    font-size: 16px;
     border-radius: 24px;
     border: 1px solid #b3b3b3;
     background-color: #f2f2f2;
