@@ -1,5 +1,4 @@
 .digit-Slider {
-    position: relative;
     display: inline-block;
     box-sizing: border-box;
     width: 150px;
@@ -8,82 +7,33 @@
     border: 1px solid #b3b3b3;
     background-color: #d9d9d9;
     outline: none;
+    padding: 0 26px 0 0;
 }
 
 .digit-Slider.montage-Slider--vertical {
     width: 10px;
     height: 150px;
     margin: 0 10px;
+    padding: 0 0 26px 0;
 }
-
-
-/* Clip ------------------------------------ */
-
-.digit-Slider-clip {
-    position: absolute;
-    overflow: hidden;
-}
-
-.montage-Slider--horizontal .digit-Slider-clip {
-    top: -10px;
-    left: -1px;
-    bottom: -18px;
-    right: -1px;
-}
-
-.montage-Slider--vertical .digit-Slider-clip {
-    top: -1px;
-    left: -10px;
-    bottom: -10px;
-    right: -10px;
-}
-
-
-/* Track ------------------------------------ */
-
-.digit-Slider-thumbTrack {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* avoid the thumb track to be draggable when outside the slider component */
-    visibility: hidden;
-}
-
-.montage-Slider--horizontal .digit-Slider-thumbTrack {
-    right: 28px; /* width of thumb */
-}
-
-.montage-Slider--vertical .digit-Slider-thumbTrack {
-    bottom: 37px; /* height of thumb + space for shadow */
-}
-
 
 /* Thumb ------------------------------------ */
 
 .digit-Slider-thumb {
-    position: absolute;
+    position: relative;
     font-size: inherit;
     box-sizing: border-box;
-    margin: -18px 0 0 0;
     border-radius: 14px;
     width: 28px;
     height: 28px;
-    left: 0;
-    top: 50%;
     border: 1px solid #b3b3b3;
     background-color: #f2f2f2;
     cursor: pointer;
-
-    /* overrides the visibility set in the thumbTrack */
-    visibility: visible;
+    margin: -10px 0 0 -1px;
 }
 
 .montage-Slider--vertical .digit-Slider-thumb {
-    margin: 0 0 0 -14px;
-    left: 50%;
-    top: 0;
+    margin: -1px 0 0 -10px;
 }
 
 .digit-Slider-thumb:after {
@@ -99,7 +49,7 @@
 
 /* States ------------------------------------ */
 
-.digit-Slider-thumb:active {
+.montage-Slider--active .digit-Slider-thumb {
     background-color: #e5e5e5;
 }
 
@@ -127,7 +77,7 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.1), 0 7px 6px -3px hsla(0,0%,0%,.15);
 }
 
-[data-montage-skin="light"] .digit-Slider-thumb:active {
+[data-montage-skin="light"] .montage-Slider--active .digit-Slider-thumb {
     border-color: hsla(0,0%,65%,1);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,83%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 6px 6px -3px hsla(0,0%,0%,.1);
@@ -148,7 +98,7 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.15), 0 7px 6px -3px hsla(0,0%,0%,.25);
 }
 
-[data-montage-skin="dark"] .digit-Slider-thumb:active {
+[data-montage-skin="dark"] .montage-Slider--active .digit-Slider-thumb {
     border-color: hsl(0,0%,12%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,34%), hsl(0,0%,23%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 7px 6px -3px hsla(0,0%,0%,.15);
