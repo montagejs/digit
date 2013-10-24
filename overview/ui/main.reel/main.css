@@ -71,10 +71,6 @@ th {
     padding: 10px;
 }
 
-tbody tr:hover {
-    background-color: hsl(200,100%,96%);
-}
-
 td {
     text-align: center;
     padding: 20px;
