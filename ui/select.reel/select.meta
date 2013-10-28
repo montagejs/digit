@@ -4,19 +4,27 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "AbstractSelect",
-                "blueprintModuleId": "montage/ui/base/abstract-select.meta",
-                "prototypeName": "AbstractSelect"
+                "prototypeName": "AbstractSelect",
+                "blueprintModule": {
+                    "%": "montage/ui/base/abstract-select.meta"
+                }
             }
         }
     },
-
     "root": {
-        "prototype": "montage/core/meta/blueprint",
+        "prototype": "montage/core/meta/module-blueprint",
         "properties": {
             "name": "Select",
-            "blueprintModuleId": "ui/select.reel/select.meta",
-            "prototypeName": "Select",
-            "parent": {"@": "blueprint_parent"}
+            "parent": {
+                "@": "blueprint_parent"
+            },
+            "blueprintModule": {
+                "%": "ui/select.reel/select.meta"
+            },
+            "exportName": "Select",
+            "module": {
+                "%": "ui/select.reel"
+            }
         }
     }
 }

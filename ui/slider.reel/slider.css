@@ -1,7 +1,6 @@
 .digit-Slider {
-    outline: none;
-    position: relative;
     display: inline-block;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 10em;
     height: .625em;
@@ -9,46 +8,55 @@
     border: 1px solid #b3b3b3;
     background-color: #d9d9d9;
     outline: none;
+    padding-right: 1.75em; /* Fallback for Android Browser */
+    padding-right: -webkit-calc(1.75em - 2px); /* Thumb size - 2px (borders) */
+    padding-right:         calc(1.75em - 2px); /* Thumb size - 2px (borders) */
 }
 
-.digit-Slider-thumbTrack {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    
-    /* width of thumb - border */
-    right: -webkit-calc( 1.75em - 2px ); /* still needed for Safari 6 */
-    right: calc( 1.75em - 2px ); /* rest */
+.digit-Slider.montage-Slider--vertical {
+    width: .625em;
+    height: 10em;
+    margin: 0 .625em;
+    padding-right: 0;
+    padding-bottom: 1.75em; /* Fallback for Android Browser */
+    padding-bottom: -webkit-calc(1.75em - 2px); /* Thumb size - 2px (borders) */
+    padding-bottom:         calc(1.75em - 2px); /* Thumb size - 2px (borders) */
 }
+
+/* Thumb ------------------------------------ */
 
 .digit-Slider-thumb {
-    position: absolute;
+    position: relative;
+    font-size: inherit;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: -.875em 0 0 -1px;
     border-radius: .875em;
     width: 1.75em;
     height: 1.75em;
-    left: 0;
-    top: 50%;
     border: 1px solid #b3b3b3;
     background-color: #f2f2f2;
     cursor: pointer;
+    margin: -.625em 0 0 -1px;
 }
 
-.digit-Slider-thumb:before {
-    content: "";
+.montage-Slider--vertical .digit-Slider-thumb {
+    margin: -1px 0 0 -.625em;
+}
+
+.digit-Slider-thumb:after {
+    /* Extra space to increase touch area */
     position: absolute;
-    /* Makes the touch target a bit bigger.*/
-    top: -7px;
-    left: -7px;
-    right: -7px;
-    bottom: -7px;
-    border-radius: 50%;
+    content: "";
+    top: -16px;
+    left: -16px;
+    bottom: -16px;
+    right: -16px;
 }
 
-/* States */
-.digit-Slider-thumb:active {
+
+/* States ------------------------------------ */
+
+.montage-Slider--active .digit-Slider-thumb {
     background-color: #e5e5e5;
 }
 
@@ -63,6 +71,8 @@
     border-color: hsla(0,0%,70%,1);
     background: hsl(0,0%,86%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
 [data-montage-skin="light"] .digit-Slider-thumb {
@@ -71,7 +81,7 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.1), 0 7px 6px -3px hsla(0,0%,0%,.15);
 }
 
-[data-montage-skin="light"] .digit-Slider-thumb:active {
+[data-montage-skin="light"] .montage-Slider--active .digit-Slider-thumb {
     border-color: hsla(0,0%,65%,1);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,83%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 6px 6px -3px hsla(0,0%,0%,.1);
@@ -84,6 +94,8 @@
     border-color: hsl(0,0%,15%);
     background: hsl(0,0%,22%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.25), 0 1px 0 hsla(0,0%,100%,.1);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
 [data-montage-skin="dark"] .digit-Slider-thumb {
@@ -92,7 +104,7 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.15), 0 7px 6px -3px hsla(0,0%,0%,.25);
 }
 
-[data-montage-skin="dark"] .digit-Slider-thumb:active {
+[data-montage-skin="dark"] .montage-Slider--active .digit-Slider-thumb {
     border-color: hsl(0,0%,12%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,34%), hsl(0,0%,23%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 7px 6px -3px hsla(0,0%,0%,.15);

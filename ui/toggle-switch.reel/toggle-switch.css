@@ -1,0 +1,124 @@
+.digit-ToggleSwitch {
+    box-sizing: border-box;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    border-radius: 1em;
+    vertical-align: middle;
+    border: 1px solid #b3b3b3;
+    background: #d9d9d9;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-transition: background-color .2s cubic-bezier(.5,.15,.2,1);
+    transition: background-color .2s cubic-bezier(.5,.15,.2,1);
+}
+
+.digit-ToggleSwitch-thumb {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    margin: -1px;
+    width: 2em;
+    height: inherit;
+    border-radius: inherit;
+    border: 1px solid #b3b3b3;
+    background: #f2f2f2;
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.5,.15,.2,1);
+    transition: transform .2s cubic-bezier(.5,.15,.2,1);
+}
+
+
+/* States */
+.digit-ToggleSwitch-thumb:active {
+    background-color: #e5e5e5;
+}
+
+.digit-ToggleSwitch:focus {
+    border-color: #7f7f7f;
+}
+
+.montage-ToggleSwitch--checked {
+    background-color: hsl(0,0%,70%);
+}
+
+.montage-ToggleSwitch--checked > .digit-ToggleSwitch-thumb {
+    -webkit-transform: translate3d(100%,0,0);
+    -ms-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+
+
+
+/* Light ------------------------------------ */
+
+[data-montage-skin="light"] .digit-ToggleSwitch {
+    border-color: hsla(0,0%,70%,1);
+    background: hsl(0,0%,86%);
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
+}
+
+[data-montage-skin="light"] .montage-ToggleSwitch--checked {
+    border-color: hsla(0,0%,60%,1);
+    background-color: hsl(0,0%,76%);
+}
+
+[data-montage-skin="light"] .digit-ToggleSwitch-thumb {
+    border-color: hsla(0,0%,70%,1);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,98%), hsl(0,0%,84%) );
+    background-image: -moz-linear-gradient(top, hsl(0,0%,98%), hsl(0,0%,84%) );
+    background-image: -ms-linear-gradient(top, hsl(0,0%,98%), hsl(0,0%,84%) );
+    background-image: -o-linear-gradient(top, hsl(0,0%,98%), hsl(0,0%,84%) );
+    background-image: linear-gradient(to bottom, hsl(0,0%,98%), hsl(0,0%,84%) );
+
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.1), 0 7px 6px -3px hsla(0,0%,0%,.15);
+}
+
+[data-montage-skin="light"] .digit-ToggleSwitch-thumb:active {
+    border-color: hsla(0,0%,65%,1);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,83%) );
+    background-image: -moz-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,83%) );
+    background-image: -ms-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,83%) );
+    background-image: -o-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,83%) );
+    background-image: linear-gradient(to bottom, hsl(0,0%,96%), hsl(0,0%,83%) );
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 6px 6px -3px hsla(0,0%,0%,.1);
+}
+
+
+
+
+/* Dark ------------------------------------ */
+
+[data-montage-skin="dark"] .digit-ToggleSwitch {
+    border-color: hsl(0,0%,15%);
+    background: hsl(0,0%,22%);
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.25), 0 1px 0 hsla(0,0%,100%,.1);
+}
+
+[data-montage-skin="dark"] .montage-ToggleSwitch--checked {
+    border-color: hsl(0,0%,12%);
+    background: hsl(0,0%,18%);
+}
+
+[data-montage-skin="dark"] .digit-ToggleSwitch-thumb {
+    border-color: hsl(0,0%,16%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,36%), hsl(0,0%,24%) );
+    background-image: -moz-linear-gradient(top, hsl(0,0%,36%), hsl(0,0%,24%) );
+    background-image: -ms-linear-gradient(top, hsl(0,0%,36%), hsl(0,0%,24%) );
+    background-image: -o-linear-gradient(top, hsl(0,0%,36%), hsl(0,0%,24%) );
+    background-image: linear-gradient(to bottom, hsl(0,0%,36%), hsl(0,0%,24%) );
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.15), 0 7px 6px -3px hsla(0,0%,0%,.25);
+}
+
+[data-montage-skin="dark"] .digit-ToggleSwitch-thumb:active {
+    border-color: hsl(0,0%,12%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,34%), hsl(0,0%,23%) );
+    background-image: -moz-linear-gradient(top, hsl(0,0%,34%), hsl(0,0%,23%) );
+    background-image: -ms-linear-gradient(top, hsl(0,0%,34%), hsl(0,0%,23%) );
+    background-image: -o-linear-gradient(top, hsl(0,0%,34%), hsl(0,0%,23%) );
+    background-image: linear-gradient(to bottom, hsl(0,0%,34%), hsl(0,0%,23%) );
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 7px 6px -3px hsla(0,0%,0%,.15);
+}

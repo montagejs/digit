@@ -4,8 +4,10 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "Component",
-                "blueprintModuleId": "montage/ui/component.meta",
-                "prototypeName": "Component"
+                "prototypeName": "Component",
+                "blueprintModule": {
+                    "%": "montage/ui/component.meta"
+                }
             }
         }
     },
@@ -51,15 +53,12 @@
         }
     },
     "root": {
-        "prototype": "montage/core/meta/blueprint",
+        "prototype": "montage/core/meta/module-blueprint",
         "properties": {
             "name": "List",
-            "blueprintModuleId": "ui/list.reel/list.meta",
             "parent": {
                 "@": "blueprint_component_reference"
             },
-            "moduleId": "ui/list.reel",
-            "prototypeName": "List",
             "propertyBlueprints": [
                 {
                     "@": "blueprint_list_delegate"
@@ -89,6 +88,13 @@
                         "@": "blueprint_list_isSelectionEnabled"
                     }
                 ]
+            },
+            "blueprintModule": {
+                "%": "ui/list.reel/list.meta"
+            },
+            "exportName": "List",
+            "module": {
+                "%": "ui/list.reel"
             }
         }
     }

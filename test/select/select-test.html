@@ -22,6 +22,20 @@
                 }
             },
 
+            "selectWithContent": {
+                "prototype": "ui/select.reel",
+                "properties": {
+                    "element": {"#": "selectWithContent"},
+                    "content": [
+                        {"label": "Arizona"},
+                        {"label": "Alabama"},
+                        {"label": "California"},
+                        {"label": "Hawaii"},
+                        {"label": "New York"}
+                    ]
+                }
+            },
+
             "selectWithOptions": {
                 "prototype": "ui/select.reel",
                 "properties": {
@@ -43,6 +57,11 @@
     <h1>Select</h1>
 
     <div data-montage-id="select"></div>
+
+    <select data-montage-id="selectWithContent">
+        <option value="fail">Fail</option>
+        <option value="fail-again" selected>Fail again</option>
+    </select>
 
     <select data-montage-id="selectWithOptions">
         <option value="apple">Green</option>
