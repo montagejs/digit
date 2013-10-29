@@ -9,6 +9,19 @@
     "button-2": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button-2"} } },
     "button-3": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button-3"} } },
 
+    "ButtonGroupButton-1-A": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-1-A"} } },
+    "ButtonGroupButton-1-B": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-1-B"} } },
+    "ButtonGroupButton-1-C": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-1-C"} } },
+
+    "ButtonGroupButton-2-A": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-2-A"} } },
+    "ButtonGroupButton-2-B": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-2-B"} } },
+    "ButtonGroupButton-2-C": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-2-C"} } },
+    
+    "ButtonGroupButton-3-A": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-3-A"} } },
+    "ButtonGroupButton-3-B": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-3-B"} } },
+    "ButtonGroupButton-3-C": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-3-C"} } },
+
+
     "radioButtonController-1": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
     "radioButton-1A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-1A"}, "radioButtonController": {"@": "radioButtonController-1"}, "value": 1 } },
     "radioButton-1B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-1B"}, "radioButtonController": {"@": "radioButtonController-1"}, "value": 2 } },
