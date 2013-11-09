@@ -1,3 +1,6 @@
+/**
+ * @module "montage/ui/button.reel"
+ */
 var AbstractButton = require("montage/ui/base/abstract-button").AbstractButton;
 /**
  * ![Button](https://raw.github.com/montagejs/digit/master/ui/button.reel/screenshot.png)
