@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="big-list.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "digitList"},
+                "flow": {"@": "flow"},
+                "_scrollBars": {"@": "scrollbars"}
+            },
+            "bindings": {
+                "_scroll": {"<->": "@flow.scroll"}
+            }
+        },
+        "scrollbars": {
+            "prototype": "matte/ui/scroll-bars.reel",
+            "properties": {
+                "element": {"#": "scrollbars"}
+            }
+        },
+        "flow": {
+            "prototype": "montage/ui/flow.reel",
+            "properties": {
+                "element": {"#": "flow"},
+                "paths": [{
+                    "knots": [
+                        {
+                            "knotPosition": [0, 0, 0],
+                            "nextHandlerPosition": [0, 0, 0],
+                            "nextDensity": 1,
+                            "previousDensity": 1,
+                            "opacity": 0
+                        },
+                        {
+                            "knotPosition": [0, 0, 0],
+                            "previousHandlerPosition": [0, 0, 0],
+                            "nextDensity": 1,
+                            "previousDensity": 1,
+                            "opacity": 0
+                        }
+                    ],
+                    "units": {
+                        "opacity": ""
+                    },
+                    "headOffset": 0,
+                    "tailOffset": 0
+                }]
+            },
+            "bindings": {
+                "isSelectionEnabled": {"<-": "@owner.isSelectionEnabled"}
+            }
+        },
+        ":iteration": {
+           "alias": "@flow:iteration"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="digitList" class="digit-BigList">
+        <div data-montage-id="scrollbars"></div>
+        <div data-montage-id="flow" class="digit-BigList-flow"><div data-param="*"></div></div>
+    </div>
+</body>
+</html>
