@@ -69,7 +69,7 @@ exports.Select = AbstractSelect.specialize({
                 option = document.createElement('option');
                 item = organizedContent[i];
 
-                option.textContent = item[this.labelPropertyName];
+                option.textContent = item && item[this.labelPropertyName];
                 options.appendChild(option);
             }
 
