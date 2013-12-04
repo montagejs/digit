@@ -7,8 +7,8 @@
     width: 1.5em;
     height: 1.5em;
     border-radius: 1em;
-    border: 1px solid #b3b3b3;
-    background: #f2f2f2;
+    border: 1px solid;
+    background-color: transparent;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
@@ -24,7 +24,7 @@
 }
 
 .digit-RadioButton.montage--active {
-    background-color: #e5e5e5;
+    background-color: hsla(0,0%,0%,.1);
 }
 
 .digit-RadioButton:focus {
@@ -32,7 +32,7 @@
 }
 
 .digit-RadioButton.montage-RadioButton--checked {
-    background: #f2f2f2 url(radio.svg) no-repeat center;
+    background: currentColor url(radio.svg) no-repeat center;
 }
 
 .digit-RadioButton.montage--disabled {
@@ -58,7 +58,7 @@
 /* Light ------------------------------------ */
 
 [data-montage-skin="light"] .digit-RadioButton.montage-RadioButton--checked:before {
-    background: url(radio.svg) no-repeat center;
+    background: url(radio-light.svg) no-repeat center;
 }
 
 [data-montage-skin="light"] .digit-RadioButton {

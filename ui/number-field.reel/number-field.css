@@ -1,12 +1,12 @@
 .digit-NumberField {
     outline: none;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
     display: inline-block;
     font-size: 0;
     width: auto;
     margin: 0;
-    outline: none;
     -webkit-user-select: none;
 }
 
