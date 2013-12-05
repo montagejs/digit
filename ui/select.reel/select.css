@@ -58,6 +58,10 @@
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.2), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
+[data-montage-skin="light"] .digit-Select:focus {
+    border-color: hsl(0,0%,50%);
+}
+
 
 /* Dark ------------------------------------ */
 
@@ -74,4 +78,8 @@
     border-color: hsl(0,0%,15%);
     background: url(select-dark.svg) no-repeat right center, -webkit-linear-gradient(top, hsl(0,0%,24%), hsl(0,0%,18%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);
+}
+
+[data-montage-skin="dark"] .digit-Select:focus {
+    border-color: hsl(0,0%,50%);
 }
