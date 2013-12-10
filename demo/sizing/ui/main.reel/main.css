@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Inder);
+
+body {
+    margin: 0;
+    color: #444;
+    font-family: sans-serif;
+	background-color: hsl(0,0%,98%);
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: hsl(0,0%,40%);
+}
+a:hover { color: hsl(0,0%,60%); }
+a:active { color: hsl(0,0%,20%); }
+
+
+h1 {
+    padding-right: 1em;
+    margin: 50px 0 20px 0;
+    text-align: center;
+    line-height: 100px;
+    color: hsl(274,54%,24%);
+    font-size: 50px;
+    font-weight: normal;
+    font-family: 'Inder', sans-serif;
+}
+
+h1 .logo {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    background: url(../../assets/images/icon.svg) no-repeat center center;
+    background-size: contain;
+}
+
+h1 span {
+    display: inline-block;
+}
+
+.hl {
+    color: hsl(200,100%,50%);
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    text-align: center;
+    color: #aaa;
+    font-size: 30px;
+    line-height: 1.5;
+    font-family: 'Inder', sans-serif;
+    border-bottom: 1px dashed hsla(0,0%,0%,.1);
+}
+
+
+table {
+    width: 100%;
+    margin: 0 auto 100px auto;
+    padding: 0;
+    list-style: none;
+    border-spacing: 0;
+    border-bottom: 1px solid hsla(0,0%,0%,.1);
+}
+
+th {
+    color: #aaa;
+    font-family: 'Inder', sans-serif ;
+    font-size: 1.8em;
+    font-weight: normal;
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid hsla(0,0%,0%,.06);
+}
+
+td:nth-child(4) {
+    border-top: 1px solid hsla(0,0%,100%,.06);
+}
+
+td:nth-child(1) { background: hsl(0,0%,96%); }
+td:nth-child(2) { background: hsl(0,0%,90%); }
+td:nth-child(3) { background: hsl(0,0%,96%); }
+td:nth-child(4) { background: hsl(0,0%,24%); }
+
+.layout td:nth-child(3) { background: hsl(0,0%,70%); }
+.layout td:nth-child(4) { background: hsl(0,0%,40%); }
+
+.modal td:nth-child(2) {
+    background: hsla(0,0%,0%,.1);
+}
+
+.list td:nth-child(3)  {
+    background: hsl(0,0%,70%);
+}
+.layout td:nth-child(4) {
+    background: hsl(0,0%,40%);
+}
+
+.small {
+	font-size: 12px;
+	margin-left: 24px;
+}
+.x-small {
+	font-size: 8px;
+	margin-left: 24px;
+}
