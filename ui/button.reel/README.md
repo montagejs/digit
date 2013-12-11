@@ -25,6 +25,9 @@ The Button component wraps a <button> or <input type="button"> element, and expo
 * `label` - Label of the button.
 
 
+## Variations
+* `digit-Button--glass` - Turns a button into a background/border-less square. 
+
 
 ## Customizing with CSS
 
