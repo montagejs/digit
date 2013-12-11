@@ -1,0 +1,44 @@
+{
+    "owner": {
+        "properties": {
+            "element": {"#": "main"}
+        }
+    },
+
+    "button": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button"} } },
+    "button-small": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button-small"} } },
+    "button-x-small": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button-x-small"} } },
+
+    "radioButtonController-1": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
+    "radioButton-1A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-1A"}, "radioButtonController": {"@": "radioButtonController-1"}, "value": 1 } },
+    "radioButton-1B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-1B"}, "radioButtonController": {"@": "radioButtonController-1"}, "value": 2 } },
+    "radioButton-1C": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-1C"}, "radioButtonController": {"@": "radioButtonController-1"}, "value": 3 } },
+
+    "checkbox": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox"} } },
+    "checkbox-small": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-small"} } },
+    "checkbox-x-small": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-x-small"} } },
+
+    "badge": { "prototype": "ui/badge.reel", "properties": { "element": {"#": "badge"}, "value": 1 } },
+    "badge-small": { "prototype": "ui/badge.reel", "properties": { "element": {"#": "badge-small"}, "value": 2 } },
+    "badge-x-small": { "prototype": "ui/badge.reel", "properties": { "element": {"#": "badge-x-small"}, "value": 3 } },
+
+    "select": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select"}, "content": [{"label": "Arizona"}, {"label": "Alabama"}, {"label": "California"}, {"label": "Hawaii"}, {"label": "New York"}] } },
+    "select-small": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select-small"}, "content": [{"label": "Arizona"}, {"label": "Alabama"}, {"label": "California"}, {"label": "Hawaii"}, {"label": "New York"}] } },
+    "select-x-small": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select-x-small"}, "content": [{"label": "Arizona"}, {"label": "Alabama"}, {"label": "California"}, {"label": "Hawaii"}, {"label": "New York"}] } },
+
+    "numberField": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField"} } },
+    "numberField-small": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField-small"} } },
+    "numberField-x-small": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField-x-small"} } },
+
+    "slider": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider"} } },
+    "slider-small": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider-small"} } },
+    "slider-x-small": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider-x-small"} } },
+
+    "textField": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField"}, "placeholderValue": "Text Field" } },
+    "textField-small": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-small"}, "placeholderValue": "Text Field" } },
+    "textField-x-small": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-x-small"}, "placeholderValue": "Text Field" } },
+
+    "textArea": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea"}, "placeholderValue": "Text Area" } },
+    "textArea-small": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-small"}, "placeholderValue": "Text Area" } },
+    "textArea-x-small": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-x-small"}, "placeholderValue": "Text Area" } }
+}
