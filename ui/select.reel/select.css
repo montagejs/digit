@@ -65,6 +65,10 @@
     background: -webkit-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
 }
 
+[data-montage-skin="light"] .digit-Select:focus {
+    border-color: hsl(0,0%,50%);
+}
+
 
 /* Dark ------------------------------------ */
 
@@ -87,4 +91,8 @@
 [data-montage-skin="dark"] .digit-Select[multiple],
 [data-montage-skin="dark"] .digit-Select[multiple]:active {
     background: -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,24%) );
+}
+
+[data-montage-skin="dark"] .digit-Select:focus {
+    border-color: hsl(0,0%,50%);
 }
