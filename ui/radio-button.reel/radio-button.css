@@ -3,7 +3,6 @@
     box-sizing: border-box;
     display: inline-block;
     vertical-align: middle;
-    font-size: 16px;
     width: 1.5em;
     height: 1.5em;
     border-radius: 1em;
@@ -33,6 +32,7 @@
 
 .digit-RadioButton.montage-RadioButton--checked {
     background: currentColor url(radio.svg) no-repeat center;
+    background-size: 1.5em;
 }
 
 .digit-RadioButton.montage--disabled {
@@ -59,6 +59,7 @@
 
 [data-montage-skin="light"] .digit-RadioButton.montage-RadioButton--checked:before {
     background: url(radio-light.svg) no-repeat center;
+    background-size: 1.5em;
 }
 
 [data-montage-skin="light"] .digit-RadioButton {
@@ -79,6 +80,7 @@
 
 [data-montage-skin="dark"] .digit-RadioButton.montage-RadioButton--checked:before {
     background: url(radio-dark.svg) no-repeat center;
+    background-size: 1.5em;
 }
 
 [data-montage-skin="dark"] .digit-RadioButton {

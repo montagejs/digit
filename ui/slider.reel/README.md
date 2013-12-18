@@ -22,8 +22,11 @@ The Slider component wraps an HTML `<input type="range">` element.
 
 ## Available properties
 
-* `max` - Maximal value.
-* `value` - Current value of the Slider.
+* `"min": 10` - Minimal value.
+* `"max": 50` - Maximal value.
+* `"value": 20` - Current value of the Slider.
+* `"step": 5` - Sets the increment value.
+* `"axis": "vertical"` - Changes the axis to vertical.
 
 
 
@@ -31,7 +34,6 @@ The Slider component wraps an HTML `<input type="range">` element.
 
 * `.digit-Slider` - The track of the Slider element
 * `.digit-Slider-thumb` - The thumb of the Slider element
-* `.digit-Slider-thumbTrack` - The element which bounds the motion of the thumb, If the width of the thumb is changed the right property should be adjusted.
 
 ```css
 .digit-Slider {

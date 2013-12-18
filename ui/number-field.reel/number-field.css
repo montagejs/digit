@@ -4,29 +4,28 @@
     box-sizing: border-box;
     position: relative;
     display: inline-block;
-    font-size: 0;
     width: auto;
-    margin: 0;
+    margin: 0 4px;
+    vertical-align: middle;
+    outline: none;
     -webkit-user-select: none;
 }
 
 .digit-NumberField > .digit-NumberField-input {
-    display: inline-block;
-    font-size: 16px;
-    width: 3.6em;
+    float: left;
+    width: 3.75em;
     border-radius: 0;
     text-align: center;
 }
 
 .digit-NumberField > .digit-NumberField-plus,
 .digit-NumberField > .digit-NumberField-minus {
-    font-size: 16px;
+    float: left;
     margin: 0;
     padding: 2px;
-    -webkit-transform: translate3d(0px,0px,0px);
-    -moz-transform: translate3d(0px,0px,0px);
-    -ms-transform: translate3d(0px,0px,0px);
-    transform: translate3d(0px,0px,0px);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-font-smoothing: antialiased;
 }
 
 .digit-NumberField > .digit-NumberField-plus {

@@ -8,11 +8,12 @@ body {
 }
 
 a {
+    font-size: 14px;
     text-decoration: none;
     color: hsl(0,0%,40%);
 }
-a:hover { color: hsl(0,0%,20%); }
-a:active { color: hsl(0,0%,60%); }
+a:hover { color: hsl(0,0%,60%); }
+a:active { color: hsl(0,0%,20%); }
 
 
 h1 {
@@ -46,10 +47,9 @@ h1 span {
 h2 {
     margin: 50px 0 20px 0;
     text-align: center;
-    color: hsl(0,0%,70%);
-    font-size: 2em;
+    color: #aaa;
+    font-size: 30px;
     line-height: 1.5;
-    font-weight: normal;
     font-family: 'Inder', sans-serif;
     border-bottom: 1px dashed hsla(0,0%,0%,.1);
 }
@@ -65,9 +65,9 @@ table {
 }
 
 th {
-    color: hsl(0,0%,70%);
+    color: #aaa;
     font-family: 'Inder', sans-serif ;
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-weight: normal;
     padding: 10px;
 }
@@ -76,15 +76,16 @@ td {
     text-align: center;
     padding: 20px;
     border-top: 1px solid hsla(0,0%,0%,.06);
-    border-left: 1px solid hsla(0,0%,0%,.06);
 }
 
 td:nth-child(4) {
     border-top: 1px solid hsla(0,0%,100%,.06);
 }
-td:nth-child(1) { background-color: hsla(0,0%,0%,.02); }
-td:nth-child(3) { background-color: hsla(0,0%,0%,.02); }
-td:nth-child(4) { background-color: hsla(0,0%,0%,.75); }
+
+td:nth-child(1) { background: hsl(0,0%,96%); }
+td:nth-child(2) { background: hsl(0,0%,90%); }
+td:nth-child(3) { background: hsl(0,0%,96%); }
+td:nth-child(4) { background: hsl(0,0%,24%); }
 
 .layout td:nth-child(3) { background: hsl(0,0%,70%); }
 .layout td:nth-child(4) { background: hsl(0,0%,40%); }
@@ -100,27 +101,11 @@ td:nth-child(4) { background-color: hsla(0,0%,0%,.75); }
     background: hsl(0,0%,40%);
 }
 
-
-
-/* Color debug --------------------- */
-
-td:nth-child(2) { color: hsl(200, 100%, 50%); }
-
-/*
-td:nth-child(2) {
-    position: relative;
-    border-top: 1px solid hsla(0,0%,0%,.1);
+.small {
+	font-size: 12px;
+	margin-left: 24px;
 }
-
-td:nth-child(2):before { 
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: currentColor;
-    opacity: .2;
+.x-small {
+	font-size: 8px;
+	margin-left: 24px;
 }
-*/

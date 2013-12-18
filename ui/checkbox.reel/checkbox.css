@@ -1,11 +1,10 @@
 .digit-Checkbox {
     box-sizing: border-box;
-    font-size: 16px;
     position: relative;
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
-    border-radius: 4px;
+    border-radius: .25em;
     vertical-align: middle;
     border: 1px solid;
     background-color: transparent;
@@ -32,6 +31,7 @@
 
 .digit-Checkbox.montage-Checkbox--checked {
     background: currentColor url(check.svg) no-repeat center;
+    background-size: 1.5em;
 }
 
 .digit-Checkbox.montage-Checkbox--disabled {
@@ -58,6 +58,7 @@
 
 [data-montage-skin="light"] .digit-Checkbox.montage-Checkbox--checked:before {
     background: url(check-light.svg) no-repeat center;
+    background-size: 1.5em;
 }
 
 [data-montage-skin="light"] .digit-Checkbox {
@@ -78,6 +79,7 @@
 
 [data-montage-skin="dark"] .digit-Checkbox.montage-Checkbox--checked:before {
     background: url(check-dark.svg) no-repeat center;
+    background-size: 1.5em;
 }
 
 [data-montage-skin="dark"] .digit-Checkbox {

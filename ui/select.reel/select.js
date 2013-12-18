@@ -6,8 +6,6 @@ exports.Select = AbstractSelect.specialize({
         value: function Select() {
             this.super();
             this.classList.add("digit-Select");
-
-            this.addPathChangeListener("content", this, "handleContentChange");
         }
     },
 
@@ -25,16 +23,6 @@ exports.Select = AbstractSelect.specialize({
                 selectedIndex = this.element.selectedIndex;
 
             this.value = organizedContent[selectedIndex];
-        }
-    },
-
-    handleContentChange: {
-        value: function() {
-            // Default to the first value in the content controller if no value
-            // has been set yet. We don't support not having a selected value.
-            if (this.value == null) {
-                this.value = this.contentController.organizedContent[0];
-            }
         }
     },
 
@@ -69,7 +57,7 @@ exports.Select = AbstractSelect.specialize({
                 option = document.createElement('option');
                 item = organizedContent[i];
 
-                option.textContent = item[this.labelPropertyName];
+                option.textContent = item && item[this.labelPropertyName];
                 options.appendChild(option);
             }
 
