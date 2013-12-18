@@ -76,3 +76,21 @@
 [data-montage-skin="dark"] .digit-Button:focus {
     border-color: hsl(0,0%,50%);
 }
+
+/* Variations ------------------------------------ */
+
+.digit-Button--glass,
+[data-montage-skin="light"] .digit-Button--glass,
+[data-montage-skin="light"] .digit-Button--glass.montage--active,
+[data-montage-skin="dark"] .digit-Button--glass,
+[data-montage-skin="dark"] .digit-Button--glass.montage--active {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+[data-montage-skin="dark"] .digit-Button--glass.montage--active {
+    color: hsla(0,0%,100%,.5);
+}
