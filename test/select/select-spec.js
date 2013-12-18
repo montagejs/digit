@@ -79,6 +79,23 @@ TestPageLoader.queueTest("select-test", function(testPage) {
                     });
                 });
             });
+
+            describe("with content", function () {
+                var select;
+
+                beforeEach(function() {
+                    select = testPage.test.selectWithContent;
+                });
+
+                it("should not fail on undefined items", function() {
+                    select.content.push(void 0);
+
+                    testPage.waitForComponentDraw(select);
+                    runs(function() {
+                        expect(select.element.querySelectorAll("option").length).toBe(select.content.length);
+                    });
+                });
+            });
         });
     });
 });

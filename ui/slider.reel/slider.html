@@ -8,20 +8,16 @@
             "owner": {
                 "properties": {
                     "element": {"#": "slider"},
-                    "_sliderThumbTrackElement": {"#": "thumbTrack"},
                     "_sliderThumbElement": {"#": "sliderThumb"}
                 }
-        
+
             }
         }
     </script>
 </head>
 <body>
     <div data-montage-id="slider" class="digit-Slider">
-        <!-- We need this middle component so we can use translate with percentages and to be independent of the knob size at the same time -->
-        <div data-montage-id="thumbTrack" class="digit-Slider-thumbTrack">
-            <div data-montage-id="sliderThumb" class="digit-Slider-thumb"></div>
-        </div>
+        <div data-montage-id="sliderThumb" class="digit-Slider-thumb"></div>
     </div>
 </body>
 </html>

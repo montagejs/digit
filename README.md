@@ -16,11 +16,11 @@ It will add MontageJS and all the other dependencies. Then you can preview the c
 
 ## Components
 
-![Button](ui/button.reel/screenshot.png)
-![RadioButton](ui/radio-button.reel/screenshot.png)
-![Checkbox](ui/checkbox.reel/screenshot.png)
-![Select](ui/select.reel/screenshot.png)
-![NumberField](ui/number-field.reel/screenshot.png)
-![Slider](ui/slider.reel/screenshot.png)
+[![Button](ui/button.reel/screenshot.png)](ui/button.reel)
+[![RadioButton](ui/radio-button.reel/screenshot.png)](ui/radio-button.reel)
+[![Checkbox](ui/checkbox.reel/screenshot.png)](ui/checkbox.reel)
+[![Select](ui/select.reel/screenshot.png)](ui/select.reel)
+[![NumberField](ui/number-field.reel/screenshot.png)](ui/number-field.reel)
+[![Slider](ui/slider.reel/screenshot.png)](ui/slider.reel)
 
 These are just a few examples, [see them all](overview).

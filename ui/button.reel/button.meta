@@ -4,19 +4,27 @@
         "properties": {
             "valueReference": {
                 "blueprintName": "AbstractButton",
-                "blueprintModuleId": "montage/ui/base/abstract-button.meta",
-                "prototypeName": "AbstractButton"
+                "prototypeName": "AbstractButton",
+                "blueprintModule": {
+                    "%": "montage/ui/base/abstract-button.meta"
+                }
             }
         }
     },
-
     "root": {
-        "prototype": "montage/core/meta/blueprint",
+        "prototype": "montage/core/meta/module-blueprint",
         "properties": {
             "name": "Button",
-            "blueprintModuleId": "ui/button.reel/button.meta",
-            "prototypeName": "Button",
-            "parent": {"@": "blueprint_parent"}
+            "parent": {
+                "@": "blueprint_parent"
+            },
+            "blueprintModule": {
+                "%": "ui/button.reel/button.meta"
+            },
+            "exportName": "Button",
+            "module": {
+                "%": "ui/button.reel"
+            }
         }
     }
 }

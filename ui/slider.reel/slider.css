@@ -1,59 +1,62 @@
 .digit-Slider {
-    outline: none;
-    position: relative;
     display: inline-block;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: 150px;
-    height: 10px;
-    border-radius: 3px;
+    width: 10em;
+    height: .625em;
+    border-radius: .25em;
     border: 1px solid #b3b3b3;
     background-color: #d9d9d9;
     outline: none;
+    padding-right: 1.75em; /* Fallback for Android Browser */
+    padding-right: -webkit-calc(1.75em - 2px); /* Thumb size - 2px (borders) */
+    padding-right:         calc(1.75em - 2px); /* Thumb size - 2px (borders) */
 }
 
-.digit-Slider-thumbTrack {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 26px; /*width of thumb - slider border*/
-    bottom: 0px;
-
-    /* avoid the thumb track to be draggable when outside the slider component */
-    visibility: hidden;
+.digit-Slider.montage-Slider--vertical {
+    width: .625em;
+    height: 10em;
+    margin: 0 .625em;
+    padding-right: 0;
+    padding-bottom: 1.75em; /* Fallback for Android Browser */
+    padding-bottom: -webkit-calc(1.75em - 2px); /* Thumb size - 2px (borders) */
+    padding-bottom:         calc(1.75em - 2px); /* Thumb size - 2px (borders) */
 }
+
+/* Thumb ------------------------------------ */
 
 .digit-Slider-thumb {
-    position: absolute;
+    position: relative;
     font-size: inherit;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: -14px 0 0 -1px;
-    border-radius: 14px;
-    width: 28px;
-    height: 28px;
-    left: 0;
-    top: 50%;
+    border-radius: .875em;
+    width: 1.75em;
+    height: 1.75em;
     border: 1px solid #b3b3b3;
     background-color: #f2f2f2;
     cursor: pointer;
-
-    /* overrides the visibility set in the thumbTrack */
-    visibility: visible;
+    margin: -.625em 0 0 -1px;
 }
 
+.montage-Slider--vertical .digit-Slider-thumb {
+    margin: -1px 0 0 -.625em;
+}
 
-.digit-Slider-thumb:before {
-    content: "";
+.digit-Slider-thumb:after {
+    /* Extra space to increase touch area */
     position: absolute;
-    /* Makes the touch target a bit bigger.*/
-    top: -7px;
-    left: -7px;
-    right: -7px;
-    bottom: -7px;
-    border-radius: 50%;
+    content: "";
+    top: -16px;
+    left: -16px;
+    bottom: -16px;
+    right: -16px;
 }
 
-/* States */
-.digit-Slider-thumb:active {
+
+/* States ------------------------------------ */
+
+.montage-Slider--active .digit-Slider-thumb {
     background-color: #e5e5e5;
 }
 
@@ -68,11 +71,8 @@
     border-color: hsla(0,0%,70%,1);
     background: hsl(0,0%,86%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
-
-    -webkit-transform: translate3d(0px,0px,0px);
-    -moz-transform: translate3d(0px,0px,0px);
-    -ms-transform: translate3d(0px,0px,0px);
-    transform: translate3d(0px,0px,0px);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
 [data-montage-skin="light"] .digit-Slider-thumb {
@@ -81,7 +81,7 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.1), 0 7px 6px -3px hsla(0,0%,0%,.15);
 }
 
-[data-montage-skin="light"] .digit-Slider-thumb:active {
+[data-montage-skin="light"] .montage-Slider--active .digit-Slider-thumb {
     border-color: hsla(0,0%,65%,1);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,83%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 6px 6px -3px hsla(0,0%,0%,.1);
@@ -94,6 +94,8 @@
     border-color: hsl(0,0%,15%);
     background: hsl(0,0%,22%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.25), 0 1px 0 hsla(0,0%,100%,.1);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
 [data-montage-skin="dark"] .digit-Slider-thumb {
@@ -102,7 +104,7 @@
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.15), 0 7px 6px -3px hsla(0,0%,0%,.25);
 }
 
-[data-montage-skin="dark"] .digit-Slider-thumb:active {
+[data-montage-skin="dark"] .montage-Slider--active .digit-Slider-thumb {
     border-color: hsl(0,0%,12%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,34%), hsl(0,0%,23%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), 0 1px 2px 0px hsla(0,0%,0%,.2), 0 7px 6px -3px hsla(0,0%,0%,.15);

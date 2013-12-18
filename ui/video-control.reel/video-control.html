@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="video-control.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "video-control"},
+                "_controlTrack": {"@": "track"}
+            }
+        },
+
+        "play": {
+            "prototype": "ui/video-control.reel[Button]",
+            "properties": {
+                "element": {"#": "play"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+
+        "track": {
+            "prototype": "ui/video-control.reel/video-control-track.reel",
+            "properties": {
+                "element": {"#": "track"},
+                "value": 0
+            },
+            "bindings": {
+                "videoController": {"<-": "@owner.videoController"}
+            }
+        },
+
+        "fullScreen": {
+            "prototype": "ui/video-control.reel[Button]",
+            "properties": {
+                "element": {"#": "fullScreen"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        }
+
+    }
+    </script>
+</head>
+<body>
+    <menu data-montage-id="video-control" class="digit-VideoControl">
+         <button data-montage-id="play" class="digit-VideoControl-button-play"></button>
+         <div data-montage-id="track"></div>
+         <button data-montage-id="fullScreen" class="digit-VideoControl-button-fullScreen"></button>
+     </menu>
+</body>
+</html>
