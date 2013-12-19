@@ -1,6 +1,47 @@
-var AbstractSelect= require("montage/ui/base/abstract-select").AbstractSelect;
-
-exports.Select = AbstractSelect.specialize({
+/**
+ * @module "digit/ui/select.reel"
+ */
+var AbstractSelect = require("montage/ui/base/abstract-select").AbstractSelect;
+/**
+ * ![Select](https://raw.github.com/montagejs/digit/master/ui/select.reel/screenshot.png)
+ *
+ * The Select Input component wraps an HTML `<select>` element.
+ *
+ * ### How to use
+ *
+ * ```json
+ * "select": {
+ *     "prototype": "digit/ui/select.reel",
+ *     "properties": {
+ *         "element": {"#": "select"},
+ *         "content": [
+ *             {"label": "California", "code": "CA"},
+ *             {"label": "Hawaii", "code": "HI},
+ *             {"label": "New York", "code": "NY}
+ *         ]
+ *     }
+ * }
+ * ```
+ *
+ * ```html
+ * <select data-montage-id="select"></select>
+ * ```
+ *
+ * See [http://montagejs.github.io/mfiddle/#!/5904481](http://montagejs.github.io/mfiddle/#!/5904481)
+ *
+ * ### Customizing with CSS
+ *
+ * * `.digit-Select` - The select element
+ *
+ * ```css
+ * .digit-Select {
+ *     background-color: pink;
+ * }
+ * ```
+ * @class Select
+ * @extends external:AbstractSelect
+ */
+exports.Select = AbstractSelect.specialize(/** @lends Select */{
 
     constructor: {
         value: function Select() {
