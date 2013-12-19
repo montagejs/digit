@@ -28,61 +28,17 @@ exports.BigList = Component.specialize( /** @lends BigList# */ {
     willDraw: {
         value: function () {
             if (this.flow._repetition._drawnIterations[0]) {
-                this._width = this.element.clientWidth;
-                this._height = this.element.clientHeight;
-                this._rowHeight = this.flow._repetition._drawnIterations[0].firstElement.scrollHeight;
-                this.flow.linearScrollingVector = [0, (-500 * this._rowHeight) / this._height, 0];
-                this.flow.paths = [
-                    {
-                        "knots": [
-                            {
-                                "knotPosition": [
-                                    0,
-                                    0,
-                                    0
-                                ],
-                                "nextHandlerPosition": [
-                                    0,
-                                    this._rowHeight * 1000,
-                                    0
-                                ],
-                                "nextDensity": 3000,
-                                "previousDensity": 3000
-                            },
-                            {
-                                "knotPosition": [
-                                    0,
-                                    this._rowHeight * 3000,
-                                    0
-                                ],
-                                "previousHandlerPosition": [
-                                    0,
-                                    this._rowHeight * 2000,
-                                    0
-                                ],
-                                "nextDensity": 3000,
-                                "previousDensity": 3000
-                            }
-                        ],
-                        "units": {},
-                        "headOffset": 1,
-                        "tailOffset": this._height / this._rowHeight
-                    }
-                ];
-                this.flow.cameraTargetPoint = [
-                    this._width / 2,
-                    this._height / 2 + this._rowHeight,
-                    0
-                ];
-                this.flow.cameraPosition = [
-                    this._width / 2,
-                    this._height / 2 + this._rowHeight,
-                    this._height / 2
-                ];
+                this._width = this._measureWidth();
+                this._height = this._measureHeight();
+                this._rowHeight = this._measureRowHeight();
+                this.flow.linearScrollingVector = this._calculateLinearScrollingVector(this._height, this._rowHeight);
+                this.flow.paths = this._calculateFlowPath(this._height, this._rowHeight);
+                this.flow.cameraTargetPoint = this._calculateCameraTargetPoint(this._width, this._height, this._rowHeight)
+                this.flow.cameraPosition = this._calculateCameraPosition(this._width, this._height, this._rowHeight);
                 this.flow.cameraFov = 90;
                 this._scrollBars.displayHorizontal = false;
                 this._scrollBars.displayVertical = true;
-                this._scrollBars.verticalLength = (this._height / this._rowHeight) / this.flow._numberOfIterations;
+                this._scrollBars.verticalLength = this._calculateScrollBarsVerticalLength(this._height,  this._rowHeight, this.flow._numberOfIterations);
             }
         }
     },
@@ -93,9 +49,105 @@ exports.BigList = Component.specialize( /** @lends BigList# */ {
         }
     },
 
+    _measureHeight: {
+        value: function() {
+            return this.element.clientHeight;
+        }
+    },
+
+    _measureWidth: {
+        value: function() {
+            return this.element.clientWidth;
+        }
+    },
+
+    _measureRowHeight: {
+        value: function() {
+            return this.flow._repetition._drawnIterations[0].firstElement.scrollHeight;
+        }
+    },
+
+    _calculateLinearScrollingVector: {
+        value: function(height, rowHeight) {
+            return [0, (-500 * rowHeight) / height, 0]
+        }
+    },
+
+    _calculateScrollBarsVerticalLength: {
+        value: function(height, rowHeight, numberOfIterations) {
+            var length = (height / rowHeight) / numberOfIterations;
+            return  length > 1 ? 1 : length;
+        }
+    },
+
+    _calculateFlowPath: {
+        value: function(height, rowHeight) {
+            return [
+                {
+                    "knots": [
+                        {
+                            "knotPosition": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "nextHandlerPosition": [
+                                0,
+                                rowHeight * 1000,
+                                0
+                            ],
+                            "nextDensity": 3000,
+                            "previousDensity": 3000
+                        },
+                        {
+                            "knotPosition": [
+                                0,
+                                rowHeight * 3000,
+                                0
+                            ],
+                            "previousHandlerPosition": [
+                                0,
+                                rowHeight * 2000,
+                                0
+                            ],
+                            "nextDensity": 3000,
+                            "previousDensity": 3000
+                        }
+                    ],
+                    "units": {},
+                    "headOffset": 1,
+                    "tailOffset": height / rowHeight
+                }
+            ];
+        }
+    },
+
+    _calculateCameraPosition: {
+        value: function(width, height, rowHeight) {
+            return [
+                width / 2,
+                height / 2 + rowHeight,
+                height / 2
+            ];
+        }
+    },
+
+    _calculateCameraTargetPoint: {
+        value: function(width, height, rowHeight) {
+            return [
+                width / 2,
+                height / 2 + rowHeight,
+                0
+            ];
+        }
+    },
+
     handleTranslateStart: {
         value: function() {
-            this._scrollBars.opacity = 0.5;
+            if (this._scrollBars.verticalLength < 1) {
+                this._scrollBars.opacity = 0.5;
+            }
+
         }
     },
 
@@ -115,7 +167,18 @@ exports.BigList = Component.specialize( /** @lends BigList# */ {
         },
         set: function (value) {
             this.__scroll = value;
-            this._scrollBars.verticalScroll = (value * (1 - this._scrollBars.verticalLength)) / (this.flow._numberOfIterations - (this._height / this._rowHeight));
+            this._scrollBars.verticalScroll = this._calculateScrollBarsVerticalScroll(
+                value, this._height, this._rowHeight, this.flow._numberOfIterations, this._scrollBars.verticalLength
+            );
+        }
+    },
+
+    _calculateScrollBarsVerticalScroll: {
+        value: function(value, height, rowHeight, numberOfIterations, verticalLength) {
+            if (verticalLength === 1) {
+                return  0;
+            }
+            return  (value * (1 - verticalLength)) / (numberOfIterations - (height / rowHeight));
         }
     },
 
@@ -178,6 +241,8 @@ exports.BigList = Component.specialize( /** @lends BigList# */ {
                     self.flow.didDraw = oldDidDraw;
                 }
             }
+            // initialize scroll bars
+            this._scrollBars.opacity = 0;
         }
     }
 
