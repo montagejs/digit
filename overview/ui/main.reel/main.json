@@ -55,10 +55,23 @@
     "textArea-2": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-2"}, "placeholderValue": "Text Area" } },
     "textArea-3": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-3"}, "placeholderValue": "Text Area" } },
 
-    "list-1": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-1"}, "content": [1, 2, 3] } },
+    "list1": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-1"}, "content": [1, 2, 3, 4, 5] } },
     "listItem-1": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-1"} } },
-    "list-2": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-2"}, "content": [1, 2, 3] } },
+    "listContent1": { "prototype": "ui/text.reel", "properties": { "element": {"#": "listContent1"} }, "bindings": { "value": {"<-": "@list1:iteration.object"}} },
+    "list2": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-2"}, "content": [1, 2, 3, 4, 5] } },
     "listItem-2": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-2"} } },
-    "list-3": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-3"}, "content": [1, 2, 3] } },
-    "listItem-3": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-3"} } }
+    "listContent2": { "prototype": "ui/text.reel", "properties": { "element": {"#": "listContent2"} }, "bindings": { "value": {"<-": "@list2:iteration.object"}} },
+    "list3": { "prototype": "ui/list.reel", "properties": { "element": {"#": "list-3"}, "content": [1, 2, 3, 4, 5] } },
+    "listItem-3": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-3"} } },
+    "listContent3": { "prototype": "ui/text.reel", "properties": { "element": {"#": "listContent3"} }, "bindings": { "value": {"<-": "@list3:iteration.object"}} },
+
+    "bigList1": { "prototype": "ui/big-list.reel", "properties": { "element": {"#": "bigList-1"}, "content": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30] } },
+    "bigListItem-1": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "bigListItem-1"} } },
+    "bigListContent1": { "prototype": "ui/text.reel", "properties": { "element": {"#": "bigListContent1"} }, "bindings": { "value": {"<-": "@bigList1:iteration.object"}} },
+    "bigList2": { "prototype": "ui/big-list.reel", "properties": { "element": {"#": "bigList-2"}, "content": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30] } },
+    "bigListItem-2": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "bigListItem-2"} } },
+    "bigListContent2": { "prototype": "ui/text.reel", "properties": { "element": {"#": "bigListContent2"} }, "bindings": { "value": {"<-": "@bigList2:iteration.object"}} },
+    "bigList3": { "prototype": "ui/big-list.reel", "properties": { "element": {"#": "bigList-3"}, "content": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30] } },
+    "bigListItem-3": { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "bigListItem-3"} } },
+    "bigListContent3": { "prototype": "ui/text.reel", "properties": { "element": {"#": "bigListContent3"} }, "bindings": { "value": {"<-": "@bigList3:iteration.object"}} }
 }
