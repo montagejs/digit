@@ -1,0 +1,17 @@
+demo
+overview
+test
+node_modules
+*.mp3
+*.mov
+*screenshot.png
+*screenshot-types.png
+*README.md
+run-tests.html
+testacular.conf.js
+phantomjs.conf.js
+.jshintrc
+.jshintignore
+.gitignore
+*poster.png
+*poster.jpg
