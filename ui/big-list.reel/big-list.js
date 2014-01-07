@@ -5,6 +5,8 @@ var Montage = require("montage").Montage,
     Component = require("montage/ui/component").Component,
     observeProperty = require("montage/frb/observers").observeProperty;
 
+var deprecationWarning = require("montage/core/deprecate").deprecationWarning;
+
 /**
     @class BigList
     @extends Component
@@ -221,6 +223,7 @@ exports.BigList = Component.specialize( /** @lends BigList# */ {
     observeProperty: {
         value: function (key, emit, source, parameters, beforeChange) {
             if (key === "objectAtCurrentIteration" || key === "currentIteration") {
+                deprecationWarning(key,":iteration.object");
                 if (this.flow) {
                     return this.flow.observeProperty(key, emit, source, parameters, beforeChange);
                 }

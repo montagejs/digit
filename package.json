@@ -6,11 +6,11 @@
     "url": "https://github.com/montagejs/digit.git"
   },
   "dependencies": {
-    "montage": "git+http://github.com/montagejs/montage.git#4be249f96f3aa52f955189e6ad0947326f93f7fe",
-    "matte": "~0.1.1"
+    "montage": "git+http://github.com/montagejs/montage.git#master",
+    "matte": "git+http://github.com/montagejs/matte.git#master"
   },
   "devDependencies": {
-    "montage-testing": "~0.2.0"
+    "montage-testing": "~0.3.0"
   },
   "exclude": [
     "overview.html",
