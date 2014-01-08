@@ -10,7 +10,11 @@
     "matte": "~0.1.1"
   },
   "devDependencies": {
-    "montage-testing": "~0.2.0"
+    "montage-testing": "~0.2.0",
+    "grunt": "~0.4.1",
+    "grunt-saucelabs": "~4.0.4",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3"
   },
   "exclude": [
     "overview.html",
