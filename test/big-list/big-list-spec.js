@@ -9,6 +9,7 @@ describe("test/big-list/big-list-spec", function() {
         bigList = new BigList();
         bigList.flow = {};
         bigList.flow.didDraw = Function.noop;
+        bigList.flow.observeProperty = Function.noop;
         bigList.flow._repetition = {};
 
         bigList._scrollBars = {};
@@ -128,5 +129,22 @@ describe("test/big-list/big-list-spec", function() {
                 expect(vector[1]).toEqual(-125);
             });
         });
+
+        describe("currentIteration property", function () {
+            it("should cause a deprecation warning", function () {
+                expectConsoleCallsFrom(function () {
+                    bigList.observeProperty("currentIteration", Function.noop, Function.noop );
+                }, window, "warn").toHaveBeenCalledWith("currentIteration is deprecated, use :iteration.object instead.", "");
+            });
+        });
+
+        describe("objectAtCurrentIteration property", function () {
+            it("should cause a deprecation warning", function () {
+                expectConsoleCallsFrom(function () {
+                    bigList.observeProperty("objectAtCurrentIteration", Function.noop, Function.noop );
+                }, window, "warn").toHaveBeenCalledWith("objectAtCurrentIteration is deprecated, use :iteration.object instead.", "");
+            });
+        });
+
     });
 });
