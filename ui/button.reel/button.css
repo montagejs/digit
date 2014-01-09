@@ -4,33 +4,57 @@
 
 .digit-Button {
     display: inline-block; /* 1 */
-    outline: none;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 100%; /* Override UA style. */
     height: 2.5em;
     min-width: 2.5em; /* Don't shrink below the height. Makes a perfect circle. */
     margin: 0 2px;
     padding: .625em 1em;
-    vertical-align: middle;
     border-radius: 1.25em;
-    border: 1px solid #b3b3b3;
-    background-color: #f2f2f2;
-    color: hsl(0,0%,30%); /* 1 */
+    vertical-align: middle;
+    font-size: 100%; /* Override UA style. */
+    color: inherit; /* 1 */
+    border: 1px solid;
+    background-color: transparent;
+    outline: none;
     cursor: pointer;
     text-decoration: none; /* 1 */
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
+
+/* States --------------------- */
+
 .digit-Button.montage--active {
-    background-color: #e5e5e5;
+    background-color: hsla(0,0%,0%,.06);
 }
 
 .digit-Button:focus {
-    border-color: #7f7f7f;
+    box-shadow: inset 0 0 0 1px;
 }
 
 
-/* Light ------------------------------------ */
+
+/* Wireframe ---------------------------------------------------------- */
+
+[data-montage-skin="wireframe"] .digit-Button {
+    color: #4D4D4D;
+    border-color: #b3b3b3;
+    background-color: #f2f2f2;
+}
+
+[data-montage-skin="wireframe"] .digit-Button.montage--active {
+    background-color: #e5e5e5;
+}
+
+[data-montage-skin="wireframe"] .digit-Button:focus {
+    border-color: #4D4D4D;
+    box-shadow: none;
+}
+
+
+
+/* Light ---------------------------------------------------------- */
 
 [data-montage-skin="light"] .digit-Button {
     color: hsla(0,0%,0%,.7);
@@ -56,7 +80,8 @@
 }
 
 
-/* Dark ------------------------------------ */
+
+/* Dark ---------------------------------------------------------- */
 
 [data-montage-skin="dark"] .digit-Button {
     color: hsla(0,0%,100%,.5);
@@ -77,9 +102,14 @@
     border-color: hsl(0,0%,50%);
 }
 
-/* Variations ------------------------------------ */
+
+
+/* Variations ---------------------------------------------------------- */
 
 .digit-Button--glass,
+.digit-Button--glass.montage--active,
+[data-montage-skin="wireframe"] .digit-Button--glass,
+[data-montage-skin="wireframe"] .digit-Button--glass.montage--active,
 [data-montage-skin="light"] .digit-Button--glass,
 [data-montage-skin="light"] .digit-Button--glass.montage--active,
 [data-montage-skin="dark"] .digit-Button--glass,
