@@ -1,25 +1,30 @@
 .digit-Select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    outline: none;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 100%; /* Override UA style. */
     height: 2.5em;
     padding: 0 2em 0 1em;
     border-radius: 1.5em .5em .5em 1.5em;
-    border: 1px solid #b3b3b3;
-    background: #f2f2f2 url(select.svg) no-repeat right center;
+    font-size: 100%; /* Override UA style. */
+    color: inherit;
+    border: 1px solid;
+    background: transparent url(select.svg) no-repeat right center;
     background-size: .875em;
+    outline: none;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
 
-.digit-Select:active {
-    background-color: #e5e5e5;
+
+/* States --------------------- */
+
+.digit-Select.montage--active {
+    background-color: hsla(0,0%,0%,.06);
 }
 
 .digit-Select:focus {
-    border-color: #7f7f7f;
+    box-shadow: inset 0 0 0 1px;
 }
 
 .digit-Select:disabled {
@@ -28,22 +33,28 @@
     pointer-events: none;
 }
 
-/* Multiple Select ------------------------------ */
 
-.digit-Select[multiple] {
-    height: auto;
-    cursor: default;
-    padding: .5em;
-    border-radius: .5em;
+
+/* Wireframe ---------------------------------------------------------- */
+
+[data-montage-skin="wireframe"] .digit-Select {
+    color: #4D4D4D;
+    border-color: #b3b3b3;
+    background-color: #f2f2f2;
 }
 
-.digit-Select[multiple],
-.digit-Select[multiple]:active {
-    background: #f2f2f2;
+[data-montage-skin="wireframe"] .digit-Select.montage--active {
+    background-color: #e5e5e5;
+}
+
+[data-montage-skin="wireframe"] .digit-Select:focus {
+    border-color: #4D4D4D;
+    box-shadow: none;
 }
 
 
-/* Light ------------------------------------ */
+
+/* Light ---------------------------------------------------------- */
 
 [data-montage-skin="light"] .digit-Select {
     color: hsla(0,0%,0%,.7);
@@ -60,17 +71,13 @@
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.2), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
-[data-montage-skin="light"] .digit-Select[multiple],
-[data-montage-skin="light"] .digit-Select[multiple]:active {
-    background: -webkit-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
-}
-
 [data-montage-skin="light"] .digit-Select:focus {
     border-color: hsl(0,0%,50%);
 }
 
 
-/* Dark ------------------------------------ */
+
+/* Dark ---------------------------------------------------------- */
 
 [data-montage-skin="dark"] .digit-Select {
     color: hsla(0,0%,100%,.5);
@@ -86,11 +93,6 @@
     border-color: hsl(0,0%,15%);
     background-image: url(select-dark.svg), -webkit-linear-gradient(top, hsl(0,0%,24%), hsl(0,0%,18%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);
-}
-
-[data-montage-skin="dark"] .digit-Select[multiple],
-[data-montage-skin="dark"] .digit-Select[multiple]:active {
-    background: -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,24%) );
 }
 
 [data-montage-skin="dark"] .digit-Select:focus {
