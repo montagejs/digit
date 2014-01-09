@@ -6,14 +6,19 @@
     height: 3.75em;
     padding: .5em;
     resize: vertical;
-    border: 1px solid #b3b3b3;
+    color: inherit;
+    border: 1px solid;
     border-radius: .25em;
-    background-color: #fff;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
     -webkit-appearance: none; /* Removes inner shadow on iOS. */
 }
 
+
+/* States --------------------- */
+
 .digit-TextArea:focus {
-    border-color: #7f7f7f;
+    box-shadow: inset 0 0 0 1px;
 }
 
 .digit-TextArea.montage--disabled {
@@ -23,7 +28,30 @@
 }
 
 
-/* Light ------------------------------------ */
+/* Placeholder --------------------- */
+
+.digit-TextArea::-webkit-input-placeholder { color: inherit; opacity: .5; }
+.digit-TextArea::-moz-placeholder { color: inherit; opacity: .5; }
+.digit-TextArea:-ms-input-placeholder { color: inherit; opacity: .5; }
+
+
+
+/* Wireframe ---------------------------------------------------------- */
+
+[data-montage-skin="wireframe"] .digit-TextArea {
+    color: #4D4D4D;
+    border-color: #b3b3b3;
+    background-color: #fff;
+}
+
+[data-montage-skin="wireframe"] .digit-TextArea:focus {
+    border-color: #7f7f7f;
+    box-shadow: none;
+}
+
+
+
+/* Light ---------------------------------------------------------- */
 
 [data-montage-skin="light"] .digit-TextArea {
     color: hsla(0,0%,0%,.7);
@@ -40,7 +68,8 @@
 }
 
 
-/* Dark ------------------------------------ */
+
+/* Dark ---------------------------------------------------------- */
 
 [data-montage-skin="dark"] .digit-TextArea {
     color: hsla(0,0%,100%,.5);
