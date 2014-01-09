@@ -4,7 +4,7 @@ body {
     margin: 0;
     color: #444;
     font-family: sans-serif;
-	background-color: hsl(0,0%,98%);
+	background-color: hsl(0,0%,100%);
 }
 
 a {
@@ -78,6 +78,8 @@ td {
     padding: 20px;
     border-top: 1px solid hsla(0,0%,0%,.06);
 }
+
+td:nth-child(2) { color: hsl(200, 100%, 50%); }
 
 td:nth-child(5) {
     border-top: 1px solid hsla(0,0%,100%,.06);
