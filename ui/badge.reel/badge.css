@@ -1,35 +1,46 @@
 .digit-Badge {
     display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
     margin: .5em;
     padding: 0 .5em;
-    line-height: 1.75em;
     min-width: 1.875em;
-    border-radius: .25em;
+    line-height: 1.75em;
     font-weight: bold;
-    border: 1px solid #b3b3b3;
-    background: #d9d9d9;
-    vertical-align: middle;
-    box-sizing: border-box;
-    color: hsla(0,0%,0%,.7);
+    border-radius: .25em;
+    border: 1px solid;
 }
 
 
-/* Light ------------------------------------ */
+
+/* Wireframe ---------------------------------------------------------- */
+
+[data-montage-skin="wireframe"] .digit-Badge {
+    color: #4D4D4D;
+    border-color: #b3b3b3;
+    background-color: #d9d9d9;
+}
+
+
+
+/* Light ---------------------------------------------------------- */
 
 [data-montage-skin="light"] .digit-Badge {
     color: hsla(0,0%,0%,.6);
-    border-color: hsla(0,0%,70%,1);
-    background: hsl(0,0%,86%);
-    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
     text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
+    border-color: hsla(0,0%,70%,1);
+    background-color: hsl(0,0%,86%);
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
 
-/* Dark ------------------------------------ */
+
+/* Dark ---------------------------------------------------------- */
 
 [data-montage-skin="dark"] .digit-Badge {
     color: hsla(0,0%,100%,.7);
     border-color: hsl(0,0%,15%);
-    background: hsl(0,0%,22%);
+    background-color: hsl(0,0%,22%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.25), 0 1px 0 hsla(0,0%,100%,.1);
 }

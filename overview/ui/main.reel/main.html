@@ -17,51 +17,67 @@
                 <tr>
                     <th></th>
                     <th>Default</th>
-                    <th>+ <span class="hl">Light</span> Skin</th>
-                    <th>+ <span class="hl">Dark</span> Skin</th>
+                    <th>+ <span class="hl">wireframe</span> Skin</th>
+                    <th>+ <span class="hl">light</span> Skin</th>
+                    <th>+ <span class="hl">dark</span> Skin</th>
                 </tr>
             </thead>
             <tbody>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/button.reel">Button</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/button.reel">Button</a></td>
                     <td><button data-montage-id="button-1">Button</button></td>
-                    <td data-montage-skin="light"><button data-montage-id="button-2">Button</button></td>
-                    <td data-montage-skin="dark" ><button data-montage-id="button-3">Button</button></td>
+                    <td data-montage-skin="wireframe"><button data-montage-id="button-2">Button</button></td>
+                    <td data-montage-skin="light"><button data-montage-id="button-3">Button</button></td>
+                    <td data-montage-skin="dark" ><button data-montage-id="button-4">Button</button></td>
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/radio-button.reel">Radio Button</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/radio-button.reel">Radio Button</a></td>
                     <td>
                         <span data-montage-id="radioButton-1A"></span>
                         <span data-montage-id="radioButton-1B"></span>
                     </td>
-                    <td data-montage-skin="light">
+                    <td data-montage-skin="wireframe">
                         <span data-montage-id="radioButton-2A"></span>
                         <span data-montage-id="radioButton-2B"></span>
                     </td>
-                    <td data-montage-skin="dark">
+                    <td data-montage-skin="light">
                         <span data-montage-id="radioButton-3A"></span>
                         <span data-montage-id="radioButton-3B"></span>
+                    </td>
+                    <td data-montage-skin="dark">
+                        <span data-montage-id="radioButton-4A"></span>
+                        <span data-montage-id="radioButton-4B"></span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/checkbox.reel">Checkbox</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/checkbox.reel">Checkbox</a></td>
                     <td><span data-montage-id="checkbox-1"></span></td>
-                    <td data-montage-skin="light"><span data-montage-id="checkbox-2"></span></td>
-                    <td data-montage-skin="dark" ><span data-montage-id="checkbox-3"></span></td>
+                    <td data-montage-skin="wireframe"><span data-montage-id="checkbox-2"></span></td>
+                    <td data-montage-skin="light"><span data-montage-id="checkbox-3"></span></td>
+                    <td data-montage-skin="dark" ><span data-montage-id="checkbox-4"></span></td>
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/badge.reel">Badge</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/badge.reel">Badge</a></td>
                     <td><span data-montage-id="badge-1"></span></td>
-                    <td data-montage-skin="light"><span data-montage-id="badge-2"></span></td>
-                    <td data-montage-skin="dark" ><span data-montage-id="badge-3"></span></td>
+                    <td data-montage-skin="wireframe"><span data-montage-id="badge-2"></span></td>
+                    <td data-montage-skin="light"><span data-montage-id="badge-3"></span></td>
+                    <td data-montage-skin="dark" ><span data-montage-id="badge-4"></span></td>
                 </tr>
-
+                
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/select.reel">Select</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/toggle-switch.reel">Toggle Switch</a></td>
+                    <td><span data-montage-id="toggle-1"></span></td>
+                    <td data-montage-skin="wireframe"><span data-montage-id="toggle-2"></span></td>
+                    <td data-montage-skin="light"><span data-montage-id="toggle-3"></span></td>
+                    <td data-montage-skin="dark" ><span data-montage-id="toggle-4"></span></td>
+                </tr>
+                
+                <tr>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/select.reel">Select</a></td>
                     <td>
                         <select data-montage-id="select-1">
                             <option value="AZ">Arizona</option>
@@ -71,7 +87,7 @@
                             <option value="NY">New York</option>
                         </select>
                     </td>
-                    <td data-montage-skin="light">
+                    <td data-montage-skin="wireframe">
                         <select data-montage-id="select-2">
                             <option value="AZ">Arizona</option>
                             <option value="AL">Alabama</option>
@@ -80,8 +96,17 @@
                             <option value="NY">New York</option>
                         </select>
                     </td>
-                    <td data-montage-skin="dark">
+                    <td data-montage-skin="light">
                         <select data-montage-id="select-3">
+                            <option value="AZ">Arizona</option>
+                            <option value="AL">Alabama</option>
+                            <option value="CA">California</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="NY">New York</option>
+                        </select>
+                    </td>
+                    <td data-montage-skin="dark">
+                        <select data-montage-id="select-4">
                             <option value="AZ">Arizona</option>
                             <option value="AL">Alabama</option>
                             <option value="CA">California</option>
@@ -92,45 +117,51 @@
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/number-field.reel">Number Field</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/number-field.reel">Number Field</a></td>
                     <td><input data-montage-id="numberField-1" type="number" value=""></td>
-                    <td data-montage-skin="light"><input data-montage-id="numberField-2" type="number" value="0"></td>
-                    <td data-montage-skin="dark"><input data-montage-id="numberField-3" type="number" value="0"></td>
+                    <td data-montage-skin="wireframe"><input data-montage-id="numberField-2" type="number" value="0"></td>
+                    <td data-montage-skin="light"><input data-montage-id="numberField-3" type="number" value="0"></td>
+                    <td data-montage-skin="dark"><input data-montage-id="numberField-4" type="number" value="0"></td>
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/slider.reel">Slider</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/slider.reel">Slider</a></td>
                     <td><input data-montage-id="slider-1" value="50" min="0" max="100" type="range"></td>
-                    <td data-montage-skin="light"><input data-montage-id="slider-2" value="50" min="0" max="100" type="range"></td>
-                    <td data-montage-skin="dark"><input data-montage-id="slider-3" value="50" min="0" max="100" type="range"></td>
+                    <td data-montage-skin="wireframe"><input data-montage-id="slider-2" value="50" min="0" max="100" type="range"></td>
+                    <td data-montage-skin="light"><input data-montage-id="slider-3" value="50" min="0" max="100" type="range"></td>
+                    <td data-montage-skin="dark"><input data-montage-id="slider-4" value="50" min="0" max="100" type="range"></td>
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/text.reel">Text</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/text.reel">Text</a></td>
                     <td><span data-montage-id="text-1"></span></td>
-                    <td data-montage-skin="light"><span data-montage-id="text-2"></span></td>
-                    <td data-montage-skin="dark"><span data-montage-id="text-3"></span></td>
+                    <td data-montage-skin="wireframe"><span data-montage-id="text-2"></span></td>
+                    <td data-montage-skin="light"><span data-montage-id="text-3"></span></td>
+                    <td data-montage-skin="dark"><span data-montage-id="text-4"></span></td>
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/title.reel">Title</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/title.reel">Title</a></td>
                     <td><h3 data-montage-id="title-1"></h3></td>
-                    <td data-montage-skin="light"><h3 data-montage-id="title-2"></h3></td>
-                    <td data-montage-skin="dark"><h3 data-montage-id="title-3"></h3></td>
+                    <td data-montage-skin="wireframe"><h3 data-montage-id="title-2"></h3></td>
+                    <td data-montage-skin="light"><h3 data-montage-id="title-3"></h3></td>
+                    <td data-montage-skin="dark"><h3 data-montage-id="title-4"></h3></td>
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/edge/text-field.reel">Text Field</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/text-field.reel">Text Field</a></td>
                     <td><input data-montage-id="textField-1" type="text"></td>
-                    <td data-montage-skin="light"><input data-montage-id="textField-2" type="text"></td>
-                    <td data-montage-skin="dark"><input data-montage-id="textField-3" type="text"></td>
+                    <td data-montage-skin="wireframe"><input data-montage-id="textField-2" type="text"></td>
+                    <td data-montage-skin="light"><input data-montage-id="textField-3" type="text"></td>
+                    <td data-montage-skin="dark"><input data-montage-id="textField-4" type="text"></td>
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/edge/ui/text-area.reel">Text Area</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/text-area.reel">Text Area</a></td>
                     <td><textarea data-montage-id="textArea-1"></textarea></td>
-                    <td data-montage-skin="light"><textarea data-montage-id="textArea-2"></textarea></td>
-                    <td data-montage-skin="dark"><textarea data-montage-id="textArea-3"></textarea></td>
+                    <td data-montage-skin="wireframe"><textarea data-montage-id="textArea-2"></textarea></td>
+                    <td data-montage-skin="light"><textarea data-montage-id="textArea-3"></textarea></td>
+                    <td data-montage-skin="dark"><textarea data-montage-id="textArea-4"></textarea></td>
                 </tr>
 
             </tbody>
@@ -143,45 +174,56 @@
                 <tr>
                     <th></th>
                     <th>Default</th>
-                    <th>+ <span class="hl">Light</span> Skin</th>
-                    <th>+ <span class="hl">Dark</span> Skin</th>
+                    <th>+ <span class="hl">wireframe</span> Skin</th>
+                    <th>+ <span class="hl">light</span> Skin</th>
+                    <th>+ <span class="hl">dark</span> Skin</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/list.reel">List</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/list.reel">List</a></td>
                     <td>
                         <ul data-montage-id="list-1" class="list">
-                            <li data-montage-id="listItem-1"><span data-montage-id="listContent1"></span></li>
+                            <li data-montage-id="listItem-1"><span data-montage-id="listContent-1"></span></li>
+                        </ul>
+                    </td>
+                    <td data-montage-skin="wireframe">
+                        <ul data-montage-id="list-2" class="list">
+                            <li data-montage-id="listItem-2"><span data-montage-id="listContent-2"></span></li>
                         </ul>
                     </td>
                     <td data-montage-skin="light">
-                        <ul data-montage-id="list-2" class="list">
-                            <li data-montage-id="listItem-2"><span data-montage-id="listContent2"></span></li>
+                        <ul data-montage-id="list-3" class="list">
+                            <li data-montage-id="listItem-3"><span data-montage-id="listContent-3"></span></li>
                         </ul>
                     </td>
                     <td data-montage-skin="dark">
-                        <ul data-montage-id="list-3" class="list">
-                            <li data-montage-id="listItem-3"><span data-montage-id="listContent3"></span></li>
+                        <ul data-montage-id="list-4" class="list">
+                            <li data-montage-id="listItem-4"><span data-montage-id="listContent-4"></span></li>
                         </ul>
                     </td>
                 </tr>
 
                 <tr>
-                    <td><a href="https://github.com/montagejs/digit/tree/master/big-list.reel">BigList</a></td>
+                    <td><a href="https://github.com/montagejs/digit/tree/master/ui/big-list.reel">BigList</a></td>
                     <td>
                         <ul data-montage-id="bigList-1" class="big-list">
-                            <li data-montage-id="bigListItem-1"><span data-montage-id="bigListContent1"></span></li>
+                            <li data-montage-id="bigListItem-1"><span data-montage-id="bigListContent-1"></span></li>
+                        </ul>
+                    </td>
+                    <td data-montage-skin="wireframe">
+                        <ul data-montage-id="bigList-2" class="big-list">
+                            <li data-montage-id="bigListItem-2"><span data-montage-id="bigListContent-2"></span></li>
                         </ul>
                     </td>
                     <td data-montage-skin="light">
-                        <ul data-montage-id="bigList-2" class="big-list">
-                            <li data-montage-id="bigListItem-2"><span data-montage-id="bigListContent2"></span></li>
+                        <ul data-montage-id="bigList-3" class="big-list">
+                            <li data-montage-id="bigListItem-3"><span data-montage-id="bigListContent-3"></span></li>
                         </ul>
                     </td>
                     <td data-montage-skin="dark">
-                        <ul data-montage-id="bigList-3" class="big-list">
-                            <li data-montage-id="bigListItem-3"><span data-montage-id="bigListContent3"></span></li>
+                        <ul data-montage-id="bigList-4" class="big-list">
+                            <li data-montage-id="bigListItem-4"><span data-montage-id="bigListContent-4"></span></li>
                         </ul>
                     </td>
                 </tr>
