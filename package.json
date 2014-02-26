@@ -1,16 +1,16 @@
 {
   "name": "digit",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/montagejs/digit.git"
   },
   "dependencies": {
-    "montage": "git+http://github.com/montagejs/montage.git#master",
-    "matte": "git+http://github.com/montagejs/matte.git#master"
+    "montage": "~0.14.0",
+    "matte": "~0.2.0"
   },
   "devDependencies": {
-    "montage-testing": "~0.3.0"
+    "montage-testing": "~0.4.0"
   },
   "exclude": [
     "overview.html",
