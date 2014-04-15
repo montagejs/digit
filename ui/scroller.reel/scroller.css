@@ -1,0 +1,10 @@
+
+.digit-Scroller {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.digit-Scroller .digit-Scroller-content {
+    float: left;
+    width: 100%;
+}
