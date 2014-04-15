@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="scroller.css">
+    <script type="text/montage-serialization">
+{
+    "owner": {
+        "properties": {
+            "_content": {
+                "#": "content"
+            },
+            "element": {
+                "#": "owner"
+            },
+            "_scrollBars": {
+                "@": "scrollbars"
+            }
+        }
+    },
+    "scrollbars": {
+        "prototype": "./scroll-bars.reel",
+        "properties": {
+            "element": {
+                "#": "scrollbars"
+            }
+        }
+    },
+    "translateComposer1": {
+        "prototype": "montage/composer/translate-composer",
+        "properties": {
+            "component": {"@": "owner"},
+            "minTranslateX": 0,
+            "minTranslateY": 0,
+            "invertAxis": true,
+            "stealChildrenPointer": true
+        },
+        "bindings": {
+            "translateX": {"<->": "@owner.scrollX"},
+            "translateY": {"<->": "@owner.scrollY"},
+            "maxTranslateX": {"<-": "@owner._maxTranslateX"},
+            "maxTranslateY": {"<-": "@owner._maxTranslateY"},
+            "axis": {"<-": "@owner.axis"},
+            "hasMomentum": {"<-": "@owner.hasMomentum"}
+        },
+        "listeners": [
+            {
+                "type": "translateStart",
+                "listener": {"@": "owner"}
+            },
+            {
+                "type": "translateEnd",
+                "listener": {"@": "owner"}
+            }
+        ]
+    }
+}
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="digit-Scroller">
+        <div data-montage-id="scrollbars"></div>
+        <div data-montage-id="content" class="digit-Scroller-content">
+            <div data-param="*"></div>
+        </div>
+    </div>
+</body>
+</html>
