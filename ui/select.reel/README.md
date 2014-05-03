@@ -10,17 +10,18 @@ The Select Input component wraps an HTML `<select>` element.
 "select": {
     "prototype": "digit/ui/select.reel",
     "properties": {
-        "element": {"#": "select"}
+        "element": {"#": "select"},
+        "content": [
+            {"label": "California", "code": "CA"},
+            {"label": "Hawaii", "code": "HI"},
+            {"label": "New York", "code": "NY"}
+        ]
     }
 }
 ```
 
 ```html
-<select data-montage-id="select">
-    <option value="CA">California</option>
-    <option value="HI">Hawaii</option>
-    <option value="NY">New York</option>
-</select>
+<select data-montage-id="select"></select>
 ```
 
 
