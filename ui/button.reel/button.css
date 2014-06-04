@@ -124,3 +124,29 @@
 [data-montage-skin="dark"] .digit-Button--glass.montage--active {
     color: hsla(0,0%,100%,.5);
 }
+
+
+
+/* ButtonGroup ---------------------------------------------------------- */
+
+.digit-ButtonGroup {
+    padding-left: 5px; /* Add the negative margin back */
+    font-size: 16px; /* Needed to keep spacing correct */
+    border-radius: 24px;
+}
+
+.digit-ButtonGroup > .digit-Button {
+    margin: 0;
+    border-radius: 0;
+    margin-left: -5px; /* Remove the space in between */
+}
+
+.digit-ButtonGroup > .digit-Button:first-child {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.digit-ButtonGroup > .digit-Button:last-child {
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
