@@ -88,7 +88,7 @@
 /* Dark ---------------------------------------------------------- */
 
 [data-montage-skin="dark"] .digit-Checkbox {
-    fill: hsla(0,0%,100%,.5);
+    fill: hsl(0,0%,80%);
     border-color: hsl(0,0%,15%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,24%) );
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), inset 0 -1px 1px hsla(0,0%,0%,.06), 0 1px 0 hsla(0,0%,100%,.1);

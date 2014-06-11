@@ -72,7 +72,7 @@
 /* Dark ---------------------------------------------------------- */
 
 [data-montage-skin="dark"] .digit-TextArea {
-    color: hsla(0,0%,100%,.5);
+    color: hsl(0,0%,80%);
     text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
     border-color: hsl(0,0%,15%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,30%) );
@@ -80,7 +80,7 @@
 }
 
 [data-montage-skin="dark"] .digit-TextArea:focus {
-    color: hsla(0,0%,100%,.7);
+    color: hsl(0,0%,100%);
     border-color: hsl(0,0%,15%);
     background-image: -webkit-linear-gradient(top, hsl(0,0%,26%), hsl(0,0%,28%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);

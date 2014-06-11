@@ -39,7 +39,7 @@
 /* Dark ---------------------------------------------------------- */
 
 [data-montage-skin="dark"] .digit-Badge {
-    color: hsla(0,0%,100%,.7);
+    color: hsl(0,0%,80%);
     border-color: hsl(0,0%,15%);
     background-color: hsl(0,0%,22%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.25), 0 1px 0 hsla(0,0%,100%,.1);
