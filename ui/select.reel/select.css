@@ -60,14 +60,16 @@
     color: hsla(0,0%,0%,.7);
     text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
     border-color: hsl(0,0%,80%);
-    background: url(select.svg) no-repeat right center, -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,92%) );
+    background: url(select.svg) no-repeat right center, -webkit-linear-gradient( hsl(0,0%,96%), hsl(0,0%,92%) );
+    background: url(select.svg) no-repeat right center,         linear-gradient( hsl(0,0%,96%), hsl(0,0%,92%) );
     background-size: .875em, auto;
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8), inset 0 -1px 1px hsla(0,0%,0%,.04), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
 [data-montage-skin="light"] .digit-Select:active {
     border-color: hsla(0,0%,70%,1);
-    background-image: url(select.svg), -webkit-linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
+    background-image: url(select.svg), -webkit-linear-gradient( hsl(0,0%,90%), hsl(0,0%,86%) );
+    background-image: url(select.svg),         linear-gradient( hsl(0,0%,90%), hsl(0,0%,86%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.2), 0 1px 0 hsla(0,0%,100%,.6);
 }
 
@@ -83,7 +85,8 @@
     color: hsla(0,0%,100%,.5);
     text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
     border-color: hsl(0,0%,15%);
-    background: url(select-dark.svg) no-repeat right center, -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,24%) );
+    background: url(select-dark.svg) no-repeat right center, -webkit-linear-gradient( hsl(0,0%,30%), hsl(0,0%,24%) );
+    background: url(select-dark.svg) no-repeat right center,         linear-gradient( hsl(0,0%,30%), hsl(0,0%,24%) );
     background-size: .875em, auto;
     box-shadow: inset 0 1px 1px hsla(0,0%,100%,.1), inset 0 -1px 1px hsla(0,0%,0%,.06), 0 1px 0 hsla(0,0%,100%,.1);
 }
@@ -91,7 +94,8 @@
 [data-montage-skin="dark"] .digit-Select:active {
     color: hsla(0,0%,100%,.3);
     border-color: hsl(0,0%,15%);
-    background-image: url(select-dark.svg), -webkit-linear-gradient(top, hsl(0,0%,24%), hsl(0,0%,18%) );
+    background-image: url(select-dark.svg), -webkit-linear-gradient( hsl(0,0%,24%), hsl(0,0%,18%) );
+    background-image: url(select-dark.svg),         linear-gradient( hsl(0,0%,24%), hsl(0,0%,18%) );
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);
 }
 
