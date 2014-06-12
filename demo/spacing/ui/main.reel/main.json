@@ -1,0 +1,36 @@
+{
+    "owner": {
+        "properties": {
+            "element": {"#": "main"}
+        }
+    },
+
+    "button-1": { "prototype": "ui/button.reel", "properties": { "element": {"#": "button-1"} } },
+    
+    "ButtonGroupButton-1-A": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-1-A"} } },
+    "ButtonGroupButton-1-B": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-1-B"} } },
+    "ButtonGroupButton-1-C": { "prototype": "ui/button.reel", "properties": { "element": {"#": "ButtonGroupButton-1-C"} } },
+
+    "radioButtonController-1": { "prototype": "montage/core/radio-button-controller", "properties": {"value": 1} },
+    "radioButton-1A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-1A"}, "radioButtonController": {"@": "radioButtonController-1"}, "value": 1 } },
+    "radioButton-1B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-1B"}, "radioButtonController": {"@": "radioButtonController-1"}, "value": 2 } },
+
+    "checkbox-1": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-1"} } },
+
+    "badge-1": { "prototype": "ui/badge.reel", "properties": { "element": {"#": "badge-1"}, "value": 1 } },
+    
+    "toggle-1": { "prototype": "ui/toggle-switch.reel", "properties": { "element": {"#": "toggle-1"} } },
+    
+    "select-1": { "prototype": "ui/select.reel", "properties": { "element": {"#": "select-1"}, "content": [{"label": "Arizona"}, {"label": "Alabama"}, {"label": "California"}, {"label": "Hawaii"}, {"label": "New York"}] } },
+
+    "numberField-1": { "prototype": "ui/number-field.reel", "properties": { "element": {"#": "numberField-1"} } },
+
+    "slider-1": { "prototype": "ui/slider.reel", "properties": { "element": {"#": "slider-1"} } },
+
+    "title-1": { "prototype": "ui/title.reel", "properties": { "element": {"#": "title-1"}, "value": "Title" } },
+
+    "textField-1": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-1"}, "placeholderValue": "Text Field" } },
+
+    "textArea-1": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-1"}, "placeholderValue": "Text Area" } }
+
+}

@@ -4,6 +4,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     vertical-align: middle;
+    margin: .375rem;
     width: 1.5em;
     height: 1.5em;
     border-radius: 1.5em;
@@ -16,11 +17,10 @@
 .digit-RadioButton:after {
     position: absolute;
     content: "";
-    top: -16px;
-    left: -16px;
-    right: -16px;
-    bottom: -16px;
-    border-radius: 100px;
+    top: -.375rem;
+    left: -.375rem;
+    bottom: -.375rem;
+    right: -.375rem;
 }
 
 /* States --------------------- */

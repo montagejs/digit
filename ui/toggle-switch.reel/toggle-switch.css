@@ -3,6 +3,7 @@
     display: inline-block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin: .375rem;
     width: 4em;
     height: 2em;
     border-radius: 1em;

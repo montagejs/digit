@@ -4,7 +4,7 @@
     position: relative;
     display: inline-block;
     width: auto;
-    margin: 0 4px;
+    margin: .375rem;
     vertical-align: middle;
     outline: none;
     -webkit-user-select: none;
@@ -12,6 +12,7 @@
 
 .digit-NumberField > .digit-NumberField-input {
     float: left;
+    margin: 0;
     width: 3.75em;
     border-radius: 0;
     text-align: center;
