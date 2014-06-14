@@ -79,7 +79,7 @@ td {
     border-top: 1px solid hsla(0,0%,0%,.06);
 }
 
-td:nth-child(2) { color: hsl(200, 100%, 50%); }
+td:nth-child(2) { color: cornflowerblue; }
 
 td:nth-child(5) {
     border-top: 1px solid hsla(0,0%,100%,.06);
