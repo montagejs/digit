@@ -10,6 +10,7 @@
 [![Badge](../ui/badge.reel/screenshot.png)](../ui/badge.reel)
 [![Select](../ui/select.reel/screenshot.png)](../ui/select.reel)
 [![NumberField](../ui/number-field.reel/screenshot.png)](../ui/number-field.reel)
+[![ToggleSwitch](../ui/toggle-switch.reel/screenshot.png)](../ui/toggle-switch.reel)
 [![Slider](../ui/slider.reel/screenshot.png)](../ui/slider.reel)
 [![Text](../ui/text.reel/screenshot.png)](../ui/text.reel)
 [![Title](../ui/title.reel/screenshot.png)](../ui/title.reel)
