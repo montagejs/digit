@@ -11,6 +11,7 @@
     fill: #fff;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    transition: background-color .3s .1s;
 }
 
 .digit-RadioButton:after {
@@ -24,6 +25,11 @@
 }
 
 /* States --------------------- */
+
+.digit-RadioButton.montage--active {
+    background-color: currentColor;
+    transition: background-color .2s;
+}
 
 .digit-RadioButton.montage--active,
 .digit-RadioButton.montage-RadioButton--checked {
@@ -39,15 +45,19 @@
 /* Icon --------------------- */
 
 .digit-RadioButton-icon {
-    fill: transparent;
+    fill: inherit;
+    transform: scale(0);
+    transition: transform .2s cubic-bezier(.30, .03, 1, .09);
 }
 
-.digit-RadioButton.montage-RadioButton--checked .digit-RadioButton-icon {
-    fill: inherit;
+.montage-RadioButton--checked .digit-RadioButton-icon {
+    transform: scale(1);
+    transition-timing-function: cubic-bezier(0, .40, .20, 1);
 }
 
 .digit-RadioButton.montage--active .digit-RadioButton-icon {
-    fill: transparent;
+    transform: scale(0);
+    transition-timing-function: cubic-bezier(.30, .03, 1, .09);
 }
 
 
