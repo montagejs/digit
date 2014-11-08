@@ -10,7 +10,7 @@
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center;
-
+    outline: none;
     position: relative;
     height: 2em;
 }
