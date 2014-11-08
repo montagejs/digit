@@ -2,6 +2,7 @@
     display: inline-block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin: .375rem;
     width: 10em;
     height: .625em;
     border-radius: .25em;
@@ -52,10 +53,10 @@
     /* Extra space to increase touch area */
     position: absolute;
     content: "";
-    top: -16px;
-    left: -16px;
-    bottom: -16px;
-    right: -16px;
+    top: -.375rem;
+    left: -.375rem;
+    bottom: -.375rem;
+    right: -.375rem;
 }
 
 

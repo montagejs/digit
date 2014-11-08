@@ -8,7 +8,7 @@
     box-sizing: border-box;
     height: 2.5em;
     min-width: 2.5em; /* Don't shrink below the height. Makes a perfect circle. */
-    margin: 0 2px;
+    margin: .375rem;
     padding: .625em 1em;
     border-radius: 1.25em;
     vertical-align: middle;
@@ -142,6 +142,7 @@
 /* ButtonGroup ---------------------------------------------------------- */
 
 .digit-ButtonGroup {
+    margin: .375rem;
     padding-left: 5px; /* Add the negative margin back */
     font-size: 16px; /* Needed to keep spacing correct */
     border-radius: 24px;

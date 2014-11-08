@@ -4,6 +4,7 @@
     font-size: 100%; /* Override UA style. */
     width: 10em;
     height: 3.75em;
+    margin: .375rem;
     padding: .5em;
     resize: vertical;
     color: inherit;
