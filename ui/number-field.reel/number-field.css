@@ -8,6 +8,9 @@
     vertical-align: middle;
     outline: none;
     -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .digit-NumberField > .digit-NumberField-input {
@@ -27,6 +30,7 @@
     -ms-transform: translate3d(0px,0px,0px);
     transform: translate3d(0,0,0);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .digit-NumberField > .digit-NumberField-plus {

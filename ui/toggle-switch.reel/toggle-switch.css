@@ -10,8 +10,12 @@
     border: 1px solid;
     cursor: pointer;
     -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     -webkit-tap-highlight-color: transparent;
-    -webkit-transition: background-color .2s cubic-bezier(.5,.15,.2,1);
+    -moz-transition: background-color .2s cubic-bezier(.5,.15,.2,1);
+    -ms-transition: background-color .2s cubic-bezier(.5,.15,.2,1);
     transition: background-color .2s cubic-bezier(.5,.15,.2,1);
 }
 
@@ -32,6 +36,8 @@
     background-clip: content-box;
     background-color: currentColor;
     -webkit-transition: -webkit-transform .2s cubic-bezier(.5,.15,.2,1);
+    -moz-transition: -moz-transform .2s cubic-bezier(.5,.15,.2,1);
+    -ms-transition: -ms-transform .2s cubic-bezier(.5,.15,.2,1);
     transition: transform .2s cubic-bezier(.5,.15,.2,1);
 }
 
@@ -45,6 +51,7 @@
 .montage-ToggleSwitch--checked > .digit-ToggleSwitch-thumb {
     background-color: #fff;
     -webkit-transform: translate3d(100%,0,0);
+    -moz-transform: translate3d(100%,0,0);
     -ms-transform: translate3d(100%,0,0);
     transform: translate3d(100%,0,0);
 }
