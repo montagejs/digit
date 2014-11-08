@@ -80,7 +80,7 @@
     pointer-events: none;
 }
 
-.digit-Video-cover-button {
+.digit-Video-cover-button.digit-Button {
     position: absolute;
     right: 0;
     top: 50%;
