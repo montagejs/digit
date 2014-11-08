@@ -39,7 +39,7 @@
     "radioButton-4A": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-4A"}, "radioButtonController": {"@": "radioButtonController-4"}, "value": 1 } },
     "radioButton-4B": { "prototype": "ui/radio-button.reel", "properties": { "element": {"#": "radioButton-4B"}, "radioButtonController": {"@": "radioButtonController-4"}, "value": 2 } },
 
-    "checkbox-1": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-1"} } },
+    "checkbox-1": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-1"}, "checked": true } },
     "checkbox-2": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-2"} } },
     "checkbox-3": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-3"} } },
     "checkbox-4": { "prototype": "ui/checkbox.reel", "properties": { "element": {"#": "checkbox-4"} } },

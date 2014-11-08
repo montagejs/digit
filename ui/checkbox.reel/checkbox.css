@@ -11,6 +11,7 @@
     fill: #fff;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    transition: background-color .4s;
 }
 
 .digit-Checkbox:after {
@@ -40,15 +41,19 @@
 /* Icon --------------------- */
 
 .digit-Checkbox-icon {
-    fill: transparent;
-}
-
-.digit-Checkbox.montage-Checkbox--checked .digit-Checkbox-icon {
     fill: inherit;
+    transform: scale(0);
+    transition: transform .2s cubic-bezier(.30, .03, 1, .09);
 }
 
-.digit-Checkbox.montage--active .digit-Checkbox-icon {
-    fill: transparent;
+.montage-Checkbox--checked .digit-Checkbox-icon {
+    transform: scale(1);
+    transition-timing-function: cubic-bezier(0, .40, .20, 1);
+}
+
+.montage-Checkbox--checked.montage--active .digit-Checkbox-icon {
+    transform: scale(0);
+    transition-timing-function: cubic-bezier(.30, .03, 1, .09);
 }
 
 
