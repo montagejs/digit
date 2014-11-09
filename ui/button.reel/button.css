@@ -142,15 +142,17 @@
 /* ButtonGroup ---------------------------------------------------------- */
 
 .digit-ButtonGroup {
-    padding-left: 5px; /* Add the negative margin back */
-    font-size: 16px; /* Needed to keep spacing correct */
-    border-radius: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 1px; /* Add the negative margin back */
+    border-radius: 1.25em;
 }
 
 .digit-ButtonGroup > .digit-Button {
+    float: left;
     margin: 0;
+    margin-left: -1px; /* Single border */
     border-radius: 0;
-    margin-left: -5px; /* Remove the space in between */
 }
 
 .digit-ButtonGroup > .digit-Button:first-child {
