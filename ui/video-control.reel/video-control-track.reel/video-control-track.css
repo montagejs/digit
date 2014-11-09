@@ -48,23 +48,18 @@
     /* em value needs to be sorted out when the font size is more stable*/
     margin: 0px .8em;
     border-radius: 10px;
-    background-color: hsla(0,0%,100%,.2);
-
-    -webkit-transition: -webkit-transform .1s;
-    -moz-transition: -moz-transform .1s;
-    -ms-transition: -ms-transform .1s;
-    transition: transform .1s;
 }
 
 .digit-VideoControlTrack-timeline-progress {
-    background-color: hsla(0,0%,85%,.8);
+    position: absolute;
     height: inherit;
     border-radius: inherit;
-    -webkit-transform: translateX(-67%);
-    -moz-transform: translateX(-67%);
-    -ms-transform: translateX(-67%);
-    transform: translateX(-67%);
+    width: 100%;
+    display: flex;
+    flex: 1;
+    border: 0;
 }
+
 
 .digit-VideoControlTrack-thumb {
     position: absolute;
@@ -142,12 +137,23 @@
 
 /* Light ------------------------------------ */
 
-[data-montage-skin="light"] .digit-VideoControlTrack-timeline {
+[data-montage-skin="light"] .digit-VideoControlTrack-timeline-progress {
+    background-color: hsla(0,0%,0%,.1);
+    box-shadow: inset 0 1px 1px hsla(0,0%,0%,.15), 0 1px 0 hsla(0,0%,100%,.5);
+
+    color: hsla(0,0%,0%,.5); /*progress bar value IE*/
+}
+
+[data-montage-skin="light"] .digit-VideoControlTrack-timeline-progress::-webkit-progress-bar {
     background-color: hsla(0,0%,0%,.1);
     box-shadow: inset 0 1px 1px hsla(0,0%,0%,.15), 0 1px 0 hsla(0,0%,100%,.5);
 }
 
-[data-montage-skin="light"] .digit-VideoControlTrack-timeline-progress {
+[data-montage-skin="light"] .digit-VideoControlTrack-timeline-progress::-moz-progress-bar {
+    background-color: hsla(0,0%,0%,.5);
+}
+
+[data-montage-skin="light"] .digit-VideoControlTrack-timeline-progress::-webkit-progress-value {
     background-color: hsla(0,0%,0%,.5);
 }
 

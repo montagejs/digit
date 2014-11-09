@@ -20,6 +20,16 @@
             "bindings": {
                 "value": {"<-": "@owner.formattedTime"}
             }
+        },
+        "progressBar": {
+            "prototype": "ui/video-control.reel/video-control-track.reel[ProgressBar]",
+            "properties": {
+                "element": {"#": "progress-bar"}
+            },
+            "bindings": {
+                "max": {"<-": "@owner.videoController.duration"},
+                "value": {"<-": "@owner.videoController.position"}
+            }
         }
     }
     </script>
@@ -27,7 +37,7 @@
 <body>
     <div data-montage-id="video-control-track" class="digit-VideoControlTrack">
         <div class="digit-VideoControlTrack-timeline">
-            <!--<div class="digit-VideoControlTrack-timeline-progress"></div>-->
+            <progress data-montage-id="progress-bar" class="digit-VideoControlTrack-timeline-progress"></progress>
         </div>
         <div data-montage-id="sliderThumbTrack" class="digit-VideoControlTrack-thumbTrack">
             <div data-montage-id="sliderThumb" class="digit-VideoControlTrack-thumb">-2:45</div>
