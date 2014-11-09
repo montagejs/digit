@@ -105,7 +105,7 @@ select::-ms-value {
 /* Dark ---------------------------------------------------------- */
 
 [data-montage-skin="dark"] .digit-Select {
-    color: hsla(0,0%,100%,.5);
+    color: hsl(0,0%,80%);
     text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
     border-color: hsl(0,0%,15%);
     background: url(select-dark.svg) no-repeat right center, -webkit-linear-gradient(top, hsl(0,0%,30%), hsl(0,0%,24%) );
@@ -118,7 +118,7 @@ select::-ms-value {
 
 
 [data-montage-skin="dark"] .digit-Select:active {
-    color: hsla(0,0%,100%,.3);
+    color: hsl(0,0%,60%);
     border-color: hsl(0,0%,15%);
     background-image: url(select-dark.svg), -webkit-linear-gradient(top, hsl(0,0%,24%), hsl(0,0%,18%) );
     background-image: url(select-dark.svg), -moz-linear-gradient(top, hsl(0,0%,24%), hsl(0,0%,18%) );
