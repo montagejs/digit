@@ -38,3 +38,13 @@ The TextField component wraps an HTML `<input type="text">` element.
     border-color: blue;
 }
 ```
+
+
+
+## Browser support
+
+* Chrome (latest)
+* Firefox (latest)
+* Opera (latest)
+* IE 10+
+* Safari 7+
