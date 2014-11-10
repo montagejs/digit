@@ -54,7 +54,9 @@ exports.Select = AbstractSelect.specialize(/** @lends Select */{
         value: function(firstTime) {
             this.super(firstTime);
 
-            this.element.addEventListener("change", this, false);
+            if (firstTime) {
+                this.element.addEventListener("change", this, false);
+            }
         }
     },
 
@@ -83,7 +85,9 @@ exports.Select = AbstractSelect.specialize(/** @lends Select */{
                 selectedIndex = 0;
             }
 
-            this.element.selectedIndex = selectedIndex;
+            if (this.element.selectedIndex !== selectedIndex) {
+                this.element.selectedIndex = selectedIndex;
+            }
         }
     },
 
