@@ -41,3 +41,13 @@ The Number Field component wraps an HTML `<input type="number">` element and add
     width: 100px;
 }
 ```
+
+
+
+## Browser support
+
+* Chrome (latest)
+* Firefox (latest)
+* Opera (latest)
+* IE 10+
+* Safari 7+
