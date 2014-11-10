@@ -39,7 +39,7 @@ The Badge can be used as a notification counter or highlighting.
 
 
 
-## Browsers support
+## Browser support
 
 * Chrome (latest)
 * Firefox (latest)
