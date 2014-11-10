@@ -36,3 +36,13 @@ The Badge can be used as a notification counter or highlighting.
     background: red;
 }
 ```
+
+
+
+## Browsers support
+
+* Chrome (latest)
+* Firefox (latest)
+* Opera (latest)
+* IE 10+
+* Safari 7+
