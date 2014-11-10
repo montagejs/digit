@@ -95,7 +95,7 @@ td:nth-child(5) { background: hsl(0,0%,24%); }
 .layout td:nth-child(5) { background: hsl(0,0%,40%); }
 
 .list,
-.big-list {
+.digit-BigList.big-list {
     position: relative;
     height: 150px;
 }
