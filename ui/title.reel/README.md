@@ -36,3 +36,13 @@ The Title component is a block element with a bold weight.
     color: red;
 }
 ```
+
+
+
+## Browser support
+
+* Chrome (latest)
+* Firefox (latest)
+* Opera (latest)
+* IE 10+
+* Safari 7+
