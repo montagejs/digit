@@ -25,9 +25,9 @@
     float: left;
     margin: 0;
     padding: 2px;
-    -webkit-transform: translate3d(0px,0px,0px);
-    -moz-transform: translate3d(0px,0px,0px);
-    -ms-transform: translate3d(0px,0px,0px);
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

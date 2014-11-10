@@ -12,7 +12,7 @@ The Toggle Switch component turns an `<input type="checkbox">` element into a to
 
 ```json
 "toggle-switch": {
-    "prototype": "matte/ui/toggle-switch.reel",
+    "prototype": "ui/toggle-switch.reel",
     "properties": {
         "element": {"#": "toggle-switch"}
     }
