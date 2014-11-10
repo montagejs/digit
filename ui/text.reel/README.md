@@ -36,3 +36,13 @@ The Text component can be used for any kind of dynamic text.
     color: red;
 }
 ```
+
+
+
+## Browser support
+
+* Chrome (latest)
+* Firefox (latest)
+* Opera (latest)
+* IE 10+
+* Safari 7+
