@@ -43,3 +43,13 @@ The Slider component wraps an HTML `<input type="range">` element.
     background-color: pink;
 }
 ```
+
+
+
+## Browser support
+
+* Chrome (latest)
+* Firefox (latest)
+* Opera (latest)
+* IE 10+
+* Safari 7+
