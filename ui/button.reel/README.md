@@ -103,3 +103,13 @@ The ButtonGroup component wraps multiple `Button`s and groups them together.
 }
 
 ```
+
+
+
+## Browser support
+
+* Chrome (latest)
+* Firefox (latest)
+* Opera (latest)
+* IE 10+
+* Safari 7+
