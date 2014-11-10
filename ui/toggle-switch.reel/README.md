@@ -44,4 +44,7 @@ The Toggle Switch component turns an `<input type="checkbox">` element into a to
 ## Browser support
 
 * Chrome (latest)
-* Safari 5+
+* Firefox (latest)
+* Opera (latest)
+* IE 10+
+* Safari 7+
