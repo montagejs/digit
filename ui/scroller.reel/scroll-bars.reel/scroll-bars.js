@@ -252,7 +252,7 @@ var ScrollBars = exports.ScrollBars = Component.specialize(/** @lends ScrollBars
                     }
                     var rtranslate = (size - this._offsetWidth + 9) + "px,0",
                         ltranslate = (pos+2) + "px,0";
-                    
+
                     this._right.style[ScrollBars.transformCssProperty] = "translate3d(" + rtranslate + ",0)";
 
                     this._left.style[ScrollBars.transformCssProperty] =
