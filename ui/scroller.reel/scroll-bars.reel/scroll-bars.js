@@ -9,11 +9,40 @@ var Component = require("montage/ui/component").Component;
  * @extends external:Component
  * @classdesc
  */
-exports.ScrollBars = Component.specialize(/** @lends ScrollBars# */ {
+var ScrollBars = exports.ScrollBars = Component.specialize(/** @lends ScrollBars# */ {
 
     constructor: {
         value: function ScrollBars() {
             this.super();
+        }
+    },
+
+    enterDocument: {
+        value: function (firstTime) {
+            if (firstTime && !ScrollBars.transformCssProperty) {
+                var style = this.element.style;
+                //Todo duplicate codes (scrollers.js), we should maybe add some cache to Component
+
+                if(typeof style.webkitTransform !== "undefined") {
+                    ScrollBars.transformCssProperty = "webkitTransform";
+                } else if(typeof style.MozTransform !== "undefined") {
+                    ScrollBars.transformCssProperty = "MozTransform";
+                } else if(typeof style.msTransform !== "undefined") {
+                    ScrollBars.transformCssProperty = "msTransform";
+                } else {
+                    ScrollBars.transformCssProperty = "transform";
+                }
+
+                if(typeof style.webkitTransition !== "undefined") {
+                    ScrollBars.transitionCssProperty = "webkitTransition";
+                } else if(typeof style.MozTransition !== "undefined") {
+                    ScrollBars.transitionCssProperty = "MozTransition";
+                } else if(typeof style.msTransition !== "undefined") {
+                    ScrollBars.transitionCssProperty = "msTransition";
+                } else {
+                    ScrollBars.transitionCssProperty = "transition";
+                }
+            }
         }
     },
 
@@ -221,19 +250,20 @@ exports.ScrollBars = Component.specialize(/** @lends ScrollBars# */ {
                         }
                         pos = range - size;
                     }
-                    var rtranslate = (size - this._offsetWidth + 9) + "px,0px",
-                        ltranslate = (pos+2) + "px,0px";
-                    this._right.style.webkitTransform = "translate3d(" + rtranslate + ",0)";
-                    this._right.style.MozTransform = "translate(" + rtranslate + ")";
-                    this._right.style.transform = "translate(" + rtranslate + ")";
-                    this._left.style.webkitTransform = this._rightClip.style.webkitTransform = "translate3d(" + ltranslate + ",0)";
-                    this._left.style.MozTransform = this._rightClip.style.MozTransform = "translate(" + ltranslate + ")";
-                    this._left.style.transform = this._rightClip.style.transform = "translate(" + ltranslate + ")";
-                    this._left.style.webkitTransition = this._right.style.webkitTransition = "none";
-                    this._left.style.MozTransition = this._right.style.MozTransition = "none";
-                    this._left.style.transition = this._right.style.transition = "none";
+                    var rtranslate = (size - this._offsetWidth + 9) + "px,0",
+                        ltranslate = (pos+2) + "px,0";
+                    
+                    this._right.style[ScrollBars.transformCssProperty] = "translate3d(" + rtranslate + ",0)";
+
+                    this._left.style[ScrollBars.transformCssProperty] =
+                        this._rightClip.style[ScrollBars.transformCssProperty] = "translate3d(" + ltranslate + ",0)";
+
+                    this._left.style[ScrollBars.transitionCssProperty] =
+                        this._right.style[ScrollBars.transitionCssProperty] = "none";
+
                     this._left.style.opacity = this._right.style.opacity = this._opacity;
                 }
+
                 if (this._displayVertical) {
                     range = this._offsetHeight - 9 - (this._displayHorizontal ? 6 : 0);
                     size = Math.floor(range * this._verticalLength);
@@ -257,29 +287,44 @@ exports.ScrollBars = Component.specialize(/** @lends ScrollBars# */ {
                         }
                         pos = range - size;
                     }
-                    var btranslate = "0px," + (size - this._offsetHeight + 9) + "px",
-                        ttranslate = "0px," + (pos+2) + "px";
-                    this._bottom.style.webkitTransform = "translate3d(" + btranslate + ",0)";
-                    this._bottom.style.MozTransform = "translate(" + btranslate + ")";
-                    this._bottom.style.transform = "translate(" + btranslate + ")";
-                    this._top.style.webkitTransform = this._bottomClip.style.webkitTransform = "translate3d(" + ttranslate + ",0)";
-                    this._top.style.MozTransform = this._bottomClip.style.MozTransform = "translate(" + ttranslate + ")";
-                    this._top.style.transform = this._bottomClip.style.transform = "translate(" + ttranslate + ")";
-                    this._top.style.webkitTransition = this._bottom.style.webkitTransition = "none";
-                    this._top.style.MozTransition = this._bottom.style.MozTransition = "none";
-                    this._top.style.transition = this._bottom.style.transition = "none";
+                    var btranslate = "0," + (size - this._offsetHeight + 9) + "px",
+                        ttranslate = "0," + (pos+2) + "px";
+
+                    this._bottom.style[ScrollBars.transformCssProperty] = "translate3d(" + btranslate + ",0)";
+
+                    this._top.style[ScrollBars.transformCssProperty] =
+                        this._bottomClip.style[ScrollBars.transformCssProperty] = "translate3d(" + ttranslate + ",0)";
+
+                    this._top.style[ScrollBars.transitionCssProperty] =
+                        this._bottom.style[ScrollBars.transitionCssProperty] = "none";
+
                     this._top.style.opacity = this._bottom.style.opacity = this._opacity;
                 }
             } else {
                 if (this._displayHorizontal) {
-                    this._left.style.webkitTransition = this._right.style.webkitTransition = "300ms opacity";
+                    this._left.style[ScrollBars.transitionCssProperty] =
+                        this._right.style[ScrollBars.transitionCssProperty] = "300ms opacity";
+
                     this._left.style.opacity = this._right.style.opacity = 0;
                 }
                 if (this._displayVertical) {
-                    this._top.style.webkitTransition = this._bottom.style.webkitTransition = "300ms opacity";
+                    this._top.style[ScrollBars.transitionCssProperty] =
+                        this._bottom.style[ScrollBars.transitionCssProperty] = "300ms opacity";
+
                     this._top.style.opacity = this._bottom.style.opacity = 0;
                 }
             }
         }
     }
+}, {
+    // cache
+
+    transformCssProperty: {
+        value: null
+    },
+
+    transitionCssProperty: {
+        value: null
+    }
+
 });

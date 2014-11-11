@@ -17,10 +17,28 @@ var Component = require("montage/ui/component").Component;
  * @extends external:Component
  * @classdesc
  */
-exports.Scroller = Component.specialize(/** @lends Scroller# */ {
+var Scroller = exports.Scroller = Component.specialize(/** @lends Scroller# */ {
     constructor: {
         value: function Scroller() {
             this.super();
+        }
+    },
+
+    enterDocument: {
+        value: function (firstTime) {
+            if (firstTime && !Scroller.transformCssProperty) {
+                var style = this.element.style;
+
+                if(typeof style.webkitTransform !== "undefined") {
+                    Scroller.transformCssProperty = "webkitTransform";
+                } else if(typeof style.MozTransform !== "undefined") {
+                    Scroller.transformCssProperty = "MozTransform";
+                } else if(typeof style.msTransform !== "undefined") {
+                    Scroller.transformCssProperty = "msTransform";
+                } else {
+                    Scroller.transformCssProperty = "transform";
+                }
+            }
         }
     },
 
@@ -242,9 +260,11 @@ exports.Scroller = Component.specialize(/** @lends Scroller# */ {
     draw: {
         value: function () {
             var str = (-this._scrollX)+"px, "+(-this._scrollY)+"px";
-            this._content.style.webkitTransform="translate3d(" + str + ", 0px)";
-            this._content.style.MozTransform = "translate(" + str + ")";
-            this._content.style.transform = "translate(" + str + ")";
+            this._content.style[Scroller.transformCssProperty] = "translate3d(" + str + ", 0)";
         }
+    }
+}, {
+    transformCssProperty: {
+        value: null
     }
 });
