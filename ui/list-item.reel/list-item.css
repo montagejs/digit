@@ -1,0 +1,216 @@
+.digit-ListItem {
+    display: -webkit-flex;
+    display: flex;
+    height: 50px;
+    text-align: left;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    box-shadow: inset 0 -1px 0 hsla(0,0%,0%,.1);
+}
+
+/* List-item items ------------------------------------------------------------------------ */
+
+/* Label */
+
+.digit-ListItem-label {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 15px;
+
+    /* TODO: ellipsis doesn't seem to work */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/** ListItem specific style */
+
+[data-montage-skin="light"] .digit-ListItem {
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.5), inset 0 -1px 0 hsla(0,0%,0%,.06);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+    background-image: -moz-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+    background-image: -ms-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+    background-image: linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+}
+
+[data-montage-skin="dark"] .digit-ListItem {
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.04), inset 0 -1px 0 hsla(0,0%,0%,.12);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+    background-image: -moz-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+    background-image: -ms-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+    background-image: linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+}
+
+/* Selected --------------------- */
+.digit-ListItem.selected {
+    background: hsl(0,0%,34%);
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.04), inset 0 -1px 0 hsla(0,0%,0%,0.35);
+}
+
+.digit-ListItem .digit-Text {
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-align-self: center;
+    align-self: center;
+    display: block;
+    box-sizing: border-box;
+    padding: 0 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.digit-ListItem.selected .digit-Text {
+    color: hsla(0,0%,100%,0.8);
+}
+
+[data-montage-skin="dark"] .digit-ListItem--highlight {
+    box-shadow: inset 2px 0 0 hsl(210,100%,50%);
+}
+
+.digit-ListItem-cell + .digit-ListItem-label,
+.digit-ListItem-badge + .digit-ListItem-label {
+    padding-left: 0;
+}
+
+
+/* Cell */
+
+.digit-ListItem-cell {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 15px;
+}
+
+
+/* Badge */
+
+.digit-ListItem-badge {
+    display: block;
+    margin: 10px;
+    padding: 0 9px;
+    box-sizing: border-box;
+    line-height: 30px;
+    min-width: 30px;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #b3b3b3;
+    background: #d9d9d9;
+}
+
+/* Icon */
+
+.digit-ListItem-icon[data-icon] {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: hsla(0,0%,0%,.04);
+}
+
+.digit-ListItem-icon[data-icon]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: inherit;
+    color: hsla(0,0%,0%,.6);
+}
+
+/* Image */
+
+.digit-ListItem-image {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+[data-montage-skin] .digit-ListItem-image {
+    box-shadow: inset 0 1px 4px hsla(0,0%,0%,.3);
+}
+
+
+
+/* Light ------------------------------------------------------------------------ */
+
+[data-montage-skin="light"] .digit-ListItem {
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.4);
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.5), inset 0 -1px 0 hsla(0,0%,0%,.06);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+    background-image: -moz-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+    background-image: -ms-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+    background-image: linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,94%) );
+}
+
+
+/* Badge */
+
+[data-montage-skin="light"] .digit-ListItem-badge {
+    border-color: hsla(0,0%,70%,1);
+    background: hsl(0,0%,86%);
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
+}
+
+/* Icon */
+
+[data-montage-skin="light"] .digit-ListItem-icon[data-icon] {
+    background-color: hsla(0,0%,0%,.04);
+    box-shadow: inset 1px 0 0 hsla(0,0%,0%,.02), inset -1px 0 0 hsla(0,0%,0%,.02);
+}
+[data-montage-skin="light"] .digit-ListItem-icon[data-icon]:before {
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.8);
+}
+
+
+
+/* Dark ------------------------------------------------------------------------ */
+
+[data-montage-skin="dark"] .digit-List,
+[data-montage-skin="dark"] .digit-List .digit-Text {
+    color: hsl(0,0%,80%);
+    text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
+}
+
+[data-montage-skin="dark"] .digit-ListItem {
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.04), inset 0 -1px 0 hsla(0,0%,0%,.12);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+    background-image: -moz-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+    background-image: -ms-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+    background-image: linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,26%) );
+}
+
+/* Badge */
+
+[data-montage-skin="dark"] .digit-ListItem-badge {
+    border-color: hsl(0,0%,15%);
+    background: hsl(0,0%,22%);
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.25), 0 1px 0 hsla(0,0%,100%,.1);
+}
+
+/* Icon */
+
+[data-montage-skin="dark"] .digit-ListItem-icon[data-icon] {
+    background-color: hsla(0,0%,0%,.1);
+    box-shadow: inset 1px 0 0 hsla(0,0%,0%,.04), inset -1px 0 0 hsla(0,0%,0%,.04);
+}
+
+[data-montage-skin="dark"] .digit-ListItem-icon[data-icon]:before {
+    color: hsla(0,0%,100%,.6);
+}
