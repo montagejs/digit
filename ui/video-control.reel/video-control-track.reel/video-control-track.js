@@ -5,6 +5,7 @@
 */
 var Montage = require("montage").Montage;
 var AbstractSlider = require("montage/ui/base/abstract-slider").AbstractSlider;
+var AbstractProgressBar = require("montage/ui/base/abstract-progress-bar").AbstractProgressBar;
 var Promise = require("montage/core/promise").Promise;
 
 /**
@@ -50,7 +51,6 @@ exports.VideoControlTrack = Montage.create(AbstractSlider, /** @lends VideoContr
     handleThumbTranslate: {
         value: function (event) {
             AbstractSlider.handleThumbTranslate.apply(this, arguments);
-
         }
     },
 
@@ -115,4 +115,9 @@ exports.VideoControlTrack = Montage.create(AbstractSlider, /** @lends VideoContr
         }
     }
 
+});
+
+
+exports.ProgressBar = Montage.create(AbstractProgressBar, {
+    hasTemplate: {value: false}
 });
