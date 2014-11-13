@@ -45,6 +45,11 @@
     transition: transform .2s cubic-bezier(.36, .12, .20, .92);
 }
 
+.digit-Video-frame::-webkit-media-controls {
+    /* remove the default iPhone Video Placeholder */
+    display: none;
+}
+
 
 /* Cover (with the initial play button) ------------------------------------ */
 
