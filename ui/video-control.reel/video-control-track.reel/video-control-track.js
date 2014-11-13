@@ -222,9 +222,9 @@ var ProgressBar = exports.ProgressBar = Montage.create(AbstractProgressBar, {
     draw: {
         value: function () {
             if (this.max > 0) {
-                this._progressBarValueElement.style[ProgressBar.transformCssProperty] = "translate3d(-" + (100 - ((100 * this._value) / this.max)) + "%, 0, 0)";
+                this._progressBarValueElement.style.left = "-" + (100 - ((100 * this._value) / this.max)) + "%";
             } else {
-                this._progressBarValueElement.style[ProgressBar.transformCssProperty] = "translate3d(-100%, 0, 0)";
+                this._progressBarValueElement.style.left = "-100%";
             }
         }
     }
