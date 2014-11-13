@@ -91,9 +91,7 @@
     height: 1.6em;
     line-height: 1.6em;
     font-size: 40px;
-    color: hsla(0,0%,100%,.9);
-    border: none;
-    background-color: hsla(0,0%,10%,.8);
+    background-color: hsla(0, 100%, 100%, 1);
 
     /*transform*/
     -webkit-transform: translate3d(2em,0,0);
@@ -118,6 +116,10 @@
     -moz-transition-timing-function: cubic-bezier(.02, .40, .20, .96);
     -ms-transition-timing-function: cubic-bezier(.02, .40, .20, .96);
     transition-timing-function: cubic-bezier(.02, .40, .20, .96);
+}
+
+.digit-Video-cover-button.digit-Button.montage--active {
+    background-color: hsla(0, 100%, 100%, .9);
 }
 
 .digit-Video-cover-button:before {

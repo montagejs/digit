@@ -2,22 +2,25 @@
 
 .digit-VideoControl {
     display: -webkit-flex;
+    display: -ms-flexbox; /*ie - 10*/
     display: flex;
     position: absolute;
+    z-index: 2;
     margin: 0;
     padding: 0;
     left: 0;
     right: 0;
     bottom: 0;
     font-size: 30px;
+    height: 60px;
     box-sizing: border-box;
-    background-color: hsla(0,0%,0%,.5);
+    background-color: hsla(0, 100%, 100%, 0.9);
     opacity: 0;
 
-    -webkit-transform: translate3d(0,20px,0);
-    -moz-transform: translate3d(0,20px,0);
-    -ms-transform: translate3d(0,20px,0);
-    transform: translate3d(0,20px,0);
+    -webkit-transform: translate3d(0,60px,0);
+    -moz-transform: translate3d(0,60px,0);
+    -ms-transform: translate3d(0,60px,0);
+    transform: translate3d(0,60px,0);
 
     -webkit-transition: -webkit-transform .2s cubic-bezier(.66, .12, .88, .50), opacity .2s cubic-bezier(.66, .12, .88, .50);
     -moz-transition: -moz-transform .2s cubic-bezier(.66, .12, .88, .50), opacity .2s cubic-bezier(.66, .12, .88, .50);
@@ -41,7 +44,7 @@
     border: none;
     font-size: inherit;
     text-align: center;
-    color: hsl(0,0%,90%);
+    color: currentColor;
     background-color: transparent;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -62,6 +65,26 @@
 .digit-VideoControl-button-play:active,
 .digit-VideoControl-button-fullScreen:active {
     background-color: hsla(0,0%,100%,.1);
+}
+
+
+/* Wireframe ------------------------------------ */
+
+
+[data-montage-skin="wireframe"] .digit-VideoControl {
+    color: #4D4D4D;
+    background: hsla(0,0%,98%, .9);
+}
+
+[data-montage-skin="wireframe"] .digit-VideoControl-button-play,
+[data-montage-skin="wireframe"] .digit-VideoControl-button-fullScreen {
+    color: #4D4D4D;
+}
+
+[data-montage-skin="wireframe"] .digit-VideoControl-button-play:active,
+[data-montage-skin="wireframe"] .digit-VideoControl-button-fullScreen:active {
+    color: #1B1B1B;
+    background: transparent;
 }
 
 
@@ -99,8 +122,8 @@
 
 [data-montage-skin="dark"] .digit-VideoControl {
     background: -webkit-linear-gradient(top, hsla(0,0%,24%,.92), hsla(0,0%,15%,1) );
-    background: -moz-linear-gradient(right, hsla(0,0%,0%,.1), hsla(0,0%,0%,.1), hsla(0,0%,0%,0) );
-    background: -ms-linear-gradient(right, hsla(0,0%,0%,.1), hsla(0,0%,0%,.1), hsla(0,0%,0%,0) );
+    background: -moz-linear-gradient(top, hsla(0,0%,24%,.92), hsla(0,0%,15%,1) );
+    background: -ms-linear-gradient(top, hsla(0,0%,24%,.92), hsla(0,0%,15%,1) );
     background: linear-gradient(top, hsla(0,0%,24%,.92), hsla(0,0%,15%,1) );
 }
 

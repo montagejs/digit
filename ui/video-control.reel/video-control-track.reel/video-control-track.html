@@ -7,18 +7,29 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "video-control-track"},
-                "_sliderThumbTrackElement": {"#": "sliderThumbTrack"},
-                "_sliderThumbElement": {"#": "sliderThumb"}
+                "element": {"#": "video-control-track"}
             }
         },
-        "time": {
-            "prototype": "montage/ui/text.reel",
+
+        "slider": {
+            "prototype": "ui/video-control.reel/video-control-track.reel[Slider]",
             "properties": {
-                "element": {"#": "sliderThumb"}
+                "element": {"#": "slider"},
+                "_sliderThumbElement": {"#": "sliderThumb"}
             },
             "bindings": {
-                "value": {"<-": "@owner.formattedTime"}
+                "controller": {"<-": "@owner"}
+            }
+        },
+
+        "progressBar": {
+            "prototype": "ui/video-control.reel/video-control-track.reel[ProgressBar]",
+            "properties": {
+                "element": {"#": "progress-bar"},
+                "_progressBarValueElement": {"#": "progress-bar-value"}
+            },
+            "bindings": {
+                "controller": {"<-": "@owner"}
             }
         }
     }
@@ -26,11 +37,11 @@
 </head>
 <body>
     <div data-montage-id="video-control-track" class="digit-VideoControlTrack">
-        <div class="digit-VideoControlTrack-timeline">
-            <!--<div class="digit-VideoControlTrack-timeline-progress"></div>-->
-        </div>
-        <div data-montage-id="sliderThumbTrack" class="digit-VideoControlTrack-thumbTrack">
-            <div data-montage-id="sliderThumb" class="digit-VideoControlTrack-thumb">-2:45</div>
+        <div data-montage-id="slider" class="digit-VideoControlTrack-timeline-slider">
+            <div data-montage-id="progress-bar" class="digit-VideoControlTrack-timeline-progress">
+                <span data-montage-id="progress-bar-value" class="digit-VideoControlTrack-timeline-progress-value"></span>
+            </div>
+            <div data-montage-id="sliderThumb" class="digit-VideoControlTrack-thumb"></div>
         </div>
     </div>
 </body>
