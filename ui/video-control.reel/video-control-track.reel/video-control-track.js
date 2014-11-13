@@ -3,18 +3,16 @@
     @requires montage
     @requires montage/ui/component
 */
-var Montage = require("montage").Montage;
-var AbstractSlider = require("montage/ui/base/abstract-slider").AbstractSlider;
-var AbstractProgressBar = require("montage/ui/base/abstract-progress-bar").AbstractProgressBar;
-var Component = require("montage/ui/component").Component;
-var Promise = require("montage/core/promise").Promise;
+var AbstractSlider = require("montage/ui/base/abstract-slider").AbstractSlider,
+    AbstractProgressBar = require("montage/ui/base/abstract-progress-bar").AbstractProgressBar,
+    Component = require("montage/ui/component").Component;
 
 /**
     Description TODO
     @class VideoControlTrack
     @extends Component
 */
-exports.VideoControlTrack = Montage.create(Component, /** @lends VideoControlTrack# */ {
+exports.VideoControlTrack = Component.specialize(/** @lends VideoControlTrack# */ {
 
     /**
      * @private
@@ -22,7 +20,6 @@ exports.VideoControlTrack = Montage.create(Component, /** @lends VideoControlTra
     constructor: {
         value: function VideoControlTrack() {
             this.super();
-            this.addOwnPropertyChangeListener("time", this);
 
             this.defineBinding("max", {"<-": "videoController.duration"});
             this.defineBinding("time", {"<-": "videoController.position"});
@@ -37,10 +34,6 @@ exports.VideoControlTrack = Montage.create(Component, /** @lends VideoControlTra
 
     slider: {
         value: null
-    },
-
-    formattedTime: {
-        value: 0
     },
 
     videoController: {
@@ -69,35 +62,11 @@ exports.VideoControlTrack = Montage.create(Component, /** @lends VideoControlTra
                 this.videoController.unpause();
             }
         }
-    },
-
-
-    // Machinery
-
-    handleTimeChange: {
-        value: function(changeValue, key, object) {
-            this.formattedTime = this._prettyTime(this.time);
-        }
-    },
-
-    _prettyTime: {
-        value: function(time) {
-
-            var sec, min, hour;
-            time = parseInt(time, 10);
-            if (isNaN(time) || time < 0) {
-                return "";
-            }
-            sec = time % 60;
-            min = Math.floor(time / 60) % 60;
-            hour = Math.floor(time / 3600);
-            return (hour > 0 ? hour + ":" : "") + (min < 10 ? min : min) + ":" + (sec < 10 ? "0"+sec : sec);
-        }
     }
 
 });
 
-exports.Slider = Montage.create(AbstractSlider, {
+exports.Slider = AbstractSlider.specialize({
 
     constructor: {
         value: function Slider() {
@@ -139,7 +108,7 @@ exports.Slider = Montage.create(AbstractSlider, {
 });
 
 
-var ProgressBar = exports.ProgressBar = Montage.create(AbstractProgressBar, {
+var ProgressBar = exports.ProgressBar = AbstractProgressBar.specialize({
 
     constructor: {
         value: function ProgressBar() {
