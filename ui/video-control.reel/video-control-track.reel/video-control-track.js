@@ -149,24 +149,6 @@ var ProgressBar = exports.ProgressBar = Montage.create(AbstractProgressBar, {
         }
     },
 
-    enterDocument: {
-        value: function (firstTime) {
-            if (firstTime && !ProgressBar.transformCssProperty) {
-                var style = this.element.style;
-
-                if("webkitTransform" in style) {
-                    ProgressBar.transformCssProperty = "webkitTransform";
-                } else if("MozTransform" in style) {
-                    ProgressBar.transformCssProperty = "MozTransform";
-                } else if("msTransform" in style) {
-                    ProgressBar.transformCssProperty = "msTransform";
-                } else {
-                    ProgressBar.transformCssProperty = "transform";
-                }
-            }
-        }
-    },
-
     _max: {
         value: 100
     },
@@ -221,19 +203,8 @@ var ProgressBar = exports.ProgressBar = Montage.create(AbstractProgressBar, {
 
     draw: {
         value: function () {
-            if (this.max > 0) {
-                this._progressBarValueElement.style.left = "-" + (100 - ((100 * this._value) / this.max)) + "%";
-            } else {
-                this._progressBarValueElement.style.left = "-100%";
-            }
+            this._progressBarValueElement.style.left = this.max > 0 ? -(100 - ((100 * this._value) / this.max)) + "%" : "-100%";
         }
-    }
-
-}, {
-    // cache
-
-    transformCssProperty: {
-        value: null
     }
 
 });
