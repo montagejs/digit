@@ -99,3 +99,7 @@ td:nth-child(5) { background: hsl(0,0%,24%); }
     position: relative;
     height: 150px;
 }
+
+.digit-Video {
+    margin: auto;
+}

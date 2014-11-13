@@ -89,6 +89,11 @@
     "textArea-3": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-3"}, "placeholderValue": "Text Area" } },
     "textArea-4": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-4"}, "placeholderValue": "Text Area" } },
 
+    "video-1": { "prototype": "ui/video.reel", "properties": { "element": {"#": "video-1"}, "sources": [ {"src": "assets/videos/video.ogg", "type": "video/ogg"}, {"src": "assets/videos/video.mp4", "type": "video/mp4"} ] } },
+    "video-2": { "prototype": "ui/video.reel", "properties": { "element": {"#": "video-2"}, "sources": [ {"src": "assets/videos/video.ogg", "type": "video/ogg"}, {"src": "assets/videos/video.mp4", "type": "video/mp4"} ] } },
+    "video-3": { "prototype": "ui/video.reel", "properties": { "element": {"#": "video-3"}, "sources": [ {"src": "assets/videos/video.ogg", "type": "video/ogg"}, {"src": "assets/videos/video.mp4", "type": "video/mp4"} ] } },
+    "video-4": { "prototype": "ui/video.reel", "properties": { "element": {"#": "video-4"}, "sources": [ {"src": "assets/videos/video.ogg", "type": "video/ogg"}, {"src": "assets/videos/video.mp4", "type": "video/mp4"} ] } },
+
     "list1":        { "prototype": "ui/list.reel",      "properties": { "element": {"#": "list-1"}, "content": [1, 2, 3, 4, 5] } },
     "listItem1":    { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "listItem-1"} } },
     "listContent1": { "prototype": "ui/text.reel",      "properties": { "element": {"#": "listContent-1"} }, "bindings": { "value": {"<-": "@list1:iteration.object"}} },
