@@ -80,14 +80,80 @@ exports.Select = AbstractSelect.specialize(/** @lends Select */{
             }
 
             // Select the current value.
-            selectedIndex = organizedContent.indexOf(this.value);
+
+            if (this.value) {
+                selectedIndex = this.getValueIndex(this.value, organizedContent);
+            }else{
+                selectedIndex = 0;
+            }
+
+            //selectedIndex = organizedContent.indexOf(this.value);
             if (selectedIndex == -1) {
                 selectedIndex = 0;
             }
 
-            if (this.element.selectedIndex !== selectedIndex) {
-                this.element.selectedIndex = selectedIndex;
+            this.element.selectedIndex = selectedIndex;
+        }
+    },
+
+    getValueIndex: {
+        value: function (value, options) {
+
+            var selectedIndex = -1;
+            var firstItem;
+            var itemType;
+
+            //If options length > 0, get the first item object type
+            if (options && options.length > 0) {
+                firstItem = options[0];
+                itemType = typeof firstItem;
+            } else {
+                return selectedIndex;
             }
+
+            //Judge if we directly match the item or we match the value
+            if (typeof value == itemType) {
+                for (var i = 0, n = options.length; i < n; i++) {
+                    var item = options[i];
+
+                    //If the select has valuePropertyName, use item[this.valuePropertyName] to do compare with value[this.valuePropertyName]
+                    //Otherwise, compare the item and value directly
+                    if (this.valuePropertyName) {
+                        if (item[this.valuePropertyName] == value[this.valuePropertyName]) {
+                            selectedIndex = i;
+                            break;
+                        }
+                    } else {
+                        if (item == value) {
+                            selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            } else {
+
+
+                for (i = 0, n = options.length; i < n; i++) {
+                    item = options[i];
+
+                    //If the select has valuePropertyName, use item[this.valuePropertyName] to compare with value
+                    //Because value should be the key value.
+                    if (this.valuePropertyName) {
+                        if (item[this.valuePropertyName] == value) {
+                            selectedIndex = i;
+                            break;
+                        }
+                    } else {
+                        if (item == value) {
+                            selectedIndex = i;
+                            break;
+                        }
+                    }
+
+                }
+            }
+
+            return selectedIndex;
         }
     },
 
