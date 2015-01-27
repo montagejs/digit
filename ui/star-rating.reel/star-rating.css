@@ -1,0 +1,65 @@
+.StarRating {
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: none;
+}
+
+.StarRating:hover {
+    cursor: pointer;
+}
+
+.StarRating-items {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1;
+    -webkit-flex: 1;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.StarRating-item {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+
+/* Wireframe ---------------------------------------------------------- */
+
+[data-montage-skin="wireframe"] .StarRating .LinearGradient-firstStop {
+    stop-color: hsla(0, 0%, 30%, 0.7);
+}
+
+
+[data-montage-skin="wireframe"] .StarRating .BarRatingItem-svg {
+    stroke: hsla(0, 0%, 30%, 0.8);
+}
+
+
+/* Light ---------------------------------------------------------- */
+
+[data-montage-skin="light"] .StarRating .LinearGradient-firstStop {
+    stop-color: hsla(0,0%,0%,.7);
+}
+
+[data-montage-skin="light"] .StarRating .BarRatingItem-svg {
+    stroke: hsla(0,0%,0%,.8);
+}
+
+/* Dark ---------------------------------------------------------- */
+
+[data-montage-skin="dark"] .StarRating .LinearGradient-firstStop {
+    stop-color: hsl(0,0%,85%);
+}
+
+[data-montage-skin="dark"] .StarRating .BarRatingItem-svg {
+    stroke: hsl(0,0%,90%);
+}
