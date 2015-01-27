@@ -118,5 +118,11 @@
     "bigListContent3": { "prototype": "ui/text.reel",      "properties": { "element": {"#": "bigListContent-3"} }, "bindings": { "value": {"<-": "@bigList3:iteration.object"}} },
     "bigList4":        { "prototype": "ui/big-list.reel",  "properties": { "element": {"#": "bigList-4"}, "content": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30] } },
     "bigListItem4":    { "prototype": "ui/list-item.reel", "properties": { "element": {"#": "bigListItem-4"} } },
-    "bigListContent4": { "prototype": "ui/text.reel",      "properties": { "element": {"#": "bigListContent-4"} }, "bindings": { "value": {"<-": "@bigList4:iteration.object"}} }
+    "bigListContent4": { "prototype": "ui/text.reel",      "properties": { "element": {"#": "bigListContent-4"} }, "bindings": { "value": {"<-": "@bigList4:iteration.object"}} },
+
+    "starRating-1": { "prototype": "ui/star-rating.reel", "properties": { "element": {"#": "starRating-1"}}},
+    "starRating-2": { "prototype": "ui/star-rating.reel", "properties": { "element": {"#": "starRating-2"}}},
+    "starRating-3": { "prototype": "ui/star-rating.reel", "properties": { "element": {"#": "starRating-3"}}},
+    "starRating-4": { "prototype": "ui/star-rating.reel", "properties": { "element": {"#": "starRating-4"}}}
+
 }
