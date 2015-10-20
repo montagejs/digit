@@ -180,7 +180,7 @@ var Scroller = exports.Scroller = Component.specialize(/** @lends Scroller# */ {
     canDraw: {
         value: function() {
             this.needsDraw = true;
-            return Component.canDraw.apply(this, arguments);
+            return Component.prototype.canDraw.apply(this, arguments);
         }
     },
 
