@@ -6,7 +6,7 @@
     "url": "https://github.com/montagejs/digit.git"
   },
   "dependencies": {
-    "montage": "~0.15.2"
+    "montage": ">0.15.2"
   },
   "devDependencies": {
     "montage-testing": "~0.4.0"
