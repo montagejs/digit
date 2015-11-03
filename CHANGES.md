@@ -1,4 +1,4 @@
-## 0.5.2
+## 0.6.0
 -  **Scroller**
 
    Fixes linear-gradient for Firefox and IE10+.
