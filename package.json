@@ -1,12 +1,12 @@
 {
   "name": "digit",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/montagejs/digit.git"
   },
   "dependencies": {
-    "montage": "git+ssh://git@github.com:montagejs/montage.git#5b1fd2515e8eec3ff9d2c3e77f196abffe52900c"
+    "montage": ">0.15.2"
   },
   "devDependencies": {
     "montage-testing": "~0.4.0"

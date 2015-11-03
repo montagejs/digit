@@ -1,10 +1,9 @@
 var Montage = require("montage/core/core").Montage;
 var Component = require("montage/ui/component").Component;
 var PressComposer = require("montage/composer/press-composer").PressComposer;
-var MediaController = require("montage/core/media-controller").MediaController;
 var AbstractVideo = require("montage/ui/base/abstract-video").AbstractVideo;
 
-exports.Video = Montage.create(AbstractVideo, {
+exports.Video = AbstractVideo.specialize({
 
     // Lifecycle
 

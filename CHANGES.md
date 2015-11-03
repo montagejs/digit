@@ -1,3 +1,26 @@
+## 0.6.0
+-  **Scroller**
+
+   Fixes linear-gradient for Firefox and IE10+.
+
+-  **Overview**
+
+   Adds ButtonGroup Example.
+
+-  **Scroller**
+
+   Updates to the latest version of the TranslateComposer.
+   Adds 3D acceleration for IE10+.
+
+-  **Matte**
+
+   Removes dependency.
+
+-  **Video**
+
+   Adds support for IE10+.
+   Adds progress bar.
+
 ## 0.5.1
 -  **Scroller**
 

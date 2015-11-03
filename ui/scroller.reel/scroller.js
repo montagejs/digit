@@ -165,6 +165,10 @@ var Scroller = exports.Scroller = Component.specialize(/** @lends Scroller# */ {
         value: null
     },
 
+    _translateComposerAxis: {
+        value: null
+    },
+
     handleTranslateStart: {
         value: function(event) {
             this._scrollBars.opacity = 0.5;
@@ -180,7 +184,7 @@ var Scroller = exports.Scroller = Component.specialize(/** @lends Scroller# */ {
     canDraw: {
         value: function() {
             this.needsDraw = true;
-            return Component.canDraw.apply(this, arguments);
+            return Component.prototype.canDraw.apply(this, arguments);
         }
     },
 
@@ -217,23 +221,46 @@ var Scroller = exports.Scroller = Component.specialize(/** @lends Scroller# */ {
                 case "horizontal":
                     this._scrollBars.displayHorizontal = true;
                     this._scrollBars.displayVertical = false;
+
+                    this._translateComposerAxis = "horizontal";
+
                     break;
                 case "vertical":
                     this._scrollBars.displayHorizontal = false;
                     this._scrollBars.displayVertical = true;
+
+                    this._translateComposerAxis = "vertical";
+
                     break;
                 case "both":
                     this._scrollBars.displayHorizontal = true;
                     this._scrollBars.displayVertical = true;
+
+                    this._translateComposerAxis = "both";
+
                     break;
                 case "auto":
                     // Only display the scroll bars if we can scroll in that direction
                     this._scrollBars.displayHorizontal = !!this._maxTranslateX;
                     this._scrollBars.displayVertical = !!this._maxTranslateY;
+
+                    if (this._scrollBars.displayVertical && this._scrollBars.displayHorizontal) {
+                        this._translateComposerAxis = "both";
+
+                    } else if (this._scrollBars.displayVertical) {
+                        this._translateComposerAxis = "vertical";
+
+                    } else if (this._scrollBars.displayHorizontal) {
+                        this._translateComposerAxis = "horizontal";
+
+                    } else {
+                        this._translateComposerAxis = "both"; //default value
+                    }
                     break;
                 case "none":
                     this._scrollBars.displayHorizontal = false;
                     this._scrollBars.displayVertical = false;
+                    this._translateComposerAxis = "both"; //default value
                     break;
             }
             if (this._scrollBars.displayHorizontal) {

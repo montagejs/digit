@@ -33,14 +33,14 @@
             "minTranslateX": 0,
             "minTranslateY": 0,
             "invertAxis": true,
-            "stealChildrenPointer": true
+            "listenToWheelEvent": true
         },
         "bindings": {
             "translateX": {"<->": "@owner.scrollX"},
             "translateY": {"<->": "@owner.scrollY"},
             "maxTranslateX": {"<-": "@owner._maxTranslateX"},
             "maxTranslateY": {"<-": "@owner._maxTranslateY"},
-            "axis": {"<-": "@owner.axis"},
+            "axis": {"<-": "@owner._translateComposerAxis"},
             "hasMomentum": {"<-": "@owner.hasMomentum"}
         },
         "listeners": [
