@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="star-rating.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"},
+                "_ratingBarItems": {"@": "ratingBarItems"}
+            }
+        },
+
+        "ratingBarItems": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "ratingBarItems"}
+            },
+            "bindings": {
+                "content": {"<-": "@owner.starCount.range()"}
+            }
+        },
+
+        "ratingBarItem": {
+            "prototype": "montage/ui/rating-bar.reel/rating-bar-item.reel",
+            "properties": {
+                "element": { "#": "ratingBarItem" }
+            },
+            "bindings": {
+                "index": {"<-": "@ratingBarItems:iteration.object"}
+            }
+        }
+
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="StarRating">
+        <div data-montage-id="ratingBarItems" class="StarRating-items RatingBar-items">
+            <div data-montage-id="ratingBarItem" class="StarRating-item RatingBar-item">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 64 62" preserveAspectRatio="xMidYMid meet">
+                    <path d="M 32 0 L 39.5 22 L 62.5 22 L 44 36 L 51 58 L 32 44.8 L 13 58 L 20 36 L 1.5 22 L 24.5 21.5 Z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
