@@ -140,12 +140,12 @@ exports.Video = AbstractVideo.specialize({
             this.element.removeEventListener("touchstart", this, false);
             this.element.removeEventListener("mousedown", this, false);
             this._firstPlay = true;
-            this.videoController.stop();
+            if(this.videoController) this.videoController.stop();
 
             this.classList.add("digit-Video--firstPlay");
             this.classList.remove("digit-Video--showControls");
 
-            this._pressComposer = PressComposer.create();
+            this._pressComposer = new PressComposer();
             this._pressComposer.identifier = "video";
             this.addComposerForElement(this._pressComposer, this.mediaElement);
             this.showPoster();
