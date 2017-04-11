@@ -9,7 +9,7 @@
     "montage": ">=0.15.2"
   },
   "devDependencies": {
-    "montage-testing": "~0.4.0"
+    "montage-testing": "montagejs/montage-testing.git#v0.4.4"
   },
   "exclude": [
     "overview.html",
