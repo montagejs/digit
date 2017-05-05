@@ -13,13 +13,29 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-
+        'test/run-karma.js',
         {
             pattern: 'package.json',
             included: false
         },
         {
             pattern: 'ui/**/*.js',
+            included: false
+        },
+        {
+            pattern: 'ui/**/*.mjson',
+            included: false
+        },
+        {
+            pattern: 'ui/**/*.css',
+            included: false
+        },
+        {
+            pattern: 'ui/**/*.html',
+            included: false
+        },
+        {
+            pattern: 'test/**/*.js',
             included: false
         },
         {
@@ -41,8 +57,7 @@ module.exports = function(config) {
         {
             pattern: 'node_modules/**/*.js',
             included: false
-        },
-        'test/run-karma.js'
+        }
     ],
 
     // list of files to exclude
