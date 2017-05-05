@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Select</title>
+    <script type="text/javascript" src="../../../node_modules/montage/montage.js" data-package="../../"></script>
+    <script type="text/montage-serialization">
+        {
+            "test": {
+                "prototype": "spec/select/select-test[Test]",
+                "properties": {
+                    "select": {"@": "select"},
+                    "selectWithContent": {"@": "selectWithContent"},
+                    "selectWithOptions": {"@": "selectWithOptions"},
+                    "selectWithAttributes": {"@": "selectWithAttributes"}
+                }
+            },
+
+            "select": {
+                "prototype": "digit/ui/select.reel",
+                "properties": {
+                    "element": {"#": "select"}
+                }
+            },
+
+            "selectWithContent": {
+                "prototype": "digit/ui/select.reel",
+                "properties": {
+                    "element": {"#": "selectWithContent"},
+                    "content": [
+                        {"label": "Arizona"},
+                        {"label": "Alabama"},
+                        {"label": "California"},
+                        {"label": "Hawaii"},
+                        {"label": "New York"}
+                    ]
+                }
+            },
+
+            "selectWithOptions": {
+                "prototype": "digit/ui/select.reel",
+                "properties": {
+                    "element": {"#": "selectWithOptions"}
+                }
+            },
+
+            "selectWithAttributes": {
+                "prototype": "digit/ui/select.reel",
+                "properties": {
+                    "element": {"#": "selectWithAttributes"}
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Select</h1>
+
+    <div data-montage-id="select"></div>
+
+    <select data-montage-id="selectWithContent">
+        <option value="fail">Fail</option>
+        <option value="fail-again" selected>Fail again</option>
+    </select>
+
+    <select data-montage-id="selectWithOptions">
+        <option value="apple">Green</option>
+        <option value="banana">Yellow</option>
+    </select>
+
+    <select data-montage-id="selectWithAttributes" required>
+        <option value="apple">Green</option>
+        <option value="banana" selected>Yellow</option>
+    </select>
+</body>
+</html>
