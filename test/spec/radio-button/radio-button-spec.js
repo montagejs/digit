@@ -9,7 +9,7 @@ TestPageLoader.queueTest("radio-button-test", function(testPage) {
         });
 
         describe("interaction", function() {
-            it("should be checked when clicked or touched", function(done) {
+            xit("should be checked when clicked or touched", function(done) {
                 var radioButton = testPage.test.templateObjects.radioButton1;
 
                 testPage.clickOrTouch({target: radioButton.element});
