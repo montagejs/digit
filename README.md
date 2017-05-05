@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/montagejs/digit.svg?branch=master)](http://travis-ci.org/montagejs/digit)
+
 # digit
 
 Touch-optimized [Montage](https://github.com/montagejs/montage) components for tablets and phones.
