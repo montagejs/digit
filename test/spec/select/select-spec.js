@@ -1,0 +1,101 @@
+var Montage = require("montage").Montage;
+var TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
+
+TestPageLoader.queueTest("select-test", function(testPage) {
+
+    describe("test/select/select-spec", function() {
+        it("should load", function() {
+            expect(testPage.loaded).toBe(true);
+        });
+
+        describe("Select", function() {
+            describe("default", function () {
+                it("can be created", function() {
+                    expect(testPage.test.select).toBeDefined();
+                });
+                var select, defaultValue, defaultRequired;
+                beforeEach(function() {
+                    if (!select) {
+                        select = testPage.test.select;
+                        //keep default values
+                        defaultValue = select.value;
+                        defaultRequired = select.required;
+                    }
+                    //restore default values
+                    select.value = defaultValue;
+                    select.required = defaultRequired;
+                });
+                describe("property", function() {
+                    describe("value", function() {
+                        xit("should have correct default", function() {
+                            expect(defaultValue).toEqual(null);
+                        });
+                        xit("can not be set with no option", function() {
+                            select.value = "banana";
+                            expect(select.value).toEqual(defaultValue);
+                        });
+                    });
+                    describe("required", function() {
+                        xit("should have correct default", function() {
+                            expect(defaultRequired).toEqual(false);
+                        });
+                        xit("can be set", function() {
+                            select.required = true;
+                            expect(select.required).toEqual(true);
+                        });
+                    });
+                });
+            });
+            describe("with options", function () {
+                it("can be created", function() {
+                    expect(testPage.test.selectWithOptions).toBeDefined();
+                });
+                var select, defaultValue, defaultRequired;
+                beforeEach(function() {
+                    if (!select) {
+                        select = testPage.test.selectWithOptions;
+                        //keep default values
+                        defaultValue = select.value;
+                        defaultRequired = select.required;
+                    }
+                    //restore default values
+                    select.value = defaultValue;
+                    select.required = defaultRequired;
+                });
+                describe("property", function() {
+                    describe("value", function() {
+                        xit("should default to first option", function() {
+                            expect(defaultValue).toEqual("apple");
+                        });
+                        xit("can be set", function() {
+                            select.value = "banana";
+                            expect(select.value).toEqual("banana");
+                        });
+                        xit("can not be set to nonexistent option", function() {
+                            select.value = "banana";
+                            select.value = "pear";
+                            expect(select.value).toEqual("banana");
+                        });
+                    });
+                });
+            });
+
+            describe("with content", function () {
+                var select;
+
+                beforeEach(function() {
+                    select = testPage.test.selectWithContent;
+                });
+
+                it("should not fail on undefined items", function(done) {
+                    select.content.push(void 0);
+
+                    testPage.waitForComponentDraw(select).then(function() {
+                        expect(select.element.querySelectorAll("option").length).toBe(select.content.length);
+                        done();
+                    });
+                });
+            });
+        });
+    });
+});

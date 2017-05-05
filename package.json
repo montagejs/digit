@@ -1,6 +1,8 @@
 {
   "name": "digit",
+  "description": "Touch-optimized MontageJS components for tablets and phones.",
   "version": "2.0.0",
+  "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
     "url": "https://github.com/montagejs/digit.git"
@@ -9,7 +11,27 @@
     "montage": ">=0.15.2"
   },
   "devDependencies": {
-    "montage-testing": "~0.4.0"
+    "concurrently": "^3.4.0",
+    "http-server": "^0.9.0",
+    "jasmine-console-reporter": "^1.2.7",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "montage-testing": "git://github.com/montagejs/montage-testing.git#master",
+    "mr": "git://github.com/montagejs/mr.git#master",
+    "open": "0.0.5"
+  },
+  "scripts": {
+    "test": "node test/run-node.js",
+    "test:karma": "karma start --no-auto-watch --single-run",
+    "test:karma-dev": "karma start --auto-watch --no-single-run",
+    "test:jasmine": "concurrently \"http-server -a localhost -p 8085\" \"open http://localhost:8085/test/run.html\"",
+    "start:demo": "concurrently \"http-server -a localhost -p 8085\" \"open http://localhost:8085/demo/sizing/index.html\"",
+    "start:overview": "concurrently \"http-server -a localhost -p 8085\" \"open http://localhost:8085/overview/index.html\""
   },
   "exclude": [
     "overview.html",

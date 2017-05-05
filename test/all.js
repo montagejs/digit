@@ -1,14 +1,19 @@
-require("montage-testing").run(require,[
+console.log('montage-testing', 'Start');
+module.exports = require("montage-testing").run(require, [
     // Please keep in alphabetical order
-    "test/big-list/big-list-spec",
-    "test/button/button-spec",
-    "test/checkbox/checkbox-spec",
-    "test/list/list-spec",
-    "test/number-field/number-field-spec",
-    "test/radio-button/radio-button-spec",
-    "test/select/select-spec",
-    "test/slider/slider-spec",
-    "test/text-field/text-field-spec",
-    "test/text-area/text-area-spec",
-    "test/toggle-switch/toggle-switch-spec"
-]);
+    "spec/big-list/big-list-spec",
+    "spec/button/button-spec",
+    "spec/checkbox/checkbox-spec",
+    "spec/list/list-spec",
+    "spec/number-field/number-field-spec",
+    "spec/radio-button/radio-button-spec",
+    "spec/select/select-spec",
+    "spec/slider/slider-spec",
+    "spec/text-field/text-field-spec",
+    "spec/text-area/text-area-spec",
+    "spec/toggle-switch/toggle-switch-spec"
+]).then(function () {
+    console.log('montage-testing', 'End');
+}, function (err) {
+    console.log('montage-testing', 'Fail', err, err.stack);
+});
