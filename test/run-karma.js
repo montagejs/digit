@@ -8,6 +8,9 @@ var globalEval = eval,
 
 // Bootsrap Karma
 if (global.__karma__) {
+    
+    //jasmine.DEFAULT_TIMEOUT_INTERVAL = 100000;
+    
     global.__karma__.loaded = function() {
         console.log('karma loaded');
     };
@@ -24,7 +27,7 @@ if (global.__karma__) {
     global.jasmine = jasmine;
     for (var property in jasmineInterface) {
         if (jasmineInterface.hasOwnProperty(property)) {
-            global[property] = jasmineInterface[property];   
+           global[property] = jasmineInterface[property];
         }
     }   
 
@@ -49,7 +52,7 @@ global.queryString = function queryString(parameter) {
     var i, key, value, equalSign;
     var loc = location.search.substring(1, location.search.length);
     var params = loc.split('&');
-    for (i = 0; i < params.length; i++) {
+    for (i=0; i<params.length;i++) {
         equalSign = params[i].indexOf('=');
         if (equalSign < 0) {
             key = params[i];
@@ -93,7 +96,7 @@ function injectBase(href) {
 }
 
 injectBase('/base/test/');
-injectScript('../node_modules/mr/bootstrap.js', 'all', function (err) {
+injectScript('../node_modules/montage/montage.js', 'all', function (err) {
     if (err) {
         throw err;
     }
