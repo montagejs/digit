@@ -1,6 +1,8 @@
 /*jshint node:true, browser:false */
 var jasmineRequire = require('jasmine-core/lib/jasmine-core/jasmine.js');
 var JasmineConsoleReporter = require('jasmine-console-reporter');
+var Montage = require('montage');
+var PATH = require("path");
 
 // Init
 var jasmine = jasmineRequire.core(jasmineRequire);
@@ -38,9 +40,10 @@ jasmineEnv.addReporter({
 });
 
 // Execute
-var mrRequire = require('mr/bootstrap-node');
-var PATH = require("path");
-mrRequire.loadPackage(PATH.join(__dirname, ".")).then(function (mr) {
+Montage.loadPackage(PATH.join(__dirname, "."), {
+    mainPackageLocation: PATH.join(__dirname, "../")
+})
+.then(function (mr) {
     return mr.async("all");
 }).then(function () {
     console.log('Done');

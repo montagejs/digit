@@ -27,9 +27,9 @@ TestPageLoader.queueTest("text-area-test", function(testPage) {
                     textArea.required = defaultRequired;
                     textArea.maxLength = defaultMaxLength;
                 });
-                describe("property", function() {
+                xdescribe("property", function() {
                     describe("value", function() {
-                        xit("should have correct default", function() {
+                        it("should have correct default", function() {
                             expect(defaultValue).toEqual("");
                         });
                         it("can be set", function() {
@@ -38,30 +38,30 @@ TestPageLoader.queueTest("text-area-test", function(testPage) {
                         });
                     });
                     describe("required", function() {
-                        xit("should have correct default", function() {
+                        it("should have correct default", function() {
                             expect(defaultRequired).toEqual(false);
                         });
-                        xit("can be set", function() {
+                        it("can be set", function() {
                             textArea.required = true;
                             expect(textArea.required).toEqual(true);
                         });
                     });
                     describe("maxLength", function() {
-                        xit("should have correct default", function() {
+                        it("should have correct default", function() {
                             expect(defaultMaxLength).toEqual(-1);
                         });
-                        xit("can be set", function() {
+                        it("can be set", function() {
                             textArea.maxLength = 400;
                             expect(textArea.maxLength).toEqual(400);
                         });
                     });
                 });
             });
-            describe("initialization attributes", function () {
+            xdescribe("initialization attributes", function () {
                 var textArea, defaultValue, defaultRequired, defaultMaxLength;
                 beforeEach(function() {
                     if (!textArea) {
-                        textArea = testPage.test.textAreaWithAttributes;
+                        textArea = testPage.test.templateObjects.textAreaWithAttributes;
                         //keep default values
                         defaultValue = textArea.value;
                         defaultRequired = textArea.required;
@@ -72,13 +72,13 @@ TestPageLoader.queueTest("text-area-test", function(testPage) {
                     textArea.required = defaultRequired;
                     textArea.maxLength = defaultMaxLength;
                 });
-                xit("should have expected value property value", function () {
+                it("should have expected value property value", function () {
                     expect(textArea.value).toEqual("a string");
                 });
-                xit("should have expected required property value", function () {
+                it("should have expected required property value", function () {
                     expect(textArea.required).toEqual(true);
                 });
-                xit("should have expected maxLength property value", function () {
+                it("should have expected maxLength property value", function () {
                     expect(textArea.maxLength).toEqual(150);
                 });
             });
