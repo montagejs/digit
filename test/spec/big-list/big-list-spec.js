@@ -1,9 +1,9 @@
 var TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
 
-var BigList = require("digit/ui/big-list.reel").BigList;
-
 describe("test/big-list/big-list-spec", function() {
     var bigList;
+
+    var BigList = require("digit/ui/big-list.reel").BigList;
 
     beforeEach(function () {
         bigList = new BigList();

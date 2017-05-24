@@ -1,6 +1,5 @@
 console.log('montage-testing', 'Start');
 module.exports = require("montage-testing").run(require, [
-    // Please keep in alphabetical order
     "spec/big-list/big-list-spec",
     "spec/button/button-spec",
     "spec/checkbox/checkbox-spec",
