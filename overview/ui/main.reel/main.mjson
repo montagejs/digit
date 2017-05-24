@@ -79,15 +79,15 @@
     "title-3": { "prototype": "ui/title.reel", "properties": { "element": {"#": "title-3"}, "value": "Title" } },
     "title-4": { "prototype": "ui/title.reel", "properties": { "element": {"#": "title-4"}, "value": "Title" } },
 
-    "textField-1": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-1"}, "placeholderValue": "Text Field" } },
-    "textField-2": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-2"}, "placeholderValue": "Text Field" } },
-    "textField-3": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-3"}, "placeholderValue": "Text Field" } },
-    "textField-4": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-4"}, "placeholderValue": "Text Field" } },
+    "textField-1": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-1"}, "placeholder": "Text Field" } },
+    "textField-2": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-2"}, "placeholder": "Text Field" } },
+    "textField-3": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-3"}, "placeholder": "Text Field" } },
+    "textField-4": { "prototype": "ui/text-field.reel", "properties": { "element": {"#": "textField-4"}, "placeholder": "Text Field" } },
 
-    "textArea-1": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-1"}, "placeholderValue": "Text Area" } },
-    "textArea-2": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-2"}, "placeholderValue": "Text Area" } },
-    "textArea-3": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-3"}, "placeholderValue": "Text Area" } },
-    "textArea-4": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-4"}, "placeholderValue": "Text Area" } },
+    "textArea-1": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-1"}, "placeholder": "Text Area" } },
+    "textArea-2": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-2"}, "placeholder": "Text Area" } },
+    "textArea-3": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-3"}, "placeholder": "Text Area" } },
+    "textArea-4": { "prototype": "ui/text-area.reel", "properties": { "element": {"#": "textArea-4"}, "placeholder": "Text Area" } },
 
     "video-1": { "prototype": "ui/video.reel", "properties": { "element": {"#": "video-1"}, "sources": [ {"src": "assets/videos/video.ogg", "type": "video/ogg"}, {"src": "assets/videos/video.mp4", "type": "video/mp4"} ] } },
     "video-2": { "prototype": "ui/video.reel", "properties": { "element": {"#": "video-2"}, "sources": [ {"src": "assets/videos/video.ogg", "type": "video/ogg"}, {"src": "assets/videos/video.mp4", "type": "video/mp4"} ] } },
