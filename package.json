@@ -8,7 +8,8 @@
     "url": "https://github.com/montagejs/digit.git"
   },
   "dependencies": {
-    "montage": "^17.0.7"
+    "montage": "^17.0.7",
+    "montage-testing": "^0.5.1"
   },
   "devDependencies": {
     "concurrently": "^3.4.0",
