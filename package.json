@@ -1,7 +1,7 @@
 {
   "name": "digit",
   "description": "Touch-optimized MontageJS components for tablets and phones.",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
@@ -34,6 +34,8 @@
     "start:overview": "concurrently \"http-server -a localhost -p 8085\" \"open http://localhost:8085/overview/index.html\""
   },
   "exclude": [
+    "demo",
+    "report"
     "overview",
     "test"
   ]
