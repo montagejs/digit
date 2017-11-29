@@ -35,7 +35,7 @@ exports.BigList = Component.specialize( /** @lends BigList# */ {
                 this._rowHeight = this._measureRowHeight();
                 this.flow.linearScrollingVector = this._calculateLinearScrollingVector(this._height, this._rowHeight);
                 this.flow.paths = this._calculateFlowPath(this._height, this._rowHeight);
-                this.flow.cameraTargetPoint = this._calculateCameraTargetPoint(this._width, this._height, this._rowHeight)
+                this.flow.cameraTargetPoint = this._calculateCameraTargetPoint(this._width, this._height, this._rowHeight);
                 this.flow.cameraPosition = this._calculateCameraPosition(this._width, this._height, this._rowHeight);
                 this.flow.cameraFov = 90;
                 this._scrollBars.displayHorizontal = false;
@@ -71,7 +71,7 @@ exports.BigList = Component.specialize( /** @lends BigList# */ {
 
     _calculateLinearScrollingVector: {
         value: function(height, rowHeight) {
-            return [0, (-500 * rowHeight) / height, 0]
+            return [0, (-500 * rowHeight) / height, 0];
         }
     },
 
@@ -243,7 +243,7 @@ exports.BigList = Component.specialize( /** @lends BigList# */ {
                     self.needsDraw = true;
                     self.flow.didDraw = oldDidDraw;
                 }
-            }
+            };
             // initialize scroll bars
             this._scrollBars.opacity = 0;
         }

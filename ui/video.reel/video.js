@@ -87,6 +87,7 @@ exports.Video = AbstractVideo.specialize({
             document.addEventListener("mouseup",this , false);
         }
     },
+    
     handleMouseup: {
         value: function() {
             var self = this;
@@ -140,7 +141,10 @@ exports.Video = AbstractVideo.specialize({
             this.element.removeEventListener("touchstart", this, false);
             this.element.removeEventListener("mousedown", this, false);
             this._firstPlay = true;
-            if(this.videoController) this.videoController.stop();
+            
+            if (this.videoController) {
+                this.videoController.stop();
+            }
 
             this.classList.add("digit-Video--firstPlay");
             this.classList.remove("digit-Video--showControls");

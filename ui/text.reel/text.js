@@ -1,7 +1,7 @@
 /**
  * @module "digit/ui/text.reel"
  */
-var Text = require("montage/ui/text.reel").Text;
+var MontageText = require("montage/ui/text.reel").Text;
 
 /**
  * ![Text](https://raw.github.com/montagejs/digit/master/ui/text.reel/screenshot.png)
@@ -34,7 +34,7 @@ var Text = require("montage/ui/text.reel").Text;
  * @class Text
  * @extends external:Text
  */
-exports.Text = Text.specialize(/** @lends Text */ {
+exports.Text = MontageText.specialize(/** @lends Text */ {
     hasTemplate: {
         value: true
     },
