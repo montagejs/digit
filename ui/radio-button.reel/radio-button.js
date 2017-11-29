@@ -3,7 +3,6 @@
  */
 var AbstractRadioButton = require("montage/ui/base/abstract-radio-button").AbstractRadioButton;
 
-CLASS_PREFIX = "digit-RadioButton";
 /**
  * ![RadioButton](https://raw.github.com/montagejs/digit/master/ui/radio-button.reel/screenshot.png)
  *

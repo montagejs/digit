@@ -96,16 +96,16 @@ exports.VideoControl = Component.specialize( /** @lends module:"ui/video-control
         value: function(time, duration) {
             var shouldDisplayHours, sec, min, hour;
 
-            time = (0.5 + time) << 0;
-            shouldDisplayHours = ~~(duration / 3600) > 0;
+            time = (0.5 + time) << 0; /* jshint ignore:line */
+            shouldDisplayHours = ~~(duration / 3600) > 0;  /* jshint ignore:line */
 
             if (time === 0) {
                 return shouldDisplayHours ? "00:00:00" : "00:00";
             }
 
             sec = time % 60;
-            min = ~~(time / 60) % 60;
-            hour = ~~(time / 3600);
+            min = ~~(time / 60) % 60;  /* jshint ignore:line */
+            hour = ~~(time / 3600);  /* jshint ignore:line */
 
             return (hour === 0 ? shouldDisplayHours ? "00:" : "" : hour < 10 ? "0" + hour + ":" : hour + ":") +
                 (min < 10 ? "0" + min : min) + ":" +

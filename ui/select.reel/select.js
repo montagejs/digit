@@ -81,7 +81,7 @@ exports.Select = AbstractSelect.specialize(/** @lends Select */{
 
             // Select the current value.
             selectedIndex = organizedContent.indexOf(this.value);
-            if (selectedIndex == -1) {
+            if (selectedIndex === -1) {
                 selectedIndex = 0;
             }
 

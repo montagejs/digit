@@ -3,6 +3,7 @@ node_js:
   - "4.8.0"
 script: npm run $COMMAND
 env:
+  - COMMAND=lint
   #- COMMAND=test
   - COMMAND=test:karma
 notifications:

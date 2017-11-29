@@ -1,14 +1,14 @@
 /**
     @module "ui/badge.reel"
 */
-var Text = require("montage/ui/text.reel").Text;
+var MontageText = require("montage/ui/text.reel").Text;
 
 /**
     Description TODO
     @class module:"ui/badge.reel".Badge
     @extends module:montage/ui/component.Component
 */
-exports.Badge = Text.specialize(/** @lends module:"ui/badge.reel".Badge# */ {
+exports.Badge = MontageText.specialize(/** @lends module:"ui/badge.reel".Badge# */ {
     hasTemplate: {
         value: true
     },
@@ -23,11 +23,11 @@ exports.Badge = Text.specialize(/** @lends module:"ui/badge.reel".Badge# */ {
     value: {
         set: function(value) {
             value = parseInt(value, 10);
-            Object.getOwnPropertyDescriptor(Text.prototype, "value").set.call(this, value);
+            Object.getOwnPropertyDescriptor(MontageText.prototype, "value").set.call(this, value);
         },
 
         get: function() {
-            return Object.getOwnPropertyDescriptor(Text.prototype, "value").get.call(this);
+            return Object.getOwnPropertyDescriptor(MontageText.prototype, "value").get.call(this);
         }
     }
 });

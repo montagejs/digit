@@ -243,7 +243,7 @@ exports.BigList = Component.specialize( /** @lends BigList# */ {
                     self.needsDraw = true;
                     self.flow.didDraw = oldDidDraw;
                 }
-            }
+            };
             // initialize scroll bars
             this._scrollBars.opacity = 0;
         }
