@@ -6,24 +6,22 @@
     <script type="text/montage-serialization">
     {
         "owner": {
-            "properties": {
+            "values": {
                 "element": {"#": "digitList"},
                 "flow": {"@": "flow"},
-                "_scrollBars": {"@": "scrollbars"}
-            },
-            "bindings": {
+                "_scrollBars": {"@": "scrollbars"},
                 "_scroll": {"<->": "@flow.scroll"}
             }
         },
         "scrollbars": {
             "prototype": "ui/scroller.reel/scroll-bars.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "scrollbars"}
             }
         },
         "flow": {
             "prototype": "montage/ui/flow.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "flow"},
                 "paths": [{
                     "knots": [
@@ -47,9 +45,7 @@
                     },
                     "headOffset": 0,
                     "tailOffset": 0
-                }]
-            },
-            "bindings": {
+                }],
                 "isSelectionEnabled": {"<-": "@owner.isSelectionEnabled"}
             }
         },

@@ -15,7 +15,7 @@ The Video component wraps a video element and provides custom controls.
 ```json
 "video": {
     "prototype": "ui/video.reel",
-    "properties": {
+    "values": {
         "element": {"#": "video"},
         "src": "movie.ogg",
         "posterSrc": "poster.png"
@@ -39,7 +39,7 @@ Multiple source files can be specified with the `sources` property. The Video co
 ```json
 "video": {
     "prototype": "ui/video.reel",
-    "properties": {
+    "values": {
         "element": {"#": "video"},
         "sources": [
             {"src": "movie.ogg", "type": "video/ogg"},
@@ -62,7 +62,7 @@ Playback of multiple videos can be synchronized by using the same MediaControlle
 ```json
 "video1": {
     "prototype": "ui/video.reel",
-    "properties": {
+    "values": {
         "element": {"#": "video1"},
         "videoController" : {"@": "mediaController"},
         "src": "movie1.mp4"
@@ -70,7 +70,7 @@ Playback of multiple videos can be synchronized by using the same MediaControlle
 },
 "video2": {
     "prototype": "ui/video.reel",
-    "properties": {
+    "values": {
         "element": {"#": "video2"},
         "videoController" : {"@": "mediaController"},
         "src": "movie2.mp4"
@@ -78,7 +78,7 @@ Playback of multiple videos can be synchronized by using the same MediaControlle
 },
 "mediaController": {
     "prototype": "montage/core/media-controller",
-    "properties": {
+    "values": {
         "autoplay": false
     }
 }

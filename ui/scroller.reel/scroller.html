@@ -6,7 +6,7 @@
     <script type="text/montage-serialization">
 {
     "owner": {
-        "properties": {
+        "values": {
             "_content": {
                 "#": "content"
             },
@@ -20,7 +20,7 @@
     },
     "scrollbars": {
         "prototype": "./scroll-bars.reel",
-        "properties": {
+        "values": {
             "element": {
                 "#": "scrollbars"
             }
@@ -28,14 +28,12 @@
     },
     "translateComposer1": {
         "prototype": "montage/composer/translate-composer",
-        "properties": {
+        "values": {
             "component": {"@": "owner"},
             "minTranslateX": 0,
             "minTranslateY": 0,
             "invertAxis": true,
-            "listenToWheelEvent": true
-        },
-        "bindings": {
+            "listenToWheelEvent": true,
             "translateX": {"<->": "@owner.scrollX"},
             "translateY": {"<->": "@owner.scrollY"},
             "maxTranslateX": {"<-": "@owner._maxTranslateX"},

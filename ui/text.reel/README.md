@@ -9,7 +9,7 @@ The Text component can be used for any kind of dynamic text.
 ```json
 "text": {
     "prototype": "digit/ui/text.reel",
-    "properties": {
+    "values": {
         "element": {"#": "text"}
     }
 }

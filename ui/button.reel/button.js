@@ -12,7 +12,7 @@ var AbstractButton = require("montage/ui/base/abstract-button").AbstractButton;
  * ```json
  * "button": {
  *     "prototype": "digit/ui/button.reel",
- *     "properties": {
+ *     "values": {
  *         "element": {"#": "button"}
  *     }
  * }

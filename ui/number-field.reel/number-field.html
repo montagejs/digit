@@ -7,7 +7,7 @@
     <script type="text/montage-serialization">
     {
         "owner": {
-            "properties": {
+            "values": {
                 "element": {"#": "numberField"},
                 "_numberFieldTextFieldComponent": {"@": "textField"},
                 "_numberFieldMinusComponent": {"@": "minus"},
@@ -18,24 +18,22 @@
 
         "textField": {
             "prototype": "ui/text-field.reel",
-            "properties": {
-                "element": {"#": "textField"}
-            },
-            "bindings" : {
+            "values": {
+                "element": {"#": "textField"},
                 "value": {"<->": "@owner.value"}
             }
         },
 
         "plus": {
             "prototype": "ui/button.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "buttonPlus"}
             }
         },
 
         "minus": {
             "prototype": "ui/button.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "buttonMinus"}
             }
         }

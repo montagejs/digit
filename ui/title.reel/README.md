@@ -9,7 +9,7 @@ The Title component is a block element with a bold weight.
 ```json
 "title": {
     "prototype": "digit/ui/title.reel",
-    "properties": {
+    "values": {
         "element": {"#": "title"}
     }
 }

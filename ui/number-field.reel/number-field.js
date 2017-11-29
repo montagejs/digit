@@ -12,7 +12,7 @@ var AbstractNumberField = require("montage/ui/base/abstract-number-field").Abstr
  * ```json
  * "number": {
  *     "prototype": "digit/ui/number-field.reel",
- *     "properties": {
+ *     "values": {
  *         "element": {"#": "number"},
  *         "value": 0
  *     }

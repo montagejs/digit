@@ -9,7 +9,7 @@ The Badge can be used as a notification counter or highlighting.
 ```json
 "badge": {
     "prototype": "digit/ui/badge.reel",
-    "properties": {
+    "values": {
         "element": {"#": "badge"}
     }
 }

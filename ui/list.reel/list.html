@@ -6,27 +6,23 @@
     <script type="text/montage-serialization">
         {
             "owner": {
-                "properties": {
+                "values": {
                     "element": {"#": "list"}
                 }
             },
 
             "repetition": {
                 "prototype": "montage/ui/repetition.reel",
-                "properties": {
-                    "element": {"#": "repetition"}
-                },
-                "bindings": {
+                "values": {
+                    "element": {"#": "repetition"},
                     "isSelectionEnabled": {"<-": "@owner.isSelectionEnabled"}
                 }
             },
 
             "scroller": {
                 "prototype": "ui/scroller.reel",
-                "properties": {
-                    "element": {"#": "scroller"}
-                },
-                "bindings": {
+                "values": {
+                    "element": {"#": "scroller"},
                     "axis": {"<-": "@owner.axis"}
                 }
             },

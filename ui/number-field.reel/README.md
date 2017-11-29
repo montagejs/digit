@@ -9,7 +9,7 @@ The Number Field component wraps an HTML `<input type="number">` element and add
 ```json
 "number": {
     "prototype": "digit/ui/number-field.reel",
-    "properties": {
+    "values": {
         "element": {"#": "number"},
         "value": 0
     }

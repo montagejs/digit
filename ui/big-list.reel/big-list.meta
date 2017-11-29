@@ -1,7 +1,7 @@
 {
     "blueprint_component_reference": {
         "prototype": "montage/core/meta/blueprint-reference",
-        "properties": {
+        "values": {
             "valueReference": {
                 "blueprintName": "Component",
                 "prototypeName": "Component",
@@ -13,7 +13,7 @@
     },
     "blueprint_list_delegate": {
         "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
+        "values": {
             "name": "delegate",
             "blueprint": {
                 "@": "root"
@@ -23,7 +23,7 @@
     },
     "blueprint_list_content": {
         "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
+        "values": {
             "name": "content",
             "blueprint": {
                 "@": "root"
@@ -34,7 +34,7 @@
     },
     "blueprint_list_contentController": {
         "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
+        "values": {
             "name": "contentController",
             "blueprint": {
                 "@": "root"
@@ -44,7 +44,7 @@
     },
     "blueprint_list_isSelectionEnabled": {
         "prototype": "montage/core/meta/property-blueprint",
-        "properties": {
+        "values": {
             "name": "isSelectionEnabled",
             "blueprint": {
                 "@": "root"
@@ -54,7 +54,7 @@
     },
     "root": {
         "prototype": "montage/core/meta/module-blueprint",
-        "properties": {
+        "values": {
             "name": "BigList",
             "parent": {
                 "@": "blueprint_component_reference"

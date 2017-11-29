@@ -1,4 +1,3 @@
-
 /* global module */
 
 // Karma configuration

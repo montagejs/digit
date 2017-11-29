@@ -7,7 +7,7 @@
 ```json
 "checkbox": {
     "prototype": "digit/ui/checkbox.reel",
-    "properties": {
+    "values": {
         "element": {"#": "checkbox"}
     }
 }
