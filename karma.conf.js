@@ -1,3 +1,5 @@
+/* global module */
+
 // Karma configuration
 // Generated on Tue Mar 07 2017 13:59:10 GMT-0800 (PST)
 

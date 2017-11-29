@@ -1,7 +1,7 @@
 {
     "blueprint_parent": {
         "prototype": "montage/core/meta/blueprint-reference",
-        "properties": {
+        "values": {
             "valueReference": {
                 "blueprintName": "Text",
                 "prototypeName": "Text",
@@ -13,7 +13,7 @@
     },
     "root": {
         "prototype": "montage/core/meta/module-blueprint",
-        "properties": {
+        "values": {
             "name": "Text",
             "parent": {
                 "@": "blueprint_parent"

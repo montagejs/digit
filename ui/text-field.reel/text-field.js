@@ -12,7 +12,7 @@ var AbstractTextField = require("montage/ui/base/abstract-text-field").AbstractT
  * ```json
  * "textField": {
  *     "prototype": "digit/ui/text-field.reel",
- *     "properties": {
+ *     "values": {
  *         "element": {"#": "textField"}
  *     }
  * }

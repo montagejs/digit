@@ -13,7 +13,7 @@ var Text = require("montage/ui/text.reel").Text;
  * ```json
  * "text": {
  *     "prototype": "digit/ui/text.reel",
- *     "properties": {
+ *     "values": {
  *         "element": {"#": "text"}
  *     }
  * }

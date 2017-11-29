@@ -9,7 +9,7 @@ The TextField component wraps an HTML `<input type="text">` element.
 ```json
 "textField": {
     "prototype": "digit/ui/text-field.reel",
-    "properties": {
+    "values": {
         "element": {"#": "textField"}
     }
 }

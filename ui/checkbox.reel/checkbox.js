@@ -10,7 +10,7 @@ var AbstractCheckbox = require("montage/ui/base/abstract-checkbox").AbstractChec
  * ```json
  * "checkbox": {
  *     "prototype": "digit/ui/checkbox.reel",
- *     "properties": {
+ *     "values": {
  *         "element": {"#": "checkbox"}
  *     }
  * }

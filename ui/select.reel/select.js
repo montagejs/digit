@@ -12,7 +12,7 @@ var AbstractSelect = require("montage/ui/base/abstract-select").AbstractSelect;
  * ```json
  * "select": {
  *     "prototype": "digit/ui/select.reel",
- *     "properties": {
+ *     "values": {
  *         "element": {"#": "select"},
  *         "content": [
  *             {"label": "California", "code": "CA"},

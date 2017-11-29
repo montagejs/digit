@@ -7,7 +7,7 @@
 ```json
 "textArea": {
     "prototype": "digit/ui/text-area.reel",
-    "properties": {
+    "values": {
         "element": {"#": "textArea"}
     }
 }

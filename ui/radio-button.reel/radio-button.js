@@ -12,7 +12,7 @@ CLASS_PREFIX = "digit-RadioButton";
  * ```json
  * "radio": {
  *     "prototype": "digit/ui/radio-button.reel",
- *     "properties": {
+ *     "values": {
  *         "element": {"#": "radio"},
  *         "value": 1
  *     }

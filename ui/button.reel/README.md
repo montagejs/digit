@@ -9,7 +9,7 @@ The Button component wraps a `<button>`, `<input type="button">` or `<a>` elemen
 ```json
 "button": {
     "prototype": "digit/ui/button.reel",
-    "properties": {
+    "values": {
         "element": {"#": "button"}
     }
 }
@@ -56,19 +56,19 @@ The ButtonGroup component wraps multiple `Button`s and groups them together.
 ```json
 "button-1": {
     "prototype": "digit/ui/button.reel",
-    "properties": {
+    "values": {
         "element": {"#": "button-1"}
     }
 }
 "button-2": {
     "prototype": "digit/ui/button.reel",
-    "properties": {
+    "values": {
         "element": {"#": "button-2"}
     }
 }
 "button-3": {
     "prototype": "digit/ui/button.reel",
-    "properties": {
+    "values": {
         "element": {"#": "button-3"}
     }
 }

@@ -9,7 +9,7 @@ The Slider component wraps an HTML `<input type="range">` element.
 ```json
 "slider": {
     "prototype": "digit/ui/slider.reel",
-    "properties": {
+    "values": {
         "element": {"#": "slider"}
     }
 }

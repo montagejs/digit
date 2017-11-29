@@ -10,7 +10,7 @@ var AbstractTextArea = require("montage/ui/base/abstract-text-area").AbstractTex
  * ```json
  * "textArea": {
  *     "prototype": "digit/ui/text-area.reel",
- *     "properties": {
+ *     "values": {
  *         "element": {"#": "textArea"}
  *     }
  * }

@@ -9,7 +9,7 @@ The List component wraps an `<ul>` element. It supports different kind of list i
 ```json
 "list": {
     "prototype": "digit/ui/list.reel",
-    "properties": {
+    "values": {
         "element": {"#": "list"}
     }
 }
