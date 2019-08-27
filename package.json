@@ -1,14 +1,14 @@
 {
   "name": "digit",
   "description": "Touch-optimized MontageJS components for tablets and phones.",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
     "url": "https://github.com/montagejs/digit.git"
   },
   "dependencies": {
-    "montage": "^17.0.7"
+    "montage": "montagejs/montage#master"
   },
   "devDependencies": {
     "concurrently": "^3.4.0",
