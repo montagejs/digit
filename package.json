@@ -23,7 +23,7 @@
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.2",
     "montage-testing": "git://github.com/montagejs/montage-testing.git#master",
-    "open": "0.0.5"
+    "open": "7.0.0"
   },
   "scripts": {
     "lint": "jshint .",
